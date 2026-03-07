@@ -21,7 +21,6 @@ tech_hgts_detox = {
 			factor = 1.25
 			has_tradition = tr_expansion_adopt
 		}
-
 	}
 
 	ai_weight = {
@@ -35,10 +34,6 @@ tech_hgts_detox = {
 			}
 		}
 
-		modifier = {
-			factor = 5
-			has_origin = origin_life_seeded
-		}
 		modifier = {
 			factor = 5
 			any_system_within_border = {
