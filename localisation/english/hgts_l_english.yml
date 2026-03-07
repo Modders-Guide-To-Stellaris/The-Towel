@@ -62,3 +62,9 @@
  # HGTS_miniature: "Miniature"
  # HGTS_modest: "Modest"
  # HGTS_grande: "Grande"
+
+# HGTS tech
+ tech_hgts_detox:2 "Detoxification"
+ tech_hgts_detox_desc:1 "This technology allows for the detoxification of toxic planets, making them habitable once more."
+ TECH_UNLOCK_TERRAFORMING_TOXIC_CHANGE_TITLE:2 "§HUnlocks Feature:§! Detoxification"
+ TECH_UNLOCK_TERRAFORMING_TOXIC_CHANGE_DESC:3 "§HDetoxification§!\nAllows us to terraform toxic worlds."
