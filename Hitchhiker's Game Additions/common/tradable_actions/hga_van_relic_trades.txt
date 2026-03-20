@@ -1,0 +1,5784 @@
+# ============================================================
+# HGA - RELIC TRADE ACTIONS
+# ============================================================
+# Relics are sorted by category (wiki order):
+#   Crisis > Archaeological > Guardian > Precursor >
+#   Astral > Curator > Other
+# Excluded: r_wormhole_key_1-4, Celestial Chart variants, RulerChip
+#
+# Note for soncio: I don't understand AI weight, can you check if it's the other way around?
+# like its currently assuming a higher number means 'less likely to'
+# ============================================================
+
+
+# ============================================================
+# CRISIS RELICS
+# ============================================================
+
+hga_trade_action_r_warlock = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_unbidden_warlock
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_unbidden_warlock }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_unbidden_warlock
+
+        from = {
+            add_relic = r_unbidden_warlock
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Warlock is a psionic/military mobility relic -<
+        # Militarists and psi-empires cling to it; materialists don't care
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.3
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_contingency_core = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_contingency_core
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_contingency_core }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_contingency_core
+
+        from = {
+            add_relic = r_contingency_core
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Machine/megastructure relic — machine empires and builders cling to it -<
+        modifier = {
+            factor = 0.5
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_machine_assimilator
+        }
+        modifier = {
+            factor = 0.7
+            has_technology = tech_mega_engineering
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_prethoryn_queen = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_prethoryn_queen
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_prethoryn_queen }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_prethoryn_queen
+
+        from = {
+            add_relic = r_prethoryn_queen
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Grants a controllable Prethoryn fleet + society research -<
+        # Militarists want the fleet; pacifists and xenophiles are uneasy keeping a brood queen
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_xenophile
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_khans_throne = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_khans_throne
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_khans_throne }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_khans_throne
+
+        from = {
+            add_relic = r_khans_throne
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Claim cost reduction + Satrapy access + weapon damage triumph -<
+        # Expansionist/authoritarian empires cling to this; democratic/pacifist less so
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.3
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_egalitarian
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_eternal_throne = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_eternal_throne
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_eternal_throne }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_eternal_throne
+
+        from = {
+            add_relic = r_eternal_throne
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Immortal leaders — extraordinarily valuable, most empires won't trade this -<
+        modifier = {
+            factor = 0.4
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 1.2
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.15
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_cetanas_heart = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_cetanas_heart
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_cetanas_heart }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_cetanas_heart
+
+        from = {
+            add_relic = r_cetanas_heart
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Reduced ascension cost + massive robot pop burst on triumph -<
+        modifier = {
+            factor = 0.5
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_machine_assimilator
+        }
+        modifier = {
+            factor = 1.2
+            is_hive_empire = yes
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 2
+            has_civic = civic_ascensionists
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_core_of_the_reckoning = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_core_of_the_reckoning
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_core_of_the_reckoning }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_core_of_the_reckoning
+
+        from = {
+            add_relic = r_core_of_the_reckoning
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Exceptional passive (influence, starbase cap, job output, naval cap, ship upkeep) -<
+        # This is one of the strongest passives in the game, almost nobody wants to trade it
+        modifier = {
+            factor = 0.4
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.1
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# ARCHAEOLOGICAL RELICS
+# ============================================================
+
+hga_trade_action_r_odryskan_crystal = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_odryskan_crystal
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_odryskan_crystal }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_odryskan_crystal
+
+        from = {
+            add_relic = r_odryskan_crystal
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Rare crystal income — valuable to anyone running crystal-hungry builds -<
+        modifier = {
+            factor = 0.7
+            has_technology = tech_crystal_armor_1
+        }
+        modifier = {
+            factor = 1.2
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.15
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_ancient_sword = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_ancient_sword
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_ancient_sword }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_ancient_sword
+
+        from = {
+            add_relic = r_ancient_sword
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Army morale + diplo weight + sensor range, broad utility relic -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = civic_diplomatic_corps
+        }
+        modifier = {
+            factor = 1.15
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_severed_head = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_severed_head
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_severed_head }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_severed_head
+
+        from = {
+            add_relic = r_severed_head
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Holy Guardian relations + Holy World access + Spiritualist triumph -<
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 1.3
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 1.2
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_galaxy = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_galaxy
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_galaxy }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_galaxy
+
+        from = {
+            add_relic = r_galaxy
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +5% research speed passive + research boost triumph, universally useful -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_militarist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_mechano_calibrator = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_defragmentor
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_defragmentor }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_defragmentor
+
+        from = {
+            add_relic = r_the_defragmentor
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Energy upkeep reduction across the board, best for large sprawling empires -<
+        modifier = {
+            factor = 0.7
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = civic_machine_assimilator
+        }
+        modifier = {
+            factor = 1.15
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_omnicodex = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_omnicodex
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_omnicodex }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_omnicodex
+
+        from = {
+            add_relic = r_omnicodex
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +1 gene mod point + pop burst from new species on triumph -<
+        modifier = {
+            factor = 0.6
+            has_technology = tech_gene_tailoring
+        }
+        modifier = {
+            factor = 1.3
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.8
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# GUARDIAN RELICS
+# ============================================================
+
+hga_trade_action_r_dragon_trophy = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_dragon_trophy
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_dragon_trophy }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_dragon_trophy
+
+        from = {
+            add_relic = r_dragon_trophy
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +10% monthly unity passive; broadly useful, spiritualist/unity empires cling to it -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = civic_shared_burden
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_worm_scales = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_worm_scales
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_worm_scales }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_worm_scales
+
+        from = {
+            add_relic = r_worm_scales
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +5% physics research passive / triumph boosts research but cuts stability -<
+        # Relatively low-powered relic, more willing to trade
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_rubricator = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_rubricator
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_rubricator }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_rubricator
+
+        from = {
+            add_relic = r_rubricator
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Archaeotech weapon damage + society research + minor artifact burst -<
+        modifier = {
+            factor = 0.7
+            has_technology = tech_archaeostudies
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_toxic_god = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_toxic_god
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_toxic_god }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_toxic_god
+
+        from = {
+            add_relic = r_toxic_god
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Strike craft damage + Consecrate Habitat for Knights of the Toxic God -<
+        modifier = {
+            factor = 0.4
+            has_origin = origin_toxic_knights
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_voidspawn_heart = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_voidspawn_myocardium
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_voidspawn_myocardium }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_voidspawn_myocardium
+
+        from = {
+            add_relic = r_voidspawn_myocardium
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Fire rate + damage reduction, with a powerful one-time destroy option -<
+        # Militarists value this highly; the destroy-for-massive-buff makes it extra sticky
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_behemoths
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# PRECURSOR RELICS
+# ============================================================
+
+hga_trade_action_r_war_forge = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_war_forge
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_war_forge }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_war_forge
+
+        from = {
+            add_relic = r_war_forge
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Cybrex Warform armies + scaling alloy burst; alloy-monkey builds love this -<
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 0.7
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_pox_sample = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_pox_sample
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_pox_sample }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_pox_sample
+
+        from = {
+            add_relic = r_pox_sample
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Leader lifespan + biological weapon bombardment stance + biology tech chance -<
+        modifier = {
+            factor = 0.6
+            has_valid_civic = civic_barbaric_despoilers
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.3
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_fanatic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+# ──────────────────────────────────────────────────────────────
+hga_trade_action_r_zro_crystal = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_zro_crystal
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_zro_crystal }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_zro_crystal
+
+        from = {
+            add_relic = r_zro_crystal
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Shroud cooldown reduction + Zro edict + better shroud odds, psionic empires hoard this -<
+        modifier = {
+            factor = 2
+            has_technology = tech_psionic_theory
+        }
+        modifier = {
+            factor = 1.5
+            has_origin = origin_shroud_forged
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_baol = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_last_baol
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_last_baol }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_last_baol
+
+        from = {
+            add_relic = r_the_last_baol
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Pop growth speed, universally useful for organic empires -<
+        modifier = {
+            factor = 0.7
+            NOT = { is_machine_empire = yes }
+            NOT = { is_hive_empire = yes }
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+        modifier = {
+            factor = 1.35
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_xenophile
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_orb_insight = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_reality_perforator
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_reality_perforator }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_reality_perforator
+
+        from = {
+            add_relic = r_reality_perforator
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Random powerful combat modifier on triumph + amenity reduction passive -<
+        # Militarists want unpredictable combat boosts; others find the randomness less appealing
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_fanatic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_cryo_core = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_cryo_core
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_cryo_core }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_cryo_core
+
+        from = {
+            add_relic = r_cryo_core
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +200% colony development speed + energy weapon attack speed -<
+        # Expansionist empires prize this; tall/static empires less so
+        modifier = {
+            factor = 0.6
+            has_valid_civic = civic_crafters
+        }
+        modifier = {
+            factor = 0.6
+            has_valid_civic = civic_corporate_crafters
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_weather_manipulator = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_weather_manipulator
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_weather_manipulator }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_weather_manipulator
+
+        from = {
+            add_relic = r_weather_manipulator
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +15% physics research + storm suppression triumph (Cosmic Storms DLC) -<
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_tempest_invocator = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_tempest_invocator
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_tempest_invocator }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_tempest_invocator
+
+        from = {
+            add_relic = r_the_tempest_invocator
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Unity + ship upkeep reduction passive; creates Nexus Storm on triumph -<
+        # Offensive empires love the storm creation; pacifists are uncomfortable
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_spiritualist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# ASTRAL RELICS
+# ============================================================
+
+hga_trade_action_r_celestial_tear = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_celestial_tear
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_celestial_tear }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_celestial_tear
+
+        from = {
+            add_relic = r_celestial_tear
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Habitability near certain stars, niche but useful for colonisers -<
+        # Relatively weak relic, more willing to trade
+        modifier = {
+            factor = 1.1
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_daedalus_seal = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_daedalus_seal
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_daedalus_seal }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_daedalus_seal
+
+        from = {
+            add_relic = r_daedalus_seal
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Dimensional lock duration + triumph locks all bypasses in borders -<
+        # Defensive empires love this; aggressive expansionists less so
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            factor = 1.2
+            has_valid_civic = civic_barbaric_despoilers
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_militarist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_ever_spinning_top = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_ever_spinning_top
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_ever_spinning_top }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_ever_spinning_top
+
+        from = {
+            add_relic = r_ever_spinning_top
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +10% energy credits passive + propulsion research triumph -<
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.85
+            is_megacorp = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_infinity_root = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_infinity_root
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_infinity_root }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_infinity_root
+
+        from = {
+            add_relic = r_infinity_root
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Food income + free scientist on triumph, organic/agrarian empires love it -<
+        modifier = {
+            factor = 0.7
+            NOT = { is_machine_empire = yes }
+            NOT = { is_hive_empire = yes }
+        }
+        modifier = {
+            factor = 0.8
+            is_hive_empire = yes
+        }
+        modifier = {
+            factor = 1.35
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = civic_agrarian_idyll
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_plasmic_core = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_plasmic_core
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_plasmic_core }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_plasmic_core
+
+        from = {
+            add_relic = r_plasmic_core
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Pop growth (organic) or leader XP (machine), broadly useful -<
+        modifier = {
+            factor = 0.8
+            NOT = { is_machine_empire = yes }
+        }
+        modifier = {
+            factor = 0.85
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_natural_design
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_hive_natural_design
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_continuum = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_continuum
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_continuum }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_continuum
+
+        from = {
+            add_relic = r_continuum
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Across-the-board resource/research bonuses, one of the best passives in the game -<
+        # Almost everyone wants this; the baseline weight is lower to reflect it being hard to obtain
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 0.7
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 0.75
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_time_crystal = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_time_crystal
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_time_crystal }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_time_crystal
+
+        from = {
+            add_relic = r_time_crystal
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +10yr leader lifespan + mass leader XP on triumph -<
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.25
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# CURATOR RELICS (Grand Archive DLC)
+# ============================================================
+
+hga_trade_action_r_celestial_resonator = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_celestial_resonator
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_celestial_resonator }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_celestial_resonator
+
+        from = {
+            add_relic = r_celestial_resonator
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Unity per exhibit — scales with Grand Archive investment -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_gavel_of_the_tribunal = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_gavel_of_the_tribunal
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_gavel_of_the_tribunal }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_gavel_of_the_tribunal
+
+        from = {
+            add_relic = r_gavel_of_the_tribunal
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Diplo weight per delegate skill + claim cost reduction triumph -<
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_diplomatic_corps
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 1.2
+            has_valid_civic = civic_barbaric_despoilers
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_pattern_maker = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_pattern_maker
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_pattern_maker }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_pattern_maker
+
+        from = {
+            add_relic = r_the_pattern_maker
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Codebreaking + tracking + accuracy passive; Patternwalker ship on triumph -<
+        modifier = {
+            factor = 0.7
+            has_technology = tech_enigmatic_decoder
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_tiyanki_matriarch_nerve_core = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_tiyanki_matriarch_nerve_core
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_tiyanki_matriarch_nerve_core }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_tiyanki_matriarch_nerve_core
+
+        from = {
+            add_relic = r_tiyanki_matriarch_nerve_core
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +25% damage to guardians passive + space fauna buffs on triumph -<
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.15
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_vaporous_mega_orchid = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_vaporous_mega_orchid
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_vaporous_mega_orchid }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_vaporous_mega_orchid
+
+        from = {
+            add_relic = r_vaporous_mega_orchid
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Trust cap + organic subject loyalty, very valuable for federation/subject empires -<
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_xenophile
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 1.15
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_entangled_relay = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_entangled_relay
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_entangled_relay }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_entangled_relay
+
+        from = {
+            add_relic = r_entangled_relay
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +2 sector size + -50% starbase influence distance, expansionist empires prize this -<
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_valid_civic = civic_inwards_perfection
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_executus_compendium = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_executus_compendium
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_executus_compendium }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_executus_compendium
+
+        from = {
+            add_relic = r_executus_compendium
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Councilor skill + agenda speed, governance-focused empires value this -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = civic_efficient_bureaucracy
+        }
+        modifier = {
+            factor = 1.15
+            is_hive_empire = yes
+        }
+        modifier = {
+            factor = 1.1
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_preservation_chamber = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_preservation_chamber
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_preservation_chamber }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_preservation_chamber
+
+        from = {
+            add_relic = r_preservation_chamber
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +25k resource storage + Vivarium capacity, useful for stockpile-heavy empires -<
+        modifier = {
+            factor = 0.75
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_prototype_vir_core = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_prototype_vir_core
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_prototype_vir_core }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_prototype_vir_core
+
+        from = {
+            add_relic = r_prototype_vir_core
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +1 leader cap for all classes, universally strong -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = civic_distinguished_admiralty
+        }
+        modifier = {
+            factor = 1.1
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_propagandosphere = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_propagandosphere
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_propagandosphere }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_propagandosphere
+
+        from = {
+            add_relic = r_propagandosphere
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Unity from soldiers + governing ethics attraction, militarist/authoritarian staple -<
+        modifier = {
+            factor = 0.6
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_fanatic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_crystallinus_diffuser = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_crystallinus_diffuser
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_crystallinus_diffuser }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_crystallinus_diffuser
+
+        from = {
+            add_relic = r_crystallinus_diffuser
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +5% resources from jobs + opinion/energy bonus for machines -<
+        modifier = {
+            factor = 0.7
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.15
+            is_hive_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_everchanging_stone = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_everchanging_stone
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_everchanging_stone }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_everchanging_stone
+
+        from = {
+            add_relic = r_everchanging_stone
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Xeno geology output + metallurgist/artisan upkeep reduction -<
+        modifier = {
+            factor = 0.8
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 1.15
+            is_machine_empire = yes
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_flowmetal_alloy = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_flowmetal_alloy
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_flowmetal_alloy }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_flowmetal_alloy
+
+        from = {
+            add_relic = r_flowmetal_alloy
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Ship build speed + robot upkeep reduction + robot pop burst -<
+        modifier = {
+            factor = 0.5
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_machine_assimilator
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            is_hive_empire = yes
+
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_pulsestone = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_pulsestone
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_pulsestone }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_pulsestone
+
+        from = {
+            add_relic = r_pulsestone
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Field manipulation research speed + energy weapon/shield triumph, but happiness penalty -<
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_pacifist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_modularium = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_modularium
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_modularium }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_modularium
+
+        from = {
+            add_relic = r_the_modularium
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: +1 of each strategic resource passively; scales up on triumph -<
+        # Strategic resource income is strong across all empire types
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.75
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.85
+            has_technology = tech_exotic_gases
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+
+# ============================================================
+# OTHER / EXTRA RELICS
+# ============================================================
+
+hga_trade_action_r_galatron = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_galatron
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_galatron }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_galatron
+
+        from = {
+            add_relic = r_galatron
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: The Galatron, absurd prestige, everyone wants it, nobody wants to give it up -<
+        # Base weight is already extremely low to reflect this
+        modifier = {
+            factor = 0.2
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.3
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = ethic_fanatic_materialist
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_surveyor = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_surveyor
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_surveyor }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_surveyor
+
+        from = {
+            add_relic = r_surveyor
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Survey-related bonuses, expansionist empires value early game -<
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_xenophobe
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_radience = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_vacuum_flower
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_vacuum_flower }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_vacuum_flower
+
+        from = {
+            add_relic = r_vacuum_flower
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: The Radiance NO FX -<
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_mutated_voidworm_nest = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_mutated_voidworm_nest
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_mutated_voidworm_nest }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_mutated_voidworm_nest
+
+        from = {
+            add_relic = r_mutated_voidworm_nest
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Voidworm-related bonuses, space fauna empires prize this -<
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 1.15
+            is_machine_empire = yes
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_fanatic_xenophobe
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_lost_patron = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_the_lost_patron
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_the_lost_patron }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_the_lost_patron
+
+        from = {
+            add_relic = r_the_lost_patron
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: The Lost Patron -<
+        modifier = {
+            factor = 2
+            has_origin = origin_mindwardens
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_pyroglyphic_codex = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_pyroglyphic_codex
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_pyroglyphic_codex }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_pyroglyphic_codex
+
+        from = {
+            add_relic = r_pyroglyphic_codex
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Pyroglyphic Codex -<
+        modifier = {
+            factor = 2
+            has_origin = origin_cosmic_dawn
+        }
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_crystallized_singularity = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_crystallized_singularity
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_crystallized_singularity }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_crystallized_singularity
+
+        from = {
+            add_relic = r_crystallized_singularity
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: Crystallized Singularity -<
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
+
+hga_trade_action_r_the_key = {
+    fire_and_forget = yes
+
+    potential = {
+        is_country_type = default
+        has_relic = r_wormhole_key
+
+        from = {
+            is_country_type = default
+            NOT = { has_relic = r_wormhole_key }
+
+            has_intel_level = {
+                who = root
+                category = economy
+                level >= 2
+            }
+        }
+    }
+
+    on_traded_effect = {
+        remove_relic = r_wormhole_key
+
+        from = {
+            add_relic = r_wormhole_key
+        }
+    }
+
+    ai_weight = {
+        weight = 1000
+
+        # >- HARD BLOCK -<
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = hga_ai_no_relic_trade
+                has_country_flag = hga_ai_no_relic
+            }
+        }
+
+        # >- CUSTOM: TheKey -<
+
+        # >- OPINION -<
+        modifier = {
+            factor = 1.3
+            opinion_level = { who = from level = excellent }
+        }
+        modifier = {
+            factor = 1.1
+            opinion_level = { who = from level = good }
+        }
+        modifier = {
+            factor = 0.6
+            opinion_level = { who = from level = poor }
+        }
+        modifier = {
+            factor = 0.2
+            opinion_level = { who = from level = terrible }
+        }
+
+        # >- OVERLORD / SUBJECT -<
+        modifier = {
+            factor = 0.3
+            root = { is_overlord_to = from }
+        }
+        modifier = {
+            factor = 1.4
+            from = { is_overlord_to = root }
+        }
+
+        # >- RELATIVE FLEET POWER -<
+        modifier = {
+            factor = 0.6
+            relative_power = { who = from category = fleet value = overwhelming }
+        }
+        modifier = {
+            factor = 0.8
+            relative_power = { who = from category = fleet value = superior }
+        }
+        modifier = {
+            factor = 1.15
+            relative_power = { who = from category = fleet value = inferior }
+        }
+        modifier = {
+            factor = 1.3
+            relative_power = { who = from category = fleet value = pathetic }
+        }
+    }
+}
