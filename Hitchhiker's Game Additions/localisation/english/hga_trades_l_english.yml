@@ -2,6 +2,7 @@
 
  # ============================================================
  # HGA - RELIC TRADE ACTIONS - LOCALISATION (ENGLISH)
+ # todo: I might want to add game concepts to the relics
  # ============================================================
 
  hga_trade_relic_desc: "Our empire sees no value in this worthless artifact, perhaps it can be used to make some money off an ignorant empire."
@@ -42,7 +43,7 @@
  hga_trade_action_r_galaxy: "$hga_trade_action$ $r_galaxy$"
  hga_trade_action_r_galaxy_desc: "$hga_trade_relic_desc$"
 
- hga_trade_action_r_mechano_calibrator: "$hga_trade_action$ $r_mechano_calibrator$"
+ hga_trade_action_r_mechano_calibrator: "$hga_trade_action$ $r_the_defragmentor$"
  hga_trade_action_r_mechano_calibrator_desc: "$hga_trade_relic_desc$"
 
  hga_trade_action_r_omnicodex: "$hga_trade_action$ $r_omnicodex$"
@@ -61,7 +62,7 @@
  hga_trade_action_r_toxic_god: "$hga_trade_action$ $r_toxic_god$"
  hga_trade_action_r_toxic_god_desc: "$hga_trade_relic_desc$"
 
- hga_trade_action_r_voidspawn_heart: "$hga_trade_action$ $r_voidspawn_heart$"
+ hga_trade_action_r_voidspawn_heart: "$hga_trade_action$ $r_voidspawn_myocardium$"
  hga_trade_action_r_voidspawn_heart_desc: "$hga_trade_relic_desc$"
 
  # >- PRECURSOR RELICS -<
@@ -77,7 +78,7 @@
  hga_trade_action_r_baol: "$hga_trade_action$ $r_baol$"
  hga_trade_action_r_baol_desc: "$hga_trade_relic_desc$"
 
- hga_trade_action_r_orb_insight: "$hga_trade_action$ $r_orb_insight$"
+ hga_trade_action_r_orb_insight: "$hga_trade_action$ $r_reality_perforator$"
  hga_trade_action_r_orb_insight_desc: "$hga_trade_relic_desc$"
 
  hga_trade_action_r_cryo_core: "$hga_trade_action$ $r_cryo_core$"
@@ -164,7 +165,7 @@
  hga_trade_action_r_surveyor: "$hga_trade_action$ $r_surveyor$"
  hga_trade_action_r_surveyor_desc: "$hga_trade_relic_desc$"
 
- hga_trade_action_r_the_radience: "$hga_trade_action$ $r_the_radience$"
+ hga_trade_action_r_the_radience: "$hga_trade_action$ $r_vacuum_flower$"
  hga_trade_action_r_the_radience_desc: "$hga_trade_relic_desc$"
 
  hga_trade_action_r_mutated_voidworm_nest: "$hga_trade_action$ $r_mutated_voidworm_nest$"
