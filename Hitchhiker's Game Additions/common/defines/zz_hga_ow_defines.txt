@@ -5,7 +5,7 @@ NGameplay = {
     TRADITION_COST_SLIDER_INTERVAL = 0.05
 
     ETHOS_MAX_POINTS					= 3                     # Number of points which you can spend on ethos.
-    GOVERNMENT_CIVIC_POINTS_BASE		= 2		                # Base amount of civic points (to "pay" for government civic costs)
+    GOVERNMENT_CIVIC_POINTS_BASE		= 3		                # Base amount of civic points (to "pay" for government civic costs)
 
     #GALCOM
     RESOLUTION_VOTE_TIMER = 720									# number of days a resolution will be on the senate floor before being passed/failed
