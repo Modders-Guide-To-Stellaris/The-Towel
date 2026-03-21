@@ -1,5 +1,288 @@
 ﻿l_german:
 
-# VANILLA - RELIKTE
-hga_capture_relic_desc: "Diese Relikte sind rechtmäßiges Eigentum des §gB§!§RR§!§KD§! und werden unter allen Umständen zurückgefordert."
+ # >- KRISENRELIKTE -<
+ war_goal_hga_wg_seize_warlock: "Erobere $r_unbidden_warlock$"
+ war_goal_hga_wg_seize_warlock_desc: "Wir ziehen in den Krieg, um $r_unbidden_warlock$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_warlock: "$casus_belli_hga_seize$ $r_unbidden_warlock$"
+ casus_belli_hga_cb_seize_warlock_acquire_hint: "Erobere $r_unbidden_warlock$ vom gegnerischen Imperium."
 
+ war_goal_hga_wg_seize_contingency_core: "Erobere $r_contingency_core$"
+ war_goal_hga_wg_seize_contingency_core_desc: "Wir ziehen in den Krieg, um $r_contingency_core$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_contingency_core: "$casus_belli_hga_seize$ $r_contingency_core$"
+ casus_belli_hga_cb_seize_contingency_core_acquire_hint: "Erobere $r_contingency_core$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_prethoryn_queen: "Erobere $r_prethoryn_queen$"
+ war_goal_hga_wg_seize_prethoryn_queen_desc: "Wir ziehen in den Krieg, um $r_prethoryn_queen$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_prethoryn_queen: "$casus_belli_hga_seize$ $r_prethoryn_queen$"
+ casus_belli_hga_cb_seize_prethoryn_queen_acquire_hint: "Erobere $r_prethoryn_queen$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_khans_throne: "Erobere $r_khans_throne$"
+ war_goal_hga_wg_seize_khans_throne_desc: "Wir ziehen in den Krieg, um $r_khans_throne$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_khans_throne: "$casus_belli_hga_seize$ $r_khans_throne$"
+ casus_belli_hga_cb_seize_khans_throne_acquire_hint: "Erobere $r_khans_throne$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_eternal_throne: "Erobere $r_eternal_throne$"
+ war_goal_hga_wg_seize_eternal_throne_desc: "Wir ziehen in den Krieg, um $r_eternal_throne$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_eternal_throne: "$casus_belli_hga_seize$ $r_eternal_throne$"
+ casus_belli_hga_cb_seize_eternal_throne_acquire_hint: "Erobere $r_eternal_throne$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_cetanas_heart: "Erobere $r_cetanas_heart$"
+ war_goal_hga_wg_seize_cetanas_heart_desc: "Wir ziehen in den Krieg, um $r_cetanas_heart$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_cetanas_heart: "$casus_belli_hga_seize$ $r_cetanas_heart$"
+ casus_belli_hga_cb_seize_cetanas_heart_acquire_hint: "Erobere $r_cetanas_heart$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_core_of_the_reckoning: "Erobere $r_core_of_the_reckoning$"
+ war_goal_hga_wg_seize_core_of_the_reckoning_desc: "Wir ziehen in den Krieg, um $r_core_of_the_reckoning$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_core_of_the_reckoning: "$casus_belli_hga_seize$ $r_core_of_the_reckoning$"
+ casus_belli_hga_cb_seize_core_of_the_reckoning_acquire_hint: "Erobere $r_core_of_the_reckoning$ vom gegnerischen Imperium."
+
+ # >- ARCHÄOLOGISCHE RELIKTE -<
+ war_goal_hga_wg_seize_odryskan_crystal: "Erobere $r_odryskan_crystal$"
+ war_goal_hga_wg_seize_odryskan_crystal_desc: "Wir ziehen in den Krieg, um $r_odryskan_crystal$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_odryskan_crystal: "$casus_belli_hga_seize$ $r_odryskan_crystal$"
+ casus_belli_hga_cb_seize_odryskan_crystal_acquire_hint: "Erobere $r_odryskan_crystal$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_ancient_sword: "Erobere $r_ancient_sword$"
+ war_goal_hga_wg_seize_ancient_sword_desc: "Wir ziehen in den Krieg, um $r_ancient_sword$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_ancient_sword: "$casus_belli_hga_seize$ $r_ancient_sword$"
+ casus_belli_hga_cb_seize_ancient_sword_acquire_hint: "Erobere $r_ancient_sword$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_severed_head: "Erobere $r_severed_head$"
+ war_goal_hga_wg_seize_severed_head_desc: "Wir ziehen in den Krieg, um $r_severed_head$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_severed_head: "$casus_belli_hga_seize$ $r_severed_head$"
+ casus_belli_hga_cb_seize_severed_head_acquire_hint: "Erobere $r_severed_head$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_galaxy: "Erobere $r_galaxy$"
+ war_goal_hga_wg_seize_galaxy_desc: "Wir ziehen in den Krieg, um $r_galaxy$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_galaxy: "$casus_belli_hga_seize$ $r_galaxy$"
+ casus_belli_hga_cb_seize_galaxy_acquire_hint: "Erobere $r_galaxy$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_mechano_calibrator: "Erobere $r_the_defragmentor$"
+ war_goal_hga_wg_seize_mechano_calibrator_desc: "Wir ziehen in den Krieg, um $r_the_defragmentor$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_mechano_calibrator: "$casus_belli_hga_seize$ $r_the_defragmentor$"
+ casus_belli_hga_cb_seize_mechano_calibrator_acquire_hint: "Erobere $r_the_defragmentor$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_omnicodex: "Erobere $r_omnicodex$"
+ war_goal_hga_wg_seize_omnicodex_desc: "Wir ziehen in den Krieg, um $r_omnicodex$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_omnicodex: "$casus_belli_hga_seize$ $r_omnicodex$"
+ casus_belli_hga_cb_seize_omnicodex_acquire_hint: "Erobere $r_omnicodex$ vom gegnerischen Imperium."
+
+ # >- HÜTERRELIKTE -<
+ war_goal_hga_wg_seize_dragon_trophy: "Erobere $r_dragon_trophy$"
+ war_goal_hga_wg_seize_dragon_trophy_desc: "Wir ziehen in den Krieg, um $r_dragon_trophy$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_dragon_trophy: "$casus_belli_hga_seize$ $r_dragon_trophy$"
+ casus_belli_hga_cb_seize_dragon_trophy_acquire_hint: "Erobere $r_dragon_trophy$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_worm_scales: "Erobere $r_worm_scales$"
+ war_goal_hga_wg_seize_worm_scales_desc: "Wir ziehen in den Krieg, um $r_worm_scales$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_worm_scales: "$casus_belli_hga_seize$ $r_worm_scales$"
+ casus_belli_hga_cb_seize_worm_scales_acquire_hint: "Erobere $r_worm_scales$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_rubricator: "Erobere $r_rubricator$"
+ war_goal_hga_wg_seize_rubricator_desc: "Wir ziehen in den Krieg, um $r_rubricator$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_rubricator: "$casus_belli_hga_seize$ $r_rubricator$"
+ casus_belli_hga_cb_seize_rubricator_acquire_hint: "Erobere $r_rubricator$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_toxic_god: "Erobere $r_toxic_god$"
+ war_goal_hga_wg_seize_toxic_god_desc: "Wir ziehen in den Krieg, um $r_toxic_god$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_toxic_god: "$casus_belli_hga_seize$ $r_toxic_god$"
+ casus_belli_hga_cb_seize_toxic_god_acquire_hint: "Erobere $r_toxic_god$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_voidspawn_heart: "Erobere $r_voidspawn_myocardium$"
+ war_goal_hga_wg_seize_voidspawn_heart_desc: "Wir ziehen in den Krieg, um $r_voidspawn_myocardium$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_voidspawn_heart: "$casus_belli_hga_seize$ $r_voidspawn_myocardium$"
+ casus_belli_hga_cb_seize_voidspawn_heart_acquire_hint: "Erobere $r_voidspawn_myocardium$ vom gegnerischen Imperium."
+
+ # >- VORLÄUFERRELIKTE -<
+ war_goal_hga_wg_seize_war_forge: "Erobere $r_war_forge$"
+ war_goal_hga_wg_seize_war_forge_desc: "Wir ziehen in den Krieg, um $r_war_forge$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_war_forge: "$casus_belli_hga_seize$ $r_war_forge$"
+ casus_belli_hga_cb_seize_war_forge_acquire_hint: "Erobere $r_war_forge$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_pox_sample: "Erobere $r_pox_sample$"
+ war_goal_hga_wg_seize_pox_sample_desc: "Wir ziehen in den Krieg, um $r_pox_sample$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_pox_sample: "$casus_belli_hga_seize$ $r_pox_sample$"
+ casus_belli_hga_cb_seize_pox_sample_acquire_hint: "Erobere $r_pox_sample$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_zro_crystal: "Erobere $r_zro_crystal$"
+ war_goal_hga_wg_seize_zro_crystal_desc: "Wir ziehen in den Krieg, um $r_zro_crystal$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_zro_crystal: "$casus_belli_hga_seize$ $r_zro_crystal$"
+ casus_belli_hga_cb_seize_zro_crystal_acquire_hint: "Erobere $r_zro_crystal$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_baol: "Erobere $r_baol$"
+ war_goal_hga_wg_seize_baol_desc: "Wir ziehen in den Krieg, um $r_baol$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_baol: "$casus_belli_hga_seize$ $r_baol$"
+ casus_belli_hga_cb_seize_baol_acquire_hint: "Erobere $r_baol$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_orb_insight: "Erobere $r_reality_perforator$"
+ war_goal_hga_wg_seize_orb_insight_desc: "Wir ziehen in den Krieg, um $r_reality_perforator$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_orb_insight: "$casus_belli_hga_seize$ $r_reality_perforator$"
+ casus_belli_hga_cb_seize_orb_insight_acquire_hint: "Erobere $r_reality_perforator$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_cryo_core: "Erobere $r_cryo_core$"
+ war_goal_hga_wg_seize_cryo_core_desc: "Wir ziehen in den Krieg, um $r_cryo_core$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_cryo_core: "$casus_belli_hga_seize$ $r_cryo_core$"
+ casus_belli_hga_cb_seize_cryo_core_acquire_hint: "Erobere $r_cryo_core$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_weather_manipulator: "Erobere $r_weather_manipulator$"
+ war_goal_hga_wg_seize_weather_manipulator_desc: "Wir ziehen in den Krieg, um $r_weather_manipulator$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_weather_manipulator: "$casus_belli_hga_seize$ $r_weather_manipulator$"
+ casus_belli_hga_cb_seize_weather_manipulator_acquire_hint: "Erobere $r_weather_manipulator$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_tempest_invocator: "Erobere $r_the_tempest_invocator$"
+ war_goal_hga_wg_seize_the_tempest_invocator_desc: "Wir ziehen in den Krieg, um $r_the_tempest_invocator$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_tempest_invocator: "$casus_belli_hga_seize$ $r_the_tempest_invocator$"
+ casus_belli_hga_cb_seize_the_tempest_invocator_acquire_hint: "Erobere $r_the_tempest_invocator$ vom gegnerischen Imperium."
+
+ # >- ASTRELLE RELIKTE -<
+ war_goal_hga_wg_seize_celestial_tear: "Erobere $r_celestial_tear$"
+ war_goal_hga_wg_seize_celestial_tear_desc: "Wir ziehen in den Krieg, um $r_celestial_tear$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_celestial_tear: "$casus_belli_hga_seize$ $r_celestial_tear$"
+ casus_belli_hga_cb_seize_celestial_tear_acquire_hint: "Erobere $r_celestial_tear$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_daedalus_seal: "Erobere $r_daedalus_seal$"
+ war_goal_hga_wg_seize_daedalus_seal_desc: "Wir ziehen in den Krieg, um $r_daedalus_seal$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_daedalus_seal: "$casus_belli_hga_seize$ $r_daedalus_seal$"
+ casus_belli_hga_cb_seize_daedalus_seal_acquire_hint: "Erobere $r_daedalus_seal$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_ever_spinning_top: "Erobere $r_ever_spinning_top$"
+ war_goal_hga_wg_seize_ever_spinning_top_desc: "Wir ziehen in den Krieg, um $r_ever_spinning_top$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_ever_spinning_top: "$casus_belli_hga_seize$ $r_ever_spinning_top$"
+ casus_belli_hga_cb_seize_ever_spinning_top_acquire_hint: "Erobere $r_ever_spinning_top$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_infinity_root: "Erobere $r_infinity_root$"
+ war_goal_hga_wg_seize_infinity_root_desc: "Wir ziehen in den Krieg, um $r_infinity_root$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_infinity_root: "$casus_belli_hga_seize$ $r_infinity_root$"
+ casus_belli_hga_cb_seize_infinity_root_acquire_hint: "Erobere $r_infinity_root$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_plasmic_core: "Erobere $r_plasmic_core$"
+ war_goal_hga_wg_seize_plasmic_core_desc: "Wir ziehen in den Krieg, um $r_plasmic_core$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_plasmic_core: "$casus_belli_hga_seize$ $r_plasmic_core$"
+ casus_belli_hga_cb_seize_plasmic_core_acquire_hint: "Erobere $r_plasmic_core$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_continuum: "Erobere $r_continuum$"
+ war_goal_hga_wg_seize_continuum_desc: "Wir ziehen in den Krieg, um $r_continuum$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_continuum: "$casus_belli_hga_seize$ $r_continuum$"
+ casus_belli_hga_cb_seize_continuum_acquire_hint: "Erobere $r_continuum$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_time_crystal: "Erobere $r_time_crystal$"
+ war_goal_hga_wg_seize_time_crystal_desc: "Wir ziehen in den Krieg, um $r_time_crystal$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_time_crystal: "$casus_belli_hga_seize$ $r_time_crystal$"
+ casus_belli_hga_cb_seize_time_crystal_acquire_hint: "Erobere $r_time_crystal$ vom gegnerischen Imperium."
+
+ # >- KURATORENRELIKTE -<
+ war_goal_hga_wg_seize_celestial_resonator: "Erobere $r_celestial_resonator$"
+ war_goal_hga_wg_seize_celestial_resonator_desc: "Wir ziehen in den Krieg, um $r_celestial_resonator$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_celestial_resonator: "$casus_belli_hga_seize$ $r_celestial_resonator$"
+ casus_belli_hga_cb_seize_celestial_resonator_acquire_hint: "Erobere $r_celestial_resonator$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_gavel_of_the_tribunal: "Erobere $r_gavel_of_the_tribunal$"
+ war_goal_hga_wg_seize_gavel_of_the_tribunal_desc: "Wir ziehen in den Krieg, um $r_gavel_of_the_tribunal$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_gavel_of_the_tribunal: "$casus_belli_hga_seize$ $r_gavel_of_the_tribunal$"
+ casus_belli_hga_cb_seize_gavel_of_the_tribunal_acquire_hint: "Erobere $r_gavel_of_the_tribunal$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_pattern_maker: "Erobere $r_the_pattern_maker$"
+ war_goal_hga_wg_seize_the_pattern_maker_desc: "Wir ziehen in den Krieg, um $r_the_pattern_maker$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_pattern_maker: "$casus_belli_hga_seize$ $r_the_pattern_maker$"
+ casus_belli_hga_cb_seize_the_pattern_maker_acquire_hint: "Erobere $r_the_pattern_maker$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_tiyanki_matriarch_nerve_core: "Erobere $r_tiyanki_matriarch_nerve_core$"
+ war_goal_hga_wg_seize_tiyanki_matriarch_nerve_core_desc: "Wir ziehen in den Krieg, um $r_tiyanki_matriarch_nerve_core$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_tiyanki_matriarch_nerve_core: "$casus_belli_hga_seize$ $r_tiyanki_matriarch_nerve_core$"
+ casus_belli_hga_cb_seize_tiyanki_matriarch_nerve_core_acquire_hint: "Erobere $r_tiyanki_matriarch_nerve_core$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_vaporous_mega_orchid: "Erobere $r_vaporous_mega_orchid$"
+ war_goal_hga_wg_seize_vaporous_mega_orchid_desc: "Wir ziehen in den Krieg, um $r_vaporous_mega_orchid$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_vaporous_mega_orchid: "$casus_belli_hga_seize$ $r_vaporous_mega_orchid$"
+ casus_belli_hga_cb_seize_vaporous_mega_orchid_acquire_hint: "Erobere $r_vaporous_mega_orchid$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_entangled_relay: "Erobere $r_entangled_relay$"
+ war_goal_hga_wg_seize_entangled_relay_desc: "Wir ziehen in den Krieg, um $r_entangled_relay$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_entangled_relay: "$casus_belli_hga_seize$ $r_entangled_relay$"
+ casus_belli_hga_cb_seize_entangled_relay_acquire_hint: "Erobere $r_entangled_relay$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_executus_compendium: "Erobere $r_executus_compendium$"
+ war_goal_hga_wg_seize_executus_compendium_desc: "Wir ziehen in den Krieg, um $r_executus_compendium$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_executus_compendium: "$casus_belli_hga_seize$ $r_executus_compendium$"
+ casus_belli_hga_cb_seize_executus_compendium_acquire_hint: "Erobere $r_executus_compendium$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_preservation_chamber: "Erobere $r_preservation_chamber$"
+ war_goal_hga_wg_seize_preservation_chamber_desc: "Wir ziehen in den Krieg, um $r_preservation_chamber$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_preservation_chamber: "$casus_belli_hga_seize$ $r_preservation_chamber$"
+ casus_belli_hga_cb_seize_preservation_chamber_acquire_hint: "Erobere $r_preservation_chamber$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_prototype_vir_core: "Erobere $r_prototype_vir_core$"
+ war_goal_hga_wg_seize_prototype_vir_core_desc: "Wir ziehen in den Krieg, um $r_prototype_vir_core$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_prototype_vir_core: "$casus_belli_hga_seize$ $r_prototype_vir_core$"
+ casus_belli_hga_cb_seize_prototype_vir_core_acquire_hint: "Erobere $r_prototype_vir_core$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_propagandosphere: "Erobere $r_propagandosphere$"
+ war_goal_hga_wg_seize_propagandosphere_desc: "Wir ziehen in den Krieg, um $r_propagandosphere$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_propagandosphere: "$casus_belli_hga_seize$ $r_propagandosphere$"
+ casus_belli_hga_cb_seize_propagandosphere_acquire_hint: "Erobere $r_propagandosphere$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_crystallinus_diffuser: "Erobere $r_crystallinus_diffuser$"
+ war_goal_hga_wg_seize_crystallinus_diffuser_desc: "Wir ziehen in den Krieg, um $r_crystallinus_diffuser$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_crystallinus_diffuser: "$casus_belli_hga_seize$ $r_crystallinus_diffuser$"
+ casus_belli_hga_cb_seize_crystallinus_diffuser_acquire_hint: "Erobere $r_crystallinus_diffuser$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_everchanging_stone: "Erobere $r_everchanging_stone$"
+ war_goal_hga_wg_seize_everchanging_stone_desc: "Wir ziehen in den Krieg, um $r_everchanging_stone$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_everchanging_stone: "$casus_belli_hga_seize$ $r_everchanging_stone$"
+ casus_belli_hga_cb_seize_everchanging_stone_acquire_hint: "Erobere $r_everchanging_stone$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_flowmetal_alloy: "Erobere $r_flowmetal_alloy$"
+ war_goal_hga_wg_seize_flowmetal_alloy_desc: "Wir ziehen in den Krieg, um $r_flowmetal_alloy$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_flowmetal_alloy: "$casus_belli_hga_seize$ $r_flowmetal_alloy$"
+ casus_belli_hga_cb_seize_flowmetal_alloy_acquire_hint: "Erobere $r_flowmetal_alloy$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_pulsestone: "Erobere $r_pulsestone$"
+ war_goal_hga_wg_seize_pulsestone_desc: "Wir ziehen in den Krieg, um $r_pulsestone$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_pulsestone: "$casus_belli_hga_seize$ $r_pulsestone$"
+ casus_belli_hga_cb_seize_pulsestone_acquire_hint: "Erobere $r_pulsestone$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_modularium: "Erobere $r_the_modularium$"
+ war_goal_hga_wg_seize_the_modularium_desc: "Wir ziehen in den Krieg, um $r_the_modularium$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_modularium: "$casus_belli_hga_seize$ $r_the_modularium$"
+ casus_belli_hga_cb_seize_the_modularium_acquire_hint: "Erobere $r_the_modularium$ vom gegnerischen Imperium."
+
+ # >- SONSTIGE RELIKTE -<
+ war_goal_hga_wg_seize_galatron: "Erobere $r_galatron$"
+ war_goal_hga_wg_seize_galatron_desc: "Wir ziehen in den Krieg, um $r_galatron$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_galatron: "$casus_belli_hga_seize$ $r_galatron$"
+ casus_belli_hga_cb_seize_galatron_acquire_hint: "Erobere $r_galatron$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_surveyor: "Erobere $r_surveyor$"
+ war_goal_hga_wg_seize_surveyor_desc: "Wir ziehen in den Krieg, um $r_surveyor$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_surveyor: "$casus_belli_hga_seize$ $r_surveyor$"
+ casus_belli_hga_cb_seize_surveyor_acquire_hint: "Erobere $r_surveyor$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_radience: "Erobere $r_vacuum_flower$"
+ war_goal_hga_wg_seize_the_radience_desc: "Wir ziehen in den Krieg, um $r_vacuum_flower$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_radience: "$casus_belli_hga_seize$ $r_vacuum_flower$"
+ casus_belli_hga_cb_seize_the_radience_acquire_hint: "Erobere $r_vacuum_flower$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_mutated_voidworm_nest: "Erobere $r_mutated_voidworm_nest$"
+ war_goal_hga_wg_seize_mutated_voidworm_nest_desc: "Wir ziehen in den Krieg, um $r_mutated_voidworm_nest$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_mutated_voidworm_nest: "$casus_belli_hga_seize$ $r_mutated_voidworm_nest$"
+ casus_belli_hga_cb_seize_mutated_voidworm_nest_acquire_hint: "Erobere $r_mutated_voidworm_nest$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_lost_patron: "Erobere $r_the_lost_patron$"
+ war_goal_hga_wg_seize_the_lost_patron_desc: "Wir ziehen in den Krieg, um $r_the_lost_patron$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_lost_patron: "$casus_belli_hga_seize$ $r_the_lost_patron$"
+ casus_belli_hga_cb_seize_the_lost_patron_acquire_hint: "Erobere $r_the_lost_patron$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_pyroglyphic_codex: "Erobere $r_pyroglyphic_codex$"
+ war_goal_hga_wg_seize_pyroglyphic_codex_desc: "Wir ziehen in den Krieg, um $r_pyroglyphic_codex$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_pyroglyphic_codex: "$casus_belli_hga_seize$ $r_pyroglyphic_codex$"
+ casus_belli_hga_cb_seize_pyroglyphic_codex_acquire_hint: "Erobere $r_pyroglyphic_codex$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_crystallized_singularity: "Erobere $r_crystallized_singularity$"
+ war_goal_hga_wg_seize_crystallized_singularity_desc: "Wir ziehen in den Krieg, um $r_crystallized_singularity$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_crystallized_singularity: "$casus_belli_hga_seize$ $r_crystallized_singularity$"
+ casus_belli_hga_cb_seize_crystallized_singularity_acquire_hint: "Erobere $r_crystallized_singularity$ vom gegnerischen Imperium."
+
+ war_goal_hga_wg_seize_the_key: "Erobere $r_wormhole_key$"
+ war_goal_hga_wg_seize_the_key_desc: "Wir ziehen in den Krieg, um $r_wormhole_key$ von unserem Feind zu beanspruchen. Ein erfolgreicher Feldzug wird es in unseren Besitz übertragen."
+ casus_belli_hga_cb_seize_the_key: "$casus_belli_hga_seize$ $r_wormhole_key$"
+ casus_belli_hga_cb_seize_the_key_acquire_hint: "Erobere $r_wormhole_key$ vom gegnerischen Imperium."

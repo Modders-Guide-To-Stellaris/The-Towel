@@ -1,0 +1,1415 @@
+# >- HGA RELIC SEIZE CASUS BELLI -<
+
+# >- CRISIS RELICS -<
+
+hga_cb_seize_warlock = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_unbidden_warlock }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_unbidden_warlock }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_contingency_core = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_contingency_core }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_contingency_core }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_prethoryn_queen = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_prethoryn_queen }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_prethoryn_queen }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_khans_throne = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_khans_throne }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_khans_throne }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_eternal_throne = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_eternal_throne }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_eternal_throne }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_cetanas_heart = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_cetanas_heart }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_cetanas_heart }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_core_of_the_reckoning = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_core_of_the_reckoning }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_core_of_the_reckoning }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- ARCHAEOLOGICAL RELICS -<
+
+hga_cb_seize_odryskan_crystal = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_odryskan_crystal }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_odryskan_crystal }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_ancient_sword = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_ancient_sword }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_ancient_sword }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_severed_head = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_severed_head }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_severed_head }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_galaxy = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_galaxy }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_galaxy }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_mechano_calibrator = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_defragmentor }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_defragmentor }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_omnicodex = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_omnicodex }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_omnicodex }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- GUARDIAN RELICS -<
+
+hga_cb_seize_dragon_trophy = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_dragon_trophy }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_dragon_trophy }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_worm_scales = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_worm_scales }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_worm_scales }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_rubricator = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_rubricator }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_rubricator }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_toxic_god = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_toxic_god }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_toxic_god }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_voidspawn_heart = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_voidspawn_myocardium }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_voidspawn_myocardium }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- PRECURSOR RELICS -<
+
+hga_cb_seize_war_forge = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_war_forge }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_war_forge }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_pox_sample = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_pox_sample }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_pox_sample }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_zro_crystal = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_zro_crystal }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_zro_crystal }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_baol = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_last_baol }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_last_baol }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_orb_insight = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_reality_perforator }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_reality_perforator }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_cryo_core = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_cryo_core }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_cryo_core }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_weather_manipulator = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_weather_manipulator }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_weather_manipulator }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_tempest_invocator = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_tempest_invocator }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_tempest_invocator }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- ASTRAL RELICS -<
+
+hga_cb_seize_celestial_tear = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_celestial_tear }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_celestial_tear }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_daedalus_seal = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_daedalus_seal }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_daedalus_seal }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_ever_spinning_top = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_ever_spinning_top }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_ever_spinning_top }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_infinity_root = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_infinity_root }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_infinity_root }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_plasmic_core = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_plasmic_core }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_plasmic_core }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_continuum = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_continuum }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_continuum }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_time_crystal = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_time_crystal }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_time_crystal }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- CURATOR RELICS -<
+
+hga_cb_seize_celestial_resonator = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_celestial_resonator }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_celestial_resonator }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_gavel_of_the_tribunal = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_gavel_of_the_tribunal }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_gavel_of_the_tribunal }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_pattern_maker = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_pattern_maker }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_pattern_maker }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_tiyanki_matriarch_nerve_core = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_tiyanki_matriarch_nerve_core }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_tiyanki_matriarch_nerve_core }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_vaporous_mega_orchid = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_vaporous_mega_orchid }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_vaporous_mega_orchid }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_entangled_relay = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_entangled_relay }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_entangled_relay }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_executus_compendium = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_executus_compendium }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_executus_compendium }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_preservation_chamber = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_preservation_chamber }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_preservation_chamber }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_prototype_vir_core = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_prototype_vir_core }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_prototype_vir_core }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_propagandosphere = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_propagandosphere }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_propagandosphere }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_crystallinus_diffuser = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_crystallinus_diffuser }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_crystallinus_diffuser }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_everchanging_stone = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_everchanging_stone }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_everchanging_stone }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_flowmetal_alloy = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_flowmetal_alloy }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_flowmetal_alloy }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_pulsestone = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_pulsestone }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_pulsestone }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_modularium = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_modularium }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_modularium }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+# >- OTHER / EXTRA RELICS -<
+
+hga_cb_seize_galatron = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_galatron }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_galatron }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_surveyor = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_surveyor }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_surveyor }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_radience = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_vacuum_flower }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_vacuum_flower }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_mutated_voidworm_nest = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_mutated_voidworm_nest }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_mutated_voidworm_nest }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_lost_patron = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_the_lost_patron }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_the_lost_patron }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_pyroglyphic_codex = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_pyroglyphic_codex }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_pyroglyphic_codex }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_crystallized_singularity = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_crystallized_singularity }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_crystallized_singularity }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}
+
+hga_cb_seize_the_key = {
+    show_in_diplomacy = yes
+    show_notification = yes
+
+    potential = {
+        is_country_type = default
+        from = { has_relic = r_wormhole_key }
+
+        has_intel_level = {
+            who = from
+            category = economy
+            level >= 2
+        }
+    }
+
+    is_valid = {
+        from = { has_relic = r_wormhole_key }
+        NOT = { is_overlord_to = from }
+        OR = {
+            is_subject = no
+            overlord = { NOT = { is_same_value = from } }
+        }
+    }
+}

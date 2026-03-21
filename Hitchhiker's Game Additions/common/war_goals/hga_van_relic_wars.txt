@@ -1,0 +1,2255 @@
+# >- HGA RELIC SEIZE WAR GOALS -<
+
+# >- CRISIS RELICS -<
+
+hga_wg_seize_warlock = {
+    casus_belli = hga_cb_seize_warlock
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_unbidden_warlock }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_warlock
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_warlock
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_warlock
+        if = {
+            limit = { from = { has_relic = r_unbidden_warlock } }
+            from = { remove_relic = r_unbidden_warlock }
+            add_relic = r_unbidden_warlock
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_contingency_core = {
+    casus_belli = hga_cb_seize_contingency_core
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_contingency_core }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_contingency_core
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_contingency_core
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_contingency_core
+        if = {
+            limit = { from = { has_relic = r_contingency_core } }
+            from = { remove_relic = r_contingency_core }
+            add_relic = r_contingency_core
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_prethoryn_queen = {
+    casus_belli = hga_cb_seize_prethoryn_queen
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_prethoryn_queen }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_prethoryn_queen
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_prethoryn_queen
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_prethoryn_queen
+        if = {
+            limit = { from = { has_relic = r_prethoryn_queen } }
+            from = { remove_relic = r_prethoryn_queen }
+            add_relic = r_prethoryn_queen
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_khans_throne = {
+    casus_belli = hga_cb_seize_khans_throne
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_khans_throne }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_khans_throne
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_khans_throne
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_khans_throne
+        if = {
+            limit = { from = { has_relic = r_khans_throne } }
+            from = { remove_relic = r_khans_throne }
+            add_relic = r_khans_throne
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_eternal_throne = {
+    casus_belli = hga_cb_seize_eternal_throne
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_eternal_throne }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_eternal_throne
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_eternal_throne
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_eternal_throne
+        if = {
+            limit = { from = { has_relic = r_eternal_throne } }
+            from = { remove_relic = r_eternal_throne }
+            add_relic = r_eternal_throne
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_cetanas_heart = {
+    casus_belli = hga_cb_seize_cetanas_heart
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_cetanas_heart }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_cetanas_heart
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_cetanas_heart
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_cetanas_heart
+        if = {
+            limit = { from = { has_relic = r_cetanas_heart } }
+            from = { remove_relic = r_cetanas_heart }
+            add_relic = r_cetanas_heart
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_core_of_the_reckoning = {
+    casus_belli = hga_cb_seize_core_of_the_reckoning
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_core_of_the_reckoning }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_core_of_the_reckoning
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_core_of_the_reckoning
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_core_of_the_reckoning
+        if = {
+            limit = { from = { has_relic = r_core_of_the_reckoning } }
+            from = { remove_relic = r_core_of_the_reckoning }
+            add_relic = r_core_of_the_reckoning
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- ARCHAEOLOGICAL RELICS -<
+
+hga_wg_seize_odryskan_crystal = {
+    casus_belli = hga_cb_seize_odryskan_crystal
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_odryskan_crystal }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_odryskan_crystal
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_odryskan_crystal
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_odryskan_crystal
+        if = {
+            limit = { from = { has_relic = r_odryskan_crystal } }
+            from = { remove_relic = r_odryskan_crystal }
+            add_relic = r_odryskan_crystal
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_ancient_sword = {
+    casus_belli = hga_cb_seize_ancient_sword
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_ancient_sword }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_ancient_sword
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_ancient_sword
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_ancient_sword
+        if = {
+            limit = { from = { has_relic = r_ancient_sword } }
+            from = { remove_relic = r_ancient_sword }
+            add_relic = r_ancient_sword
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_severed_head = {
+    casus_belli = hga_cb_seize_severed_head
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_severed_head }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_severed_head
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_severed_head
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_severed_head
+        if = {
+            limit = { from = { has_relic = r_severed_head } }
+            from = { remove_relic = r_severed_head }
+            add_relic = r_severed_head
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_galaxy = {
+    casus_belli = hga_cb_seize_galaxy
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_galaxy }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_galaxy
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_galaxy
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_galaxy
+        if = {
+            limit = { from = { has_relic = r_galaxy } }
+            from = { remove_relic = r_galaxy }
+            add_relic = r_galaxy
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_mechano_calibrator = {
+    casus_belli = hga_cb_seize_mechano_calibrator
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_defragmentor }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_mechano_calibrator
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_mechano_calibrator
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_mechano_calibrator
+        if = {
+            limit = { from = { has_relic = r_the_defragmentor } }
+            from = { remove_relic = r_the_defragmentor }
+            add_relic = r_the_defragmentor
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_omnicodex = {
+    casus_belli = hga_cb_seize_omnicodex
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_omnicodex }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_omnicodex
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_omnicodex
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_omnicodex
+        if = {
+            limit = { from = { has_relic = r_omnicodex } }
+            from = { remove_relic = r_omnicodex }
+            add_relic = r_omnicodex
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- GUARDIAN RELICS -<
+
+hga_wg_seize_dragon_trophy = {
+    casus_belli = hga_cb_seize_dragon_trophy
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_dragon_trophy }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_dragon_trophy
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_dragon_trophy
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_dragon_trophy
+        if = {
+            limit = { from = { has_relic = r_dragon_trophy } }
+            from = { remove_relic = r_dragon_trophy }
+            add_relic = r_dragon_trophy
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_worm_scales = {
+    casus_belli = hga_cb_seize_worm_scales
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_worm_scales }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_worm_scales
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_worm_scales
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_worm_scales
+        if = {
+            limit = { from = { has_relic = r_worm_scales } }
+            from = { remove_relic = r_worm_scales }
+            add_relic = r_worm_scales
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_rubricator = {
+    casus_belli = hga_cb_seize_rubricator
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_rubricator }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_rubricator
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_rubricator
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_rubricator
+        if = {
+            limit = { from = { has_relic = r_rubricator } }
+            from = { remove_relic = r_rubricator }
+            add_relic = r_rubricator
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_toxic_god = {
+    casus_belli = hga_cb_seize_toxic_god
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_toxic_god }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_toxic_god
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_toxic_god
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_toxic_god
+        if = {
+            limit = { from = { has_relic = r_toxic_god } }
+            from = { remove_relic = r_toxic_god }
+            add_relic = r_toxic_god
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_voidspawn_heart = {
+    casus_belli = hga_cb_seize_voidspawn_heart
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_voidspawn_myocardium }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_voidspawn_heart
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_voidspawn_heart
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_voidspawn_heart
+        if = {
+            limit = { from = { has_relic = r_voidspawn_myocardium } }
+            from = { remove_relic = r_voidspawn_myocardium }
+            add_relic = r_voidspawn_myocardium
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- PRECURSOR RELICS -<
+
+hga_wg_seize_war_forge = {
+    casus_belli = hga_cb_seize_war_forge
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_war_forge }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_war_forge
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_war_forge
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_war_forge
+        if = {
+            limit = { from = { has_relic = r_war_forge } }
+            from = { remove_relic = r_war_forge }
+            add_relic = r_war_forge
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_pox_sample = {
+    casus_belli = hga_cb_seize_pox_sample
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_pox_sample }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_pox_sample
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_pox_sample
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_pox_sample
+        if = {
+            limit = { from = { has_relic = r_pox_sample } }
+            from = { remove_relic = r_pox_sample }
+            add_relic = r_pox_sample
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_zro_crystal = {
+    casus_belli = hga_cb_seize_zro_crystal
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_zro_crystal }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_zro_crystal
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_zro_crystal
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_zro_crystal
+        if = {
+            limit = { from = { has_relic = r_zro_crystal } }
+            from = { remove_relic = r_zro_crystal }
+            add_relic = r_zro_crystal
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_baol = {
+    casus_belli = hga_cb_seize_baol
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_last_baol }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_baol
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_baol
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_baol
+        if = {
+            limit = { from = { has_relic = r_the_last_baol } }
+            from = { remove_relic = r_the_last_baol }
+            add_relic = r_the_last_baol
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_orb_insight = {
+    casus_belli = hga_cb_seize_orb_insight
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_reality_perforator }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_orb_insight
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_orb_insight
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_orb_insight
+        if = {
+            limit = { from = { has_relic = r_reality_perforator } }
+            from = { remove_relic = r_reality_perforator }
+            add_relic = r_reality_perforator
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_cryo_core = {
+    casus_belli = hga_cb_seize_cryo_core
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_cryo_core }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_cryo_core
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_cryo_core
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_cryo_core
+        if = {
+            limit = { from = { has_relic = r_cryo_core } }
+            from = { remove_relic = r_cryo_core }
+            add_relic = r_cryo_core
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_weather_manipulator = {
+    casus_belli = hga_cb_seize_weather_manipulator
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_weather_manipulator }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_weather_manipulator
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_weather_manipulator
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_weather_manipulator
+        if = {
+            limit = { from = { has_relic = r_weather_manipulator } }
+            from = { remove_relic = r_weather_manipulator }
+            add_relic = r_weather_manipulator
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_tempest_invocator = {
+    casus_belli = hga_cb_seize_the_tempest_invocator
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_tempest_invocator }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_tempest_invocator
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_tempest_invocator
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_tempest_invocator
+        if = {
+            limit = { from = { has_relic = r_the_tempest_invocator } }
+            from = { remove_relic = r_the_tempest_invocator }
+            add_relic = r_the_tempest_invocator
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- ASTRAL RELICS -<
+
+hga_wg_seize_celestial_tear = {
+    casus_belli = hga_cb_seize_celestial_tear
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_celestial_tear }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_celestial_tear
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_celestial_tear
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_celestial_tear
+        if = {
+            limit = { from = { has_relic = r_celestial_tear } }
+            from = { remove_relic = r_celestial_tear }
+            add_relic = r_celestial_tear
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_daedalus_seal = {
+    casus_belli = hga_cb_seize_daedalus_seal
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_daedalus_seal }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_daedalus_seal
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_daedalus_seal
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_daedalus_seal
+        if = {
+            limit = { from = { has_relic = r_daedalus_seal } }
+            from = { remove_relic = r_daedalus_seal }
+            add_relic = r_daedalus_seal
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_ever_spinning_top = {
+    casus_belli = hga_cb_seize_ever_spinning_top
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_ever_spinning_top }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_ever_spinning_top
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_ever_spinning_top
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_ever_spinning_top
+        if = {
+            limit = { from = { has_relic = r_ever_spinning_top } }
+            from = { remove_relic = r_ever_spinning_top }
+            add_relic = r_ever_spinning_top
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_infinity_root = {
+    casus_belli = hga_cb_seize_infinity_root
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_infinity_root }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_infinity_root
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_infinity_root
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_infinity_root
+        if = {
+            limit = { from = { has_relic = r_infinity_root } }
+            from = { remove_relic = r_infinity_root }
+            add_relic = r_infinity_root
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_plasmic_core = {
+    casus_belli = hga_cb_seize_plasmic_core
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_plasmic_core }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_plasmic_core
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_plasmic_core
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_plasmic_core
+        if = {
+            limit = { from = { has_relic = r_plasmic_core } }
+            from = { remove_relic = r_plasmic_core }
+            add_relic = r_plasmic_core
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_continuum = {
+    casus_belli = hga_cb_seize_continuum
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_continuum }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_continuum
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_continuum
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_continuum
+        if = {
+            limit = { from = { has_relic = r_continuum } }
+            from = { remove_relic = r_continuum }
+            add_relic = r_continuum
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_time_crystal = {
+    casus_belli = hga_cb_seize_time_crystal
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_time_crystal }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_time_crystal
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_time_crystal
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_time_crystal
+        if = {
+            limit = { from = { has_relic = r_time_crystal } }
+            from = { remove_relic = r_time_crystal }
+            add_relic = r_time_crystal
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- CURATOR RELICS -<
+
+hga_wg_seize_celestial_resonator = {
+    casus_belli = hga_cb_seize_celestial_resonator
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_celestial_resonator }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_celestial_resonator
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_celestial_resonator
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_celestial_resonator
+        if = {
+            limit = { from = { has_relic = r_celestial_resonator } }
+            from = { remove_relic = r_celestial_resonator }
+            add_relic = r_celestial_resonator
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_gavel_of_the_tribunal = {
+    casus_belli = hga_cb_seize_gavel_of_the_tribunal
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_gavel_of_the_tribunal }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_gavel_of_the_tribunal
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_gavel_of_the_tribunal
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_gavel_of_the_tribunal
+        if = {
+            limit = { from = { has_relic = r_gavel_of_the_tribunal } }
+            from = { remove_relic = r_gavel_of_the_tribunal }
+            add_relic = r_gavel_of_the_tribunal
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_pattern_maker = {
+    casus_belli = hga_cb_seize_the_pattern_maker
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_pattern_maker }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_pattern_maker
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_pattern_maker
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_pattern_maker
+        if = {
+            limit = { from = { has_relic = r_the_pattern_maker } }
+            from = { remove_relic = r_the_pattern_maker }
+            add_relic = r_the_pattern_maker
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_tiyanki_matriarch_nerve_core = {
+    casus_belli = hga_cb_seize_tiyanki_matriarch_nerve_core
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_tiyanki_matriarch_nerve_core }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_tiyanki_matriarch_nerve_core
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_tiyanki_matriarch_nerve_core
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_tiyanki_matriarch_nerve_core
+        if = {
+            limit = { from = { has_relic = r_tiyanki_matriarch_nerve_core } }
+            from = { remove_relic = r_tiyanki_matriarch_nerve_core }
+            add_relic = r_tiyanki_matriarch_nerve_core
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_vaporous_mega_orchid = {
+    casus_belli = hga_cb_seize_vaporous_mega_orchid
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_vaporous_mega_orchid }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_vaporous_mega_orchid
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_vaporous_mega_orchid
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_vaporous_mega_orchid
+        if = {
+            limit = { from = { has_relic = r_vaporous_mega_orchid } }
+            from = { remove_relic = r_vaporous_mega_orchid }
+            add_relic = r_vaporous_mega_orchid
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_entangled_relay = {
+    casus_belli = hga_cb_seize_entangled_relay
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_entangled_relay }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_entangled_relay
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_entangled_relay
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_entangled_relay
+        if = {
+            limit = { from = { has_relic = r_entangled_relay } }
+            from = { remove_relic = r_entangled_relay }
+            add_relic = r_entangled_relay
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_executus_compendium = {
+    casus_belli = hga_cb_seize_executus_compendium
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_executus_compendium }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_executus_compendium
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_executus_compendium
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_executus_compendium
+        if = {
+            limit = { from = { has_relic = r_executus_compendium } }
+            from = { remove_relic = r_executus_compendium }
+            add_relic = r_executus_compendium
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_preservation_chamber = {
+    casus_belli = hga_cb_seize_preservation_chamber
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_preservation_chamber }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_preservation_chamber
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_preservation_chamber
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_preservation_chamber
+        if = {
+            limit = { from = { has_relic = r_preservation_chamber } }
+            from = { remove_relic = r_preservation_chamber }
+            add_relic = r_preservation_chamber
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_prototype_vir_core = {
+    casus_belli = hga_cb_seize_prototype_vir_core
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_prototype_vir_core }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_prototype_vir_core
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_prototype_vir_core
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_prototype_vir_core
+        if = {
+            limit = { from = { has_relic = r_prototype_vir_core } }
+            from = { remove_relic = r_prototype_vir_core }
+            add_relic = r_prototype_vir_core
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_propagandosphere = {
+    casus_belli = hga_cb_seize_propagandosphere
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_propagandosphere }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_propagandosphere
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_propagandosphere
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_propagandosphere
+        if = {
+            limit = { from = { has_relic = r_propagandosphere } }
+            from = { remove_relic = r_propagandosphere }
+            add_relic = r_propagandosphere
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_crystallinus_diffuser = {
+    casus_belli = hga_cb_seize_crystallinus_diffuser
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_crystallinus_diffuser }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_crystallinus_diffuser
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_crystallinus_diffuser
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_crystallinus_diffuser
+        if = {
+            limit = { from = { has_relic = r_crystallinus_diffuser } }
+            from = { remove_relic = r_crystallinus_diffuser }
+            add_relic = r_crystallinus_diffuser
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_everchanging_stone = {
+    casus_belli = hga_cb_seize_everchanging_stone
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_everchanging_stone }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_everchanging_stone
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_everchanging_stone
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_everchanging_stone
+        if = {
+            limit = { from = { has_relic = r_everchanging_stone } }
+            from = { remove_relic = r_everchanging_stone }
+            add_relic = r_everchanging_stone
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_flowmetal_alloy = {
+    casus_belli = hga_cb_seize_flowmetal_alloy
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_flowmetal_alloy }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_flowmetal_alloy
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_flowmetal_alloy
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_flowmetal_alloy
+        if = {
+            limit = { from = { has_relic = r_flowmetal_alloy } }
+            from = { remove_relic = r_flowmetal_alloy }
+            add_relic = r_flowmetal_alloy
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_pulsestone = {
+    casus_belli = hga_cb_seize_pulsestone
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_pulsestone }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_pulsestone
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_pulsestone
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_pulsestone
+        if = {
+            limit = { from = { has_relic = r_pulsestone } }
+            from = { remove_relic = r_pulsestone }
+            add_relic = r_pulsestone
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_modularium = {
+    casus_belli = hga_cb_seize_the_modularium
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_modularium }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_modularium
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_modularium
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_modularium
+        if = {
+            limit = { from = { has_relic = r_the_modularium } }
+            from = { remove_relic = r_the_modularium }
+            add_relic = r_the_modularium
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+# >- OTHER / EXTRA RELICS -<
+
+hga_wg_seize_galatron = {
+    casus_belli = hga_cb_seize_galatron
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_galatron }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_galatron
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_galatron
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_galatron
+        if = {
+            limit = { from = { has_relic = r_galatron } }
+            from = { remove_relic = r_galatron }
+            add_relic = r_galatron
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_surveyor = {
+    casus_belli = hga_cb_seize_surveyor
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_surveyor }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_surveyor
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_surveyor
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_surveyor
+        if = {
+            limit = { from = { has_relic = r_surveyor } }
+            from = { remove_relic = r_surveyor }
+            add_relic = r_surveyor
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_radience = {
+    casus_belli = hga_cb_seize_the_radience
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_vacuum_flower }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_radience
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_radience
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_radience
+        if = {
+            limit = { from = { has_relic = r_vacuum_flower } }
+            from = { remove_relic = r_vacuum_flower }
+            add_relic = r_vacuum_flower
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_mutated_voidworm_nest = {
+    casus_belli = hga_cb_seize_mutated_voidworm_nest
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_mutated_voidworm_nest }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_mutated_voidworm_nest
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_mutated_voidworm_nest
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_mutated_voidworm_nest
+        if = {
+            limit = { from = { has_relic = r_mutated_voidworm_nest } }
+            from = { remove_relic = r_mutated_voidworm_nest }
+            add_relic = r_mutated_voidworm_nest
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_lost_patron = {
+    casus_belli = hga_cb_seize_the_lost_patron
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_the_lost_patron }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_lost_patron
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_lost_patron
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_lost_patron
+        if = {
+            limit = { from = { has_relic = r_the_lost_patron } }
+            from = { remove_relic = r_the_lost_patron }
+            add_relic = r_the_lost_patron
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_pyroglyphic_codex = {
+    casus_belli = hga_cb_seize_pyroglyphic_codex
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_pyroglyphic_codex }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_pyroglyphic_codex
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_pyroglyphic_codex
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_pyroglyphic_codex
+        if = {
+            limit = { from = { has_relic = r_pyroglyphic_codex } }
+            from = { remove_relic = r_pyroglyphic_codex }
+            add_relic = r_pyroglyphic_codex
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_crystallized_singularity = {
+    casus_belli = hga_cb_seize_crystallized_singularity
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_crystallized_singularity }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_crystallized_singularity
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_crystallized_singularity
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_crystallized_singularity
+        if = {
+            limit = { from = { has_relic = r_crystallized_singularity } }
+            from = { remove_relic = r_crystallized_singularity }
+            add_relic = r_crystallized_singularity
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}
+
+hga_wg_seize_the_key = {
+    casus_belli = hga_cb_seize_the_key
+    set_defender_wargoal = wg_humiliation
+
+    should_ignore_federations = yes
+    hide_if_no_cb = yes
+    cede_claims = no
+
+    allowed_peace_offers = {
+        demand_surrender
+        status_quo
+        surrender
+    }
+
+    possible = {
+        from = { has_relic = r_wormhole_key }
+    }
+
+    on_wargoal_set = {
+        set_country_flag = hga_cannot_trade_the_key
+    }
+
+    on_status_quo = {
+        remove_country_flag = hga_cannot_trade_the_key
+    }
+
+    on_accept = {
+        remove_country_flag = hga_cannot_trade_the_key
+        if = {
+            limit = { from = { has_relic = r_wormhole_key } }
+            from = { remove_relic = r_wormhole_key }
+            add_relic = r_wormhole_key
+        }
+    }
+
+    ai_weight = {
+        # TODO
+    }
+}

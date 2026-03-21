@@ -5,9 +5,6 @@
 #   Crisis > Archaeological > Guardian > Precursor >
 #   Astral > Curator > Other
 # Excluded: r_wormhole_key_1-4, Celestial Chart variants, RulerChip
-#
-# Note for soncio: I don't understand AI weight, can you check if it's the other way around?
-# like its currently assuming a higher number means 'less likely to'
 # ============================================================
 
 
@@ -21,6 +18,7 @@ hga_trade_action_r_warlock = {
     potential = {
         is_country_type = default
         has_relic = r_unbidden_warlock
+        NOT = { has_country_flag = hga_cannot_trade_warlock }
 
         from = {
             is_country_type = default
@@ -127,6 +125,7 @@ hga_trade_action_r_contingency_core = {
     potential = {
         is_country_type = default
         has_relic = r_contingency_core
+        NOT = { has_country_flag = hga_cannot_trade_contingency_core }
 
         from = {
             is_country_type = default
@@ -228,6 +227,7 @@ hga_trade_action_r_prethoryn_queen = {
     potential = {
         is_country_type = default
         has_relic = r_prethoryn_queen
+        NOT = { has_country_flag = hga_cannot_trade_prethoryn_queen }
 
         from = {
             is_country_type = default
@@ -338,6 +338,7 @@ hga_trade_action_r_khans_throne = {
     potential = {
         is_country_type = default
         has_relic = r_khans_throne
+        NOT = { has_country_flag = hga_cannot_trade_khans_throne }
 
         from = {
             is_country_type = default
@@ -452,6 +453,7 @@ hga_trade_action_r_eternal_throne = {
     potential = {
         is_country_type = default
         has_relic = r_eternal_throne
+        NOT = { has_country_flag = hga_cannot_trade_eternal_throne }
 
         from = {
             is_country_type = default
@@ -557,6 +559,7 @@ hga_trade_action_r_cetanas_heart = {
     potential = {
         is_country_type = default
         has_relic = r_cetanas_heart
+        NOT = { has_country_flag = hga_cannot_trade_cetanas_heart }
 
         from = {
             is_country_type = default
@@ -666,6 +669,7 @@ hga_trade_action_r_core_of_the_reckoning = {
     potential = {
         is_country_type = default
         has_relic = r_core_of_the_reckoning
+        NOT = { has_country_flag = hga_cannot_trade_core_of_the_reckoning }
 
         from = {
             is_country_type = default
@@ -773,6 +777,7 @@ hga_trade_action_r_odryskan_crystal = {
     potential = {
         is_country_type = default
         has_relic = r_odryskan_crystal
+        NOT = { has_country_flag = hga_cannot_trade_odryskan_crystal }
 
         from = {
             is_country_type = default
@@ -874,6 +879,7 @@ hga_trade_action_r_ancient_sword = {
     potential = {
         is_country_type = default
         has_relic = r_ancient_sword
+        NOT = { has_country_flag = hga_cannot_trade_ancient_sword }
 
         from = {
             is_country_type = default
@@ -979,6 +985,7 @@ hga_trade_action_r_severed_head = {
     potential = {
         is_country_type = default
         has_relic = r_severed_head
+        NOT = { has_country_flag = hga_cannot_trade_severed_head }
 
         from = {
             is_country_type = default
@@ -1088,6 +1095,7 @@ hga_trade_action_r_galaxy = {
     potential = {
         is_country_type = default
         has_relic = r_galaxy
+        NOT = { has_country_flag = hga_cannot_trade_galaxy }
 
         from = {
             is_country_type = default
@@ -1189,6 +1197,7 @@ hga_trade_action_r_mechano_calibrator = {
     potential = {
         is_country_type = default
         has_relic = r_the_defragmentor
+        NOT = { has_country_flag = hga_cannot_trade_mechano_calibrator }
 
         from = {
             is_country_type = default
@@ -1290,6 +1299,7 @@ hga_trade_action_r_omnicodex = {
     potential = {
         is_country_type = default
         has_relic = r_omnicodex
+        NOT = { has_country_flag = hga_cannot_trade_omnicodex }
 
         from = {
             is_country_type = default
@@ -1396,6 +1406,7 @@ hga_trade_action_r_dragon_trophy = {
     potential = {
         is_country_type = default
         has_relic = r_dragon_trophy
+        NOT = { has_country_flag = hga_cannot_trade_dragon_trophy }
 
         from = {
             is_country_type = default
@@ -1501,6 +1512,7 @@ hga_trade_action_r_worm_scales = {
     potential = {
         is_country_type = default
         has_relic = r_worm_scales
+        NOT = { has_country_flag = hga_cannot_trade_worm_scales }
 
         from = {
             is_country_type = default
@@ -1599,6 +1611,7 @@ hga_trade_action_r_rubricator = {
     potential = {
         is_country_type = default
         has_relic = r_rubricator
+        NOT = { has_country_flag = hga_cannot_trade_rubricator }
 
         from = {
             is_country_type = default
@@ -1696,6 +1709,7 @@ hga_trade_action_r_toxic_god = {
     potential = {
         is_country_type = default
         has_relic = r_toxic_god
+        NOT = { has_country_flag = hga_cannot_trade_toxic_god }
 
         from = {
             is_country_type = default
@@ -1801,6 +1815,7 @@ hga_trade_action_r_voidspawn_heart = {
     potential = {
         is_country_type = default
         has_relic = r_voidspawn_myocardium
+        NOT = { has_country_flag = hga_cannot_trade_voidspawn_heart }
 
         from = {
             is_country_type = default
@@ -1916,6 +1931,7 @@ hga_trade_action_r_war_forge = {
     potential = {
         is_country_type = default
         has_relic = r_war_forge
+        NOT = { has_country_flag = hga_cannot_trade_war_forge }
 
         from = {
             is_country_type = default
@@ -2025,6 +2041,7 @@ hga_trade_action_r_pox_sample = {
     potential = {
         is_country_type = default
         has_relic = r_pox_sample
+        NOT = { has_country_flag = hga_cannot_trade_pox_sample }
 
         from = {
             is_country_type = default
@@ -2128,13 +2145,13 @@ hga_trade_action_r_pox_sample = {
     }
 }
 
-# ──────────────────────────────────────────────────────────────
 hga_trade_action_r_zro_crystal = {
     fire_and_forget = yes
 
     potential = {
         is_country_type = default
         has_relic = r_zro_crystal
+        NOT = { has_country_flag = hga_cannot_trade_zro_crystal }
 
         from = {
             is_country_type = default
@@ -2236,6 +2253,8 @@ hga_trade_action_r_baol = {
     potential = {
         is_country_type = default
         has_relic = r_the_last_baol
+        NOT = { has_country_flag = hga_cannot_trade_baol }
+
         from = {
             is_country_type = default
             NOT = { has_relic = r_the_last_baol }
@@ -2341,6 +2360,7 @@ hga_trade_action_r_orb_insight = {
     potential = {
         is_country_type = default
         has_relic = r_reality_perforator
+        NOT = { has_country_flag = hga_cannot_trade_orb_insight }
 
         from = {
             is_country_type = default
@@ -2443,6 +2463,7 @@ hga_trade_action_r_cryo_core = {
     potential = {
         is_country_type = default
         has_relic = r_cryo_core
+        NOT = { has_country_flag = hga_cannot_trade_cryo_core }
 
         from = {
             is_country_type = default
@@ -2549,6 +2570,7 @@ hga_trade_action_r_weather_manipulator = {
     potential = {
         is_country_type = default
         has_relic = r_weather_manipulator
+        NOT = { has_country_flag = hga_cannot_trade_weather_manipulator }
 
         from = {
             is_country_type = default
@@ -2646,6 +2668,7 @@ hga_trade_action_r_the_tempest_invocator = {
     potential = {
         is_country_type = default
         has_relic = r_the_tempest_invocator
+        NOT = { has_country_flag = hga_cannot_trade_the_tempest_invocator }
 
         from = {
             is_country_type = default
@@ -2757,6 +2780,7 @@ hga_trade_action_r_celestial_tear = {
     potential = {
         is_country_type = default
         has_relic = r_celestial_tear
+        NOT = { has_country_flag = hga_cannot_trade_celestial_tear }
 
         from = {
             is_country_type = default
@@ -2851,6 +2875,7 @@ hga_trade_action_r_daedalus_seal = {
     potential = {
         is_country_type = default
         has_relic = r_daedalus_seal
+        NOT = { has_country_flag = hga_cannot_trade_daedalus_seal }
 
         from = {
             is_country_type = default
@@ -2957,6 +2982,7 @@ hga_trade_action_r_ever_spinning_top = {
     potential = {
         is_country_type = default
         has_relic = r_ever_spinning_top
+        NOT = { has_country_flag = hga_cannot_trade_ever_spinning_top }
 
         from = {
             is_country_type = default
@@ -3058,6 +3084,7 @@ hga_trade_action_r_infinity_root = {
     potential = {
         is_country_type = default
         has_relic = r_infinity_root
+        NOT = { has_country_flag = hga_cannot_trade_infinity_root }
 
         from = {
             is_country_type = default
@@ -3164,6 +3191,7 @@ hga_trade_action_r_plasmic_core = {
     potential = {
         is_country_type = default
         has_relic = r_plasmic_core
+        NOT = { has_country_flag = hga_cannot_trade_plasmic_core }
 
         from = {
             is_country_type = default
@@ -3269,6 +3297,7 @@ hga_trade_action_r_continuum = {
     potential = {
         is_country_type = default
         has_relic = r_continuum
+        NOT = { has_country_flag = hga_cannot_trade_continuum }
 
         from = {
             is_country_type = default
@@ -3375,6 +3404,7 @@ hga_trade_action_r_time_crystal = {
     potential = {
         is_country_type = default
         has_relic = r_time_crystal
+        NOT = { has_country_flag = hga_cannot_trade_time_crystal }
 
         from = {
             is_country_type = default
@@ -3481,6 +3511,7 @@ hga_trade_action_r_celestial_resonator = {
     potential = {
         is_country_type = default
         has_relic = r_celestial_resonator
+        NOT = { has_country_flag = hga_cannot_trade_celestial_resonator }
 
         from = {
             is_country_type = default
@@ -3582,6 +3613,7 @@ hga_trade_action_r_gavel_of_the_tribunal = {
     potential = {
         is_country_type = default
         has_relic = r_gavel_of_the_tribunal
+        NOT = { has_country_flag = hga_cannot_trade_gavel_of_the_tribunal }
 
         from = {
             is_country_type = default
@@ -3687,6 +3719,7 @@ hga_trade_action_r_the_pattern_maker = {
     potential = {
         is_country_type = default
         has_relic = r_the_pattern_maker
+        NOT = { has_country_flag = hga_cannot_trade_the_pattern_maker }
 
         from = {
             is_country_type = default
@@ -3788,6 +3821,7 @@ hga_trade_action_r_tiyanki_matriarch_nerve_core = {
     potential = {
         is_country_type = default
         has_relic = r_tiyanki_matriarch_nerve_core
+        NOT = { has_country_flag = hga_cannot_trade_tiyanki_matriarch_nerve_core }
 
         from = {
             is_country_type = default
@@ -3885,6 +3919,7 @@ hga_trade_action_r_vaporous_mega_orchid = {
     potential = {
         is_country_type = default
         has_relic = r_vaporous_mega_orchid
+        NOT = { has_country_flag = hga_cannot_trade_vaporous_mega_orchid }
 
         from = {
             is_country_type = default
@@ -3990,6 +4025,7 @@ hga_trade_action_r_entangled_relay = {
     potential = {
         is_country_type = default
         has_relic = r_entangled_relay
+        NOT = { has_country_flag = hga_cannot_trade_entangled_relay }
 
         from = {
             is_country_type = default
@@ -4039,7 +4075,6 @@ hga_trade_action_r_entangled_relay = {
         modifier = {
             factor = 1.1
             is_hive_empire = yes
-
         }
 
         # >- OPINION -<
@@ -4096,6 +4131,7 @@ hga_trade_action_r_executus_compendium = {
     potential = {
         is_country_type = default
         has_relic = r_executus_compendium
+        NOT = { has_country_flag = hga_cannot_trade_executus_compendium }
 
         from = {
             is_country_type = default
@@ -4201,6 +4237,7 @@ hga_trade_action_r_preservation_chamber = {
     potential = {
         is_country_type = default
         has_relic = r_preservation_chamber
+        NOT = { has_country_flag = hga_cannot_trade_preservation_chamber }
 
         from = {
             is_country_type = default
@@ -4302,6 +4339,7 @@ hga_trade_action_r_prototype_vir_core = {
     potential = {
         is_country_type = default
         has_relic = r_prototype_vir_core
+        NOT = { has_country_flag = hga_cannot_trade_prototype_vir_core }
 
         from = {
             is_country_type = default
@@ -4407,6 +4445,7 @@ hga_trade_action_r_propagandosphere = {
     potential = {
         is_country_type = default
         has_relic = r_propagandosphere
+        NOT = { has_country_flag = hga_cannot_trade_propagandosphere }
 
         from = {
             is_country_type = default
@@ -4516,6 +4555,7 @@ hga_trade_action_r_crystallinus_diffuser = {
     potential = {
         is_country_type = default
         has_relic = r_crystallinus_diffuser
+        NOT = { has_country_flag = hga_cannot_trade_crystallinus_diffuser }
 
         from = {
             is_country_type = default
@@ -4617,6 +4657,7 @@ hga_trade_action_r_everchanging_stone = {
     potential = {
         is_country_type = default
         has_relic = r_everchanging_stone
+        NOT = { has_country_flag = hga_cannot_trade_everchanging_stone }
 
         from = {
             is_country_type = default
@@ -4714,6 +4755,7 @@ hga_trade_action_r_flowmetal_alloy = {
     potential = {
         is_country_type = default
         has_relic = r_flowmetal_alloy
+        NOT = { has_country_flag = hga_cannot_trade_flowmetal_alloy }
 
         from = {
             is_country_type = default
@@ -4763,7 +4805,6 @@ hga_trade_action_r_flowmetal_alloy = {
         modifier = {
             factor = 1.2
             is_hive_empire = yes
-
         }
 
         # >- OPINION -<
@@ -4820,6 +4861,7 @@ hga_trade_action_r_pulsestone = {
     potential = {
         is_country_type = default
         has_relic = r_pulsestone
+        NOT = { has_country_flag = hga_cannot_trade_pulsestone }
 
         from = {
             is_country_type = default
@@ -4925,6 +4967,7 @@ hga_trade_action_r_the_modularium = {
     potential = {
         is_country_type = default
         has_relic = r_the_modularium
+        NOT = { has_country_flag = hga_cannot_trade_the_modularium }
 
         from = {
             is_country_type = default
@@ -5036,6 +5079,7 @@ hga_trade_action_r_galatron = {
     potential = {
         is_country_type = default
         has_relic = r_galatron
+        NOT = { has_country_flag = hga_cannot_trade_galatron }
 
         from = {
             is_country_type = default
@@ -5142,6 +5186,7 @@ hga_trade_action_r_surveyor = {
     potential = {
         is_country_type = default
         has_relic = r_surveyor
+        NOT = { has_country_flag = hga_cannot_trade_surveyor }
 
         from = {
             is_country_type = default
@@ -5235,6 +5280,7 @@ hga_trade_action_r_the_radience = {
     potential = {
         is_country_type = default
         has_relic = r_vacuum_flower
+        NOT = { has_country_flag = hga_cannot_trade_the_radience }
 
         from = {
             is_country_type = default
@@ -5324,6 +5370,7 @@ hga_trade_action_r_mutated_voidworm_nest = {
     potential = {
         is_country_type = default
         has_relic = r_mutated_voidworm_nest
+        NOT = { has_country_flag = hga_cannot_trade_mutated_voidworm_nest }
 
         from = {
             is_country_type = default
@@ -5425,6 +5472,7 @@ hga_trade_action_r_the_lost_patron = {
     potential = {
         is_country_type = default
         has_relic = r_the_lost_patron
+        NOT = { has_country_flag = hga_cannot_trade_the_lost_patron }
 
         from = {
             is_country_type = default
@@ -5518,6 +5566,7 @@ hga_trade_action_r_pyroglyphic_codex = {
     potential = {
         is_country_type = default
         has_relic = r_pyroglyphic_codex
+        NOT = { has_country_flag = hga_cannot_trade_pyroglyphic_codex }
 
         from = {
             is_country_type = default
@@ -5611,6 +5660,7 @@ hga_trade_action_r_crystallized_singularity = {
     potential = {
         is_country_type = default
         has_relic = r_crystallized_singularity
+        NOT = { has_country_flag = hga_cannot_trade_crystallized_singularity }
 
         from = {
             is_country_type = default
@@ -5700,6 +5750,7 @@ hga_trade_action_r_the_key = {
     potential = {
         is_country_type = default
         has_relic = r_wormhole_key
+        NOT = { has_country_flag = hga_cannot_trade_the_key }
 
         from = {
             is_country_type = default
@@ -5733,7 +5784,7 @@ hga_trade_action_r_the_key = {
             }
         }
 
-        # >- CUSTOM: TheKey -<
+        # >- CUSTOM: The Key -<
 
         # >- OPINION -<
         modifier = {
