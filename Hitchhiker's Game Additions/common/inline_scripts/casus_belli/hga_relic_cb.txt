@@ -1,0 +1,33 @@
+# common/inline_scripts/casus_belli/hga_relic_cb.txt
+# Authors: HGA
+
+# Usage:
+#inline_script = {
+#	script = casus_belli/hga_relic_cb
+#	CB_KEY   = hga_cb_seize_warlock
+#	RELIC_ID = r_unbidden_warlock
+#}
+
+# CB definition
+	$CB_KEY$ = {
+		show_in_diplomacy = yes
+		show_notification = yes
+
+		potential = {
+			is_country_type = default
+			from = { has_relic = $RELIC_ID$ }
+			has_intel_level = {
+				who = from
+				category = economy
+				level >= 2
+			}
+		}
+
+		is_valid = {
+			hga_can_seize_relic_from = yes
+			from = { has_relic = $RELIC_ID$ }
+		}
+	}
+# /
+
+# Do not remove below v

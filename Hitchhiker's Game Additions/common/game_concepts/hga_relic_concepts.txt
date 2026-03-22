@@ -1,0 +1,453 @@
+# common/game_concepts/hga_relic_concepts.txt
+# Authors: HGA
+
+	concept_hga_r_unbidden_warlock = {
+		alias = { concept_hga_r_unbidden_warlocks }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_unbidden_warlock"
+		}
+	}
+	concept_hga_r_contingency_core = {
+		alias = { concept_hga_r_contingency_cores }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_contingency_core"
+		}
+	}
+	concept_hga_r_prethoryn_queen = {
+		alias = { concept_hga_r_prethoryn_queens }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_prethoryn_queen"
+		}
+	}
+	concept_hga_r_khans_throne = {
+		alias = { concept_hga_r_khans_thrones }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_khans_throne"
+		}
+	}
+	concept_hga_r_eternal_throne = {
+		alias = { concept_hga_r_eternal_thrones }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_eternal_throne"
+		}
+	}
+	concept_hga_r_cetanas_heart = {
+		alias = { concept_hga_r_cetanas_hearts }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_cetanas_heart"
+		}
+	}
+	concept_hga_r_core_of_the_reckoning = {
+		alias = { concept_hga_r_core_of_the_reckonings }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_core_of_the_reckoning"
+		}
+	}
+	concept_hga_r_odryskan_crystal = {
+		alias = { concept_hga_r_odryskan_crystals }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_odryskan_crystal"
+		}
+	}
+	concept_hga_r_ancient_sword = {
+		alias = { concept_hga_r_ancient_swords }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_ancient_sword"
+		}
+	}
+	concept_hga_r_severed_head = {
+		alias = { concept_hga_r_severed_heads }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_severed_head"
+		}
+	}
+	concept_hga_r_galaxy = {
+		alias = { concept_hga_r_galaxys }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_galaxy"
+		}
+	}
+	concept_hga_r_the_defragmentor = {
+		alias = { concept_hga_r_the_defragmentors }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_mechano_calibrator"
+		}
+	}
+	concept_hga_r_omnicodex = {
+		alias = { concept_hga_r_omnicodexs }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_omnicodex"
+		}
+	}
+	concept_hga_r_dragon_trophy = {
+		alias = { concept_hga_r_dragon_trophys }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_dragon_trophy"
+		}
+	}
+	concept_hga_r_worm_scales = {
+		alias = { concept_hga_r_worm_scaless }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_worm_scales"
+		}
+	}
+	concept_hga_r_rubricator = {
+		alias = { concept_hga_r_rubricators }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_rubricator"
+		}
+	}
+	concept_hga_r_toxic_god = {
+		alias = { concept_hga_r_toxic_gods }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_toxic_god"
+		}
+	}
+	concept_hga_r_voidspawn_myocardium = {
+		alias = { concept_hga_r_voidspawn_myocardiums }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_voidspawn_heart"
+		}
+	}
+	concept_hga_r_war_forge = {
+		alias = { concept_hga_r_war_forges }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_war_forge"
+		}
+	}
+	concept_hga_r_pox_sample = {
+		alias = { concept_hga_r_pox_samples }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_pox_sample"
+		}
+	}
+	concept_hga_r_zro_crystal = {
+		alias = { concept_hga_r_zro_crystals }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_zro_crystal"
+		}
+	}
+	concept_hga_r_the_last_baol = {
+		alias = { concept_hga_r_the_last_baols }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_baol"
+		}
+	}
+	concept_hga_r_reality_perforator = {
+		alias = { concept_hga_r_reality_perforators }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_orb_insight"
+		}
+	}
+	concept_hga_r_cryo_core = {
+		alias = { concept_hga_r_cryo_cores }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_cryo_core"
+		}
+	}
+	concept_hga_r_weather_manipulator = {
+		alias = { concept_hga_r_weather_manipulators }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_weather_manipulation"
+		}
+	}
+	concept_hga_r_the_tempest_invocator = {
+		alias = { concept_hga_r_the_tempest_invocators }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_the_tempest_exsoulcillator"
+		}
+	}
+	concept_hga_r_celestial_tear = {
+		alias = { concept_hga_r_celestial_tears }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_celestial_tear"
+		}
+	}
+	concept_hga_r_daedalus_seal = {
+		alias = { concept_hga_r_daedalus_seals }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_daedalus_seal"
+		}
+	}
+	concept_hga_r_ever_spinning_top = {
+		alias = { concept_hga_r_ever_spinning_tops }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_ever_spinning_top"
+		}
+	}
+	concept_hga_r_infinity_root = {
+		alias = { concept_hga_r_infinity_roots }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_infinity_root"
+		}
+	}
+	concept_hga_r_plasmic_core = {
+		alias = { concept_hga_r_plasmic_cores }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_plasmic_core"
+		}
+	}
+	concept_hga_r_continuum = {
+		alias = { concept_hga_r_continuums }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_continuum"
+		}
+	}
+	concept_hga_r_time_crystal = {
+		alias = { concept_hga_r_time_crystals }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_time_crystal"
+		}
+	}
+	concept_hga_r_celestial_resonator = {
+		alias = { concept_hga_r_celestial_resonators }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_celestial_resonator"
+		}
+	}
+	concept_hga_r_gavel_of_the_tribunal = {
+		alias = { concept_hga_r_gavel_of_the_tribunals }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_gavel_of_the_tribunal"
+		}
+	}
+	concept_hga_r_the_pattern_maker = {
+		alias = { concept_hga_r_the_pattern_makers }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_the_pattern_maker"
+		}
+	}
+	concept_hga_r_tiyanki_matriarch_nerve_core = {
+		alias = { concept_hga_r_tiyanki_matriarch_nerve_cores }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_tiyanki_matriarch_nerve_core"
+		}
+	}
+	concept_hga_r_vaporous_mega_orchid = {
+		alias = { concept_hga_r_vaporous_mega_orchids }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_vaporous_mega_orchid"
+		}
+	}
+	concept_hga_r_entangled_relay = {
+		alias = { concept_hga_r_entangled_relays }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_entangled_relay"
+		}
+	}
+	concept_hga_r_executus_compendium = {
+		alias = { concept_hga_r_executus_compendiums }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_executus_compendium"
+		}
+	}
+	concept_hga_r_preservation_chamber = {
+		alias = { concept_hga_r_preservation_chambers }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_preservation_chamber"
+		}
+	}
+	concept_hga_r_prototype_vir_core = {
+		alias = { concept_hga_r_prototype_vir_cores }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_prototype_vir_core"
+		}
+	}
+	concept_hga_r_propagandosphere = {
+		alias = { concept_hga_r_propagandospheres }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_propagandosphere"
+		}
+	}
+	concept_hga_r_crystallinus_diffuser = {
+		alias = { concept_hga_r_crystallinus_diffusers }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_crystallinus_diffuser"
+		}
+	}
+	concept_hga_r_everchanging_stone = {
+		alias = { concept_hga_r_everchanging_stones }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_everchanging_stone"
+		}
+	}
+	concept_hga_r_flowmetal_alloy = {
+		alias = { concept_hga_r_flowmetal_alloys }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_flowmetal_alloy"
+		}
+	}
+	concept_hga_r_pulsestone = {
+		alias = { concept_hga_r_pulsestones }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_pulsestone"
+		}
+	}
+	concept_hga_r_the_modularium = {
+		alias = { concept_hga_r_the_modulariums }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_the_modularium"
+		}
+	}
+	concept_hga_r_galatron = {
+		alias = { concept_hga_r_galatrons }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_galatron"
+		}
+	}
+	concept_hga_r_surveyor = {
+		alias = { concept_hga_r_surveyors }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_surveyor"
+		}
+	}
+	concept_hga_r_vacuum_flower = {
+		alias = { concept_hga_r_vacuum_flowers }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_the_radiance"
+		}
+	}
+	concept_hga_r_mutated_voidworm_nest = {
+		alias = { concept_hga_r_mutated_voidworm_nests }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_mutated_voidworm_nest"
+		}
+	}
+	concept_hga_r_the_lost_patron = {
+		alias = { concept_hga_r_the_lost_patrons }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_the_lost_patron"
+		}
+	}
+	concept_hga_r_pyroglyphic_codex = {
+		alias = { concept_hga_r_pyroglyphic_codexs }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_pyroglyphic_codex"
+		}
+	}
+	concept_hga_r_crystallized_singularity = {
+		alias = { concept_hga_r_crystallized_singularitys }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_crystallized_singularity"
+		}
+	}
+	concept_hga_r_wormhole_key = {
+		alias = { concept_hga_r_wormhole_keys }
+		databank = {
+			category = db_exploration
+			icon = "GFX_text_databank_exploration"
+			picture = "GFX_relic_wormhole_key_5"
+		}
+	}
+
+# Do not remove below v
