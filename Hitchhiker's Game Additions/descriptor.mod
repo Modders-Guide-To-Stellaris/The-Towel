@@ -3,4 +3,4 @@ tags={
 	"Overhaul"
 }
 name="Hitchhiker's Game Additions"
-supported_version="v4.3.0"
+supported_version="v4.3.*"
