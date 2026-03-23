@@ -1,4 +1,7 @@
-﻿l_english:
+﻿# localisation/english/hga_van_relic_trade_l_english.yml
+# Authors: HGA
+
+l_english:
 	hga_trade_relic_desc:0 "Our empire sees no value in this artifact. Perhaps it can fetch a price from a less discerning power."
 	hga_trade_action:0 "Trade Relic:"
 

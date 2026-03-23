@@ -3,176 +3,172 @@
 
 l_english:
 
-	 concept_hga_r_unbidden_warlock:0 "$r_unbidden_warlock$"
-	 concept_hga_r_unbidden_warlock_desc:0 "§L$r_unbidden_warlock_desc$§!\n\n§YPASSIVE§!\n£MOD_SHIP_SPEED_MULT£ $MOD_SHIP_SPEED_MULT$: §G+30%§!\n£MOD_SHIP_WEAPON_RANGE_MULT£ $MOD_SHIP_WEAPON_RANGE_MULT$: §G+30%§!\n\n§YTRIUMPH§!\n$unbidden_ritual$"
+	concept_hga_r_unbidden_warlock:0 "$r_unbidden_warlock$"
+	concept_hga_r_unbidden_warlock_desc:0 "§L$r_unbidden_warlock_desc$§!"
 
-	 concept_hga_r_contingency_core:0 "$r_contingency_core$"
-	 concept_hga_r_contingency_core_desc:0 "§L$r_contingency_core_desc$§!\n\n§YPASSIVE§!\n$relic_contingecy_core$\n£MOD_PLANET_POP_ASSEMBLY_MULT£ $mod_planet_pop_assembly_mult$: §G+100%§! (non-hive)\n£mod_engineering_research_produces_mult£ $mod_country_engineering_research_produces_mult$: §G+150%§! (hive)\n\n§YTRIUMPH§!\n$contingency_calculation$"
+	concept_hga_r_contingency_core:0 "$r_contingency_core$"
+	concept_hga_r_contingency_core_desc:0 "§L$r_contingency_core_desc$§!"
 
-	 concept_hga_r_prethoryn_queen:0 "$r_prethoryn_queen$"
-	 concept_hga_r_prethoryn_queen_desc:0 "§L$r_prethoryn_queen_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_SOCIETY_TECH_RESEARCH_SPEED£ $mod_country_society_tech_research_speed$: §G+50%§!\n£mod_ship_fire_rate_mult£ $mod_weapon_swarm_weapon_fire_rate_mult$: varies (scales with Brood)\n\n§YTRIUMPH§!\n$relic_queen_spawn$"
+	concept_hga_r_prethoryn_queen:0 "$r_prethoryn_queen$"
+	concept_hga_r_prethoryn_queen_desc:0 "§L$r_prethoryn_queen_desc$§!"
 
-	 concept_hga_r_khans_throne:0 "$r_khans_throne$"
-	 concept_hga_r_khans_throne_desc:0 "§L$r_khans_throne_desc$§!\n\n§YPASSIVE§!\n£mod_country_claim_influence_cost_mult£ $mod_country_claim_influence_cost_mult$: §R-20%§!\n$khans_throne_passive_effect$\n\n§YTRIUMPH§!\n$drums_of_war$"
+	concept_hga_r_khans_throne:0 "$r_khans_throne$"
+	concept_hga_r_khans_throne_desc:0 "§L$r_khans_throne_desc$§!"
 
-	 concept_hga_r_eternal_throne:0 "$r_eternal_throne$"
-	 concept_hga_r_eternal_throne_desc:0 "§L$r_eternal_throne_desc$§!\n\n§YPASSIVE§!\n$eternal_throne_active_effect_tt$\n\n§YTRIUMPH§!\n$eternal_throne_modifier$"
+	concept_hga_r_eternal_throne:0 "$r_eternal_throne$"
+	concept_hga_r_eternal_throne_desc:0 "§L$r_eternal_throne_desc$§!"
 
-	 concept_hga_r_cetanas_heart:0 "$r_cetanas_heart$"
-	 concept_hga_r_cetanas_heart_desc:0 "§L$r_cetanas_heart_desc$§!\n\n§YPASSIVE§!\n£MOD_PLANETARY_ASCENSION_COST_MULT£ $mod_planetary_ascension_cost_mult$: §R-50%§!\n\n§YTRIUMPH§!\n$relic_cetanas_heart_active$"
+	concept_hga_r_cetanas_heart:0 "$r_cetanas_heart$"
+	concept_hga_r_cetanas_heart_desc:0 "§L$r_cetanas_heart_desc$§!"
 
-	 concept_hga_r_core_of_the_reckoning:0 "$r_core_of_the_reckoning$"
-	 concept_hga_r_core_of_the_reckoning_desc:0 "§L$r_core_of_the_reckoning_desc$§!\n\n§YPASSIVE§!\n£mod_non_artificial_planet_jobs_produces_mult£ $mod_planet_jobs_produces_mult$: §G+25%§!\n£a£ $mod_station_gatherers_produces_mult$: §G+25%§!\n£MOD_COUNTRY_NAVAL_CAP_MULT£ $mod_country_naval_cap_mult$: §G+25%§!\n£MOD_SHIPS_UPKEEP_MULT£ $mod_ships_upkeep_mult$: §R-25%§!\n£MOD_COUNTRY_BASE_INFLUENCE_PRODUCES_ADD£ $mod_country_base_influence_produces_add$: §G+1§!\n£MOD_COUNTRY_STARBASE_CAPACITY_ADD£ $mod_country_starbase_capacity_add$: §G+1§!\n(all scale with Reckoning level)\n\n§YTRIUMPH§!\n$core_of_reckoning_active_effect_tt$"
+	concept_hga_r_core_of_the_reckoning:0 "$r_core_of_the_reckoning$"
+	concept_hga_r_core_of_the_reckoning_desc:0 "§L$r_core_of_the_reckoning_desc$§!"
 
-	 concept_hga_r_odryskan_crystal:0 "$r_odryskan_crystal$"
-	 concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_RARE_CRYSTALS_PRODUCES_MULT£ $mod_country_rare_crystals_produces_mult$: §G+15%§!\n\n§YTRIUMPH§!\n£energy£ §G+60§! months of £rare_crystals£ income, random Scientist gains Maniacal trait"
+	concept_hga_r_odryskan_crystal:0 "$r_odryskan_crystal$"
+	concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!"
 
-	 concept_hga_r_ancient_sword:0 "$r_ancient_sword$"
-	 concept_hga_r_ancient_sword_desc:0 "§L$r_ancient_sword_desc$§!\n\n§YPASSIVE§!\n£MOD_ARMY_MORALE£ $mod_army_morale$: §G+25%§!\n£MOD_PLANET_SENSOR_RANGE_ADD£ $mod_planet_sensor_range_add$: §G+2§!\n£MOD_DIPLO_WEIGHT_MULT£ $mod_diplo_weight_mult$: §G+10%§!\n\n§YTRIUMPH§!\n$ancient_sword$"
+	concept_hga_r_ancient_sword:0 "$r_ancient_sword$"
+	concept_hga_r_ancient_sword_desc:0 "§L$r_ancient_sword_desc$§!"
 
-	 concept_hga_r_severed_head:0 "$r_severed_head$"
-	 concept_hga_r_severed_head_desc:0 "§L$r_severed_head_desc$§!\n\n§YPASSIVE§!\n$r_severed_head_passive$\n\n§YTRIUMPH§!\n$relic_summon_pilgrims$\n$severed_head_modifier$"
+	concept_hga_r_severed_head:0 "$r_severed_head$"
+	concept_hga_r_severed_head_desc:0 "§L$r_severed_head_desc$§!"
 
-	 concept_hga_r_galaxy:0 "$r_galaxy$"
-	 concept_hga_r_galaxy_desc:0 "§L$r_galaxy_desc$§!\n\n§YPASSIVE§!\n£MOD_ALL_TECHNOLOGY_RESEARCH_SPEED£ $mod_all_technology_research_speed$: §G+5%§!\n\n§YTRIUMPH§!\n$relic_galaxy_active$"
+	concept_hga_r_galaxy:0 "$r_galaxy$"
+	concept_hga_r_galaxy_desc:0 "§L$r_galaxy_desc$§!"
 
-	 concept_hga_r_mechano_calibrator:0 "$r_the_defragmentor$"
-	 concept_hga_r_mechano_calibrator_desc:0 "§L$r_the_defragmentor_desc$§!\n\n§YPASSIVE§!\n£MOD_PLANET_POPS_ROBOTICS_UPKEEP_MULT£ $mod_planet_pops_robotics_upkeep_mult$: §R-10%§!\n£MOD_PLANET_BUILDINGS_ENERGY_UPKEEP_MULT£ $mod_planet_buildings_energy_upkeep_mult$: §R-10%§!\n£MOD_PLANET_DISTRICTS_ENERGY_UPKEEP_MULT£ $mod_planet_districts_energy_upkeep_mult$: §R-10%§!\n£MOD_PLANET_JOBS_ENERGY_UPKEEP_MULT£ $mod_planet_jobs_energy_upkeep_mult$: §R-10%§!\n£MOD_POP_HOUSING_USAGE_MULT£ $mod_pop_housing_usage_mult$: §R-10%§! (machine only)\n\n§YTRIUMPH§!\n$relic_defragmentor$"
+	concept_hga_r_mechano_calibrator:0 "$r_the_defragmentor$"
+	concept_hga_r_mechano_calibrator_desc:0 "§L$r_the_defragmentor_desc$§!"
 
-	 concept_hga_r_omnicodex:0 "$r_omnicodex$"
-	 concept_hga_r_omnicodex_desc:0 "§L$r_omnicodex_desc$§!\n\n§YPASSIVE§!\n£MOD_BIOLOGICAL_SPECIES_TRAIT_POINTS_ADD£ $mod_BIOLOGICAL_species_trait_points_add$: §G+1§!\n\n§YTRIUMPH§!\n$relic_omnicodex_active$"
+	concept_hga_r_omnicodex:0 "$r_omnicodex$"
+	concept_hga_r_omnicodex_desc:0 "§L$r_omnicodex_desc$§!"
 
-	 concept_hga_r_dragon_trophy:0 "$r_dragon_trophy$"
-	 concept_hga_r_dragon_trophy_desc:0 "§L$r_dragon_trophy_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_UNITY_PRODUCES_MULT£ $mod_country_unity_produces_mult$: §G+10%§!\n\n§YTRIUMPH§!\n$ether_drake_triumph$"
+	concept_hga_r_dragon_trophy:0 "$r_dragon_trophy$"
+	concept_hga_r_dragon_trophy_desc:0 "§L$r_dragon_trophy_desc$§!"
 
-	 concept_hga_r_worm_scales:0 "$r_worm_scales$"
-	 concept_hga_r_worm_scales_desc:0 "§L$r_worm_scales_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED£ $mod_country_physics_tech_research_speed$: §G+5%§!\n\n§YTRIUMPH§!\n$worm_scales$"
+	concept_hga_r_worm_scales:0 "$r_worm_scales$"
+	concept_hga_r_worm_scales_desc:0 "§L$r_worm_scales_desc$§!"
 
-	 concept_hga_r_rubricator:0 "$r_rubricator$"
-	 concept_hga_r_rubricator_desc:0 "§L$r_ubricator_desc$§!\n\n§YPASSIVE§!\n£MOD_WEAPON_ARCHAEOTECH_WEAPON_DAMAGE_MULT£ $mod_weapon_archaeotech_weapon_damage_mult$: §G+15%§!\n£society_research£ §G+20§! monthly\n\n§YTRIUMPH§!\n$relic_rubricator_active$"
+	concept_hga_r_rubricator:0 "$r_rubricator$"
+	concept_hga_r_rubricator_desc:0 "§L$r_ubricator_desc$§!"
 
-	 concept_hga_r_toxic_god:0 "$r_toxic_god$"
-	 concept_hga_r_toxic_god_desc:0 "§L$r_toxic_god_desc$§!\n\n§YPASSIVE§!\n£MOD_WEAPON_TYPE_STRIKE_CRAFT_WEAPON_DAMAGE_MULT£ $mod_weapon_type_strike_craft_weapon_damage_mult$: §G+15%§!\n\n§YTRIUMPH§!\n$r_toxic_god_knights_effect$ (Toxic Knights)
-£exotic_gases£ §G+1000§! (others)"
+	concept_hga_r_toxic_god:0 "$r_toxic_god$"
+	concept_hga_r_toxic_god_desc:0 "§L$r_toxic_god_desc$§!"
 
-	 concept_hga_r_voidspawn_heart:0 "$r_voidspawn_myocardium$"
-	 concept_hga_r_voidspawn_heart_desc:0 "§L$r_voidspawn_myocardium_desc$§!\n\n§YPASSIVE§!\n£MOD_SHIP_FIRE_RATE_MULT£ $mod_ship_fire_rate_mult$: §G+10%§!\n£MOD_SHIP_DAMAGE_REDUCTION_MULT£ $mod_ship_damage_reduction_mult$: §G+5%§!\n\n§YTRIUMPH§!\n$voidslayers$ (standard)
-$eat_the_voidspawn$ (Behemoth present — §Rconsumes relic§!)"
+	concept_hga_r_voidspawn_heart:0 "$r_voidspawn_myocardium$"
+	concept_hga_r_voidspawn_heart_desc:0 "§L$r_voidspawn_myocardium_desc$§!"
 
-	 concept_hga_r_war_forge:0 "$r_war_forge$"
-	 concept_hga_r_war_forge_desc:0 "§L$r_war_forge_desc$§!\n\n§YPASSIVE§!\n$relic_cybrex_passive$\n\n§YTRIUMPH§!\n£alloys£ §G+1000§! per Cybrex building (scaling)"
+	concept_hga_r_war_forge:0 "$r_war_forge$"
+	concept_hga_r_war_forge_desc:0 "§L$r_war_forge_desc$§!"
 
-	 concept_hga_r_pox_sample:0 "$r_pox_sample$"
-	 concept_hga_r_pox_sample_desc:0 "§L$r_pox_sample_desc$§!\n\n§YPASSIVE§!\n£MOD_LEADER_LIFESPAN_ADD£ $mod_leader_lifespan_add$: §G+20 years§!\n$relic_javorian_pox$\n\n§YTRIUMPH§!\n$javorian_pox$"
+	concept_hga_r_pox_sample:0 "$r_pox_sample$"
+	concept_hga_r_pox_sample_desc:0 "§L$r_pox_sample_desc$§!"
 
-	 concept_hga_r_zro_crystal:0 "$r_zro_crystal$"
-	 concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!\n\n§YPASSIVE§!\n£MOD_SHROUD_DELVE_COOLDOWN£ $mod_shroud_delve_cooldown$: §R-50%§!\n$relic_zro_crystal_passive$\n\n§YTRIUMPH§!\n$relic_zro_crystal_active$"
+	concept_hga_r_zro_crystal:0 "$r_zro_crystal$"
+	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!"
 
-	 concept_hga_r_baol:0 "$r_the_last_baol$"
-	 concept_hga_r_baol_desc:0 "§L$r_the_last_baol_desc$§!\n\n§YPASSIVE§!\n£MOD_LOGISTIC_GROWTH_MULT£ $mod_logistic_growth_mult$: §G+10%§!\n£MOD_COUNTRY_SOCIETY_RESEARCH_PRODUCES_MULT£ $mod_country_society_research_produces_mult$: §G+10%§! (machine/wilderness only)\n\n§YTRIUMPH§!\n$relic_last_baol_active_tooltip$"
+	concept_hga_r_baol:0 "$r_the_last_baol$"
+	concept_hga_r_baol_desc:0 "§L$r_the_last_baol_desc$§!"
 
-	 concept_hga_r_orb_insight:0 "$r_reality_perforator$"
-	 concept_hga_r_orb_insight_desc:0 "§L$r_eality_perforator_desc$§!\n\n§YPASSIVE§!\n£MOD_POP_AMENITIES_USAGE_MULT£ $mod_pop_amenities_usage_mult$: §R-10%§!\n\n§YTRIUMPH§!\n$relic_reality_perforated$"
+	concept_hga_r_orb_insight:0 "$r_reality_perforator$"
+	concept_hga_r_orb_insight_desc:0 "§L$r_eality_perforator_desc$§!"
 
-	 concept_hga_r_cryo_core:0 "$r_cryo_core$"
-	 concept_hga_r_cryo_core_desc:0 "§L$r_cryo_core_desc$§!\n\n§YPASSIVE§!\n£MOD_PLANET_COLONY_DEVELOPMENT_SPEED_MULT£ $mod_planet_colony_development_speed_mult$: §G+200%§!\n£MOD_WEAPON_TYPE_ENERGY_WEAPON_FIRE_RATE_MULT£ $mod_weapon_type_energy_weapon_fire_rate_mult$: §G+20%§!\n\n§YTRIUMPH§!\n$yuht_cryo_core$"
+	concept_hga_r_cryo_core:0 "$r_cryo_core$"
+	concept_hga_r_cryo_core_desc:0 "§L$r_cryo_core_desc$§!"
 
-	 concept_hga_r_weather_manipulator:0 "$r_weather_manipulator$"
-	 concept_hga_r_weather_manipulator_desc:0 "§L$r_weather_manipulator_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_PHYSICS_RESEARCH_PRODUCES_MULT£ $mod_country_physics_research_produces_mult$: §G+15%§!\n\n§YTRIUMPH§!\n$storm_relic_repelling_field_modifier_tt$"
+	concept_hga_r_weather_manipulator:0 "$r_weather_manipulator$"
+	concept_hga_r_weather_manipulator_desc:0 "§L$r_weather_manipulator_desc$§!"
 
-	 concept_hga_r_the_tempest_invocator:0 "$r_the_tempest_invocator$"
-	 concept_hga_r_the_tempest_invocator_desc:0 "§L$r_the_tempest_invocator_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_UNITY_PRODUCES_MULT£ $mod_country_unity_produces_mult$: §G+10%§!\n£MOD_SHIPS_UPKEEP_MULT£ $mod_ships_upkeep_mult$: §R-15%§!\n\n§YTRIUMPH§!\n$r_the_tempest_invocator_active_effect_tt$"
+	concept_hga_r_the_tempest_invocator:0 "$r_the_tempest_invocator$"
+	concept_hga_r_the_tempest_invocator_desc:0 "§L$r_the_tempest_invocator_desc$§!"
 
-	 concept_hga_r_celestial_tear:0 "$r_celestial_tear$"
-	 concept_hga_r_celestial_tear_desc:0 "§L$r_celestial_tear_desc$§!\n\n§YPASSIVE§!\n$celestial_tear_acquisition_tt$\n\n§YTRIUMPH§!\n£astral_threads£ §G+1000§!"
+	concept_hga_r_celestial_tear:0 "$r_celestial_tear$"
+	concept_hga_r_celestial_tear_desc:0 "§L$r_celestial_tear_desc$§!"
 
-	 concept_hga_r_daedalus_seal:0 "$r_daedalus_seal$"
-	 concept_hga_r_daedalus_seal_desc:0 "§L$r_daedalus_seal_desc$§!\n\n§YPASSIVE§!\n£MOD_DIMENSIONAL_LOCK_DURATION_MULT£ $mod_dimensional_lock_duration_mult$: §G+25%§!\n£astral_threads£ §G+1§! monthly\n$daedalus_seal_acquisition_tt$\n\n§YTRIUMPH§!\n$daedalus_seal_active_effect_tt$"
+	concept_hga_r_daedalus_seal:0 "$r_daedalus_seal$"
+	concept_hga_r_daedalus_seal_desc:0 "§L$r_daedalus_seal_desc$§!"
 
-	 concept_hga_r_ever_spinning_top:0 "$r_ever_spinning_top$"
-	 concept_hga_r_ever_spinning_top_desc:0 "§L$r_ever_spinning_top_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_ENERGY_PRODUCES_MULT£ $mod_country_energy_produces_mult$: §G+10%§!\n\n§YTRIUMPH§!\n$ever_spinning_top_modifier$"
+	concept_hga_r_ever_spinning_top:0 "$r_ever_spinning_top$"
+	concept_hga_r_ever_spinning_top_desc:0 "§L$r_ever_spinning_top_desc$§!"
 
-	 concept_hga_r_infinity_root:0 "$r_infinity_root$"
-	 concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_FOOD_PRODUCES_MULT£ $mod_country_food_produces_mult$: §G+10–20%§! (scales with activations)\n\n§YTRIUMPH§!\n$infinity_root_active_effect_tt$"
+	concept_hga_r_infinity_root:0 "$r_infinity_root$"
+	concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!"
 
-	 concept_hga_r_plasmic_core:0 "$r_plasmic_core$"
-	 concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!\n\n§YPASSIVE§!\n£MOD_LOGISTIC_GROWTH_MULT£ $mod_logistic_growth_mult$: §G+10%§! (organic)\n£MOD_SPECIES_LEADER_EXP_GAIN£ $mod_species_leader_exp_gain$: §G+10%§! (machine)\n\n§YTRIUMPH§!\n$plasmic_core_effect$ (organic)
-$machine_plasmic_core_effect$ (machine)"
+	concept_hga_r_plasmic_core:0 "$r_plasmic_core$"
+	concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!"
 
-	 concept_hga_r_continuum:0 "$r_continuum$"
-	 concept_hga_r_continuum_desc:0 "§L$r_continuum_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_ENERGY_PRODUCES_MULT£ $mod_country_energy_produces_mult$: §G+5%§!\n£MOD_COUNTRY_MINERALS_PRODUCES_MULT£ $mod_country_minerals_produces_mult$: §G+5%§!\n£MOD_COUNTRY_FOOD_PRODUCES_MULT£ $mod_country_food_produces_mult$: §G+5%§!\n£MOD_COUNTRY_ALLOYS_PRODUCES_MULT£ $mod_country_alloys_produces_mult$: §G+5%§!\n£MOD_COUNTRY_CONSUMER_GOODS_PRODUCES_MULT£ $mod_country_consumer_goods_produces_mult$: §G+5%§!\n£MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED£ $mod_country_physics_tech_research_speed$: §G+5%§!\n£MOD_COUNTRY_SOCIETY_TECH_RESEARCH_SPEED£ $mod_country_society_tech_research_speed$: §G+5%§!\n£MOD_COUNTRY_ENGINEERING_TECH_RESEARCH_SPEED£ $mod_country_engineering_tech_research_speed$: §G+5%§!\n\n§YTRIUMPH§!\n12 months of every major resource and research income"
+	concept_hga_r_continuum:0 "$r_continuum$"
+	concept_hga_r_continuum_desc:0 "§L$r_continuum_desc$§!"
 
-	 concept_hga_r_time_crystal:0 "$r_time_crystal$"
-	 concept_hga_r_time_crystal_desc:0 "§L$r_time_crystal_desc$§!\n\n§YPASSIVE§!\n£MOD_LEADER_LIFESPAN_ADD£ $mod_leader_lifespan_add$: §G+10 years§!\n\n§YTRIUMPH§!\nAll owned leaders gain §G+800§! experience"
+	concept_hga_r_time_crystal:0 "$r_time_crystal$"
+	concept_hga_r_time_crystal_desc:0 "§L$r_time_crystal_desc$§!"
 
-	 concept_hga_r_celestial_resonator:0 "$r_celestial_resonator$"
-	 concept_hga_r_celestial_resonator_desc:0 "§L$r_celestial_resonator_desc$§!\n\n§YPASSIVE§!\n$r_celestial_resonator_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_celestial_resonator_active_effect_tooltip$"
+	concept_hga_r_celestial_resonator:0 "$r_celestial_resonator$"
+	concept_hga_r_celestial_resonator_desc:0 "§L$r_celestial_resonator_desc$§!"
 
-	 concept_hga_r_gavel_of_the_tribunal:0 "$r_gavel_of_the_tribunal$"
-	 concept_hga_r_gavel_of_the_tribunal_desc:0 "§L$r_gavel_of_the_tribunal_desc$§!\n\n§YPASSIVE§!\n$r_gavel_of_the_tribunal_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_gavel_of_the_tribunal_active_effect_tooltip$"
+	concept_hga_r_gavel_of_the_tribunal:0 "$r_gavel_of_the_tribunal$"
+	concept_hga_r_gavel_of_the_tribunal_desc:0 "§L$r_gavel_of_the_tribunal_desc$§!"
 
-	 concept_hga_r_the_pattern_maker:0 "$r_the_pattern_maker$"
-	 concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!\n\n§YPASSIVE§!\n$r_the_pattern_maker_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_the_pattern_maker_active_effect_tooltip$"
+	concept_hga_r_the_pattern_maker:0 "$r_the_pattern_maker$"
+	concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!"
 
-	 concept_hga_r_tiyanki_matriarch_nerve_core:0 "$r_tiyanki_matriarch_nerve_core$"
-	 concept_hga_r_tiyanki_matriarch_nerve_core_desc:0 "§L$r_tiyanki_matriarch_nerve_core_desc$§!\n\n§YPASSIVE§!\n$r_tiyanki_matriarch_nerve_core_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_tiyanki_matriarch_nerve_core_active_effect_tooltip$"
+	concept_hga_r_tiyanki_matriarch_nerve_core:0 "$r_tiyanki_matriarch_nerve_core$"
+	concept_hga_r_tiyanki_matriarch_nerve_core_desc:0 "§L$r_tiyanki_matriarch_nerve_core_desc$§!"
 
-	 concept_hga_r_vaporous_mega_orchid:0 "$r_vaporous_mega_orchid$"
-	 concept_hga_r_vaporous_mega_orchid_desc:0 "§L$r_vaporous_mega_orchid_desc$§!\n\n§YPASSIVE§!\n$r_vaporous_mega_orchid_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_vaporous_mega_orchid_active_effect_tooltip$"
+	concept_hga_r_vaporous_mega_orchid:0 "$r_vaporous_mega_orchid$"
+	concept_hga_r_vaporous_mega_orchid_desc:0 "§L$r_vaporous_mega_orchid_desc$§!"
 
-	 concept_hga_r_entangled_relay:0 "$r_entangled_relay$"
-	 concept_hga_r_entangled_relay_desc:0 "§L$r_entangled_relay_desc$§!\n\n§YPASSIVE§!\n$r_entangled_relay_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_entangled_relay_active_effect_tooltip$"
+	concept_hga_r_entangled_relay:0 "$r_entangled_relay$"
+	concept_hga_r_entangled_relay_desc:0 "§L$r_entangled_relay_desc$§!"
 
-	 concept_hga_r_executus_compendium:0 "$r_executus_compendium$"
-	 concept_hga_r_executus_compendium_desc:0 "§L$r_executus_compendium_desc$§!\n\n§YPASSIVE§!\n$r_executus_compendium_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_executus_compendium_active_effect_tooltip$"
+	concept_hga_r_executus_compendium:0 "$r_executus_compendium$"
+	concept_hga_r_executus_compendium_desc:0 "§L$r_executus_compendium_desc$§!"
 
-	 concept_hga_r_preservation_chamber:0 "$r_preservation_chamber$"
-	 concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!\n\n§YPASSIVE§!\n$r_preservation_chamber_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_preservation_chamber_active_effect_tooltip$"
+	concept_hga_r_preservation_chamber:0 "$r_preservation_chamber$"
+	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!"
 
-	 concept_hga_r_prototype_vir_core:0 "$r_prototype_vir_core$"
-	 concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!\n\n§YPASSIVE§!\n$r_prototype_vir_core_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_prototype_vir_core_active_effect_tooltip$"
+	concept_hga_r_prototype_vir_core:0 "$r_prototype_vir_core$"
+	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!"
 
-	 concept_hga_r_propagandosphere:0 "$r_propagandosphere$"
-	 concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!\n\n§YPASSIVE§!\n$r_propagandosphere_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_propagandosphere_active_effect_tooltip$"
+	concept_hga_r_propagandosphere:0 "$r_propagandosphere$"
+	concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!"
 
-	 concept_hga_r_crystallinus_diffuser:0 "$r_crystallinus_diffuser$"
-	 concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!\n\n§YPASSIVE§!\n$r_crystallinus_diffuser_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_crystallinus_diffuser_active_effect_tooltip$"
+	concept_hga_r_crystallinus_diffuser:0 "$r_crystallinus_diffuser$"
+	concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!"
 
-	 concept_hga_r_everchanging_stone:0 "$r_everchanging_stone$"
-	 concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!\n\n§YPASSIVE§!\n$r_everchanging_stone_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_everchanging_stone_active_effect_tooltip$"
+	concept_hga_r_everchanging_stone:0 "$r_everchanging_stone$"
+	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!"
 
-	 concept_hga_r_flowmetal_alloy:0 "$r_flowmetal_alloy$"
-	 concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§YPASSIVE§!\n$r_flowmetal_alloy_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_flowmetal_alloy_active_effect_tooltip$"
+	concept_hga_r_flowmetal_alloy:0 "$r_flowmetal_alloy$"
+	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!"
 
-	 concept_hga_r_pulsestone:0 "$r_pulsestone$"
-	 concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!\n\n§YPASSIVE§!\n$r_pulsestone_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_pulsestone_active_effect_tooltip$"
+	concept_hga_r_pulsestone:0 "$r_pulsestone$"
+	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!"
 
-	 concept_hga_r_the_modularium:0 "$r_the_modularium$"
-	 concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!\n\n§YPASSIVE§!\n$r_the_modularium_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_the_modularium_active_effect_tooltip$"
+	concept_hga_r_the_modularium:0 "$r_the_modularium$"
+	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!"
 
-	 concept_hga_r_galatron:0 "$r_galatron$"
-	 concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§YPASSIVE§!\n£MOD_DIPLO_WEIGHT_MULT£ $mod_diplo_weight_mult$: §G+100%§!\n£influence£ §G+3§! monthly\n\n§YTRIUMPH§!\n$relic_galatron_active$"
+	concept_hga_r_galatron:0 "$r_galatron$"
+	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!"
 
-	 concept_hga_r_surveyor:0 "$r_surveyor$"
-	 concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!\n\n§YPASSIVE§!\n£MOD_SHIP_SENSOR_RANGE_ADD£ $mod_ship_sensor_range_add$: §G+1§!\n\n§YTRIUMPH§!\n$relic_surveyor_active$"
+	concept_hga_r_surveyor:0 "$r_surveyor$"
+	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!"
 
-	 concept_hga_r_the_radience:0 "$r_vacuum_flower$"
-	 concept_hga_r_the_radience_desc:0 "§L$r_vacuum_flower_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_ENERGY_PRODUCES_MULT£ $mod_country_energy_produces_mult$: §G+10%§!\n\n§YTRIUMPH§!\n$relic_vacuum_flower_active$ (varies by star type)"
+	concept_hga_r_the_radience:0 "$r_vacuum_flower$"
+	concept_hga_r_the_radience_desc:0 "§L$r_vacuum_flower_desc$§!"
 
-	 concept_hga_r_mutated_voidworm_nest:0 "$r_mutated_voidworm_nest$"
-	 concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!\n\n§YPASSIVE§!\n$r_mutated_voidworm_nest_triggered_modifier_desc$\n\n§YTRIUMPH§!\n$r_mutated_voidworm_nest_active_effect_tooltip$"
+	concept_hga_r_mutated_voidworm_nest:0 "$r_mutated_voidworm_nest$"
+	concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!"
 
-	 concept_hga_r_the_lost_patron:0 "$r_the_lost_patron$"
-	 concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!\n\n§YPASSIVE§!\n$the_lost_patron_passive_effect$\n\n§YTRIUMPH§!\n$the_lost_patron_before_activation_tt$ (first use)
-$the_lost_patron_after_activation_effect_tt$ (subsequent)"
+	concept_hga_r_the_lost_patron:0 "$r_the_lost_patron$"
+	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!"
 
-	 concept_hga_r_pyroglyphic_codex:0 "$r_pyroglyphic_codex$"
-	 concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_UNITY_PRODUCES_MULT£ $mod_country_unity_produces_mult$: §G+10%§!\n\n§YTRIUMPH§!\n$r_pyroglyphic_codex_effect_tt$"
+	concept_hga_r_pyroglyphic_codex:0 "$r_pyroglyphic_codex$"
+	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!"
 
-	 concept_hga_r_crystallized_singularity:0 "$r_crystallized_singularity$"
-	 concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED£ $mod_country_physics_tech_research_speed$: §G+10%§!\n£physics_research£ → £energy£ conversion while active\n\n§YTRIUMPH§!\n$r_crystallized_singularity_effect_tt$"
+	concept_hga_r_crystallized_singularity:0 "$r_crystallized_singularity$"
+	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!"
 
-	 concept_hga_r_the_key:0 "$r_wormhole_key$"
-	 concept_hga_r_the_key_desc:0 "§L$r_wormhole_key_desc$§!\n\n§YPASSIVE§!\n£MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED£ $mod_country_physics_tech_research_speed$: §G+20%§!\n£MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT£ $mod_ship_jumpdrive_cooldown_mult$: §R-25%§!\n\n§YTRIUMPH§!\n$paragon_relic_wormhole_key$ — temporarily enables jump drives"
+	concept_hga_r_the_key:0 "$r_wormhole_key$"
+	concept_hga_r_the_key_desc:0 "§L$r_wormhole_key_desc$§!"
 
 # Do not remove below v

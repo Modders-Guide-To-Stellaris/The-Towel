@@ -1,4 +1,7 @@
-﻿l_english:
+﻿# localisation/english/hga_van_relic_war_l_english.yml
+# Authors: HGA
+
+l_english:
 
 	casus_belli_hga_seize:0 "Seize Relic"
 
