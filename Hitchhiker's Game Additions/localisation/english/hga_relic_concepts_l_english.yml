@@ -4,171 +4,171 @@
 l_english:
 
 	concept_hga_r_unbidden_warlock:0 "$r_unbidden_warlock$"
-	concept_hga_r_unbidden_warlock_desc:0 "§L$r_unbidden_warlock_desc$§!"
+	concept_hga_r_unbidden_warlock_desc:0 "§L$r_unbidden_warlock_desc$§!\n\n§cPassive Effects:§!\nSublight Speed: §G+30%§!\nShip Weapons Range: §G+30%§!\n\n§cActive Effects:§!\n§Y$unbidden_ritual$§! modifier added for §Y10§! years:\nJump Drive Range: §G+100%§!\nJump Drive Cooldown: §G-50%§!\nQuantum Catapult Accuracy: §G+75%§!\nQuantum Catapult Range: §G+75%§!"
 
 	concept_hga_r_contingency_core:0 "$r_contingency_core$"
-	concept_hga_r_contingency_core_desc:0 "§L$r_contingency_core_desc$§!"
+	concept_hga_r_contingency_core_desc:0 "§L$r_contingency_core_desc$§!\n\n§cPassive Effects:§!\nAllows the construction of §G1§! additional Megastructure of each type.\nMechanical Pop Assembly Speed: §G+100%§!\n\n§cActive Effects:§!\n§YContingency Calculation§! modifier added for §Y10§! Years:\nMegastructure Build Speed: §G+300%§!"
 
 	concept_hga_r_prethoryn_queen:0 "$r_prethoryn_queen$"
-	concept_hga_r_prethoryn_queen_desc:0 "§L$r_prethoryn_queen_desc$§!"
+	concept_hga_r_prethoryn_queen_desc:0 "§L$r_prethoryn_queen_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£society£ §YSociety§!): §G+50%§!\n\n§cActive Effects:§!\nBreed a sizeable Prethoryn fleet\n(36 Warriors & 54 Swarmlings)"
 
 	concept_hga_r_khans_throne:0 "$r_khans_throne$"
-	concept_hga_r_khans_throne_desc:0 "§L$r_khans_throne_desc$§!"
+	concept_hga_r_khans_throne_desc:0 "§L$r_khans_throne_desc$§!\n\n§cPassive Effects:§!\nClaim Influence Cost: §G-20%§!\nGrants access to the §YSatrapy§! Subject Preset.\n\n§cActive Effects:§!\n§YDrums of War§! modifier added for §Y10§! Years:\nShip Weapons Damage: §G+20%§!\nMilitarist Ethics Attraction: §G+25%§!"
 
 	concept_hga_r_eternal_throne:0 "$r_eternal_throne$"
-	concept_hga_r_eternal_throne_desc:0 "§L$r_eternal_throne_desc$§!"
+	concept_hga_r_eternal_throne_desc:0 "§L$r_eternal_throne_desc$§!\n\n§cPassive Effects:§!\nAll leaders are immortal.\n\n§cActive Effects:§!\n§YAstral Attunement§! modifier added for §Y10§! Years:\nMonthly £astral_threads£ Astral Threads: §G+333%§!"
 
 	concept_hga_r_cetanas_heart:0 "$r_cetanas_heart$"
-	concept_hga_r_cetanas_heart_desc:0 "§L$r_cetanas_heart_desc$§!"
+	concept_hga_r_cetanas_heart_desc:0 "§L$r_cetanas_heart_desc$§!\n\n§cPassive Effects:§!\nColony Ascension Cost: §G-50%§!\n\n§cActive Effects:§!\nCreates §Y3K§! to §Y5K§! £pop£ §HSynthetic Pops§!, depending on job and housing availability."
 
 	concept_hga_r_core_of_the_reckoning:0 "$r_core_of_the_reckoning$"
-	concept_hga_r_core_of_the_reckoning_desc:0 "§L$r_core_of_the_reckoning_desc$§!"
+	concept_hga_r_core_of_the_reckoning_desc:0 "§L$r_core_of_the_reckoning_desc$§!\n\n§cPassive Effects:§!\nResources From £job£ Jobs: §G+25%§!\nResources Produced from Mining Stations: §G+25%§!\nResources Produced from Research Stations: §G+25%§!\nNaval Capacity: §G+25%§!\nShip Upkeep: §G-25%§!\nMonthly Influence: §G+1§!\nStarbase Capacity: §G+1§!\n\n§cActive Effects:§!\nUnlocks one £decision£ §YPlanetary Decision§!: §H['concept_banish_decision']§!"
 
 	concept_hga_r_odryskan_crystal:0 "$r_odryskan_crystal$"
-	concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!"
+	concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!\n\n§cPassive Effects:§!\nMonthly £rare_crystals£ Rare Crystals: §G+15%§!\n\n§cActive Effects:§!\nEnergy Credits Grained: §Y60§! months worth of £energy£ §YEnergy Credits§!\nOne of our scientists may gain the §YManiacal§! trait."
 
 	concept_hga_r_ancient_sword:0 "$r_ancient_sword$"
-	concept_hga_r_ancient_sword_desc:0 "§L$r_ancient_sword_desc$§!"
+	concept_hga_r_ancient_sword_desc:0 "§L$r_ancient_sword_desc$§!\n\n§cPassive Effects:§!\nArmy Morale: §G+25%§!\nPlanet Sensor Range: §G+2§!\nDiplomatic Weight: §G+10%§!\n\n§cActive Effects:§!\n§YBlade of the Huntress§! modifier added for §Y10§! Years:\nSublight Speed: §G+25%§!"
 
 	concept_hga_r_severed_head:0 "$r_severed_head$"
-	concept_hga_r_severed_head_desc:0 "§L$r_severed_head_desc$§!"
+	concept_hga_r_severed_head_desc:0 "§L$r_severed_head_desc$§!\n\n§cPassive Effects:§!\nAllows the settling of §YHoly Worlds§!.\n\n§cActive Effects:§!\nSummon a small Fallen Empire fleet. Every activation will increase the size of the fleet.\n§YHead of Zarqlan§! modifier added for §Y10§! Years:\nSpiritualist Ethics Attraction: §G+75%§!"
 
 	concept_hga_r_galaxy:0 "$r_galaxy$"
-	concept_hga_r_galaxy_desc:0 "§L$r_galaxy_desc$§!"
+	concept_hga_r_galaxy_desc:0 "§L$r_galaxy_desc$§!\n\n§cPassive Effects:§!\nResearch Speed: §G+5%§!\n\n§cActive Effects:§!\nGain §Y50%§! tech progress in a random technology."
 
-	concept_hga_r_mechano_calibrator:0 "$r_the_defragmentor$"
-	concept_hga_r_mechano_calibrator_desc:0 "§L$r_the_defragmentor_desc$§!"
+	concept_hga_r_the_defragmentor:0 "$r_the_defragmentor$"
+	concept_hga_r_the_defragmentor_desc:0 "§L$r_the_defragmentor_desc$§!\n\n§cPassive Effects:§!\nRobot Upkeep: §G-10%§!\nBuilding £energy£ Energy Upkeep: §G-10%§!\nDistrict £energy£ Energy Upkeep: §G-10%§!\nJob £energy£ Energy Upkeep §G-10%§!\n\n§cActive Effects:§!\n§YThe Defragmentor§! modifier added for §Y10§! Years:\nMonthly £energy£ Energy Credits: §G+20%§!\nResearch Speed (£engineering£ §YEngineering§!) §G+5%§!"
 
 	concept_hga_r_omnicodex:0 "$r_omnicodex$"
-	concept_hga_r_omnicodex_desc:0 "§L$r_omnicodex_desc$§!"
+	concept_hga_r_omnicodex_desc:0 "§L$r_omnicodex_desc$§!\n\n§cPassive Effects:§!\nOrganic Species Modification Points: §G+1§!\n§G+25§! opinion with §YNon-Robotic§! empires.\n\n§cActive Effects:§!\n§YSpawn Pops§! from an extinct species on one of your planets."
 
 	concept_hga_r_dragon_trophy:0 "$r_dragon_trophy$"
-	concept_hga_r_dragon_trophy_desc:0 "§L$r_dragon_trophy_desc$§!"
+	concept_hga_r_dragon_trophy_desc:0 "§L$r_dragon_trophy_desc$§!\n\n§cPassive Effects:§!\nMonthly £unity£ Unity: §G+10%§!\n\n§cActive Effects:§!\n§YEther Drake Triumph§! modifier added for §Y10§! Years:\nHappiness: §G+10%§!\nStability: §G+3§!"
 
 	concept_hga_r_worm_scales:0 "$r_worm_scales$"
-	concept_hga_r_worm_scales_desc:0 "§L$r_worm_scales_desc$§!"
+	concept_hga_r_worm_scales_desc:0 "§L$r_worm_scales_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+5%§!\n\n§cActive Effects:§!\n§YWorm Scale Influence§! modifier added for §Y10§! Years:\nResearch Speed: §G+20%§!\nStability: §R-5§!"
 
 	concept_hga_r_rubricator:0 "$r_rubricator$"
-	concept_hga_r_rubricator_desc:0 "§L$r_ubricator_desc$§!"
+	concept_hga_r_rubricator_desc:0 "§L$r_rubricator_desc$§!\n\n§cPassive Effects:§!\nArchaeotech Weapon Damage: §G+15%§!\n£society£ Society Research: §G+20§!\n\n§cActive Effects:§!\nCreate §Y500§! £minor_artifacts£ Minor Artifacts."
 
 	concept_hga_r_toxic_god:0 "$r_toxic_god$"
-	concept_hga_r_toxic_god_desc:0 "§L$r_toxic_god_desc$§!"
+	concept_hga_r_toxic_god_desc:0 "§L$r_toxic_god_desc$§!\n\n§cPassive Effects:§!\nStrike Craft Damage: §G+15%§!\n\n§cActive Effects:§!\n£exotic_gases£ Exotic Gases Gained: §Y1000§!"
 
-	concept_hga_r_voidspawn_heart:0 "$r_voidspawn_myocardium$"
-	concept_hga_r_voidspawn_heart_desc:0 "§L$r_voidspawn_myocardium_desc$§!"
+	concept_hga_r_voidspawn_myocardium:0 "$r_voidspawn_myocardium$"
+	concept_hga_r_voidspawn_myocardium_desc:0 "§L$r_voidspawn_myocardium_desc$§!\n\n§cPassive Effects:§!\nShip Fire Rate: §G+10%§!\nDamage Reduction: §G+5%§!\n\n§cActive Effects:§!\n§YVoidslayer§! modifier added for §Y10§! Years:\nDamage Reduction: §G+15%§!"
 
 	concept_hga_r_war_forge:0 "$r_war_forge$"
-	concept_hga_r_war_forge_desc:0 "§L$r_war_forge_desc$§!"
+	concept_hga_r_war_forge_desc:0 "§L$r_war_forge_desc$§!\n\n§cPassive Effects:§!\nPermits building §YCybrex Warform§! armies at your capital.\n\n§cActive Effects:§!\n£alloys£ Alloys Gained: §Y1000§! (Per Triumph)"
 
 	concept_hga_r_pox_sample:0 "$r_pox_sample$"
-	concept_hga_r_pox_sample_desc:0 "§L$r_pox_sample_desc$§!"
+	concept_hga_r_pox_sample_desc:0 "§L$r_pox_sample_desc$§!\n\n§cPassive Effects:§!\nEnables §YPox§! Orbital Bombardment stance\nIncreased likelihood of discovering £society£ §IBio Technologies§!\nLeader Lifespan: §G+20 Years§!\n\n§cActive Effects:§!\n§YJavorian Pox Sample§! modifier added for §Y10§! Years:\nResearch Speed (£society£ §YBiology§!) §G+25%§!"
 
 	concept_hga_r_zro_crystal:0 "$r_zro_crystal$"
-	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!"
+	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!\n\n§cPassive Effects:§!\nThe cooldown to §YBreach into the Shroud§! is reduced by §G50%§!\nGrants access to the ['edict:zro_crystal'] edict.\n\n§cActive Effects:§!\nContact the spirit of §YJa'Baxti§! to seek guidance in different matters."
 
 	concept_hga_r_baol:0 "$r_the_last_baol$"
-	concept_hga_r_baol_desc:0 "§L$r_the_last_baol_desc$§!"
+	concept_hga_r_baol_desc:0 "§L$r_the_last_baol_desc$§!\n\n§cPassive Effects:§!\nPop Growth Speed: §G+10%§!\n\n§cActive Effects:§!\n§HUnlocks Decision:§! §GNu-Baol Life-Seeding§!, granting the ability to turn one non-Ecuomenopolis/Hive/Machine World planet into a ['concept_pc_gaia']."
 
-	concept_hga_r_orb_insight:0 "$r_reality_perforator$"
-	concept_hga_r_orb_insight_desc:0 "§L$r_eality_perforator_desc$§!"
+	concept_hga_r_reality_perforator:0 "$r_reality_perforator$"
+	concept_hga_r_reality_perforator_desc:0 "§L$r_eality_perforator_desc$§!\n\n§cPassive Effects:§!\nPop Amenities Usage: §G-10%§!\n\n§cActive Effects:§!\nPerforate reality for powerful temporary combat advantages."
 
 	concept_hga_r_cryo_core:0 "$r_cryo_core$"
-	concept_hga_r_cryo_core_desc:0 "§L$r_cryo_core_desc$§!"
+	concept_hga_r_cryo_core_desc:0 "§L$r_cryo_core_desc$§!\n\n§cPassive Effects:§!\nColony Development Speed: §G+200%§!\nEnergy Weapon Fire Rate: §G+20%§!\n\n§cActive Effects:§!\n§YYuht Cyro Core§! modifier added for §Y10§! Years:\nShip Upkeep: §G-20%§!"
 
 	concept_hga_r_weather_manipulator:0 "$r_weather_manipulator$"
-	concept_hga_r_weather_manipulator_desc:0 "§L$r_weather_manipulator_desc$§!"
+	concept_hga_r_weather_manipulator_desc:0 "§L$r_weather_manipulator_desc$§!\n\n§cPassive Effects:§!\nMonthly £physics£ Physics Research: §G+15%§!\n\n§cActive Effects:§!\nCreates an §Mextra large§! §YCosmic Storm§! repelling field around the empire's capital for §Y36§! months "
 
 	concept_hga_r_the_tempest_invocator:0 "$r_the_tempest_invocator$"
-	concept_hga_r_the_tempest_invocator_desc:0 "§L$r_the_tempest_invocator_desc$§!"
+	concept_hga_r_the_tempest_invocator_desc:0 "§L$r_the_tempest_invocator_desc$§!\n\n§cPassive Effects:§!\nMonthly £unity£ Unity: §G+10%§!\nShip Upkeep: §G-15%§!\n\n§cActive Effects:§!\nGenerate a ['concept_nexus_storm'] in a system of your choice within a set range of the selected §Psacrificial§! £scientist£ ['concept_scientist']\n§YTempest Repulsion§! modifier added for §Y10§! Years:\nCosmic Storm Repulsion Effect: §G+100%§!"
 
 	concept_hga_r_celestial_tear:0 "$r_celestial_tear$"
-	concept_hga_r_celestial_tear_desc:0 "§L$r_celestial_tear_desc$§!"
+	concept_hga_r_celestial_tear_desc:0 "§L$r_celestial_tear_desc$§!\n\n§cPassive Effects:§!\nHabitability of planets within your borders orbiting around A/B/F/G class stars: §G+5%§!\n\n§cActive Effects:§!\n£astral_threads£ Astral Threads Gained: §Y1000§!"
 
 	concept_hga_r_daedalus_seal:0 "$r_daedalus_seal$"
-	concept_hga_r_daedalus_seal_desc:0 "§L$r_daedalus_seal_desc$§!"
+	concept_hga_r_daedalus_seal_desc:0 "§L$r_daedalus_seal_desc$§!\n\n§cPassive Effects:§!\nDimensional Locks duration: §G+25%§!\n£astral_threads£ Astral Threads: §G+1§!\n\n§cActive Effects:§!\nPlaces a lock on every bypass within borders for §Y5§! Years."
 
 	concept_hga_r_ever_spinning_top:0 "$r_ever_spinning_top$"
-	concept_hga_r_ever_spinning_top_desc:0 "§L$r_ever_spinning_top_desc$§!"
+	concept_hga_r_ever_spinning_top_desc:0 "§L$r_ever_spinning_top_desc$§!\n\n§cPassive Effects:§!\nMonthly £energy£ Energy Credits: §G+10%§!\n\n§cActive Effects:§!\n§YPerpetual Motion§! modifier added for §Y5§! Years:\nResearch Speed (£engineering£ §YPropulsion§!): §G+15%§!"
 
 	concept_hga_r_infinity_root:0 "$r_infinity_root$"
-	concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!"
+	concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!\nMonthly £food£ Food +10/20%\n§cPassive Effects:§!\n\n\n§cActive Effects:§!\nGrow a new leader. They will have no upkeep and will not count towards your leader total."
 
 	concept_hga_r_plasmic_core:0 "$r_plasmic_core$"
-	concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!"
+	concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!\n\n§cPassive Effects:§!\nOrg: Pop Growth Speed: §G+10%§!\nRobo: Leader Experience Gain: §G+10%§!\n\n§cActive Effects:§!\nOrg: Every pop on a random planet gain the ['trait:trait_plasmic'] trait.\nRobo:Gives a random leader 3 random positive traits."
 
 	concept_hga_r_continuum:0 "$r_continuum$"
-	concept_hga_r_continuum_desc:0 "§L$r_continuum_desc$§!"
+	concept_hga_r_continuum_desc:0 "§L$r_continuum_desc$§!\n\n§cPassive Effects:§!\nMonthly £basic_resources£ Basic Resources: §G+5%§!\nMonthly £alloys£ £consumer_goods£ Advanced Resources: §G+5%§!\nMonthly £research£ Research: §G+5%§!\n\n§cActive Effects:§!\n£basic_resources£ Basic, £alloys£ £consumer_goods£ Advanced, £strategic£ Strategic Resources and £research£ Research Gained: §YMonthly Production x 12§!"
 
 	concept_hga_r_time_crystal:0 "$r_time_crystal$"
-	concept_hga_r_time_crystal_desc:0 "§L$r_time_crystal_desc$§!"
+	concept_hga_r_time_crystal_desc:0 "§L$r_time_crystal_desc$§!\n\n§cPassive Effects:§!\nLeader Lifespan §G+10§!\n\n§cActive Effects:§!\nAll recruited leaders gain §G800§! Experience."
 
 	concept_hga_r_celestial_resonator:0 "$r_celestial_resonator$"
-	concept_hga_r_celestial_resonator_desc:0 "§L$r_celestial_resonator_desc$§!"
+	concept_hga_r_celestial_resonator_desc:0 "§L$r_celestial_resonator_desc$§!\n\n§cPassive Effects:§!\nProduces §G10§! £unity£ §YUnity§! per ['concept_specimen'] exhibited\n\n§cActive Effects:§!\nGain §G+1%§! £happiness£ §YHappiness§! and §G+2%§! £diplo_weight£ §IDiplomatic Weight§! per ['concept_specimen'] exhibited."
 
 	concept_hga_r_gavel_of_the_tribunal:0 "$r_gavel_of_the_tribunal$"
-	concept_hga_r_gavel_of_the_tribunal_desc:0 "§L$r_gavel_of_the_tribunal_desc$§!"
+	concept_hga_r_gavel_of_the_tribunal_desc:0 "§L$r_gavel_of_the_tribunal_desc$§!\n\n§cPassive Effects:§!\n£diplo_weight£ Diplomatic Weight from assigned Leader Skill Level: §G+5%§!\n\n§cActive Effects:§!\n§YGavel of the Tribunal§! modifier added for §Y10§! Years:\nClaim Influence Cost: §G-25%§!"
 
 	concept_hga_r_the_pattern_maker:0 "$r_the_pattern_maker$"
-	concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!"
+	concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!\n\n§cPassive Effects:§!\nCodebreaking: §G+4§!\nTracking: §G+5§!\nAccuracy: §G+5%§!\n\n§cActive Effects:§!\nCreates a §YPatternwalker§! Class Science Ship, Very high speed and Hyperlane Detection Range."
 
 	concept_hga_r_tiyanki_matriarch_nerve_core:0 "$r_tiyanki_matriarch_nerve_core$"
-	concept_hga_r_tiyanki_matriarch_nerve_core_desc:0 "§L$r_tiyanki_matriarch_nerve_core_desc$§!"
+	concept_hga_r_tiyanki_matriarch_nerve_core_desc:0 "§L$r_tiyanki_matriarch_nerve_core_desc$§!\n\n§cPassive Effects:§!\nDamage vs Leviathans: §G+25%§!\n\n§cActive Effects:§!\n§YTiyanki Matriarch Nerve Core§! modifier added for §Y10§! Years:\nSpace Fauna Ship Hull: §G+20%§!\nSpace Fauna Ship Armor: §G+20%§!\nSpace Fauna Ship Growth Rate: §G+25%§!"
 
 	concept_hga_r_vaporous_mega_orchid:0 "$r_vaporous_mega_orchid$"
-	concept_hga_r_vaporous_mega_orchid_desc:0 "§L$r_vaporous_mega_orchid_desc$§!"
+	concept_hga_r_vaporous_mega_orchid_desc:0 "§L$r_vaporous_mega_orchid_desc$§!\n\n§cPassive Effects:§!\nTrust Cap for Organics: §G+50§!\nMonthly Loyalty from Organic Subjects: §G+1§!\n\n§cActive Effects:§!\n§G+150§! £opinion£ Opinion with every non-Homicidal/Fallen/Machine Empire for §Y10§! years."
 
 	concept_hga_r_entangled_relay:0 "$r_entangled_relay$"
-	concept_hga_r_entangled_relay_desc:0 "§L$r_entangled_relay_desc$§!"
+	concept_hga_r_entangled_relay_desc:0 "§L$r_entangled_relay_desc$§!\n\n§cPassive Effects:§!\nSector Size: §G+2§!\nStarbase Influence Distance Cost: §G-50%§!\n\n§cActive Effects:§!\n§YEntangled Relay§! modifier added for §Y10§! Years:\nResources from Orbital Stations: §G+40%§!"
 
 	concept_hga_r_executus_compendium:0 "$r_executus_compendium$"
-	concept_hga_r_executus_compendium_desc:0 "§L$r_executus_compendium_desc$§!"
+	concept_hga_r_executus_compendium_desc:0 "§L$r_executus_compendium_desc$§!\n\n§cPassive Effects:§!\nEffective Councillor Skill: §G+1§!\nCouncil Agenda Speed: §G+25%§!\n\n§cActive Effects:§!\nLaunch the Agenda for §Y10%§! of its early launch cost. (Minimum cost of £unity£ 3000)"
 
 	concept_hga_r_preservation_chamber:0 "$r_preservation_chamber$"
-	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!"
+	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!\n\n§cPassive Effects:§!\nResource Storage Capacity: §G+25000§!\nVivarium Max Capacity: §G+25§!\n\n§cActive Effects:§!\nAdd 2 §MExceptional§! Space Fauna specimens of a same, random Species, to your Vivarium."
 
 	concept_hga_r_prototype_vir_core:0 "$r_prototype_vir_core$"
-	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!"
+	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_propagandosphere:0 "$r_propagandosphere$"
-	concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!"
+	concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_crystallinus_diffuser:0 "$r_crystallinus_diffuser$"
-	concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!"
+	concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_everchanging_stone:0 "$r_everchanging_stone$"
-	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!"
+	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_flowmetal_alloy:0 "$r_flowmetal_alloy$"
-	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!"
+	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_pulsestone:0 "$r_pulsestone$"
-	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!"
+	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_the_modularium:0 "$r_the_modularium$"
-	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!"
+	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_galatron:0 "$r_galatron$"
-	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!"
+	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_surveyor:0 "$r_surveyor$"
-	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!"
+	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_the_radience:0 "$r_vacuum_flower$"
-	concept_hga_r_the_radience_desc:0 "§L$r_vacuum_flower_desc$§!"
+	concept_hga_r_the_radience_desc:0 "§L$r_vacuum_flower_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_mutated_voidworm_nest:0 "$r_mutated_voidworm_nest$"
-	concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!"
+	concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_the_lost_patron:0 "$r_the_lost_patron$"
-	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!"
+	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_pyroglyphic_codex:0 "$r_pyroglyphic_codex$"
-	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!"
+	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_crystallized_singularity:0 "$r_crystallized_singularity$"
-	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!"
+	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 	concept_hga_r_the_key:0 "$r_wormhole_key$"
-	concept_hga_r_the_key_desc:0 "§L$r_wormhole_key_desc$§!"
+	concept_hga_r_the_key_desc:0 "§L$r_wormhole_key_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
 
 # Do not remove below v
