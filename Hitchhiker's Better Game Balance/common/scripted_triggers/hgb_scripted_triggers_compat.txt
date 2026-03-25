@@ -1,0 +1,7 @@
+has_hitchhiker_better_game_balance = {
+    always = yes
+}
+
+has_hitchhiker_additions = {
+    has_global_flag = hga_enabled
+}

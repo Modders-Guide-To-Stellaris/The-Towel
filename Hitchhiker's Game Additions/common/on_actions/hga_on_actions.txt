@@ -2,6 +2,12 @@
 # Authors: HGA
 # >- HOST MENU ON ACTIONS -<
 
+on_game_start = {
+	events = {
+		hga_internal.1
+	}
+}
+
 # Game Start >> fires hga_menu.0 (init + open menu) for the host
 # this = country
 on_game_start_country = {

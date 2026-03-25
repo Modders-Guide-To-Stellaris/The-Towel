@@ -11,7 +11,7 @@ l_english:
   hga_menu.1.name: "HGA Host Options"
   hga_menu.1.desc: "Configure game settings before beginning. Use the buttons below to navigate each category, then start the game when ready."
 
-  hga_menu.1.nav_relic: "Relic Settings"
+  hga_menu.1.nav_relic: "£minor_artifacts£ Relic Settings"
   hga_menu.1.nav_relicTT: "Configure relic wars and relic trading restrictions for players and AI."
 
   # RESERVED >> uncomment with hga_menu.20
@@ -25,7 +25,7 @@ l_english:
   edict_hga_host_tool_desc: "Jezzaj would say 'Look at this §RLegalized Cheating§!'"
 
  # >- Relic Settings (hga_menu.10) -<
-  hga_menu.10.name: "£minor_artifacts£ Relic Settings"
+  hga_menu.10.name: "$hga_menu.1.nav_relic$"
   hga_menu.10.desc: "Control who can start relic wars and who can trade relics. Changes apply globally."
 
   # Relic Wars <<Player>>

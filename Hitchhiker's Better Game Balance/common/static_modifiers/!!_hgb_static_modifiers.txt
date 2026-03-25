@@ -1,0 +1,4 @@
+imperial_security_directorate = {
+    intel_decryption_add = 1
+    intel_encryption_add = 2
+}
