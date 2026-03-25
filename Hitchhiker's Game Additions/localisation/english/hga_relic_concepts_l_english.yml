@@ -66,8 +66,8 @@ l_english:
 	concept_hga_r_zro_crystal:0 "$r_zro_crystal$"
 	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!\n\n§cPassive Effects:§!\nThe cooldown to §YBreach into the Shroud§! is reduced by §G50%§!\nGrants access to the ['edict:zro_crystal'] edict.\n\n§cActive Effects:§!\nContact the spirit of §YJa'Baxti§! to seek guidance in different matters."
 
-	concept_hga_r_baol:0 "$r_the_last_baol$"
-	concept_hga_r_baol_desc:0 "§L$r_the_last_baol_desc$§!\n\n§cPassive Effects:§!\nPop Growth Speed: §G+10%§!\n\n§cActive Effects:§!\n§HUnlocks Decision:§! §GNu-Baol Life-Seeding§!, granting the ability to turn one non-Ecuomenopolis/Hive/Machine World planet into a ['concept_pc_gaia']."
+	concept_hga_r_the_last_baol:0 "$r_the_last_baol$"
+	concept_hga_r_the_last_baol_desc:0 "§L$r_the_last_baol_desc$§!\n\n§cPassive Effects:§!\nPop Growth Speed: §G+10%§!\n\n§cActive Effects:§!\n§HUnlocks Decision:§! §GNu-Baol Life-Seeding§!, granting the ability to turn one non-Ecuomenopolis/Hive/Machine World planet into a ['concept_pc_gaia']."
 
 	concept_hga_r_reality_perforator:0 "$r_reality_perforator$"
 	concept_hga_r_reality_perforator_desc:0 "§L$r_eality_perforator_desc$§!\n\n§cPassive Effects:§!\nPop Amenities Usage: §G-10%§!\n\n§cActive Effects:§!\nPerforate reality for powerful temporary combat advantages."
@@ -127,48 +127,48 @@ l_english:
 	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!\n\n§cPassive Effects:§!\nResource Storage Capacity: §G+25000§!\nVivarium Max Capacity: §G+25§!\n\n§cActive Effects:§!\nAdd 2 §MExceptional§! Space Fauna specimens of a same, random Species, to your Vivarium."
 
 	concept_hga_r_prototype_vir_core:0 "$r_prototype_vir_core$"
-	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!\n\n§cPassive Effects:§!\n£official£ Official Capacity: §G+1§!\n£commander£ Commander Capacity: §G+1§!\n£scientist£ Scientist Capacity: §G+1§!\n\n§cActive Effects:§!\n§YPrototype VIR Core§! modifier added for §Y10§! Years:\nEffective Councilor Skills: §G+4§!"
 
 	concept_hga_r_propagandosphere:0 "$r_propagandosphere$"
-	concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_propagandosphere_desc:0 "§L$r_propagandosphere_desc$§!\n\n§cPassive Effects:§!\n£unity£ Unity Produced per 100 £job_soldier£ Soldiers: §G+2§!\n\n§cActive Effects:§!\n£unity£ Unity Gained: §YMonthly Production x 48§!"
 
 	concept_hga_r_crystallinus_diffuser:0 "$r_crystallinus_diffuser$"
-	concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_crystallinus_diffuser_desc:0 "§L$r_crystallinus_diffuser_desc$§!\n\n§cPassive Effects:§!\nResources from £job£ Jobs: §G+5%§!\n\n§cActive Effects:§!\n§YBiological Pops§! of your Empire have their production doubled for §Y10§! Years. Afterwards, §R20%§! of them will die."
 
 	concept_hga_r_everchanging_stone:0 "$r_everchanging_stone$"
-	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!\n\n§cPassive Effects:§!\nXeno Geology Specimens Output: +30%\n£minerals£ Upkeep per 100 £mod_planet_metallurgists_upkeep_mult£ Metallurgists: §G-1§!\n£minerals£ Upkeep per 100 £job_artisan£ Artisans: §G-1§!\n\n§cActive Effects:§!\nFor each ['concept_specimen'] exhibited in Xeno Geology, increase the output of the other two categories by §G3%§!."
 
 	concept_hga_r_flowmetal_alloy:0 "$r_flowmetal_alloy$"
-	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§cPassive Effects:§!\nRobot Upkeep: §G-30%§!\nShip Build Speed: §G+15%§!\n\n§cActive Effects:§!\nCreate 300 §G300§! §YRobot £pop£ Pops§! in your capital."
 
 	concept_hga_r_pulsestone:0 "$r_pulsestone$"
-	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YField Manipulation§!): §G+25%§!\nChance for £physics£ §YField Manipulation§! Research Opties: §G+50%§!\n\n§cActive Effects:§!\n§YPulsestone§! modifier added for §Y10§! Years:\nHappines: §R-10%§!\nCombat Disengagement Chance: §G+25%§!\nShield Hardening: §G+25%§!\nEnergy Weapon Damage: §G+25%§!"
 
 	concept_hga_r_the_modularium:0 "$r_the_modularium$"
-	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!\n\n§cPassive Effects:§!\nVolatile Motes: §G+1§!\nExotic Gases: §G+1§!\nRare Crystals: §G+1§!\n\n§cActive Effects:§!\nDoubles the amount of resources provided by The Modularium, and doubles the cost of its next triumph."
 
 	concept_hga_r_galatron:0 "$r_galatron$"
-	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§cPassive Effects:§!\nDiplomatic Weight: §G+100%§!\nInfluence: §G+3§!\n\n§cActive Effects:§!\nThe Galatron random spews forth resources."
 
 	concept_hga_r_surveyor:0 "$r_surveyor$"
-	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!\n\n§cPassive Effects:§!\nSensor Range: §G+1§!\n\n§cActive Effects:§!\nScan planets in your territory for new resource deposits."
 
-	concept_hga_r_the_radience:0 "$r_vacuum_flower$"
-	concept_hga_r_the_radience_desc:0 "§L$r_vacuum_flower_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_vacuum_flower:0 "$r_vacuum_flower$"
+	concept_hga_r_vacuum_flower_desc:0 "§L$r_vacuum_flower_desc$§!\n\n§cPassive Effects:§!\nMonthly £energy£ Energy Credits: §G+10%§!\n\n§cActive Effects:§!\nGrants a different production bonus depending on the Star Class(es) of your capital system."
 
 	concept_hga_r_mutated_voidworm_nest:0 "$r_mutated_voidworm_nest$"
-	concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_mutated_voidworm_nest_desc:0 "§L$r_mutated_voidworm_nest_desc$§!\n\n§cPassive Effects:§!\nSpace Fauna Ship Cloning Speed: §G+25%§!\nVivarium Max Capacity: §G+25§!\n\n§cActive Effects:§!\nSpawn a fleet of Mature Mutated Voidworms in your capital system."
 
 	concept_hga_r_the_lost_patron:0 "$r_the_lost_patron$"
-	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!\n\n§cPassive Effects:§!\n§HShroud Seals§! Effective Range: §G+1§!\n§HShroud Seals§! produce £unity£ §YUnity§! §G+25§!\n§HShroud Seals§! provide £mod_country_naval_capacity_contribution_from_subjects_mult£ §YNaval Capacity§!: §G+10§!\n\n§cActive Effects:§!\nWe do not know what may happen..."
 
 	concept_hga_r_pyroglyphic_codex:0 "$r_pyroglyphic_codex$"
-	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§cPassive Effects:§!\nMonthly £unity£ Unity: §G+10%§!\n\n§cActive Effects:§!\nPyroglyphic Codex modifier added for 10 Years:\nResources Produced from £job_physicist£ £job_biologist£ £job_engineer£ Researchers: §G+10%§!\n\nActivating the Pyroglyphic Codex for the §Yfirst time§! permanently adds the\n§YUnderground Architecture§! modifier to our capital with the following effects:\nMax Districts: §G+5§!\nHousing: §G+20%§!\nAmenities: §G+10%§!"
 
 	concept_hga_r_crystallized_singularity:0 "$r_crystallized_singularity$"
-	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+10%§!\n\n§cActive Effects:§!\n§YCrystallized Singularity§! added for §Y10§! Years:\nEnergy Weapon Damage: §G+10%§!\nEnergy Weapon Fire Rate: §G+10%§!\nResearch Speed (£engineering£ §YEngineering§!): §G+10%§!\n\n§G10%§ of our £physics£ §YPhysics Research§! income will also generate £Energy£ §YEnergy Credits§!.\nUnlocks the §YLife Seeding§! decision on colonizable worlds to create a new primitive civilization."
 
-	concept_hga_r_the_key:0 "$r_wormhole_key$"
-	concept_hga_r_the_key_desc:0 "§L$r_wormhole_key_desc$§!\n\n§cPassive Effects:§!\n \n\n§cActive Effects:§!\n"
+	concept_hga_r_wormhole_key:0 "$r_wormhole_key$"
+	concept_hga_r_wormhole_key_desc:0 "§L$r_wormhole_key_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+20%§!\nJump Drive Cooldown: §G-25%§!\n\n§cActive Effects:§!\n§YThe Key§! modifier added for §Y3§! months:\n§GAllows every ship to make jumps, bypassing hyperlanes§!\nJump Drive Cooldown: §G-50%§!\nCombat Disengagement Chance: §G+75%§!"
 
 # Do not remove below v
