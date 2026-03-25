@@ -1,0 +1,33 @@
+# common/scripted_effects/hga_menu_scripted_effects.txt
+# Authors: HGA
+# >- HOST MENU SCRIPTED EFFECTS -<
+
+# Flag Holder >> master list of all HGA menu flags
+# NEVER trigger this effect, it exists only as a reference
+# Add new flags here as new settings are added
+
+hga_flag_holder = {
+	if = {
+		limit = { always = no }
+
+		# >- Relic Settings -<
+			set_global_flag = hga_no_relic_war		# player cannot declare relic wars
+			set_global_flag = hga_ai_no_relic_war		# AI cannot declare relic wars
+			set_global_flag = hga_no_relic_trade		# player cannot trade relics
+			set_global_flag = hga_ai_no_relic_trade	# AI cannot trade relics
+		# /
+
+		# >- Planetary Modifiers (RESERVED) -<
+			# set_global_flag = hga_modifier_intensity_low
+			# set_global_flag = hga_modifier_intensity_medium
+			# set_global_flag = hga_modifier_intensity_high
+		# /
+
+		# >- System -<
+			set_global_flag = hga_menu_initialized		# set on first init, prevents re-run on load
+		# /
+	}
+}
+# /
+
+# Do not remove below v

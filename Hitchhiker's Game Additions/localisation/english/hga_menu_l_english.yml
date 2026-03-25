@@ -1,0 +1,62 @@
+﻿# localisation/english/hga_menu_l_english.yml
+# Authors: HGA
+# >- HOST MENU LOCALISATION -<
+
+l_english:
+
+ # >- Shared -<
+  hga_menu.back: "◄ Back"
+
+ # >- Main Menu (hga_menu.1) -<
+  hga_menu.1.name: "HGA Host Options"
+  hga_menu.1.desc: "Configure game settings before beginning. Use the buttons below to navigate each category, then start the game when ready."
+
+  hga_menu.1.nav_relic: "Relic Settings"
+  hga_menu.1.nav_relicTT: "Configure relic wars and relic trading restrictions for players and AI."
+
+  # RESERVED >> uncomment with hga_menu.20
+  # hga_menu.1.nav_planetary: "Planetary Modifiers"
+  # hga_menu.1.nav_planetaryTT: "Configure planetary modifier intensity and types."
+
+  hga_menu.1.start: "Begin the Game"
+  hga_menu.1.startTT: "Close this menu and start playing."
+
+
+ # >- Relic Settings (hga_menu.10) -<
+  hga_menu.10.name: "Relic Settings"
+  hga_menu.10.desc: "Control who can start relic wars and who can trade relics. Changes apply globally."
+
+  # Relic Wars <<Player>>
+  hga_menu.10.lock_relic_war: "Lock: Relic Wars [OFF]"
+  hga_menu.10.lock_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for players."
+  hga_menu.10.unlock_relic_war: "Relic Wars [LOCKED]"
+  hga_menu.10.unlock_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for players."
+
+  # Relic Wars <<AI>>
+  hga_menu.10.lock_ai_relic_war: "Lock: AI Relic Wars [OFF]"
+  hga_menu.10.lock_ai_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for the AI."
+  hga_menu.10.unlock_ai_relic_war: "AI Relic Wars [LOCKED]"
+  hga_menu.10.unlock_ai_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for the AI."
+
+  # Relic Trade <<Player>>
+  hga_menu.10.lock_relic_trade: "Lock: Relic Trading [OFF]"
+  hga_menu.10.lock_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for players."
+  hga_menu.10.unlock_relic_trade: "Relic Trading [LOCKED]"
+  hga_menu.10.unlock_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for players."
+
+  # Relic Trade <<AI>>
+  hga_menu.10.lock_ai_relic_trade: "Lock: AI Relic Trading [OFF]"
+  hga_menu.10.lock_ai_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for the AI."
+  hga_menu.10.unlock_ai_relic_trade: "AI Relic Trading [LOCKED]"
+  hga_menu.10.unlock_ai_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for the AI."
+
+
+ # >- Planetary Modifiers (RESERVED / hga_menu.20) -<
+  # hga_menu.20.name: "Planetary Modifiers"
+  # hga_menu.20.desc: "Adjust the intensity of planetary modifiers applied across the galaxy."
+  # hga_menu.20.intensity_low: "Modifier Intensity: §YLow§!"
+  # hga_menu.20.intensity_lowTT: "Currently §YLow§!. Click to advance to §GMedium§!."
+  # hga_menu.20.intensity_medium: "Modifier Intensity: §GMedium§!"
+  # hga_menu.20.intensity_mediumTT: "Currently §GMedium§!. Click to advance to §RHigh§!."
+  # hga_menu.20.intensity_high: "Modifier Intensity: §RHigh§!"
+  # hga_menu.20.intensity_highTT: "Currently §RHigh§!. Click to wrap back to §YLow§!."

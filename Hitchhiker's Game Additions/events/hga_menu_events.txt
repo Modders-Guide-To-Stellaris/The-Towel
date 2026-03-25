@@ -1,0 +1,262 @@
+# events/hga_menu_events.txt
+# Authors: HGA
+# >- 1-1000 (HOST MENU) -<
+#
+# Legend:
+#   hga_menu.0   - Init (hidden, fires on game start, sets defaults)
+#   hga_menu.1   - Hub / Main Menu
+#   hga_menu.10  - Relic Settings page
+#   hga_menu.20  - [RESERVED] Planetary Modifiers page (TBD)
+# 	Anything else I desire because im special xD
+
+namespace = hga_menu
+
+# >- INIT -<
+	country_event = {
+		id = hga_menu.0
+		hide_window = yes
+		is_triggered_only = yes
+
+		trigger = {
+			is_ai = no
+			NOT = { has_global_flag = hga_menu_initialized }
+		}
+
+		immediate = {
+			set_global_flag = hga_menu_initialized
+
+			# Relic Wars >> default ON
+			# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
+
+			# Relic Trade >> default ON
+			# Do not set hga_no_relic_trade or hga_ai_no_relic_trade by default
+
+			country_event = { id = hga_menu.1 days = 1 }
+		}
+	}
+
+# /
+
+
+# >- HUB / MAIN MENU -<
+	country_event = {
+		id = hga_menu.1
+		title = hga_menu.1.name
+		desc = hga_menu.1.desc
+		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+
+		is_triggered_only = yes
+
+		# <<->> Relic Settings <<->>
+
+		option = {
+			name = hga_menu.1.nav_relic
+			custom_tooltip = hga_menu.1.nav_relicTT
+			hidden_effect = {
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		# <<->> Planetary Modifiers <<->>
+
+		# RESERVED, uncomment when planetary modifiers page is built
+		# option = {
+		# 	name = hga_menu.1.nav_planetary
+		# 	custom_tooltip = hga_menu.1.nav_planetaryTT
+		# 	hidden_effect = {
+		# 		country_event = { id = hga_menu.20 }
+		# 	}
+		# }
+
+		# <<->> Start Game <<->>
+
+		option = {
+			name = hga_menu.1.start
+			custom_tooltip = hga_menu.1.startTT
+		}
+	}
+
+# /
+
+
+# >- RELIC SETTINGS PAGE -<
+	country_event = {
+		id = hga_menu.10
+		title = hga_menu.10.name
+		desc = hga_menu.10.desc
+		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+
+		is_triggered_only = yes
+
+		# <<->> Relic Wars [Players] <<->>
+
+		option = {
+			trigger = {
+				NOT = { has_global_flag = hga_no_relic_war }
+			}
+			name = hga_menu.10.lock_relic_war
+			custom_tooltip = hga_menu.10.lock_relic_warTT
+			hidden_effect = {
+				set_global_flag = hga_no_relic_war
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		option = {
+			trigger = {
+				has_global_flag = hga_no_relic_war
+			}
+			name = hga_menu.10.unlock_relic_war
+			custom_tooltip = hga_menu.10.unlock_relic_warTT
+			hidden_effect = {
+				remove_global_flag = hga_no_relic_war
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+
+		# <<->> Relic Wars [AI] <<->>
+
+		option = {
+			trigger = {
+				NOT = { has_global_flag = hga_ai_no_relic_war }
+			}
+			name = hga_menu.10.lock_ai_relic_war
+			custom_tooltip = hga_menu.10.lock_ai_relic_warTT
+			hidden_effect = {
+				set_global_flag = hga_ai_no_relic_war
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		option = {
+			trigger = {
+				has_global_flag = hga_ai_no_relic_war
+			}
+			name = hga_menu.10.unlock_ai_relic_war
+			custom_tooltip = hga_menu.10.unlock_ai_relic_warTT
+			hidden_effect = {
+				remove_global_flag = hga_ai_no_relic_war
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		# <<->> Relic Trade [Player] <<->>
+
+		option = {
+			trigger = {
+				NOT = { has_global_flag = hga_no_relic_trade }
+			}
+			name = hga_menu.10.lock_relic_trade
+			custom_tooltip = hga_menu.10.lock_relic_tradeTT
+			hidden_effect = {
+				set_global_flag = hga_no_relic_trade
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		option = {
+			trigger = {
+				has_global_flag = hga_no_relic_trade
+			}
+			name = hga_menu.10.unlock_relic_trade
+			custom_tooltip = hga_menu.10.unlock_relic_tradeTT
+			hidden_effect = {
+				remove_global_flag = hga_no_relic_trade
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		# <<->> Relic Trade [AI] <<->>
+
+		option = {
+			trigger = {
+				NOT = { has_global_flag = hga_ai_no_relic_trade }
+			}
+			name = hga_menu.10.lock_ai_relic_trade
+			custom_tooltip = hga_menu.10.lock_ai_relic_tradeTT
+			hidden_effect = {
+				set_global_flag = hga_ai_no_relic_trade
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		option = {
+			trigger = {
+				has_global_flag = hga_ai_no_relic_trade
+			}
+			name = hga_menu.10.unlock_ai_relic_trade
+			custom_tooltip = hga_menu.10.unlock_ai_relic_tradeTT
+			hidden_effect = {
+				remove_global_flag = hga_ai_no_relic_trade
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+
+		# <<->> Return Button <<->>
+
+		option = {
+			name = hga_menu.back
+			hidden_effect = {
+				country_event = { id = hga_menu.1 }
+			}
+		}
+	}
+
+# /
+
+
+# >- PLANETARY MODIFIERS PAGE (RESERVED) -<
+	# country_event = {
+	# 	id = hga_menu.20
+	# 	title = hga_menu.20.name
+	# 	desc = hga_menu.20.desc
+	# 	picture = GFX_evt_star_chart
+	# 	is_triggered_only = yes
+	#
+	#	# <<->> Modifier Intensitity LOW > MEDIUM <<->>
+	# 	# option = {
+	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_low }
+	# 	# 	name = hga_menu.20.intensity_low
+	# 	# 	custom_tooltip = hga_menu.20.intensity_lowTT
+	# 	# 	hidden_effect = {
+	# 	# 		remove_global_flag = hga_modifier_intensity_low
+	# 	# 		set_global_flag = hga_modifier_intensity_medium
+	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 	}
+	# 	# }
+	# 	# <<->> Modifier Intensitity MEDIUM > HIGH <<->>
+	# 	# option = {
+	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_medium }
+	# 	# 	name = hga_menu.20.intensity_medium
+	# 	# 	custom_tooltip = hga_menu.20.intensity_mediumTT
+	# 	# 	hidden_effect = {
+	# 	# 		remove_global_flag = hga_modifier_intensity_medium
+	# 	# 		set_global_flag = hga_modifier_intensity_high
+	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 	}
+	# 	# }
+	# 	# <<->> Modifier Intensitity HIGH > LOW <<->>
+	# 	# option = {
+	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_high }
+	# 	# 	name = hga_menu.20.intensity_high
+	# 	# 	custom_tooltip = hga_menu.20.intensity_highTT
+	# 	# 	hidden_effect = {
+	# 	# 		remove_global_flag = hga_modifier_intensity_high
+	# 	# 		set_global_flag = hga_modifier_intensity_low
+	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 	}
+	# 	# }
+	#
+	# 	# <<->> Return Button <<->>
+	#
+	# 	# option = {
+	# 	# 	name = hga_menu.back
+	# 	# 	hidden_effect = { country_event = { id = hga_menu.1 } }
+	# 	# }
+	# }
+
+# /
+
+# Do not remove below v
