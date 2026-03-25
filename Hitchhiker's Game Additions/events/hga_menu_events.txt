@@ -24,6 +24,7 @@ namespace = hga_menu
 
 		immediate = {
 			set_global_flag = hga_menu_initialized
+			set_country_flag = hga_is_host
 
 			# Relic Wars >> default ON
 			# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
