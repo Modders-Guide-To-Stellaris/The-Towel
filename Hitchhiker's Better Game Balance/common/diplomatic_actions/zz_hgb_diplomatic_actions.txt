@@ -29,12 +29,12 @@ action_improve_relation = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -135,12 +135,12 @@ action_offer_trade_deal = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -241,12 +241,12 @@ action_form_defensive_pact = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -400,12 +400,12 @@ action_form_non_aggression_pact = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -534,12 +534,12 @@ action_form_commercial_pact = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -733,12 +733,12 @@ action_form_research_agreement = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -994,12 +994,12 @@ action_guarantee_independence = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -1158,12 +1158,12 @@ action_support_independence = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -1272,12 +1272,12 @@ action_form_migration_pact = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -1502,12 +1502,12 @@ action_ask_to_become_subjugated = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -1703,12 +1703,12 @@ action_embassy = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
@@ -1831,12 +1831,12 @@ action_propose_secret_fealty = {
     possible = {
         #HGTS
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
-            NOT = { has_country_flag = hgb_is_definitive_crisis }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC
+            NOT = { hgb_is_definitive_crisis = yes }
         }
         custom_tooltip = {
-            fail_text = HGTS_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
-            from = { NOT = { has_country_flag = hgb_is_definitive_crisis } }
+            fail_text = HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM
+            from = { NOT = { hgb_is_definitive_crisis = yes } }
         }
         #VANILLA
         custom_tooltip = {
