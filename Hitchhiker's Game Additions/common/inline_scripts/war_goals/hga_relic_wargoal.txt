@@ -31,6 +31,7 @@
 
 		possible = {
 			from = { has_relic = $RELIC_ID$ }
+			NOT = { has_global_flag = hga_no_relic_war }
 		}
 
 		on_wargoal_set = {

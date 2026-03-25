@@ -14,7 +14,7 @@ composer_aura = {
                 logistic_growth_mult = 0.03
                 planet_pop_assembly_mult = 0.03
                 bonus_pop_growth_mult = 0.03
-                deposit_blockers_natural_unity_produces_add = 1
+                deposit_blockers_natural_unity_produces_add = 2
             }
         }
         neutral_fleet_modifier = {
@@ -52,7 +52,7 @@ composer_aura = {
                 logistic_growth_mult = 0.05
                 planet_pop_assembly_mult = 0.05
                 bonus_pop_growth_mult = 0.05
-                deposit_blockers_natural_unity_produces_add = 2
+                deposit_blockers_natural_unity_produces_add = 3
             }
         }
         neutral_fleet_modifier = {
