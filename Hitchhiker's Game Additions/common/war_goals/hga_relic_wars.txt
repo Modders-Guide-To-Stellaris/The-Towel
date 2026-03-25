@@ -1,4 +1,4 @@
-# common/war_goals/hga_van_relic_wars.txt
+# common/war_goals/hga_relic_wars.txt
 # Authors: HGA
 #
 # CUSTOM_AI notes per relic — mirrored from trade logic (inverted: high trade reluctance = high war desire)

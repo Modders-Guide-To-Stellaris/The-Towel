@@ -1,4 +1,4 @@
-# common/tradeable_actions/hga_van_relic_trades.txt
+# common/tradeable_actions/hga_relic_trades.txt
 # Authors: HGA
 #
 # Per-relic CUSTOM_AI carries the same logic as the original file.

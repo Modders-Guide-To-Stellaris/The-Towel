@@ -1,0 +1,50 @@
+# common/ascension_perks/zz_hga_ow_ascension_perks.txt
+# Authors: HGA
+
+ap_detox = {
+    potential = {
+        host_has_dlc = "Toxoids Species Pack"
+        NOT = {
+            has_ascension_perk = ap_detox
+            has_country_flag = knights_detox
+        }
+
+        always = no
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_tech_climate_restoration"
+            has_technology = tech_climate_restoration
+        }
+
+        always = no
+    }
+
+    on_enabled = {
+        custom_tooltip = "detox_tox_worlds"
+    }
+
+    modifier = {
+        add_attunement_the_composer_of_strands = 30
+    }
+
+    ai_weight = {
+        factor = 20
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    has_modifier = toxic_terraforming_candidate
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            count_planet_within_border = {
+                count > 2
+                limit = { has_modifier = toxic_terraforming_candidate }
+            }
+        }
+    }
+}
