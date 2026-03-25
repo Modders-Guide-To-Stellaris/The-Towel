@@ -21,6 +21,8 @@
 				category = economy
 				level >= 2
 			}
+
+			NOT = { has_global_flag = hga_no_relic_war }
 		}
 
 		is_valid = {
