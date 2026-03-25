@@ -25,7 +25,7 @@ l_english:
 	concept_hga_r_core_of_the_reckoning_desc:0 "§L$r_core_of_the_reckoning_desc$§!\n\n§cPassive Effects:§!\nResources From £job£ Jobs: §G+25%§!\nResources Produced from Mining Stations: §G+25%§!\nResources Produced from Research Stations: §G+25%§!\nNaval Capacity: §G+25%§!\nShip Upkeep: §G-25%§!\nMonthly Influence: §G+1§!\nStarbase Capacity: §G+1§!\n\n§cActive Effects:§!\nUnlocks one £decision£ §YPlanetary Decision§!: §H['concept_banish_decision']§!"
 
 	concept_hga_r_odryskan_crystal:0 "$r_odryskan_crystal$"
-	concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!\n\n§cPassive Effects:§!\nMonthly £rare_crystals£ Rare Crystals: §G+15%§!\n\n§cActive Effects:§!\nEnergy Credits Grained: §Y60§! months worth of £energy£ §YEnergy Credits§!\nOne of our scientists may gain the §YManiacal§! trait."
+	concept_hga_r_odryskan_crystal_desc:0 "§L$r_odryskan_crystal_desc$§!\n\n§cPassive Effects:§!\nMonthly £rare_crystals£ Rare Crystals: §G+15%§!\n\n§cActive Effects:§!\nEnergy Credits Gained: §Y60§! months worth of £energy£ §YEnergy Credits§!\nOne of our scientists may gain the §YManiacal§! trait."
 
 	concept_hga_r_ancient_sword:0 "$r_ancient_sword$"
 	concept_hga_r_ancient_sword_desc:0 "§L$r_ancient_sword_desc$§!\n\n§cPassive Effects:§!\nArmy Morale: §G+25%§!\nPlanet Sensor Range: §G+2§!\nDiplomatic Weight: §G+10%§!\n\n§cActive Effects:§!\n§YBlade of the Huntress§! modifier added for §Y10§! Years:\nSublight Speed: §G+25%§!"
@@ -64,7 +64,7 @@ l_english:
 	concept_hga_r_pox_sample_desc:0 "§L$r_pox_sample_desc$§!\n\n§cPassive Effects:§!\nEnables §YPox§! Orbital Bombardment stance\nIncreased likelihood of discovering £society£ §IBio Technologies§!\nLeader Lifespan: §G+20 Years§!\n\n§cActive Effects:§!\n§YJavorian Pox Sample§! modifier added for §Y10§! Years:\nResearch Speed (£society£ §YBiology§!) §G+25%§!"
 
 	concept_hga_r_zro_crystal:0 "$r_zro_crystal$"
-	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!\n\n§cPassive Effects:§!\nThe cooldown to §YBreach into the Shroud§! is reduced by §G50%§!\nGrants access to the ['edict:zro_crystal'] edict.\n\n§cActive Effects:§!\nContact the spirit of §YJa'Baxti§! to seek guidance in different matters."
+	concept_hga_r_zro_crystal_desc:0 "§L$r_zro_crystal_desc$§!\n\n§cPassive Effects:§!\nThe cooldown to §YBreach into the Shroud§! is reduced by §G50%§!\nGrants access to the ['edict:zro_crystal', $edict_zro_crystal$] edict.\n\n§cActive Effects:§!\nContact the spirit of §YJa'Baxti§! to seek guidance in different matters."
 
 	concept_hga_r_the_last_baol:0 "$r_the_last_baol$"
 	concept_hga_r_the_last_baol_desc:0 "§L$r_the_last_baol_desc$§!\n\n§cPassive Effects:§!\nPop Growth Speed: §G+10%§!\n\n§cActive Effects:§!\n§HUnlocks Decision:§! §GNu-Baol Life-Seeding§!, granting the ability to turn one non-Ecuomenopolis/Hive/Machine World planet into a ['concept_pc_gaia']."
@@ -91,10 +91,10 @@ l_english:
 	concept_hga_r_ever_spinning_top_desc:0 "§L$r_ever_spinning_top_desc$§!\n\n§cPassive Effects:§!\nMonthly £energy£ Energy Credits: §G+10%§!\n\n§cActive Effects:§!\n§YPerpetual Motion§! modifier added for §Y5§! Years:\nResearch Speed (£engineering£ §YPropulsion§!): §G+15%§!"
 
 	concept_hga_r_infinity_root:0 "$r_infinity_root$"
-	concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!\nMonthly £food£ Food +10/20%\n§cPassive Effects:§!\n\n\n§cActive Effects:§!\nGrow a new leader. They will have no upkeep and will not count towards your leader total."
+	concept_hga_r_infinity_root_desc:0 "§L$r_infinity_root_desc$§!\n\n§cPassive Effects:§!\nMonthly £food£ Food +10/20%\n\n§cActive Effects:§!\nGrow a new leader. They will have no upkeep and will not count towards your leader total."
 
 	concept_hga_r_plasmic_core:0 "$r_plasmic_core$"
-	concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!\n\n§cPassive Effects:§!\nOrg: Pop Growth Speed: §G+10%§!\nRobo: Leader Experience Gain: §G+10%§!\n\n§cActive Effects:§!\nOrg: Every pop on a random planet gain the ['trait:trait_plasmic'] trait.\nRobo:Gives a random leader 3 random positive traits."
+	concept_hga_r_plasmic_core_desc:0 "§L$r_plasmic_core_desc$§!\n\n§cPassive Effects:§!\nOrg: Pop Growth Speed: §G+10%§!\nRobo: Leader Experience Gain: §G+10%§!\n\n§cActive Effects:§!\nOrg: Every pop on a random planet gain the ['trait:trait_plasmic'] trait.\nRobo: Gives a random leader 3 random positive traits."
 
 	concept_hga_r_continuum:0 "$r_continuum$"
 	concept_hga_r_continuum_desc:0 "§L$r_continuum_desc$§!\n\n§cPassive Effects:§!\nMonthly £basic_resources£ Basic Resources: §G+5%§!\nMonthly £alloys£ £consumer_goods£ Advanced Resources: §G+5%§!\nMonthly £research£ Research: §G+5%§!\n\n§cActive Effects:§!\n£basic_resources£ Basic, £alloys£ £consumer_goods£ Advanced, £strategic£ Strategic Resources and £research£ Research Gained: §YMonthly Production x 12§!"
@@ -109,7 +109,7 @@ l_english:
 	concept_hga_r_gavel_of_the_tribunal_desc:0 "§L$r_gavel_of_the_tribunal_desc$§!\n\n§cPassive Effects:§!\n£diplo_weight£ Diplomatic Weight from assigned Leader Skill Level: §G+5%§!\n\n§cActive Effects:§!\n§YGavel of the Tribunal§! modifier added for §Y10§! Years:\nClaim Influence Cost: §G-25%§!"
 
 	concept_hga_r_the_pattern_maker:0 "$r_the_pattern_maker$"
-	concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!\n\n§cPassive Effects:§!\nCodebreaking: §G+4§!\nTracking: §G+5§!\nAccuracy: §G+5%§!\n\n§cActive Effects:§!\nCreates a §YPatternwalker§! Class Science Ship, Very high speed and Hyperlane Detection Range."
+	concept_hga_r_the_pattern_maker_desc:0 "§L$r_the_pattern_maker_desc$§!\n\n§cPassive Effects:§!\nCodebreaking: §G+4§!\nTracking: §G+5§!\nAccuracy: §G+5%§!\n\n§cActive Effects:§!\nCreates a §YPatternwalker§! Class Science Ship, very high speed and Hyperlane Detection Range."
 
 	concept_hga_r_tiyanki_matriarch_nerve_core:0 "$r_tiyanki_matriarch_nerve_core$"
 	concept_hga_r_tiyanki_matriarch_nerve_core_desc:0 "§L$r_tiyanki_matriarch_nerve_core_desc$§!\n\n§cPassive Effects:§!\nDamage vs Leviathans: §G+25%§!\n\n§cActive Effects:§!\n§YTiyanki Matriarch Nerve Core§! modifier added for §Y10§! Years:\nSpace Fauna Ship Hull: §G+20%§!\nSpace Fauna Ship Armor: §G+20%§!\nSpace Fauna Ship Growth Rate: §G+25%§!"
@@ -124,7 +124,7 @@ l_english:
 	concept_hga_r_executus_compendium_desc:0 "§L$r_executus_compendium_desc$§!\n\n§cPassive Effects:§!\nEffective Councillor Skill: §G+1§!\nCouncil Agenda Speed: §G+25%§!\n\n§cActive Effects:§!\nLaunch the Agenda for §Y10%§! of its early launch cost. (Minimum cost of £unity£ 3000)"
 
 	concept_hga_r_preservation_chamber:0 "$r_preservation_chamber$"
-	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!\n\n§cPassive Effects:§!\nResource Storage Capacity: §G+25000§!\nVivarium Max Capacity: §G+25§!\n\n§cActive Effects:§!\nAdd 2 §MExceptional§! Space Fauna specimens of a same, random Species, to your Vivarium."
+	concept_hga_r_preservation_chamber_desc:0 "§L$r_preservation_chamber_desc$§!\n\n§cPassive Effects:§!\nResource Storage Capacity: §G+25000§!\nVivarium Max Capacity: §G+25§!\n\n§cActive Effects:§!\nAdd 2 §MExceptional§! Space Fauna specimens of the same, random Species, to your Vivarium."
 
 	concept_hga_r_prototype_vir_core:0 "$r_prototype_vir_core$"
 	concept_hga_r_prototype_vir_core_desc:0 "§L$r_prototype_vir_core_desc$§!\n\n§cPassive Effects:§!\n£official£ Official Capacity: §G+1§!\n£commander£ Commander Capacity: §G+1§!\n£scientist£ Scientist Capacity: §G+1§!\n\n§cActive Effects:§!\n§YPrototype VIR Core§! modifier added for §Y10§! Years:\nEffective Councilor Skills: §G+4§!"
@@ -139,7 +139,7 @@ l_english:
 	concept_hga_r_everchanging_stone_desc:0 "§L$r_everchanging_stone_desc$§!\n\n§cPassive Effects:§!\nXeno Geology Specimens Output: +30%\n£minerals£ Upkeep per 100 £mod_planet_metallurgists_upkeep_mult£ Metallurgists: §G-1§!\n£minerals£ Upkeep per 100 £job_artisan£ Artisans: §G-1§!\n\n§cActive Effects:§!\nFor each ['concept_specimen'] exhibited in Xeno Geology, increase the output of the other two categories by §G3%§!."
 
 	concept_hga_r_flowmetal_alloy:0 "$r_flowmetal_alloy$"
-	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§cPassive Effects:§!\nRobot Upkeep: §G-30%§!\nShip Build Speed: §G+15%§!\n\n§cActive Effects:§!\nCreate 300 §G300§! §YRobot £pop£ Pops§! in your capital."
+	concept_hga_r_flowmetal_alloy_desc:0 "§L$r_flowmetal_alloy_desc$§!\n\n§cPassive Effects:§!\nRobot Upkeep: §G-30%§!\nShip Build Speed: §G+15%§!\n\n§cActive Effects:§!\nCreate §G300§! §YRobot £pop£ Pops§! in your capital."
 
 	concept_hga_r_pulsestone:0 "$r_pulsestone$"
 	concept_hga_r_pulsestone_desc:0 "§L$r_pulsestone_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YField Manipulation§!): §G+25%§!\nChance for £physics£ §YField Manipulation§! Research Opties: §G+50%§!\n\n§cActive Effects:§!\n§YPulsestone§! modifier added for §Y10§! Years:\nHappines: §R-10%§!\nCombat Disengagement Chance: §G+25%§!\nShield Hardening: §G+25%§!\nEnergy Weapon Damage: §G+25%§!"
@@ -148,7 +148,7 @@ l_english:
 	concept_hga_r_the_modularium_desc:0 "§L$r_the_modularium_desc$§!\n\n§cPassive Effects:§!\nVolatile Motes: §G+1§!\nExotic Gases: §G+1§!\nRare Crystals: §G+1§!\n\n§cActive Effects:§!\nDoubles the amount of resources provided by The Modularium, and doubles the cost of its next triumph."
 
 	concept_hga_r_galatron:0 "$r_galatron$"
-	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§cPassive Effects:§!\nDiplomatic Weight: §G+100%§!\nInfluence: §G+3§!\n\n§cActive Effects:§!\nThe Galatron random spews forth resources."
+	concept_hga_r_galatron_desc:0 "§L$r_galatron_desc$§!\n\n§cPassive Effects:§!\nDiplomatic Weight: §G+100%§!\nInfluence: §G+3§!\n\n§cActive Effects:§!\nThe Galatron randomly spews forth resources."
 
 	concept_hga_r_surveyor:0 "$r_surveyor$"
 	concept_hga_r_surveyor_desc:0 "§L$r_surveyor_desc$§!\n\n§cPassive Effects:§!\nSensor Range: §G+1§!\n\n§cActive Effects:§!\nScan planets in your territory for new resource deposits."
@@ -163,10 +163,10 @@ l_english:
 	concept_hga_r_the_lost_patron_desc:0 "§L$r_the_lost_patron_desc$§!\n\n§cPassive Effects:§!\n§HShroud Seals§! Effective Range: §G+1§!\n§HShroud Seals§! produce £unity£ §YUnity§! §G+25§!\n§HShroud Seals§! provide £mod_country_naval_capacity_contribution_from_subjects_mult£ §YNaval Capacity§!: §G+10§!\n\n§cActive Effects:§!\nWe do not know what may happen..."
 
 	concept_hga_r_pyroglyphic_codex:0 "$r_pyroglyphic_codex$"
-	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§cPassive Effects:§!\nMonthly £unity£ Unity: §G+10%§!\n\n§cActive Effects:§!\nPyroglyphic Codex modifier added for 10 Years:\nResources Produced from £job_physicist£ £job_biologist£ £job_engineer£ Researchers: §G+10%§!\n\nActivating the Pyroglyphic Codex for the §Yfirst time§! permanently adds the\n§YUnderground Architecture§! modifier to our capital with the following effects:\nMax Districts: §G+5§!\nHousing: §G+20%§!\nAmenities: §G+10%§!"
+	concept_hga_r_pyroglyphic_codex_desc:0 "§L$r_pyroglyphic_codex_desc$§!\n\n§cPassive Effects:§!\nMonthly £unity£ Unity: §G+10%§!\n\n§cActive Effects:§!\n§YPyroglyphic Codex§! modifier added for §Y10§! Years:\nResources Produced from £job_physicist£ £job_biologist£ £job_engineer£ Researchers: §G+10%§!\n\nActivating the Pyroglyphic Codex for the §Yfirst time§! permanently adds the\n§YUnderground Architecture§! modifier to our capital with the following effects:\nMax Districts: §G+5§!\nHousing: §G+20%§!\nAmenities: §G+10%§!"
 
 	concept_hga_r_crystallized_singularity:0 "$r_crystallized_singularity$"
-	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+10%§!\n\n§cActive Effects:§!\n§YCrystallized Singularity§! added for §Y10§! Years:\nEnergy Weapon Damage: §G+10%§!\nEnergy Weapon Fire Rate: §G+10%§!\nResearch Speed (£engineering£ §YEngineering§!): §G+10%§!\n\n§G10%§ of our £physics£ §YPhysics Research§! income will also generate £Energy£ §YEnergy Credits§!.\nUnlocks the §YLife Seeding§! decision on colonizable worlds to create a new primitive civilization."
+	concept_hga_r_crystallized_singularity_desc:0 "§L$r_crystallized_singularity_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+10%§!\n\n§cActive Effects:§!\n§YCrystallized Singularity§! added for §Y10§! Years:\nEnergy Weapon Damage: §G+10%§!\nEnergy Weapon Fire Rate: §G+10%§!\nResearch Speed (£engineering£ §YEngineering§!): §G+10%§!\n\n§G10%§! of our £physics£ §YPhysics Research§! income will also generate £Energy£ §YEnergy Credits§!.\nUnlocks the §YLife Seeding§! decision on colonizable worlds to create a new primitive civilization."
 
 	concept_hga_r_wormhole_key:0 "$r_wormhole_key$"
 	concept_hga_r_wormhole_key_desc:0 "§L$r_wormhole_key_desc$§!\n\n§cPassive Effects:§!\nResearch Speed (£physics£ §YPhysics§!): §G+20%§!\nJump Drive Cooldown: §G-25%§!\n\n§cActive Effects:§!\n§YThe Key§! modifier added for §Y3§! months:\n§GAllows every ship to make jumps, bypassing hyperlanes§!\nJump Drive Cooldown: §G-50%§!\nCombat Disengagement Chance: §G+75%§!"
