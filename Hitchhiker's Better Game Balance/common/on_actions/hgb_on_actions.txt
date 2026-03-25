@@ -3,3 +3,9 @@ on_game_start = {
         hgb_internal.1
     }
 }
+
+on_monthly_pulse_country = {
+    events = {
+        hgb_internal.2
+    }
+}

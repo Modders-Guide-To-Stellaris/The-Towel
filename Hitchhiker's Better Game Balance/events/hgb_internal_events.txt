@@ -9,3 +9,22 @@ event = {
         set_global_flag = hgb_enabled
     }
 }
+
+country_event = {
+    id = hgb_internal.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                AND = {
+                    NOT = { has_country_flag = hgb_is_definitive_crisis }
+                    hgb_is_definitive_crisis = yes
+                }
+            }
+
+            set_country_flag = hgb_is_definitive_crisis
+        }
+    }
+}
