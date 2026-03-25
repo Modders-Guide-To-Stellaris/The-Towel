@@ -13,7 +13,7 @@ the_masquerade_$ETHIC$ = {
     support_weight_exponent = 0.7
 
     country_modifier = {
-        diplo_weight_mult = 0.001
+        diplo_weight_mult = 0.02
     }
 
     extortion_resource = {
