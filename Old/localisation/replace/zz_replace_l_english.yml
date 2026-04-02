@@ -1,5 +1,0 @@
-﻿l_english:
- cloning_unlock_level_1_tt: "£mod_bonus_pop_growth£ $MOD_BONUS_POP_GROWTH$ per $pop_group_unit$ [GetGenomicJobsPluralWithIcon]: §G+0.5§!"
- trait_robot_digital_2_tt: "$trait_robot_digital_1_tt$\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+140%§! (§R-25%§! per Colony)\nPop Upkeep: §R+0.1§! £energy£ §YEnergy§! per Colony"
- tr_virtuality_1_modifier_desc: "§Y$trait_robot_digital_1$§! Species Trait gains the following effects:$TABBED_NEW_LINE$- $MOD_POP_BONUS_WORKFORCE_MULT$: §G+140%§! (§R-25%§! per Colony)$TABBED_NEW_LINE$- Pop Upkeep: §R+0.1§! $r_energy$ per Colony"
- luminous_blades_tt: "$MOD_ARMY_DAMAGE_MULT$: §G+25%§!\n[knight.GetIcon] §Y[knight.GetName]§! jobs have §R-1§! $r_alloys$ Upkeep"

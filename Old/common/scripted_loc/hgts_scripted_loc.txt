@@ -1,4 +1,0 @@
-defined_text = {
-    name = gestalt_over_cap
-    value = value:hgts_gestalts_over_limit
-}

@@ -1,0 +1,24 @@
+NGameplay = {
+
+    # down from like 0.25 or smt
+    TECH_COST_SLIDER_INTERVAL = 0.05
+    TRADITION_COST_SLIDER_INTERVAL = 0.05
+
+    ETHOS_MAX_POINTS					= 3                     # Number of points which you can spend on ethos.
+    GOVERNMENT_CIVIC_POINTS_BASE		= 3		                # Base amount of civic points (to "pay" for government civic costs)
+
+    #GALCOM
+    RESOLUTION_VOTE_TIMER = 720									# number of days a resolution will be on the senate floor before being passed/failed
+    RESOLUTION_VOTE_PREMATURE_TIMER = 360						# number of days until the custodian/emperor can prematurely end the senate session
+    SENATE_RECESS_TIMER = 360									# number of days until the next proposed resolution will be put on the floor after the current vote
+    CHANGE_VOTE_COOLDOWN = 30									# number of days after voting in a resolution before you can change your vote
+    CATEGORY_VOTE_COOLDOWN = 1080								# days before another resolution in a given category can proposed again
+    TYPE_VOTE_COOLDOWN	= 2060									# time before a referendum of a given type can be proposed again
+    VETO_COOLDOWN = 1080										# time before a country can enact another veto
+    DEFAULT_VETO_COST_MULT = 3									# proposed resolution cost is multiplied by this to determine the cost of vetoing that resolution
+
+    # LIMITED_EXPLORATION = 1		# If set to 1, only science ships with scientists or military fleets let by an commander can enter unvisited systems
+    # ENFORCE_STATUS_QUO_ENABLED				= yes		# Can status quo be enforced at high WE?
+    # ENFORCE_STATUS_QUO_MONTHS				= 24
+    # Might be fun to look at : FALLEN_CUSTOM_EMPIRE_SPAWN_CHANCE (if someone's empire is particularly memorable, add them as a FE XD
+}

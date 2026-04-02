@@ -1,0 +1,1120 @@
+# common/war_goals/hga_relic_wars.txt
+# Authors: HGA
+#
+# CUSTOM_AI notes per relic — mirrored from trade logic (inverted: high trade reluctance = high war desire)
+# Base war ai_weight logic lives in inline_scripts/war_goals/hga_relic_wargoal.txt
+
+# >- CRISIS RELICS -<
+
+	# Warlock: psionic/military mobility — militarists cling to it, so others want it by war
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_warlock
+		CB_KEY   = hga_cb_seize_warlock
+		RELIC_ID = r_unbidden_warlock
+		FLAG_KEY = hga_cannot_trade_warlock
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 0.8
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Contingency Core: machine/megastructure relic — machine empires want it back if stolen
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_contingency_core
+		CB_KEY   = hga_cb_seize_contingency_core
+		RELIC_ID = r_contingency_core
+		FLAG_KEY = hga_cannot_trade_contingency_core
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.5
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_machine_assimilator
+			}
+			modifier = {
+				factor = 1.2
+				has_technology = tech_mega_engineering
+			}
+		"
+	}
+
+	# Prethoryn Queen: militarists want the fleet; pacifists less eager for war over it
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_prethoryn_queen
+		CB_KEY   = hga_cb_seize_prethoryn_queen
+		RELIC_ID = r_prethoryn_queen
+		FLAG_KEY = hga_cannot_trade_prethoryn_queen
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 0.6
+				has_ethic = ethic_fanatic_pacifist
+			}
+		"
+	}
+
+	# Khan's Throne: claim costs + Satrapy access — expansionists and authoritarians prize this
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_khans_throne
+		CB_KEY   = hga_cb_seize_khans_throne
+		RELIC_ID = r_khans_throne
+		FLAG_KEY = hga_cannot_trade_khans_throne
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 0.7
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		"
+	}
+
+	# Eternal Throne: immortal leaders — almost everyone wants this; authoritarians especially
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_eternal_throne
+		CB_KEY   = hga_cb_seize_eternal_throne
+		RELIC_ID = r_eternal_throne
+		FLAG_KEY = hga_cannot_trade_eternal_throne
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.6
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 0.8
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 0.85
+				is_hive_empire = yes
+			}
+		"
+	}
+
+	# Cetana's Heart: ascension cost reduction + robot pop burst — machine empires want it
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_cetanas_heart
+		CB_KEY   = hga_cb_seize_cetanas_heart
+		RELIC_ID = r_cetanas_heart
+		FLAG_KEY = hga_cannot_trade_cetanas_heart
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.5
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_machine_assimilator
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_ascensionists
+			}
+			modifier = {
+				factor = 0.8
+				is_hive_empire = yes
+			}
+		"
+	}
+
+	# Core of the Reckoning: one of the strongest passives — almost nobody trades it, so war is the only path
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_core_of_the_reckoning
+		CB_KEY   = hga_cb_seize_core_of_the_reckoning
+		RELIC_ID = r_core_of_the_reckoning
+		FLAG_KEY = hga_cannot_trade_core_of_the_reckoning
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.6
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_militarist
+			}
+		"
+	}
+# /
+
+# >- ARCHAEOLOGICAL RELICS -<
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_odryskan_crystal
+		CB_KEY   = hga_cb_seize_odryskan_crystal
+		RELIC_ID = r_odryskan_crystal
+		FLAG_KEY = hga_cannot_trade_odryskan_crystal
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_technology = tech_crystal_armor_1
+			}
+		"
+	}
+
+	# Ancient Sword: army morale + diplo weight + sensors — militarists want it by war
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_ancient_sword
+		CB_KEY   = hga_cb_seize_ancient_sword
+		RELIC_ID = r_ancient_sword
+		FLAG_KEY = hga_cannot_trade_ancient_sword
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_militarist
+			}
+		"
+	}
+
+	# Severed Head: Holy Guardian relations — spiritualists prize this highly
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_severed_head
+		CB_KEY   = hga_cb_seize_severed_head
+		RELIC_ID = r_severed_head
+		FLAG_KEY = hga_cannot_trade_severed_head
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 0.7
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Galaxy: research speed — materialists want this
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_galaxy
+		CB_KEY   = hga_cb_seize_galaxy
+		RELIC_ID = r_galaxy
+		FLAG_KEY = hga_cannot_trade_galaxy
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_materialist
+			}
+		"
+	}
+
+	# Defragmentor: energy upkeep reduction — machine empires want this
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_mechano_calibrator
+		CB_KEY   = hga_cb_seize_mechano_calibrator
+		RELIC_ID = r_the_defragmentor
+		FLAG_KEY = hga_cannot_trade_mechano_calibrator
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_machine_assimilator
+			}
+		"
+	}
+
+	# Omnicodex: gene mod point + new species pop burst — bio empires and gene-focused want it
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_omnicodex
+		CB_KEY   = hga_cb_seize_omnicodex
+		RELIC_ID = r_omnicodex
+		FLAG_KEY = hga_cannot_trade_omnicodex
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_technology = tech_gene_tailoring
+			}
+			modifier = {
+				factor = 0.7
+				is_machine_empire = yes
+			}
+		"
+	}
+# /
+
+# >- GUARDIAN RELICS -<
+
+	# Dragon Trophy: +10% unity — spiritualists/unity empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_dragon_trophy
+		CB_KEY   = hga_cb_seize_dragon_trophy
+		RELIC_ID = r_dragon_trophy
+		FLAG_KEY = hga_cannot_trade_dragon_trophy
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_shared_burden
+			}
+		"
+	}
+
+	# Worm Scales: +5% physics research — relatively weak, modest war desire
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_worm_scales
+		CB_KEY   = hga_cb_seize_worm_scales
+		RELIC_ID = r_worm_scales
+		FLAG_KEY = hga_cannot_trade_worm_scales
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.1
+				has_ethic = ethic_materialist
+			}
+		"
+	}
+
+	# Rubricator: archaeotech weapon damage + minor artifacts — archaeology empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_rubricator
+		CB_KEY   = hga_cb_seize_rubricator
+		RELIC_ID = r_rubricator
+		FLAG_KEY = hga_cannot_trade_rubricator
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_technology = tech_archaeostudies
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Toxic God: strike craft + Knights bonus — toxic origin empires cling hardest
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_toxic_god
+		CB_KEY   = hga_cb_seize_toxic_god
+		RELIC_ID = r_toxic_god
+		FLAG_KEY = hga_cannot_trade_toxic_god
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 0.5
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Voidspawn Myocardium: fire rate + damage reduction; behemoth empires prize it
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_voidspawn_heart
+		CB_KEY   = hga_cb_seize_voidspawn_heart
+		RELIC_ID = r_voidspawn_myocardium
+		FLAG_KEY = hga_cannot_trade_voidspawn_heart
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 2.0
+				has_ascension_perk = ap_behemoths
+			}
+		"
+	}
+# /
+
+# >- PRECURSOR RELICS -<
+
+	# War Forge: Cybrex Warforms + alloy burst — militarists and machine empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_war_forge
+		CB_KEY   = hga_cb_seize_war_forge
+		RELIC_ID = r_war_forge
+		FLAG_KEY = hga_cannot_trade_war_forge
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.3
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Pox Sample: leader lifespan + bio weapon stance — aggressive despoilers want this
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_pox_sample
+		CB_KEY   = hga_cb_seize_pox_sample
+		RELIC_ID = r_pox_sample
+		FLAG_KEY = hga_cannot_trade_pox_sample
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_valid_civic = civic_barbaric_despoilers
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 0.7
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Zro Crystal: shroud cooldown + psionic bonuses — psionic empires want it by war
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_zro_crystal
+		CB_KEY   = hga_cb_seize_zro_crystal
+		RELIC_ID = r_zro_crystal
+		FLAG_KEY = hga_cannot_trade_zro_crystal
+		CUSTOM_AI = "
+			modifier = {
+				factor = 2.0
+				has_technology = tech_psionic_theory
+			}
+			modifier = {
+				factor = 1.5
+				has_origin = origin_shroud_forged
+			}
+			modifier = {
+				factor = 0.7
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Last Baol: pop growth — organic empires prize it, machines don't care
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_baol
+		CB_KEY   = hga_cb_seize_baol
+		RELIC_ID = r_the_last_baol
+		FLAG_KEY = hga_cannot_trade_baol
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				NOT = { is_machine_empire = yes }
+				NOT = { is_hive_empire = yes }
+			}
+			modifier = {
+				factor = 0.7
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Reality Perforator: random combat modifier — militarists want unpredictable power
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_orb_insight
+		CB_KEY   = hga_cb_seize_orb_insight
+		RELIC_ID = r_reality_perforator
+		FLAG_KEY = hga_cannot_trade_orb_insight
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_militarist
+			}
+		"
+	}
+
+	# Cryo Core: colony development speed — expansionist empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_cryo_core
+		CB_KEY   = hga_cb_seize_cryo_core
+		RELIC_ID = r_cryo_core
+		FLAG_KEY = hga_cannot_trade_cryo_core
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_crafters
+			}
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_corporate_crafters
+			}
+			modifier = {
+				factor = 1.2
+				is_hive_empire = yes
+			}
+		"
+	}
+
+	# Weather Manipulator: physics research + storm suppression
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_weather_manipulator
+		CB_KEY   = hga_cb_seize_weather_manipulator
+		RELIC_ID = r_weather_manipulator
+		FLAG_KEY = hga_cannot_trade_weather_manipulator
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.1
+				has_ethic = ethic_materialist
+			}
+		"
+	}
+
+	# Tempest Invocator: unity + ship upkeep + creates Nexus Storm
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_tempest_invocator
+		CB_KEY   = hga_cb_seize_the_tempest_invocator
+		RELIC_ID = r_the_tempest_invocator
+		FLAG_KEY = hga_cannot_trade_the_tempest_invocator
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		"
+	}
+# /
+
+# >- ASTRAL RELICS -<
+
+	# Celestial Tear: habitability near stars — niche, moderate war desire
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_celestial_tear
+		CB_KEY   = hga_cb_seize_celestial_tear
+		RELIC_ID = r_celestial_tear
+		FLAG_KEY = hga_cannot_trade_celestial_tear
+		CUSTOM_AI = ""
+	}
+
+	# Daedalus Seal: dimensional lock — defensive xenophobes love this
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_daedalus_seal
+		CB_KEY   = hga_cb_seize_daedalus_seal
+		RELIC_ID = r_daedalus_seal
+		FLAG_KEY = hga_cannot_trade_daedalus_seal
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_xenophobe
+			}
+		"
+	}
+
+	# Ever-Spinning Top: +10% energy + propulsion research
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_ever_spinning_top
+		CB_KEY   = hga_cb_seize_ever_spinning_top
+		RELIC_ID = r_ever_spinning_top
+		FLAG_KEY = hga_cannot_trade_ever_spinning_top
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.15
+				is_megacorp = yes
+			}
+		"
+	}
+
+	# Infinity Root: food income + free scientist — organic empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_infinity_root
+		CB_KEY   = hga_cb_seize_infinity_root
+		RELIC_ID = r_infinity_root
+		FLAG_KEY = hga_cannot_trade_infinity_root
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				NOT = { is_machine_empire = yes }
+				NOT = { is_hive_empire = yes }
+			}
+			modifier = {
+				factor = 0.7
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Plasmic Core: pop growth or leader XP — broadly wanted
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_plasmic_core
+		CB_KEY   = hga_cb_seize_plasmic_core
+		RELIC_ID = r_plasmic_core
+		FLAG_KEY = hga_cannot_trade_plasmic_core
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_natural_design
+			}
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_hive_natural_design
+			}
+		"
+	}
+
+	# Continuum: across-the-board bonuses — one of the best, everyone wants it
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_continuum
+		CB_KEY   = hga_cb_seize_continuum
+		RELIC_ID = r_continuum
+		FLAG_KEY = hga_cannot_trade_continuum
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 1.3
+				is_megacorp = yes
+			}
+			modifier = {
+				factor = 1.25
+				is_machine_empire = yes
+			}
+		"
+	}
+
+	# Time Crystal: leader lifespan + mass XP — authoritarian empires value leaders
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_time_crystal
+		CB_KEY   = hga_cb_seize_time_crystal
+		RELIC_ID = r_time_crystal
+		FLAG_KEY = hga_cannot_trade_time_crystal
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.8
+				is_machine_empire = yes
+			}
+		"
+	}
+# /
+
+# >- CURATOR RELICS -<
+
+	# Celestial Resonator: unity per exhibit — spiritualists and archive empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_celestial_resonator
+		CB_KEY   = hga_cb_seize_celestial_resonator
+		RELIC_ID = r_celestial_resonator
+		FLAG_KEY = hga_cannot_trade_celestial_resonator
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_spiritualist
+			}
+		"
+	}
+
+	# Gavel of the Tribunal: diplo weight + claim cost reduction — diplomatic empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_gavel_of_the_tribunal
+		CB_KEY   = hga_cb_seize_gavel_of_the_tribunal
+		RELIC_ID = r_gavel_of_the_tribunal
+		FLAG_KEY = hga_cannot_trade_gavel_of_the_tribunal
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_diplomatic_corps
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 0.7
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		"
+	}
+
+	# Pattern Maker: codebreaking + tracking + Patternwalker ship
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_pattern_maker
+		CB_KEY   = hga_cb_seize_the_pattern_maker
+		RELIC_ID = r_the_pattern_maker
+		FLAG_KEY = hga_cannot_trade_the_pattern_maker
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_technology = tech_enigmatic_decoder
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_militarist
+			}
+		"
+	}
+
+	# Tiyanki Nerve Core: +25% damage to guardians + space fauna
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_tiyanki_matriarch_nerve_core
+		CB_KEY   = hga_cb_seize_tiyanki_matriarch_nerve_core
+		RELIC_ID = r_tiyanki_matriarch_nerve_core
+		FLAG_KEY = hga_cannot_trade_tiyanki_matriarch_nerve_core
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_militarist
+			}
+		"
+	}
+
+	# Vaporous Mega Orchid: trust cap + subject loyalty — federation builders
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_vaporous_mega_orchid
+		CB_KEY   = hga_cb_seize_vaporous_mega_orchid
+		RELIC_ID = r_vaporous_mega_orchid
+		FLAG_KEY = hga_cannot_trade_vaporous_mega_orchid
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_xenophile
+			}
+		"
+	}
+
+	# Entangled Relay: +2 sector size + starbase range — expansionist empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_entangled_relay
+		CB_KEY   = hga_cb_seize_entangled_relay
+		RELIC_ID = r_entangled_relay
+		FLAG_KEY = hga_cannot_trade_entangled_relay
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_militarist
+			}
+		"
+	}
+
+	# Executus Compendium: councilor skill + agenda speed
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_executus_compendium
+		CB_KEY   = hga_cb_seize_executus_compendium
+		RELIC_ID = r_executus_compendium
+		FLAG_KEY = hga_cannot_trade_executus_compendium
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_efficient_bureaucracy
+			}
+		"
+	}
+
+	# Preservation Chamber: +25k resource storage + Vivarium capacity
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_preservation_chamber
+		CB_KEY   = hga_cb_seize_preservation_chamber
+		RELIC_ID = r_preservation_chamber
+		FLAG_KEY = hga_cannot_trade_preservation_chamber
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.25
+				is_megacorp = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_militarist
+			}
+		"
+	}
+
+	# Prototype VIR Core: +1 leader cap all classes — broadly valuable
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_prototype_vir_core
+		CB_KEY   = hga_cb_seize_prototype_vir_core
+		RELIC_ID = r_prototype_vir_core
+		FLAG_KEY = hga_cannot_trade_prototype_vir_core
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_distinguished_admiralty
+			}
+		"
+	}
+
+	# Propagandosphere: unity from soldiers + governing ethics attraction
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_propagandosphere
+		CB_KEY   = hga_cb_seize_propagandosphere
+		RELIC_ID = r_propagandosphere
+		FLAG_KEY = hga_cannot_trade_propagandosphere
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.4
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		"
+	}
+
+	# Crystallinus Diffuser: +5% resources from jobs
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_crystallinus_diffuser
+		CB_KEY   = hga_cb_seize_crystallinus_diffuser
+		RELIC_ID = r_crystallinus_diffuser
+		FLAG_KEY = hga_cannot_trade_crystallinus_diffuser
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Everchanging Stone: xeno geology output + upkeep reduction
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_everchanging_stone
+		CB_KEY   = hga_cb_seize_everchanging_stone
+		RELIC_ID = r_everchanging_stone
+		FLAG_KEY = hga_cannot_trade_everchanging_stone
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				is_megacorp = yes
+			}
+		"
+	}
+
+	# Flowmetal Alloy: ship build speed + robot pop burst — machine empires
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_flowmetal_alloy
+		CB_KEY   = hga_cb_seize_flowmetal_alloy
+		RELIC_ID = r_flowmetal_alloy
+		FLAG_KEY = hga_cannot_trade_flowmetal_alloy
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.5
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 1.3
+				has_valid_civic = civic_machine_assimilator
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_militarist
+			}
+		"
+	}
+
+	# Pulsestone: field manipulation research + energy weapons, but happiness penalty
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_pulsestone
+		CB_KEY   = hga_cb_seize_pulsestone
+		RELIC_ID = r_pulsestone
+		FLAG_KEY = hga_cannot_trade_pulsestone
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+
+	# Modularium: +1 of each strategic resource passively
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_modularium
+		CB_KEY   = hga_cb_seize_the_modularium
+		RELIC_ID = r_the_modularium
+		FLAG_KEY = hga_cannot_trade_the_modularium
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.25
+				is_megacorp = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_materialist
+			}
+		"
+	}
+# /
+
+# >- OTHER / EXTRA RELICS -<
+
+	# Galatron: absurd prestige — base weight already low, everyone wants it by war
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_galatron
+		CB_KEY   = hga_cb_seize_galatron
+		RELIC_ID = r_galatron
+		FLAG_KEY = hga_cannot_trade_galatron
+		CUSTOM_AI = "
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		"
+	}
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_surveyor
+		CB_KEY   = hga_cb_seize_surveyor
+		RELIC_ID = r_surveyor
+		FLAG_KEY = hga_cannot_trade_surveyor
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		"
+	}
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_radience
+		CB_KEY   = hga_cb_seize_the_radience
+		RELIC_ID = r_vacuum_flower
+		FLAG_KEY = hga_cannot_trade_the_radience
+		CUSTOM_AI = ""
+	}
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_mutated_voidworm_nest
+		CB_KEY   = hga_cb_seize_mutated_voidworm_nest
+		RELIC_ID = r_mutated_voidworm_nest
+		FLAG_KEY = hga_cannot_trade_mutated_voidworm_nest
+		CUSTOM_AI = "
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_fanatic_xenophile
+			}
+		"
+	}
+
+	# Lost Patron: Mindwardens origin exclusive
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_lost_patron
+		CB_KEY   = hga_cb_seize_the_lost_patron
+		RELIC_ID = r_the_lost_patron
+		FLAG_KEY = hga_cannot_trade_the_lost_patron
+		CUSTOM_AI = "
+			modifier = {
+				factor = 2.0
+				has_origin = origin_mindwardens
+			}
+		"
+	}
+
+	# Pyroglyphic Codex: Cosmic Dawn origin exclusive
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_pyroglyphic_codex
+		CB_KEY   = hga_cb_seize_pyroglyphic_codex
+		RELIC_ID = r_pyroglyphic_codex
+		FLAG_KEY = hga_cannot_trade_pyroglyphic_codex
+		CUSTOM_AI = "
+			modifier = {
+				factor = 2.0
+				has_origin = origin_cosmic_dawn
+			}
+		"
+	}
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_crystallized_singularity
+		CB_KEY   = hga_cb_seize_crystallized_singularity
+		RELIC_ID = r_crystallized_singularity
+		FLAG_KEY = hga_cannot_trade_crystallized_singularity
+		CUSTOM_AI = ""
+	}
+
+	inline_script = {
+		script = war_goals/hga_relic_wargoal
+		WG_KEY   = hga_wg_seize_the_key
+		CB_KEY   = hga_cb_seize_the_key
+		RELIC_ID = r_wormhole_key
+		FLAG_KEY = hga_cannot_trade_the_key
+		CUSTOM_AI = ""
+	}
+# /
+
+# Do not remove below v

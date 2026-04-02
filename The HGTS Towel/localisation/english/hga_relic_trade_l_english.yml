@@ -1,0 +1,181 @@
+﻿# localisation/english/hga_relic_trade_l_english.yml
+# Authors: HGA
+
+l_english:
+	hga_trade_relic_desc:0 "Our empire sees no value in this artifact. Perhaps it can fetch a price from a less discerning power."
+	hga_trade_action:0 "Trade Relic:"
+
+	# >- CRISIS RELICS -<
+	hga_trade_action_r_warlock:0 "$hga_trade_action$ ['concept_hga_r_unbidden_warlock', $r_unbidden_warlock$]"
+	hga_trade_action_r_warlock_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_contingency_core:0 "$hga_trade_action$ ['concept_hga_r_contingency_core', $r_contingency_core$]"
+	hga_trade_action_r_contingency_core_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_prethoryn_queen:0 "$hga_trade_action$ ['concept_hga_r_prethoryn_queen', $r_prethoryn_queen$]"
+	hga_trade_action_r_prethoryn_queen_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_khans_throne:0 "$hga_trade_action$ ['concept_hga_r_khans_throne', $r_khans_throne$]"
+	hga_trade_action_r_khans_throne_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_eternal_throne:0 "$hga_trade_action$ ['concept_hga_r_eternal_throne', $r_eternal_throne$]"
+	hga_trade_action_r_eternal_throne_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_cetanas_heart:0 "$hga_trade_action$ ['concept_hga_r_cetanas_heart', $r_cetanas_heart$]"
+	hga_trade_action_r_cetanas_heart_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_core_of_the_reckoning:0 "$hga_trade_action$ ['concept_hga_r_core_of_the_reckoning', $r_core_of_the_reckoning$]"
+	hga_trade_action_r_core_of_the_reckoning_desc:0 "$hga_trade_relic_desc$"
+
+	# >- ARCHAEOLOGICAL RELICS -<
+	hga_trade_action_r_odryskan_crystal:0 "$hga_trade_action$ ['concept_hga_r_odryskan_crystal', $r_odryskan_crystal$]"
+	hga_trade_action_r_odryskan_crystal_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_ancient_sword:0 "$hga_trade_action$ ['concept_hga_r_ancient_sword', $r_ancient_sword$]"
+	hga_trade_action_r_ancient_sword_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_severed_head:0 "$hga_trade_action$ ['concept_hga_r_severed_head', $r_severed_head$]"
+	hga_trade_action_r_severed_head_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_galaxy:0 "$hga_trade_action$ ['concept_hga_r_galaxy', $r_galaxy$]"
+	hga_trade_action_r_galaxy_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_mechano_calibrator:0 "$hga_trade_action$ ['concept_hga_r_the_defragmentor', $r_the_defragmentor$]"
+	hga_trade_action_r_mechano_calibrator_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_omnicodex:0 "$hga_trade_action$ ['concept_hga_r_omnicodex', $r_omnicodex$]"
+	hga_trade_action_r_omnicodex_desc:0 "$hga_trade_relic_desc$"
+
+	# >- GUARDIAN RELICS -<
+	hga_trade_action_r_dragon_trophy:0 "$hga_trade_action$ ['concept_hga_r_dragon_trophy', $r_dragon_trophy$]"
+	hga_trade_action_r_dragon_trophy_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_worm_scales:0 "$hga_trade_action$ ['concept_hga_r_worm_scales', $r_worm_scales$]"
+	hga_trade_action_r_worm_scales_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_rubricator:0 "$hga_trade_action$ ['concept_hga_r_rubricator', $r_rubricator$]"
+	hga_trade_action_r_rubricator_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_toxic_god:0 "$hga_trade_action$ ['concept_hga_r_toxic_god', $r_toxic_god$]"
+	hga_trade_action_r_toxic_god_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_voidspawn_heart:0 "$hga_trade_action$ ['concept_hga_r_voidspawn_myocardium', $r_voidspawn_myocardium$]"
+	hga_trade_action_r_voidspawn_heart_desc:0 "$hga_trade_relic_desc$"
+
+	# >- PRECURSOR RELICS -<
+	hga_trade_action_r_war_forge:0 "$hga_trade_action$ ['concept_hga_r_war_forge', $r_war_forge$]"
+	hga_trade_action_r_war_forge_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_pox_sample:0 "$hga_trade_action$ ['concept_hga_r_pox_sample', $r_pox_sample$]"
+ 	hga_trade_action_r_pox_sample_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_zro_crystal:0 "$hga_trade_action$ ['concept_hga_r_zro_crystal', $r_zro_crystal$]"
+	hga_trade_action_r_zro_crystal_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_baol:0 "$hga_trade_action$ ['concept_hga_r_the_last_baol', $r_the_last_baol$]"
+	hga_trade_action_r_baol_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_orb_insight:0 "$hga_trade_action$ ['concept_hga_r_reality_perforator', $r_reality_perforator$]"
+	hga_trade_action_r_orb_insight_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_cryo_core:0 "$hga_trade_action$ ['concept_hga_r_cryo_core', $r_cryo_core$]"
+	hga_trade_action_r_cryo_core_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_weather_manipulator:0 "$hga_trade_action$ ['concept_hga_r_weather_manipulator', $r_weather_manipulator$]"
+	hga_trade_action_r_weather_manipulator_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_tempest_invocator:0 "$hga_trade_action$ ['concept_hga_r_the_tempest_invocator', $r_the_tempest_invocator$]"
+	hga_trade_action_r_the_tempest_invocator_desc:0 "$hga_trade_relic_desc$"
+
+	# >- ASTRAL RELICS -<
+	hga_trade_action_r_celestial_tear:0 "$hga_trade_action$ ['concept_hga_r_celestial_tear', $r_celestial_tear$]"
+	hga_trade_action_r_celestial_tear_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_daedalus_seal:0 "$hga_trade_action$ ['concept_hga_r_daedalus_seal', $r_daedalus_seal$]"
+	hga_trade_action_r_daedalus_seal_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_ever_spinning_top:0 "$hga_trade_action$ ['concept_hga_r_ever_spinning_top', $r_ever_spinning_top$]"
+	hga_trade_action_r_ever_spinning_top_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_infinity_root:0 "$hga_trade_action$ ['concept_hga_r_infinity_root', $r_infinity_root$]"
+	hga_trade_action_r_infinity_root_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_plasmic_core:0 "$hga_trade_action$ ['concept_hga_r_plasmic_core', $r_plasmic_core$]"
+	hga_trade_action_r_plasmic_core_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_continuum:0 "$hga_trade_action$ ['concept_hga_r_continuum', $r_continuum$]"
+	hga_trade_action_r_continuum_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_time_crystal:0 "$hga_trade_action$ ['concept_hga_r_time_crystal', $r_time_crystal$]"
+	hga_trade_action_r_time_crystal_desc:0 "$hga_trade_relic_desc$"
+
+	# >- CURATOR RELICS -<
+	hga_trade_action_r_celestial_resonator:0 "$hga_trade_action$ ['concept_hga_r_celestial_resonator', $r_celestial_resonator$]"
+	hga_trade_action_r_celestial_resonator_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_gavel_of_the_tribunal:0 "$hga_trade_action$ ['concept_hga_r_gavel_of_the_tribunal', $r_gavel_of_the_tribunal$]"
+	hga_trade_action_r_gavel_of_the_tribunal_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_pattern_maker:0 "$hga_trade_action$ ['concept_hga_r_the_pattern_maker', $r_the_pattern_maker$]"
+	hga_trade_action_r_the_pattern_maker_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_tiyanki_matriarch_nerve_core:0 "$hga_trade_action$ ['concept_hga_r_tiyanki_matriarch_nerve_core', $r_tiyanki_matriarch_nerve_core$]"
+	hga_trade_action_r_tiyanki_matriarch_nerve_core_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_vaporous_mega_orchid:0 "$hga_trade_action$ ['concept_hga_r_vaporous_mega_orchid', $r_vaporous_mega_orchid$]"
+	hga_trade_action_r_vaporous_mega_orchid_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_entangled_relay:0 "$hga_trade_action$ ['concept_hga_r_entangled_relay', $r_entangled_relay$]"
+	hga_trade_action_r_entangled_relay_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_executus_compendium:0 "$hga_trade_action$ ['concept_hga_r_executus_compendium', $r_executus_compendium$]"
+	hga_trade_action_r_executus_compendium_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_preservation_chamber:0 "$hga_trade_action$ ['concept_hga_r_preservation_chamber', $r_preservation_chamber$]"
+	hga_trade_action_r_preservation_chamber_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_prototype_vir_core:0 "$hga_trade_action$ ['concept_hga_r_prototype_vir_core', $r_prototype_vir_core$]"
+	hga_trade_action_r_prototype_vir_core_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_propagandosphere:0 "$hga_trade_action$ ['concept_hga_r_propagandosphere', $r_propagandosphere$]"
+	hga_trade_action_r_propagandosphere_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_crystallinus_diffuser:0 "$hga_trade_action$ ['concept_hga_r_crystallinus_diffuser', $r_crystallinus_diffuser$]"
+	hga_trade_action_r_crystallinus_diffuser_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_everchanging_stone:0 "$hga_trade_action$ ['concept_hga_r_everchanging_stone', $r_everchanging_stone$]"
+	hga_trade_action_r_everchanging_stone_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_flowmetal_alloy:0 "$hga_trade_action$ ['concept_hga_r_flowmetal_alloy', $r_flowmetal_alloy$]"
+	hga_trade_action_r_flowmetal_alloy_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_pulsestone:0 "$hga_trade_action$ ['concept_hga_r_pulsestone', $r_pulsestone$]"
+	hga_trade_action_r_pulsestone_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_modularium:0 "$hga_trade_action$ ['concept_hga_r_the_modularium', $r_the_modularium$]"
+	hga_trade_action_r_the_modularium_desc:0 "$hga_trade_relic_desc$"
+
+	# >- OTHER / EXTRA RELICS -<
+	hga_trade_action_r_galatron:0 "$hga_trade_action$ ['concept_hga_r_galatron', $r_galatron$]"
+	hga_trade_action_r_galatron_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_surveyor:0 "$hga_trade_action$ ['concept_hga_r_surveyor', $r_surveyor$]"
+	hga_trade_action_r_surveyor_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_radience:0 "$hga_trade_action$ ['concept_hga_r_vacuum_flower', $r_vacuum_flower$]"
+	hga_trade_action_r_the_radience_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_mutated_voidworm_nest:0 "$hga_trade_action$ ['concept_hga_r_mutated_voidworm_nest', $r_mutated_voidworm_nest$]"
+	hga_trade_action_r_mutated_voidworm_nest_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_lost_patron:0 "$hga_trade_action$ ['concept_hga_r_the_lost_patron', $r_the_lost_patron$]"
+	hga_trade_action_r_the_lost_patron_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_pyroglyphic_codex:0 "$hga_trade_action$ ['concept_hga_r_pyroglyphic_codex', $r_pyroglyphic_codex$]"
+	hga_trade_action_r_pyroglyphic_codex_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_crystallized_singularity:0 "$hga_trade_action$ ['concept_hga_r_crystallized_singularity', $r_crystallized_singularity$]"
+	hga_trade_action_r_crystallized_singularity_desc:0 "$hga_trade_relic_desc$"
+
+	hga_trade_action_r_the_key:0 "$hga_trade_action$ ['concept_hga_r_wormhole_key', $r_wormhole_key$]"
+	hga_trade_action_r_the_key_desc:0 "$hga_trade_relic_desc$"

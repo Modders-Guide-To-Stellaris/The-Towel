@@ -1,8 +1,0 @@
-experiment_engineer_crime_research_output = {
-    base = @experiment_engineer_crime_research_output
-    complex_trigger_modifier = {
-        trigger = planet_crime
-        mode = mult
-    }
-    max = 100
-}
