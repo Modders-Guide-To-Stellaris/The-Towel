@@ -1,0 +1,110 @@
+
+#RNG lose a planet WHY... (gone)
+decision_open_shroud_rift = {
+	owned_planets_only = yes
+	icon = decision_surreal_visions
+
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			sr_zro = 25
+			mult = value:decision_open_shroud_rift_cost_mult
+		}
+	}
+
+	custom_tooltip = {
+		success_text = decision_open_shroud_rift_max_uses
+		count_deposits = {
+			type = d_shroud_rift_deposit
+			count < @max_open_shroud_rift_uses
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_artificial = no
+		owner = {
+			has_origin = origin_shroud_forged
+			NOT = { has_country_flag = finish_shroud_forged_control_flag }
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_open_shroud_rift_condition_tt
+			any_deposit = {
+				is_blocker = no
+				NOR = {
+					has_deposit_category = deposit_cat_rare
+					has_deposit_category = deposit_cat_rare_resource
+					has_deposit_category = deposit_cat_rare_blocker
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = decision_open_shroud_rift_max_uses_fail
+			count_deposits = {
+				type = d_shroud_rift_deposit
+				count < @max_open_shroud_rift_uses
+			}
+		}
+		custom_tooltip = {
+			fail_text = decision_open_shroud_rift_legacy_fail
+			NOT = { has_planet_flag = zroni_legacy_flag }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_deposit = d_shroud_rift_deposit
+			}
+			random_list = {
+				0 = {
+					#modifier = {
+					#	add = value:get_shroud_rift_decision_uses
+					#}
+					tooltip = {
+						change_pc = pc_shrouded
+					}
+					hidden_effect = {
+						planet_event = {
+							id = shroud_forged.160
+							scopes = {
+								from = owner
+							}
+						}
+						add_deposit = d_shroud_rift_deposit
+						kill_all_pop = yes
+						remove_all_buildings = yes
+						destroy_colony = yes
+						close_shroud_rift_effect = yes
+						change_pc = pc_shrouded
+					}
+				}
+				10 = {
+					modifier = {
+						subtract = value:get_shroud_rift_decision_uses
+					}
+					decision_shroud_region_effect = yes
+				}
+			}
+		}
+		else = {
+			decision_shroud_region_effect = yes
+		}
+	}
+
+	on_queued = {
+		open_shroud_rift_effect = yes
+	}
+
+	on_unqueued = {
+		close_shroud_rift_effect = yes
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}

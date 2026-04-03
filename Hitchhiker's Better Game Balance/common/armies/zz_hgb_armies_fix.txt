@@ -1,0 +1,62 @@
+
+##Fix shroudforged defense and occupation armies not being generated due to them having trait_mechanical  instead of trait_machine_unit by adding trait_shroud_forged to the potential
+
+machine_defense = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.10
+	damage = 1.10
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon = GFX_army_type_machine_defensive
+	has_species = yes
+
+	potential = {
+		owner = {
+			is_machine_empire = yes
+		}
+		from = {
+			OR = {
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_shroud_forged"
+			}
+		}
+	}
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+}
+
+### Machine Empire Armies
+machine_occupation_army = {
+	defensive = yes
+	occupation = yes
+	health = 1.10
+	damage = 1.10
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from occupation armies
+	icon = GFX_army_type_machine_defensive
+	has_species = yes
+
+	potential = {
+		owner = { is_machine_empire = yes }
+		from = {
+			OR = {
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_shroud_forged"
+			}
+		}
+	}
+}

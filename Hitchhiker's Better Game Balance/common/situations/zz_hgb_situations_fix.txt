@@ -1,0 +1,211 @@
+
+##"Band-Aid" Fix Geomagnetic Storm not counting correctly protected drones for Shroudforged empires
+## Geomagnetic Storm
+situation_geomagnetic_storm = {
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_negative
+	picture = GFX_evt_supernova
+	category = negative
+
+	on_start = {
+		set_situation_locked = yes
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_geomagnetic_storm_outcome
+		# Worst end: lost all drones
+		situation_event = { id = situation.290 }
+	}
+
+	on_abort = {
+		# Storm has ended
+		situation_event = { id = situation.289 }
+	}
+
+	initial_progress = 0
+
+	# the situation automatically ends after 5 years
+	# progress bar: amount of radiation damage
+	# goal: keep the droids shielded to avoid accumulating radiation damage
+	# different endings after 5 year depending on the amount of damage suffered
+
+	on_monthly = {
+		events = {
+			situation.204 # Update the variables used to calculate shielding costs every month
+		}
+		random_events = {
+		 	250 = 0
+		 	5 = situation.210 # malfunctioning drones
+		 	5 = situation.213 # Faulty Assembly Line
+			5 = situation.214 # Miscalculation
+		 	10 = situation.250 # Disappearing pop
+		}
+	}
+
+	# Stages
+	stages = {
+		radiation_damage_low = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 40
+			target_modifier = {
+				planet_jobs_simple_drone_produces_mult = -0.20
+				planet_jobs_complex_drone_produces_mult = -0.20
+			}
+		}
+		radiation_damage_mid = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 70
+			target_modifier = {
+				planet_jobs_simple_drone_produces_mult = -0.25
+				planet_jobs_complex_drone_produces_mult = -0.25
+				planet_stability_add = -30
+			}
+		}
+		radiation_damage_high = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			target_modifier = {
+				planet_jobs_simple_drone_produces_mult = -0.30
+				planet_jobs_complex_drone_produces_mult = -0.30
+				planet_stability_add = -60
+				country_unity_produces_mult = -0.10
+			}
+		}
+	}
+
+	# Approaches
+	approach = { #Protect everydrone
+		name = protect_everydrone
+		icon = GFX_situation_approach_influence
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			target = {
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = approach_protect_effect
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 1
+				multiplier = target.total_drones_cost
+			}
+		}
+		target_modifier = {
+			# drones work better bc they're shielded, countering the situation's negative modifier
+			planet_jobs_simple_drone_produces_mult = 0.20
+			planet_jobs_complex_drone_produces_mult = 0.20
+		}
+	}
+
+	approach = { #Protect simple drones
+		name = protect_simple_drones
+		icon = GFX_situation_approach_pop
+		icon_background = GFX_situation_approach_bg_yellow
+		potential = {
+			target = {
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
+					is_pop_category = simple_drone
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = approach_protect_effect
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 1
+				multiplier  = target.simple_drones_cost
+				# multiply this value by the number
+				# of drones we're protecting
+			}
+		}
+		target_modifier = {
+			# drones work better bc they're shielded, countering the situation's negative modifier
+			planet_jobs_simple_drone_produces_mult = 0.20
+		}
+	}
+
+	approach = { #Protect complex drones
+		name = protect_complex_drones
+		icon_background = GFX_situation_approach_bg_yellow
+		icon = GFX_situation_approach_pop
+		potential = {
+			target = {
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
+					is_pop_category = complex_drone
+				}
+			}
+		}
+		on_select = {
+			custom_tooltip = approach_protect_effect
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 1
+				multiplier = target.complex_drones_cost
+			}
+		}
+		target_modifier = {
+			# drones work better bc they're shielded, countering the situation's negative modifier
+			planet_jobs_complex_drone_produces_mult = 0.20
+		}
+	}
+
+	approach = { #Do Nothing
+ 		name = protect_nobody
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_red
+		default = yes
+		on_select = {
+			custom_tooltip = approach_protect_nobody_effect
+		}
+ 	}
+
+
+	#Progress
+	# 1 year in stellaris = 12 months = 360 days
+	# Situation automatically ends after 5 years
+	# Default: reach worst ending in about 2 years (20 months) if you do nothing
+	# 100 / 20 = 5
+
+	monthly_progress = {
+		base = 5
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = protect_everydrone
+			#subtract = target.total_drones_percentage
+			## Why count the percentage of protected drones if we are protecting every drone? Band Aid fix since not counting protected drones correctly for shroudforged empires
+			subtract = 5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = protect_simple_drones
+			subtract = target.simple_drones_percentage
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = protect_complex_drones
+			subtract = target.complex_drones_percentage
+		}
+	}
+
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+			#target = { NOT = { has_planet_modifier = magnetic_disruption } }
+		}
+	}
+}
