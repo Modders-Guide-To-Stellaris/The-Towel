@@ -1,0 +1,26 @@
+
+
+
+
+#Checks whether any leaders (scientists etc) can be formed from this pop group
+#Root = country
+#This = pop_group
+can_generate_leader_from_pop_group = {
+	can_be_leader = yes
+	NAND = {
+		has_trait = trait_hive_mind
+		NOT = { is_same_species = ROOT.owner_main_species }
+	}
+}
+
+
+#Root = country
+#This = pop_group
+can_generate_military_leader_from_pop_group = {
+	can_be_leader = yes
+	can_be_military_leader = yes
+	NAND = {
+		has_trait = trait_hive_mind
+		NOT = { is_same_species = ROOT.owner_main_species }
+	}
+}
