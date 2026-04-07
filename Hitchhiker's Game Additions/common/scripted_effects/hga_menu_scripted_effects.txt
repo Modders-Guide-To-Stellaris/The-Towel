@@ -2,10 +2,6 @@
 # Authors: HGA
 # >- HOST MENU SCRIPTED EFFECTS -<
 
-# Flag Holder >> master list of all HGA menu flags
-# NEVER trigger this effect, it exists only as a reference
-# Add new flags here as new settings are added
-
 hga_flag_holder = {
 	if = {
 		limit = { always = no }
@@ -18,9 +14,11 @@ hga_flag_holder = {
 		# /
 
 		# >- Planetary Modifiers (RESERVED) -<
-			# set_global_flag = hga_modifier_intensity_low
-			# set_global_flag = hga_modifier_intensity_medium
-			# set_global_flag = hga_modifier_intensity_high
+			set_global_flag = hga_planetary_effects_disabled
+
+			set_global_flag = hga_modifier_intensity_low
+			set_global_flag = hga_modifier_intensity_medium
+			set_global_flag = hga_modifier_intensity_high
 		# /
 
 		# >- System -<

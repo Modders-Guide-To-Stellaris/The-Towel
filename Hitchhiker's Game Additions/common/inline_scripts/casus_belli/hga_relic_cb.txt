@@ -1,13 +1,6 @@
 # common/inline_scripts/casus_belli/hga_relic_cb.txt
 # Authors: HGA
 
-# Usage:
-#inline_script = {
-#	script = casus_belli/hga_relic_cb
-#	CB_KEY   = hga_cb_seize_warlock
-#	RELIC_ID = r_unbidden_warlock
-#}
-
 # CB definition
 	$CB_KEY$ = {
 		show_in_diplomacy = yes
