@@ -19,7 +19,6 @@ room_selector = {
         "apocalyptic2_room"                     = { always = yes }
         "apocalyptic3_room"                     = { always = yes }
         "apocalyptic4_room"                     = { always = yes }
-        "apocalyptic5_room"                     = { always = yes }
         "barren1_room"                          = { always = yes }
         "barren2_room"                          = { always = yes }
         "cave1_room"                            = { always = yes }
@@ -33,7 +32,6 @@ room_selector = {
         "cityscape2_room"                       = { always = yes }
         "cityscape3_room"                       = { always = yes }
         "cityscape4_room"                       = { always = yes }
-        "cityscape5_room"                       = { always = yes }
         "command1_room"                         = { always = yes }
         "command2_room"                         = { always = yes }
         "command3_room"                         = { always = yes }
@@ -41,7 +39,6 @@ room_selector = {
         "command5_room"                         = { always = yes }
         "command6_room"                         = { always = yes }
         "command7_room"                         = { always = yes }
-        "command8_room"                         = { always = yes }
         "control1_room"                         = { always = yes }
         "control2_room"                         = { always = yes }
         "control3_room"                         = { always = yes }
@@ -54,7 +51,6 @@ room_selector = {
         "frozen1_room"                          = { always = yes }
         "frozen2_room"                          = { always = yes }
         "frozen3_room"                          = { always = yes }
-        "frozen4_room"                          = { always = yes }
         "fungus1_room"                          = { always = yes }
         "fungus2_room"                          = { always = yes }
         "fungus3_room"                          = { always = yes }
@@ -77,11 +73,8 @@ room_selector = {
         "industrial3_room"                      = { always = yes }
         "industrial4_room"                      = { always = yes }
         "industrial5_room"                      = { always = yes }
-        "industrial6_room"                      = { always = yes }
-        "industrial7_room"                      = { always = yes }
         "mech1_room"                            = { always = yes }
         "militarist1_room"                      = { always = yes }
-        "militarist2_room"                      = { always = yes }
         "outdoor1_room"                         = { always = yes }
         "outdoor2_room"                         = { always = yes }
         "outdoor3_room"                         = { always = yes }
@@ -102,12 +95,9 @@ room_selector = {
         "plantoid6_room"                        = { always = yes }
         "plantoid7_room"                        = { always = yes }
         "plantoid8_room"                        = { always = yes }
-        "plantoid9_room"                        = { always = yes }
         "spiritualist1_room"                    = { always = yes }
-        "spiritualist2_room"                    = { always = yes }
         "tech1_room"                            = { always = yes }
         "tech2_room"                            = { always = yes }
-        "tech3_room"                            = { always = yes }
         "tech4_room"                            = { always = yes }
         "throne1_room"                          = { always = yes }
         "throne2_room"                          = { always = yes }
@@ -118,14 +108,12 @@ room_selector = {
         "throne7_room"                          = { always = yes }
         "toxic1_room"                           = { always = yes }
         "toxic2_room"                           = { always = yes }
-        "toxic3_room"                           = { always = yes }
         "trader1_room"                          = { always = yes }
         "underwater1_room"                      = { always = yes }
         "underwater2_room"                      = { always = yes }
         "underwater3_room"                      = { always = yes }
         "underwater4_room"                      = { always = yes }
         "underwater5_room"                      = { always = yes }
-        "underwater6_room"                      = { always = yes }
         "warp1_room"                            = { always = yes }
         "xenomorph1_room"                       = { always = yes }
         "xenomorph2_room"                       = { always = yes }
@@ -156,7 +144,6 @@ room_selector = {
         "cityscape2_room"                       = { exists = owner }
         "cityscape3_room"                       = { exists = owner }
         "cityscape4_room"                       = { exists = owner }
-        "cityscape5_room"                       = { exists = owner }
         "command1_room"                         = { exists = owner }
         "command2_room"                         = { exists = owner }
         "command3_room"                         = { exists = owner }
@@ -164,7 +151,6 @@ room_selector = {
         "command5_room"                         = { exists = owner }
         "command6_room"                         = { exists = owner }
         "command7_room"                         = { exists = owner }
-        "command8_room"                         = { exists = owner }
         "control1_room"                         = { exists = owner }
         "control2_room"                         = { exists = owner }
         "control3_room"                         = { exists = owner }
@@ -177,7 +163,6 @@ room_selector = {
         "frozen1_room"                          = { exists = owner }
         "frozen2_room"                          = { exists = owner }
         "frozen3_room"                          = { exists = owner }
-        "frozen4_room"                          = { exists = owner }
         "fungus1_room"                          = { exists = owner }
         "fungus2_room"                          = { exists = owner }
         "fungus3_room"                          = { exists = owner }
@@ -200,11 +185,8 @@ room_selector = {
         "industrial3_room"                      = { exists = owner }
         "industrial4_room"                      = { exists = owner }
         "industrial5_room"                      = { exists = owner }
-        "industrial6_room"                      = { exists = owner }
-        "industrial7_room"                      = { exists = owner }
         "mech1_room"                            = { exists = owner }
         "militarist1_room"                      = { exists = owner }
-        "militarist2_room"                      = { exists = owner }
         "outdoor1_room"                         = { exists = owner }
         "outdoor2_room"                         = { exists = owner }
         "outdoor3_room"                         = { exists = owner }
@@ -225,13 +207,9 @@ room_selector = {
         "plantoid6_room"                        = { exists = owner }
         "plantoid7_room"                        = { exists = owner }
         "plantoid8_room"                        = { exists = owner }
-        "plantoid9_room"                        = { exists = owner }
         "spiritualist1_room"                    = { exists = owner }
-        "spiritualist2_room"                    = { exists = owner }
         "tech1_room"                            = { exists = owner }
         "tech2_room"                            = { exists = owner }
-        "tech3_room"                            = { exists = owner }
-        "tech4_room"                            = { exists = owner }
         "throne1_room"                          = { exists = owner }
         "throne2_room"                          = { exists = owner }
         "throne3_room"                          = { exists = owner }
@@ -241,14 +219,12 @@ room_selector = {
         "throne7_room"                          = { exists = owner }
         "toxic1_room"                           = { exists = owner }
         "toxic2_room"                           = { exists = owner }
-        "toxic3_room"                           = { exists = owner }
         "trader1_room"                          = { exists = owner }
         "underwater1_room"                      = { exists = owner }
         "underwater2_room"                      = { exists = owner }
         "underwater3_room"                      = { exists = owner }
         "underwater4_room"                      = { exists = owner }
         "underwater5_room"                      = { exists = owner }
-        "underwater6_room"                      = { exists = owner }
         "warp1_room"                            = { exists = owner }
         "xenomorph1_room"                       = { exists = owner }
         "xenomorph2_room"                       = { exists = owner }
