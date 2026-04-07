@@ -1,19 +1,6 @@
 # common/inline_scripts/war_goals/hga_relic_wargoal.txt
 # Authors: HGA
 
-# Usage:
-#inline_script = {
-#	script = war_goals/hga_relic_wargoal
-#	WG_KEY     = hga_wg_seize_warlock
-#	CB_KEY     = hga_cb_seize_warlock
-#	RELIC_ID   = r_unbidden_warlock
-#	FLAG_KEY   = hga_cannot_trade_warlock
-#	CUSTOM_AI  = ""
-#}
-#
-# CUSTOM_AI accepts raw modifier { } blocks to inject per-relic weighting.
-# Leave as "" for default logic only.
-
 # War goal definition
 	$WG_KEY$ = {
 		casus_belli = $CB_KEY$
@@ -51,7 +38,6 @@
 		}
 
 		ai_weight = {
-			# Base desire to go to war for a relic
 			weight = 100
 
 			# >- HARD BLOCK -<

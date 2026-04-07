@@ -1,18 +1,6 @@
 # common/inline_scripts/tradeable_actions/hga_relic_trade.txt
 # Authors: HGA
 
-# Usage:
-#inline_script = {
-#	script = tradeable_actions/hga_relic_trade
-#	ACTION_KEY = hga_trade_action_r_warlock
-#	RELIC_ID   = r_unbidden_warlock
-#	FLAG_KEY   = hga_cannot_trade_warlock
-#	CUSTOM_AI  = ""
-#}
-#
-# CUSTOM_AI accepts raw modifier { } blocks for per-relic trade willingness.
-# Leave as "" for the shared baseline only.
-
 # Trade action definition
 	$ACTION_KEY$ = {
 		fire_and_forget = yes

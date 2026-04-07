@@ -1,8 +1,5 @@
 # common/tradeable_actions/hga_relic_trades.txt
 # Authors: HGA
-#
-# Per-relic CUSTOM_AI carries the same logic as the original file.
-# Shared baseline (opinion, fleet power, overlord/subject) lives in the inline template.
 
 # >- CRISIS RELICS -<
 
@@ -1154,7 +1151,6 @@
 
 # >- OTHER / EXTRA RELICS -<
 
-	# Galatron: base weight 100 to reflect extreme reluctance
 	inline_script = {
 		script = tradeable_actions/hga_relic_trade
 		ACTION_KEY = hga_trade_action_r_galatron
@@ -1257,8 +1253,6 @@
 		CUSTOM_AI  = ""
 	}
 
-	# Localisation fix: was referencing wrong key ($hga_trade_action_desc$ → $hga_trade_relic_desc$)
-	# See localisation file — hga_trade_action_r_the_key_desc needs correcting there too
 	inline_script = {
 		script = tradeable_actions/hga_relic_trade
 		ACTION_KEY = hga_trade_action_r_the_key
