@@ -1,5 +1,0 @@
-on_game_start = {
-    events = {
-        hgb_internal.1
-    }
-}

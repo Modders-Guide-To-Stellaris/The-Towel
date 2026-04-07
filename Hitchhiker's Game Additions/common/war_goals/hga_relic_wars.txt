@@ -1,12 +1,8 @@
 # common/war_goals/hga_relic_wars.txt
 # Authors: HGA
-#
-# CUSTOM_AI notes per relic — mirrored from trade logic (inverted: high trade reluctance = high war desire)
-# Base war ai_weight logic lives in inline_scripts/war_goals/hga_relic_wargoal.txt
 
 # >- CRISIS RELICS -<
 
-	# Warlock: psionic/military mobility — militarists cling to it, so others want it by war
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_warlock
@@ -29,7 +25,6 @@
 		"
 	}
 
-	# Contingency Core: machine/megastructure relic — machine empires want it back if stolen
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_contingency_core
@@ -52,7 +47,6 @@
 		"
 	}
 
-	# Prethoryn Queen: militarists want the fleet; pacifists less eager for war over it
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_prethoryn_queen
@@ -75,7 +69,6 @@
 		"
 	}
 
-	# Khan's Throne: claim costs + Satrapy access — expansionists and authoritarians prize this
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_khans_throne
@@ -102,7 +95,6 @@
 		"
 	}
 
-	# Eternal Throne: immortal leaders — almost everyone wants this; authoritarians especially
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_eternal_throne
@@ -129,7 +121,6 @@
 		"
 	}
 
-	# Cetana's Heart: ascension cost reduction + robot pop burst — machine empires want it
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_cetanas_heart
@@ -156,7 +147,6 @@
 		"
 	}
 
-	# Core of the Reckoning: one of the strongest passives — almost nobody trades it, so war is the only path
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_core_of_the_reckoning
@@ -192,7 +182,6 @@
 		"
 	}
 
-	# Ancient Sword: army morale + diplo weight + sensors — militarists want it by war
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_ancient_sword
@@ -211,7 +200,6 @@
 		"
 	}
 
-	# Severed Head: Holy Guardian relations — spiritualists prize this highly
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_severed_head
@@ -234,7 +222,6 @@
 		"
 	}
 
-	# Galaxy: research speed — materialists want this
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_galaxy
@@ -253,7 +240,6 @@
 		"
 	}
 
-	# Defragmentor: energy upkeep reduction — machine empires want this
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_mechano_calibrator
@@ -272,7 +258,6 @@
 		"
 	}
 
-	# Omnicodex: gene mod point + new species pop burst — bio empires and gene-focused want it
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_omnicodex
@@ -294,7 +279,6 @@
 
 # >- GUARDIAN RELICS -<
 
-	# Dragon Trophy: +10% unity — spiritualists/unity empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_dragon_trophy
@@ -317,7 +301,6 @@
 		"
 	}
 
-	# Worm Scales: +5% physics research — relatively weak, modest war desire
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_worm_scales
@@ -336,7 +319,6 @@
 		"
 	}
 
-	# Rubricator: archaeotech weapon damage + minor artifacts — archaeology empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_rubricator
@@ -355,7 +337,6 @@
 		"
 	}
 
-	# Toxic God: strike craft + Knights bonus — toxic origin empires cling hardest
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_toxic_god
@@ -378,7 +359,6 @@
 		"
 	}
 
-	# Voidspawn Myocardium: fire rate + damage reduction; behemoth empires prize it
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_voidspawn_heart
@@ -404,7 +384,6 @@
 
 # >- PRECURSOR RELICS -<
 
-	# War Forge: Cybrex Warforms + alloy burst — militarists and machine empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_war_forge
@@ -427,7 +406,6 @@
 		"
 	}
 
-	# Pox Sample: leader lifespan + bio weapon stance — aggressive despoilers want this
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_pox_sample
@@ -450,7 +428,6 @@
 		"
 	}
 
-	# Zro Crystal: shroud cooldown + psionic bonuses — psionic empires want it by war
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_zro_crystal
@@ -473,7 +450,6 @@
 		"
 	}
 
-	# Last Baol: pop growth — organic empires prize it, machines don't care
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_baol
@@ -493,7 +469,6 @@
 		"
 	}
 
-	# Reality Perforator: random combat modifier — militarists want unpredictable power
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_orb_insight
@@ -512,7 +487,6 @@
 		"
 	}
 
-	# Cryo Core: colony development speed — expansionist empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_cryo_core
@@ -535,7 +509,6 @@
 		"
 	}
 
-	# Weather Manipulator: physics research + storm suppression
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_weather_manipulator
@@ -554,7 +527,6 @@
 		"
 	}
 
-	# Tempest Invocator: unity + ship upkeep + creates Nexus Storm
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_the_tempest_invocator
@@ -580,7 +552,6 @@
 
 # >- ASTRAL RELICS -<
 
-	# Celestial Tear: habitability near stars — niche, moderate war desire
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_celestial_tear
@@ -590,7 +561,6 @@
 		CUSTOM_AI = ""
 	}
 
-	# Daedalus Seal: dimensional lock — defensive xenophobes love this
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_daedalus_seal
@@ -609,7 +579,6 @@
 		"
 	}
 
-	# Ever-Spinning Top: +10% energy + propulsion research
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_ever_spinning_top
@@ -628,7 +597,6 @@
 		"
 	}
 
-	# Infinity Root: food income + free scientist — organic empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_infinity_root
@@ -648,7 +616,6 @@
 		"
 	}
 
-	# Plasmic Core: pop growth or leader XP — broadly wanted
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_plasmic_core
@@ -667,7 +634,6 @@
 		"
 	}
 
-	# Continuum: across-the-board bonuses — one of the best, everyone wants it
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_continuum
@@ -694,7 +660,6 @@
 		"
 	}
 
-	# Time Crystal: leader lifespan + mass XP — authoritarian empires value leaders
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_time_crystal
@@ -716,7 +681,6 @@
 
 # >- CURATOR RELICS -<
 
-	# Celestial Resonator: unity per exhibit — spiritualists and archive empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_celestial_resonator
@@ -735,7 +699,6 @@
 		"
 	}
 
-	# Gavel of the Tribunal: diplo weight + claim cost reduction — diplomatic empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_gavel_of_the_tribunal
@@ -758,7 +721,6 @@
 		"
 	}
 
-	# Pattern Maker: codebreaking + tracking + Patternwalker ship
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_the_pattern_maker
@@ -777,7 +739,6 @@
 		"
 	}
 
-	# Tiyanki Nerve Core: +25% damage to guardians + space fauna
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_tiyanki_matriarch_nerve_core
@@ -792,7 +753,6 @@
 		"
 	}
 
-	# Vaporous Mega Orchid: trust cap + subject loyalty — federation builders
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_vaporous_mega_orchid
@@ -811,7 +771,6 @@
 		"
 	}
 
-	# Entangled Relay: +2 sector size + starbase range — expansionist empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_entangled_relay
@@ -830,7 +789,6 @@
 		"
 	}
 
-	# Executus Compendium: councilor skill + agenda speed
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_executus_compendium
@@ -849,7 +807,6 @@
 		"
 	}
 
-	# Preservation Chamber: +25k resource storage + Vivarium capacity
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_preservation_chamber
@@ -868,7 +825,6 @@
 		"
 	}
 
-	# Prototype VIR Core: +1 leader cap all classes — broadly valuable
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_prototype_vir_core
@@ -887,7 +843,6 @@
 		"
 	}
 
-	# Propagandosphere: unity from soldiers + governing ethics attraction
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_propagandosphere
@@ -906,7 +861,6 @@
 		"
 	}
 
-	# Crystallinus Diffuser: +5% resources from jobs
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_crystallinus_diffuser
@@ -925,7 +879,6 @@
 		"
 	}
 
-	# Everchanging Stone: xeno geology output + upkeep reduction
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_everchanging_stone
@@ -940,7 +893,6 @@
 		"
 	}
 
-	# Flowmetal Alloy: ship build speed + robot pop burst — machine empires
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_flowmetal_alloy
@@ -963,7 +915,6 @@
 		"
 	}
 
-	# Pulsestone: field manipulation research + energy weapons, but happiness penalty
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_pulsestone
@@ -982,7 +933,6 @@
 		"
 	}
 
-	# Modularium: +1 of each strategic resource passively
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_the_modularium
@@ -1008,7 +958,6 @@
 
 # >- OTHER / EXTRA RELICS -<
 
-	# Galatron: absurd prestige — base weight already low, everyone wants it by war
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_galatron
@@ -1068,7 +1017,6 @@
 		"
 	}
 
-	# Lost Patron: Mindwardens origin exclusive
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_the_lost_patron
@@ -1083,7 +1031,6 @@
 		"
 	}
 
-	# Pyroglyphic Codex: Cosmic Dawn origin exclusive
 	inline_script = {
 		script = war_goals/hga_relic_wargoal
 		WG_KEY   = hga_wg_seize_pyroglyphic_codex

@@ -1,6 +1,5 @@
 # common/on_actions/hga_on_actions.txt
 # Authors: HGA
-# >- HOST MENU ON ACTIONS -<
 
 on_game_start = {
 	events = {
