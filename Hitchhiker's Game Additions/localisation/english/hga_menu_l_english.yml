@@ -4,7 +4,9 @@
 
 l_english:
 
- # >- Shared -<
+  maintheme13: "Starsailer - HGA Maintheme"
+  
+  # >- Shared -<
   hga_menu.back: "< Back"
   hga_game_time_override: "The Game has already started, you can override it within the settings."
   hga_game_time_override_option: "Enable Game Started flag Override. Changing settings may break the current gameplay, just beware that here be dragons."
