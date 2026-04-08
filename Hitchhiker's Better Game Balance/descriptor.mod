@@ -3,4 +3,4 @@ tags={
 	"Balance"
 }
 name="Hitchhiker's Better Game Balance"
-supported_version="v4.3.0"
+supported_version="v4.3.*"

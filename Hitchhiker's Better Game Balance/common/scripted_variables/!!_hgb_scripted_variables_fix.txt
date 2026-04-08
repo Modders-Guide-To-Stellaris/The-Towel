@@ -1,0 +1,25 @@
+##Ferrodermis armor regeneration values. added t6
+
+@bio_lm_ship_armor_regen_s_1 = 0.20
+@bio_lm_ship_armor_regen_m_1 = 0.60
+@bio_lm_ship_armor_regen_l_1 = 1.80
+
+@bio_lm_ship_armor_regen_s_2 = 0.30
+@bio_lm_ship_armor_regen_m_2 = 0.90
+@bio_lm_ship_armor_regen_l_2 = 2.10
+
+@bio_lm_ship_armor_regen_s_3 = 0.40
+@bio_lm_ship_armor_regen_m_3 = 1.20
+@bio_lm_ship_armor_regen_l_3 = 3.60
+
+@bio_lm_ship_armor_regen_s_4 = 0.50
+@bio_lm_ship_armor_regen_m_4 = 1.50
+@bio_lm_ship_armor_regen_l_4 = 4.50
+
+@bio_lm_ship_armor_regen_s_5 = 0.60
+@bio_lm_ship_armor_regen_m_5 = 1.80
+@bio_lm_ship_armor_regen_l_5 = 5.40
+
+@bio_lm_ship_armor_regen_s_6 = 0.70
+@bio_lm_ship_armor_regen_m_6 = 2.10
+@bio_lm_ship_armor_regen_l_6 = 6.30

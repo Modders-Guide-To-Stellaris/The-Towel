@@ -1,0 +1,225 @@
+# Neutronium Armor
+utility_component_template = {
+	key = "SMALL_BIO_LM_ARMOR_5"
+	size = small
+	icon = "GFX_ship_part_bio_lm_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = s
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_LM_ARMOR_5"
+	upgrades_to = "SMALL_DRAGON_BIO_LM_ARMOR"
+
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_LM_ARMOR_5"
+	size = medium
+	icon = "GFX_ship_part_bio_lm_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = m
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_LM_ARMOR_5"
+	upgrades_to = "MEDIUM_DRAGON_BIO_LM_ARMOR"
+
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_LM_ARMOR_5"
+	size = large
+	icon = "GFX_ship_part_bio_lm_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = l
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_LM_ARMOR_5"
+	upgrades_to = "LARGE_DRAGON_BIO_LM_ARMOR"
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+
+
+
+# Draconic Ferrodermis Armor
+utility_component_template = {
+	key = "SMALL_DRAGON_BIO_LM_ARMOR"
+	size = small
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = s
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_LM_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_DRAGON_BIO_LM_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = m
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_LM_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_DRAGON_BIO_LM_ARMOR"
+	size = large
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_lm_ship_armor
+		SIZE = l
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+		is_galvanic_empire = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_LM_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
