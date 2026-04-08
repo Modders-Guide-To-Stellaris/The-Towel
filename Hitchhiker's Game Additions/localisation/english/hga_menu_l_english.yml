@@ -5,7 +5,7 @@
 l_english:
 
   maintheme13: "Starsailer - HGA Maintheme"
-  
+
   # >- Shared -<
   hga_menu.back: "< Back"
   hga_game_time_override: "The Game has already started, you can override it within the settings."

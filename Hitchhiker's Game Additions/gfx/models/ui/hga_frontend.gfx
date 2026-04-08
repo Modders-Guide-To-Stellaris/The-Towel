@@ -1,0 +1,16 @@
+objectTypes = {
+    pdxmesh = {
+        name = "hga_frontend_mesh"
+        file = "gfx/models/ui/nemesis_frontend.mesh"
+
+        animation = { id = "idle"	type = "nemesis_frontend_idle_animation" }
+
+        meshsettings = {
+            name = "background_meshShape"
+            index = 0
+            texture_diffuse = "hga_background_main.dds"
+            texture_specular = "nospec.dds"
+            shader = "PdxMeshFrontendBackground"
+        }
+    }
+}
