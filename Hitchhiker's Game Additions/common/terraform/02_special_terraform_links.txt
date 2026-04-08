@@ -4016,9 +4016,16 @@ terraform_link = {
         exists = owner
         from = { has_modifier = toxic_terraforming_candidate }
     }
-    condition = {
+    condition = { ## HGA CONDITION
         OR = {
-            has_technology = tech_hga_detox
+            AND = {
+                has_technology = tech_hga_detox
+                has_global_flag = hga_detox_tech_enabled
+            }
+            AND = {
+                has_ascension_perk = ap_detox
+                NOT = { has_global_flag = hga_detox_tech_enabled }
+            }
             has_country_flag = knights_detox
         }
         has_technology = "tech_climate_restoration"

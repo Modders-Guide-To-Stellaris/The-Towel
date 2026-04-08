@@ -7,9 +7,8 @@ ap_detox = {
         NOT = {
             has_ascension_perk = ap_detox
             has_country_flag = knights_detox
+            has_global_flag = hga_detox_tech_enabled
         }
-
-        always = no
     }
 
     possible = {
@@ -17,8 +16,8 @@ ap_detox = {
             fail_text = "requires_technology_tech_climate_restoration"
             has_technology = tech_climate_restoration
         }
-
-        always = no
+        #
+        # has_global_flag = hga_detox_tech_disabled
     }
 
     on_enabled = {

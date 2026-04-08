@@ -5,8 +5,9 @@
 # Legend:
 #   hga_menu.0   - Init (hidden, fires on game start, sets defaults)
 #   hga_menu.1   - Hub / Main Menu
-#   hga_menu.10  - Relic Settings page
-#   hga_menu.20  - [RESERVED] Planetary Modifiers page (TBD)
+# 	hga_menu.10	 - Global Settings
+#   hga_menu.100  - Relic Settings page
+#   hga_menu.110  - [RESERVED] Planetary Modifiers page (TBD)
 # 	Anything else I desire because im special xD
 
 namespace = hga_menu
@@ -26,11 +27,16 @@ namespace = hga_menu
 			set_global_flag = hga_menu_initialized
 			set_country_flag = hga_is_host
 
+			## DEFAULT SETTING SETTER
+			set_global_flag = hga_detox_tech_enabled
+
 			# Relic Wars >> default ON
 			# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
 
 			# Relic Trade >> default ON
 			# Do not set hga_no_relic_trade or hga_ai_no_relic_trade by default
+
+			# Detox AP into Tech >> default ON
 
 			country_event = { id = hga_menu.1 days = 1 }
 		}
@@ -48,13 +54,23 @@ namespace = hga_menu
 
 		is_triggered_only = yes
 
+		# <<->> Global Settings <<->>
+
+		option = {
+			name = hga_menu.1.nav_global
+			custom_tooltip = hga_menu.1.nav_globalTT
+			hidden_effect = {
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
 		# <<->> Relic Settings <<->>
 
 		option = {
-			name = hga_menu.1.nav_relic
-			custom_tooltip = hga_menu.1.nav_relicTT
+			name = hga_menu.2.nav_relic
+			custom_tooltip = hga_menu.2.nav_relicTT
 			hidden_effect = {
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -65,7 +81,7 @@ namespace = hga_menu
 		# 	name = hga_menu.1.nav_planetary
 		# 	custom_tooltip = hga_menu.1.nav_planetaryTT
 		# 	hidden_effect = {
-		# 		country_event = { id = hga_menu.20 }
+		# 		country_event = { id = hga_menu.110 }
 		# 	}
 		# }
 
@@ -74,17 +90,78 @@ namespace = hga_menu
 		option = {
 			name = hga_menu.1.start
 			custom_tooltip = hga_menu.1.startTT
+			hidden_effect = {
+				set_global_flag = hga_game_started
+			}
 		}
 	}
 
 # /
 
-
-# >- RELIC SETTINGS PAGE -<
+# >- GLOBAL SETTINGS PAGE -<
 	country_event = {
 		id = hga_menu.10
 		title = hga_menu.10.name
 		desc = hga_menu.10.desc
+		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+
+		is_triggered_only = yes
+
+		# <<->> Detoxification Wars <<->>
+
+		option = {
+			trigger = {
+				OR = {
+					NOT = { has_global_flag = hga_game_started}
+					has_global_flag = hga_game_started_override
+					#TODO: add flag shown above, but put a warning because certain changes after game start might break things
+				}
+
+				has_global_flag = hga_detox_tech_enabled
+			}
+			name = hga_menu.10.release_detox_tech
+			custom_tooltip = hga_menu.10.release_detox_techTT
+			hidden_effect = {
+				remove_global_flag = hga_detox_tech_enabled
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		option = {
+			trigger = {
+				OR = {
+					NOT = { has_global_flag = hga_game_started}
+					has_global_flag = hga_game_started_override
+					fail_text = hga_game_time_override
+				}
+
+				NOT = { has_global_flag = hga_detox_tech_enabled }
+			}
+			name = hga_menu.10.force_detox_tech
+			custom_tooltip = hga_menu.100.force_detox_techTT
+			hidden_effect = {
+				set_global_flag = hga_detox_tech_enabled
+				country_event = { id = hga_menu.10 }
+			}
+		}
+
+		# <<->> Return Button <<->>
+
+		option = {
+			name = hga_menu.back
+			hidden_effect = {
+				country_event = { id = hga_menu.1 }
+			}
+		}
+	}
+
+# /
+
+# >- RELIC SETTINGS PAGE -<
+	country_event = {
+		id = hga_menu.100
+		title = hga_menu.100.name
+		desc = hga_menu.100.desc
 		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
 
 		is_triggered_only = yes
@@ -95,11 +172,11 @@ namespace = hga_menu
 			trigger = {
 				NOT = { has_global_flag = hga_no_relic_war }
 			}
-			name = hga_menu.10.lock_relic_war
-			custom_tooltip = hga_menu.10.lock_relic_warTT
+			name = hga_menu.100.lock_relic_war
+			custom_tooltip = hga_menu.100.lock_relic_warTT
 			hidden_effect = {
 				set_global_flag = hga_no_relic_war
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -107,11 +184,11 @@ namespace = hga_menu
 			trigger = {
 				has_global_flag = hga_no_relic_war
 			}
-			name = hga_menu.10.unlock_relic_war
-			custom_tooltip = hga_menu.10.unlock_relic_warTT
+			name = hga_menu.100.unlock_relic_war
+			custom_tooltip = hga_menu.100.unlock_relic_warTT
 			hidden_effect = {
 				remove_global_flag = hga_no_relic_war
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -122,11 +199,11 @@ namespace = hga_menu
 			trigger = {
 				NOT = { has_global_flag = hga_ai_no_relic_war }
 			}
-			name = hga_menu.10.lock_ai_relic_war
-			custom_tooltip = hga_menu.10.lock_ai_relic_warTT
+			name = hga_menu.100.lock_ai_relic_war
+			custom_tooltip = hga_menu.100.lock_ai_relic_warTT
 			hidden_effect = {
 				set_global_flag = hga_ai_no_relic_war
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -134,11 +211,11 @@ namespace = hga_menu
 			trigger = {
 				has_global_flag = hga_ai_no_relic_war
 			}
-			name = hga_menu.10.unlock_ai_relic_war
-			custom_tooltip = hga_menu.10.unlock_ai_relic_warTT
+			name = hga_menu.100.unlock_ai_relic_war
+			custom_tooltip = hga_menu.100.unlock_ai_relic_warTT
 			hidden_effect = {
 				remove_global_flag = hga_ai_no_relic_war
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -148,11 +225,11 @@ namespace = hga_menu
 			trigger = {
 				NOT = { has_global_flag = hga_no_relic_trade }
 			}
-			name = hga_menu.10.lock_relic_trade
-			custom_tooltip = hga_menu.10.lock_relic_tradeTT
+			name = hga_menu.100.lock_relic_trade
+			custom_tooltip = hga_menu.100.lock_relic_tradeTT
 			hidden_effect = {
 				set_global_flag = hga_no_relic_trade
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -160,11 +237,11 @@ namespace = hga_menu
 			trigger = {
 				has_global_flag = hga_no_relic_trade
 			}
-			name = hga_menu.10.unlock_relic_trade
-			custom_tooltip = hga_menu.10.unlock_relic_tradeTT
+			name = hga_menu.100.unlock_relic_trade
+			custom_tooltip = hga_menu.100.unlock_relic_tradeTT
 			hidden_effect = {
 				remove_global_flag = hga_no_relic_trade
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -174,11 +251,11 @@ namespace = hga_menu
 			trigger = {
 				NOT = { has_global_flag = hga_ai_no_relic_trade }
 			}
-			name = hga_menu.10.lock_ai_relic_trade
-			custom_tooltip = hga_menu.10.lock_ai_relic_tradeTT
+			name = hga_menu.100.lock_ai_relic_trade
+			custom_tooltip = hga_menu.100.lock_ai_relic_tradeTT
 			hidden_effect = {
 				set_global_flag = hga_ai_no_relic_trade
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -186,11 +263,11 @@ namespace = hga_menu
 			trigger = {
 				has_global_flag = hga_ai_no_relic_trade
 			}
-			name = hga_menu.10.unlock_ai_relic_trade
-			custom_tooltip = hga_menu.10.unlock_ai_relic_tradeTT
+			name = hga_menu.100.unlock_ai_relic_trade
+			custom_tooltip = hga_menu.100.unlock_ai_relic_tradeTT
 			hidden_effect = {
 				remove_global_flag = hga_ai_no_relic_trade
-				country_event = { id = hga_menu.10 }
+				country_event = { id = hga_menu.100 }
 			}
 		}
 
@@ -210,43 +287,43 @@ namespace = hga_menu
 
 # >- PLANETARY MODIFIERS PAGE (RESERVED) -<
 	# country_event = {
-	# 	id = hga_menu.20
-	# 	title = hga_menu.20.name
-	# 	desc = hga_menu.20.desc
+	# 	id = hga_menu.110
+	# 	title = hga_menu.110.name
+	# 	desc = hga_menu.110.desc
 	# 	picture = GFX_evt_star_chart
 	# 	is_triggered_only = yes
 	#
 	#	# <<->> Modifier Intensitity LOW > MEDIUM <<->>
 	# 	# option = {
 	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_low }
-	# 	# 	name = hga_menu.20.intensity_low
-	# 	# 	custom_tooltip = hga_menu.20.intensity_lowTT
+	# 	# 	name = hga_menu.110.intensity_low
+	# 	# 	custom_tooltip = hga_menu.110.intensity_lowTT
 	# 	# 	hidden_effect = {
 	# 	# 		remove_global_flag = hga_modifier_intensity_low
 	# 	# 		set_global_flag = hga_modifier_intensity_medium
-	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 		country_event = { id = hga_menu.110 }
 	# 	# 	}
 	# 	# }
 	# 	# <<->> Modifier Intensitity MEDIUM > HIGH <<->>
 	# 	# option = {
 	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_medium }
-	# 	# 	name = hga_menu.20.intensity_medium
-	# 	# 	custom_tooltip = hga_menu.20.intensity_mediumTT
+	# 	# 	name = hga_menu.110.intensity_medium
+	# 	# 	custom_tooltip = hga_menu.110.intensity_mediumTT
 	# 	# 	hidden_effect = {
 	# 	# 		remove_global_flag = hga_modifier_intensity_medium
 	# 	# 		set_global_flag = hga_modifier_intensity_high
-	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 		country_event = { id = hga_menu.110 }
 	# 	# 	}
 	# 	# }
 	# 	# <<->> Modifier Intensitity HIGH > LOW <<->>
 	# 	# option = {
 	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_high }
-	# 	# 	name = hga_menu.20.intensity_high
-	# 	# 	custom_tooltip = hga_menu.20.intensity_highTT
+	# 	# 	name = hga_menu.110.intensity_high
+	# 	# 	custom_tooltip = hga_menu.110.intensity_highTT
 	# 	# 	hidden_effect = {
 	# 	# 		remove_global_flag = hga_modifier_intensity_high
 	# 	# 		set_global_flag = hga_modifier_intensity_low
-	# 	# 		country_event = { id = hga_menu.20 }
+	# 	# 		country_event = { id = hga_menu.110 }
 	# 	# 	}
 	# 	# }
 	#

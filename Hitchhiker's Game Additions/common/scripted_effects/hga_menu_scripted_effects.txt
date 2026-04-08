@@ -21,6 +21,9 @@ hga_flag_holder = {
 			set_global_flag = hga_modifier_intensity_high
 		# /
 
+		# >- Ascension Settings -<
+			set_global_flag = hga_detox_tech_enabled
+
 		# >- System -<
 			set_global_flag = hga_menu_initialized		# set on first init, prevents re-run on load
 		# /

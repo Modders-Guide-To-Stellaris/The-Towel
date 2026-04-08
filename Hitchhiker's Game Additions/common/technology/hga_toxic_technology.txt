@@ -24,6 +24,10 @@ tech_hga_detox = {
             has_country_flag = knights_detox
         }
         modifier = {
+            factor = 0
+            NOT = { has_global_flag = hga_detox_tech_enabled }
+        }
+        modifier = {
             factor = 1.25
             has_tradition = tr_expansion_adopt
         }
