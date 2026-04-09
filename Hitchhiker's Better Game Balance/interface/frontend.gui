@@ -144,18 +144,6 @@ guiTypes = {
                 name = "version"
                 font = "cg_16b"
                 text = "1337"
-                position = { x = 310 y = -60 }
-                maxWidth = 400
-                maxHeight = 20
-                fixedSize = yes
-                format = left
-                orientation = lower_left
-            }
-
-            instantTextBoxType = {
-                name = "hga_version"
-                font = "cg_16b"
-                text = "hga_version"
                 position = { x = 310 y = 0 }
                 maxWidth = 400
                 maxHeight = 20
