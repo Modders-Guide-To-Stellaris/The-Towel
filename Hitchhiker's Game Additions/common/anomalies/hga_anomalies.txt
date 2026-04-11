@@ -1,0 +1,35 @@
+# common\anomalies\hga_anomalies.txt
+
+# Authors: Curator Foxy
+
+# >- GAS GIANT BEAUTY ANOMALY -<
+# Spawns on gas giants only.
+
+	hga_beauty_gas_giant_anomaly = {
+		desc = hga_beauty_gas_giant_anomaly_desc
+		picture = GFX_evt_gas_giant
+
+		level = 5
+
+		should_ai_and_humans_use = yes
+
+		max_once_global = yes
+
+		spawn_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				is_planet_class = "pc_gas_giant"
+			}
+		}
+
+		on_success = {
+			100 = {
+				anomaly_event = hga_modifier.10
+			}
+		}
+	}
+
+# /
+
+# Do not remove below v

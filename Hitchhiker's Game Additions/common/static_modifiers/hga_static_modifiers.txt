@@ -1,0 +1,85 @@
+# common\static_modifiers\hga_static_modifiers.txt
+# Authors: Curator Foxy
+
+# >- FAUNA & FLORA MODIFIERS -<
+hga_megafauna = {
+    planet_farmers_food_produces_mult = -0.20
+    planet_jobs_society_research_produces_mult = 0.1
+    biologist_jobs_bonus_workforce_mult = 0.1
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
+    icon_frame = 2
+}
+
+hga_underwater_megafauna = {
+    planet_farmers_food_produces_mult = -0.20
+    planet_jobs_society_research_produces_mult = 0.10
+    biologist_jobs_bonus_workforce_mult = 0.05
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds" #todo: change picture
+    icon_frame = 2
+}
+
+hga_megaflora = {
+    planet_farmers_food_produces_add = 0.5
+    planet_clear_blocker_speed_mult = -0.5
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+    icon_frame = 1
+}
+
+# /
+
+# >- THE BEAUTY HIDDEN WITHIN -<
+hga_beauty_hidden_within = {
+    planet_researchers_physics_research_produces_add = 0.25
+    bureaucrat_jobs_bonus_workforce_mult = 0.10
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_hidden_within_maturing = {
+    planet_researchers_physics_research_produces_add = 0.20
+    bureaucrat_jobs_bonus_workforce_mult = 0.08
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_hidden_within_ancient = {
+    planet_researchers_physics_research_produces_add = 0.15
+    bureaucrat_jobs_bonus_workforce_mult = 0.05
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_hidden_gaia = {
+    planet_researchers_physics_research_produces_add = 0.50
+    bureaucrat_jobs_bonus_workforce_mult = 0.25
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_reconsecrated = {
+    planet_jobs_unity_produces_mult = 0.10
+    pop_happiness = 0.05
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_consecrated_worlds.dds"
+    icon_frame = 1
+}
+
+# /
+
+# >- COUNTRY MODIFIERS -<
+hga_beauty_reconsecrated_country = {
+    country_unity_produces_mult = 0.05
+
+    icon = "gfx/interface/icons/modifiers/mod_country_unity_produces_mult.dds"
+    icon_frame = 1
+}
+# /
+
+# Do not remove below v

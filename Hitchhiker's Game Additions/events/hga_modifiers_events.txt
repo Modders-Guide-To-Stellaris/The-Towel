@@ -1,0 +1,281 @@
+# events\hga_modifier_events.txt
+# Authors: Curator Foxy
+
+namespace = hga_modifier
+
+# >- COUNTRY TICKER: BEAUTY GROWING -<
+country_event = {
+    id = hga_modifier.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_owned_planet = {
+            has_planet_flag = hga_beauty_growing
+        }
+    }
+
+    immediate = {
+        hidden_effect = {
+            every_owned_planet = {
+                limit = {
+                    has_planet_flag = hga_beauty_growing
+                }
+
+                if = {
+                    limit = {
+                        OR = {
+                            has_planet_flag = hga_beauty_colonized
+                            planet_size >= 25
+                        }
+                    }
+                    remove_planet_flag = hga_beauty_growing
+                }
+                else = {
+                    change_planet_size = 1
+
+                    change_variable = {
+                        which = hga_beauty_age
+                        value = 1
+                    }
+
+                    # >- MODIFIER TIER SWAPS -<
+                    if = {
+                        limit = {
+                            check_variable = {
+                                which = hga_beauty_age
+                                value = 5
+                            }
+                            has_modifier = hga_beauty_hidden_within
+                        }
+                        remove_modifier = hga_beauty_hidden_within
+                        add_modifier = { modifier = hga_beauty_hidden_within_maturing days = -1 }
+                    }
+
+                    if = {
+                        limit = {
+                            check_variable = {
+                                which = hga_beauty_age
+                                value = 10
+                            }
+                            has_modifier = hga_beauty_hidden_within_maturing
+                        }
+                        remove_modifier = hga_beauty_hidden_within_maturing
+                        add_modifier = { modifier = hga_beauty_hidden_within_ancient days = -1 }
+                    }
+                }
+            }
+        }
+    }
+}
+# /
+
+ship_event = {
+    id = hga_modifier.10
+    title = "hga_modifier.10.name"
+    picture = GFX_evt_gas_giant
+
+    desc = {
+        trigger = {
+            NOT = { from = { has_planet_flag = consecrated@root.owner } }
+        }
+        text = hga_modifier.10.desc.addonUno
+    }
+
+    desc = {
+        trigger = {
+            from = { has_planet_flag = consecrated@root.owner }
+        }
+        text = hga_modifier.10.desc.addonDos
+    }
+
+    is_triggered_only = yes
+
+    trigger = {
+        from = { is_planet_class = pc_gas_giant }
+    }
+
+    immediate = {
+        hidden_effect = {
+            from = {
+                planet = {
+                    save_event_target_as = hga_beauty_gas_giant
+                }
+            }
+        }
+    }
+
+    option = {
+        name = hga_modifier.10.a
+        ship_event = { id = hga_modifier.11 days = 30 }
+    }
+
+    option = {
+        name = hga_modifier.10.b
+
+        allow = {
+            from = { has_planet_flag = consecrated@root.owner }
+        }
+
+        root.owner = {
+            set_country_flag = hga_gas_giant_consecrated_approach
+        }
+
+        ship_event = { id = hga_modifier.11 days = 30 }
+
+        hide_option_if_not_allowed = yes
+    }
+
+    option = {
+        name = hga_modifier.10.c
+        owner = {
+            add_tech_progress = {
+                tech = tech_terrestrial_sculpting
+                progress = 0.25
+            }
+        }
+    }
+}
+# /
+
+ship_event = {
+    id = hga_modifier.11
+    title = "hga_modifier.11.name"
+    desc = "hga_modifier.11.desc"
+    picture = GFX_evt_gas_giant
+
+    is_triggered_only = yes
+
+    option = {
+        name = hga_modifier.11.a
+        enable_special_project = {
+            name = HGA_EXTRACT_PLANET_FROM_GIANT
+            location = from
+            owner = root
+        }
+    }
+
+    option = {
+        name = hga_modifier.11.b
+        trigger = {
+            owner = { has_country_flag = hga_gas_giant_consecrated_approach }
+        }
+        enable_special_project = {
+            name = HGA_EXTRACT_PLANET_FROM_GIANT
+            location = from
+            owner = root
+        }
+    }
+
+    # Option C — Abort: take tech progress instead
+    option = {
+        name = hga_modifier.11.c
+        owner = {
+            add_tech_progress = {
+                tech = tech_terrestrial_sculpting
+                progress = 0.50
+            }
+            add_tech_progress = {
+                tech = tech_climate_restoration
+                progress = 0.25
+            }
+        }
+    }
+}
+# /
+
+# >- OUTCOME: NORMAL PLANET EXTRACTED -<
+ship_event = {
+    id = hga_modifier.12
+    title = "hga_modifier.12.name"
+    desc = "hga_modifier.12.desc"
+    picture = GFX_evt_terraforming
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            event_target:hga_beauty_gas_giant = {
+                random_list = {
+                    1 = {
+                        change_pc = pc_continental
+                    }
+                    1 = {
+                        change_pc = pc_tropical
+                    }
+                    1 = {
+                        change_pc = pc_ocean
+                    }
+                }
+
+                set_planet_size = 10
+
+                add_modifier = { modifier = hga_beauty_hidden_within days = -1 }
+                add_deposit = d_hga_crystalline_wonder
+
+                set_variable = {
+                    which = hga_beauty_age
+                    value = 0
+                }
+
+                set_planet_flag = hga_beauty_growing
+            }
+        }
+    }
+
+    option = {
+        name = hga_modifier.12.a
+    }
+}
+# /
+
+# >- OUTCOME: GAIA PLANET EXTRACTED -<
+ship_event = {
+    id = hga_modifier.13
+    title = "hga_modifier.13.name"
+    desc = "hga_modifier.13.desc"
+    picture = GFX_evt_gaia
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            event_target:hga_beauty_gas_giant = {
+                change_pc = pc_gaia
+                set_planet_size = 10
+                add_modifier = { modifier = hga_beauty_hidden_gaia days = -1 }
+                add_deposit = d_hga_crystalline_wonder
+                set_variable = {
+                    which = hga_beauty_age
+                    value = 0
+                }
+                set_planet_flag = hga_beauty_growing
+            }
+        }
+    }
+
+    option = {
+        name = hga_modifier.13.a
+        event_target:hga_beauty_gas_giant = {
+            set_planet_flag = hga_beauty_colonized
+        }
+    }
+
+    option = {
+        name = hga_modifier.13.b
+        event_target:hga_beauty_gas_giant = {
+            set_planet_flag = hga_beauty_colonized
+            remove_modifier = hga_beauty_hidden_gaia
+            add_modifier = { modifier = holy_planet days = -1 }
+            add_modifier = { modifier = hga_beauty_reconsecrated days = -1 }
+            add_deposit = d_hga_beauty_holy_unity
+        }
+        owner = {
+            add_modifier = {
+                modifier = hga_beauty_reconsecrated_country
+                days = -1
+            }
+        }
+    }
+}
+# /

@@ -7,11 +7,15 @@ on_game_start = {
 	}
 }
 
-# Game Start >> fires hga_menu.0 (init + open menu) for the host
-# this = country
 on_game_start_country = {
 	events = {
-		hga_menu.0		# Host Menu >> init defaults and open menu for host
+		hga_menu.0
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		hga_modifier_1
 	}
 }
 
