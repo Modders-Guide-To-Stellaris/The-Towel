@@ -1,6 +1,8 @@
 ## Minor patron events can still trigger after forging our own path
 ## Minor Patrons delve events
 # The Animator of Clay - Animatus
+namespace = shroud
+
 country_event = {
 	id = shroud.3200
 	base = shroud.3

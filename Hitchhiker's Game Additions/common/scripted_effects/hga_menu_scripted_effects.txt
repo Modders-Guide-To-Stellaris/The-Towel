@@ -13,19 +13,19 @@ hga_flag_holder = {
 			set_global_flag = hga_ai_no_relic_trade	# AI cannot trade relics
 		# /
 
-		# >- Planetary Modifiers (RESERVED) -<
-			set_global_flag = hga_planetary_effects_disabled
+		# >- Planetary Modifiers -<
+			set_global_flag = hga_planetary_features_disabled
 
-			set_global_flag = hga_modifier_intensity_low
-			set_global_flag = hga_modifier_intensity_medium
-			set_global_flag = hga_modifier_intensity_high
+			set_global_flag = hga_features_intensity_low
+			set_global_flag = hga_features_intensity_medium
+			set_global_flag = hga_features_intensity_high
 		# /
 
 		# >- Ascension Settings -<
 			set_global_flag = hga_detox_tech_enabled
 
 		# >- System -<
-			set_global_flag = hga_menu_initialized		# set on first init, prevents re-run on load
+			set_global_flag = hga_menu_initialized
 		# /
 	}
 }
