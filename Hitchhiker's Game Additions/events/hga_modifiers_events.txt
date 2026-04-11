@@ -30,6 +30,13 @@ country_event = {
                         }
                     }
                     remove_planet_flag = hga_beauty_growing
+
+                    if = { #IF block to stop grubby jezzajs from taking the unity and settling the planet anyways somehow
+                        limit = {
+                            has_deposit = d_hga_beauty_holy_unity
+                        }
+                        remove_deposit = d_hga_beauty_holy_unity
+                    }
                 }
                 else = {
                     change_planet_size = 1
