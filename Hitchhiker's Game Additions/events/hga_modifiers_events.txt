@@ -17,7 +17,7 @@ country_event = {
 
     immediate = {
         hidden_effect = {
-            every_owned_planet = {
+            every_planet_within_border = {
                 limit = {
                     has_planet_flag = hga_beauty_growing
                 }
@@ -25,7 +25,7 @@ country_event = {
                 if = {
                     limit = {
                         OR = {
-                            has_planet_flag = hga_beauty_colonized
+                            is_colony = yes
                             planet_size >= 25
                         }
                     }
@@ -100,6 +100,18 @@ ship_event = {
             from = {
                 planet = {
                     save_event_target_as = hga_beauty_gas_giant
+
+                    remove_planet_flag = consecrated@from
+
+                    remove_modifier = consecrated_quality_1
+                    remove_modifier = consecrated_quality_2
+                    remove_modifier = consecrated_quality_3
+                    remove_modifier = consecrated_quality_4
+
+                    change_variable = {
+                        which = num_consecrated_worlds
+                        value = -1
+                    }
                 }
             }
         }
@@ -167,7 +179,6 @@ ship_event = {
         }
     }
 
-    # Option C — Abort: take tech progress instead
     option = {
         name = hga_modifier.11.c
         owner = {
@@ -242,13 +253,17 @@ ship_event = {
         hidden_effect = {
             event_target:hga_beauty_gas_giant = {
                 change_pc = pc_gaia
+
                 set_planet_size = 10
+
                 add_modifier = { modifier = hga_beauty_hidden_gaia days = -1 }
                 add_deposit = d_hga_crystalline_wonder
+
                 set_variable = {
                     which = hga_beauty_age
                     value = 0
                 }
+
                 set_planet_flag = hga_beauty_growing
             }
         }
@@ -256,18 +271,23 @@ ship_event = {
 
     option = {
         name = hga_modifier.13.a
-        event_target:hga_beauty_gas_giant = {
-            set_planet_flag = hga_beauty_colonized
-        }
     }
 
     option = {
         name = hga_modifier.13.b
         event_target:hga_beauty_gas_giant = {
             set_planet_flag = hga_beauty_colonized
-            remove_modifier = hga_beauty_hidden_gaia
+
             add_modifier = { modifier = holy_planet days = -1 }
             add_modifier = { modifier = hga_beauty_reconsecrated days = -1 }
+            add_modifier = { modifier = consecrated_quality_4 }
+
+            set_planet_flag = consecrated@from
+            change_variable = {
+                which = num_consecrated_worlds
+                value = 1
+            }
+
             add_deposit = d_hga_beauty_holy_unity
         }
         owner = {

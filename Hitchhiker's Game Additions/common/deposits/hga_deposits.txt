@@ -41,12 +41,14 @@
 		icon = "GFX_deposit_d_crystal_reef" #todo: change
 
 		resources = {
-			category = planet_deposits
+			category = orbital_mining_deposits
 			produces = {
 				unity = 20
 				mult = planet.owner.trigger:num_ascension_perks
 			}
 		}
+
+		station = shipclass_research_station
 
 		drop_weight = {
 			weight = 0
