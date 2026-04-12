@@ -3,14 +3,14 @@
 
 namespace = hga_modifier
 
-# >- COUNTRY TICKER: BEAUTY GROWING -<
+# >- COUNTRY TICKER: BEAUTY GROWING -
 country_event = {
     id = hga_modifier.1
     hide_window = yes
     is_triggered_only = yes
 
     trigger = {
-        any_owned_planet = {
+        any_planet_within_border = {
             has_planet_flag = hga_beauty_growing
         }
     }
@@ -31,7 +31,7 @@ country_event = {
                     }
                     remove_planet_flag = hga_beauty_growing
 
-                    if = { #IF block to stop grubby jezzajs from taking the unity and settling the planet anyways somehow
+                    if = { # stop grubby jezzajs from taking the unity and settling anyway
                         limit = {
                             has_deposit = d_hga_beauty_holy_unity
                         }
@@ -46,7 +46,9 @@ country_event = {
                         value = 1
                     }
 
-                    # >- MODIFIER TIER SWAPS -<
+                    # >- MODIFIER TIER SWAPS -
+
+                    # Age 5: tier 1 -> tier 2 (maturing)
                     if = {
                         limit = {
                             check_variable = {
@@ -56,9 +58,34 @@ country_event = {
                             has_modifier = hga_beauty_hidden_within
                         }
                         remove_modifier = hga_beauty_hidden_within
-                        add_modifier = { modifier = hga_beauty_hidden_within_maturing days = -1 }
+
+                        switch = {
+                            trigger = has_global_flag
+                            hga_features_production_low = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_maturing
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_low
+                                }
+                            }
+                            hga_features_production_medium = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_maturing
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_medium
+                                }
+                            }
+                            hga_features_production_high = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_maturing
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_high
+                                }
+                            }
+                        }
                     }
 
+                    # Age 10: tier 2 -> tier 3 (ancient)
                     if = {
                         limit = {
                             check_variable = {
@@ -68,8 +95,33 @@ country_event = {
                             has_modifier = hga_beauty_hidden_within_maturing
                         }
                         remove_modifier = hga_beauty_hidden_within_maturing
-                        add_modifier = { modifier = hga_beauty_hidden_within_ancient days = -1 }
+
+                        switch = {
+                            trigger = has_global_flag
+                            hga_features_production_low = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_ancient
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_low
+                                }
+                            }
+                            hga_features_production_medium = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_ancient
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_medium
+                                }
+                            }
+                            hga_features_production_high = {
+                                add_modifier = {
+                                    modifier = hga_beauty_hidden_within_ancient
+                                    days = -1
+                                    mult = @hga_planetary_feature_mult_high
+                                }
+                            }
+                        }
                     }
+                    # /
                 }
             }
         }
@@ -77,6 +129,7 @@ country_event = {
 }
 # /
 
+# >- CHAIN START: GAS GIANT SURVEY -
 ship_event = {
     id = hga_modifier.10
     title = "hga_modifier.10.name"
@@ -108,16 +161,76 @@ ship_event = {
                 planet = {
                     save_event_target_as = hga_beauty_gas_giant
 
+                    from = {
+                        change_variable = {
+                            which = num_consecrated_worlds
+                            value = -1
+                        }
+                    }
                     remove_planet_flag = consecrated@from
 
-                    remove_modifier = consecrated_quality_1
-                    remove_modifier = consecrated_quality_2
-                    remove_modifier = consecrated_quality_3
-                    remove_modifier = consecrated_quality_4
-
-                    change_variable = {
-                        which = num_consecrated_worlds
-                        value = -1
+                    switch = {
+                        trigger = has_modifier
+                        consecrated_quality_4 = {
+                            remove_modifier = consecrated_quality_4
+                            solar_system = {
+                                random_system_ambient_object = {
+                                    limit = {
+                                        is_ambient_object_type = consecrated_planet_stage_3_object
+                                    }
+                                    destroy_ambient_object = this
+                                }
+                            }
+                            root.owner = {
+                                change_variable = {
+                                    which = consecrated_variable
+                                    value = -4
+                                }
+                            }
+                        }
+                        consecrated_quality_3 = {
+                            remove_modifier = consecrated_quality_3
+                            solar_system = {
+                                random_system_ambient_object = {
+                                    limit = {
+                                        is_ambient_object_type = consecrated_planet_stage_2_object
+                                    }
+                                    destroy_ambient_object = this
+                                }
+                            }
+                            root.owner = {
+                                change_variable = {
+                                    which = consecrated_variable
+                                    value = -3
+                                }
+                            }
+                        }
+                        consecrated_quality_2 = {
+                            remove_modifier = consecrated_quality_2
+                            solar_system = {
+                                random_system_ambient_object = {
+                                    limit = {
+                                        is_ambient_object_type = consecrated_planet_stage_1_object
+                                    }
+                                    destroy_ambient_object = this
+                                }
+                            }
+                            root.owner = {
+                                change_variable = {
+                                    which = consecrated_variable
+                                    value = -2
+                                }
+                            }
+                        }
+                        consecrated_quality_1 = {
+                            remove_modifier = consecrated_quality_1
+                            root.owner = {
+                                change_variable = {
+                                    which = consecrated_variable
+                                    value = -1
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -157,6 +270,7 @@ ship_event = {
 }
 # /
 
+# >- CHAIN: COMMIT TO EXTRACTION -<
 ship_event = {
     id = hga_modifier.11
     title = "hga_modifier.11.name"
@@ -207,7 +321,7 @@ ship_event = {
     id = hga_modifier.12
     title = "hga_modifier.12.name"
     desc = "hga_modifier.12.desc"
-    picture = GFX_evt_terraforming
+    picture = GFX_evt_shrouded_planet
 
     is_triggered_only = yes
 
@@ -215,20 +329,40 @@ ship_event = {
         hidden_effect = {
             event_target:hga_beauty_gas_giant = {
                 random_list = {
-                    1 = {
-                        change_pc = pc_continental
-                    }
-                    1 = {
-                        change_pc = pc_tropical
-                    }
-                    1 = {
-                        change_pc = pc_ocean
-                    }
+                    1 = { change_pc = pc_continental }
+                    1 = { change_pc = pc_tropical }
+                    1 = { change_pc = pc_ocean }
                 }
 
                 set_planet_size = 10
 
-                add_modifier = { modifier = hga_beauty_hidden_within days = -1 }
+                # >- PRODUCTION SWITCH -
+                switch = {
+                    trigger = has_global_flag
+                    hga_features_production_low = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_within
+                            days = -1
+                            mult = @hga_planetary_feature_mult_low
+                        }
+                    }
+                    hga_features_production_medium = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_within
+                            days = -1
+                            mult = @hga_planetary_feature_mult_medium
+                        }
+                    }
+                    hga_features_production_high = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_within
+                            days = -1
+                            mult = @hga_planetary_feature_mult_high
+                        }
+                    }
+                }
+                # /
+
                 add_deposit = d_hga_crystalline_wonder
 
                 set_variable = {
@@ -260,10 +394,34 @@ ship_event = {
         hidden_effect = {
             event_target:hga_beauty_gas_giant = {
                 change_pc = pc_gaia
-
                 set_planet_size = 10
 
-                add_modifier = { modifier = hga_beauty_hidden_gaia days = -1 }
+                switch = {
+                    trigger = has_global_flag
+                    hga_features_production_low = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_gaia
+                            days = -1
+                            mult = @hga_planetary_feature_mult_low
+                        }
+                    }
+                    hga_features_production_medium = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_gaia
+                            days = -1
+                            mult = @hga_planetary_feature_mult_medium
+                        }
+                    }
+                    hga_features_production_high = {
+                        add_modifier = {
+                            modifier = hga_beauty_hidden_gaia
+                            days = -1
+                            mult = @hga_planetary_feature_mult_high
+                        }
+                    }
+                }
+                # /
+
                 add_deposit = d_hga_crystalline_wonder
 
                 set_variable = {
@@ -282,27 +440,51 @@ ship_event = {
 
     option = {
         name = hga_modifier.13.b
+
+        allow = {
+            check_variable = {
+                which = num_consecrated_worlds
+                value < 3
+            }
+        }
+
         event_target:hga_beauty_gas_giant = {
             set_planet_flag = hga_beauty_colonized
 
             add_modifier = { modifier = holy_planet days = -1 }
-            add_modifier = { modifier = hga_beauty_reconsecrated days = -1 }
-            add_modifier = { modifier = consecrated_quality_4 }
+            root.owner = {
+                add_modifier = {
+                    modifier = hga_beauty_reconsecrated_country
+                    days = -1
+                }
+            }
 
-            set_planet_flag = consecrated@from
-            change_variable = {
-                which = num_consecrated_worlds
-                value = 1
+            set_variable = {
+                which = hga_beauty_age
+                value = 0
+            }
+
+            add_modifier = {
+                modifier = consecrated_quality_4
+                days = -1
+            }
+            create_ambient_object = {
+                type = consecrated_planet_stage_3_object
+                location = this
+                use_3d_location = yes
+                entity_scale_to_size = yes
+            }
+            root.owner = {
+                change_variable = {
+                    which = consecrated_variable
+                    value = 4
+                }
             }
 
             add_deposit = d_hga_beauty_holy_unity
         }
-        owner = {
-            add_modifier = {
-                modifier = hga_beauty_reconsecrated_country
-                days = -1
-            }
-        }
     }
 }
 # /
+
+# Do not remove below v

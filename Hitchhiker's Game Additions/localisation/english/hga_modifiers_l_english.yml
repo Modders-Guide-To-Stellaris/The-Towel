@@ -1,0 +1,59 @@
+﻿# localisation\english\hga_modifiers_l_english.yml
+# Authors: Curator Foxy
+
+l_english:
+
+ # >- PLANET MODIFIER NAMES & DESCRIPTIONS -<
+
+ hga_megafauna:0 "Megafauna"
+ hga_megafauna_desc:0 ""
+
+ hga_underwater_megafauna:0 "Underwater Megafauna"
+ hga_underwater_megafauna_desc:0 ""
+
+ hga_megaflora:0 "Megaflora"
+ hga_megaflora_desc:0 ""
+
+ hga_beauty_hidden_within:0 "The Beauty Hidden Within"
+ hga_beauty_hidden_within_desc:0 "Compressed at the heart of this world lie vast crystalline formations, remnants of the gas giant it once was. The frequencies they emit are faint but constant, sharpening focus and drawing the intellectually curious from across the sector."
+
+ hga_beauty_hidden_within_maturing:0 "The Beauty Hidden Within"
+ hga_beauty_hidden_within_maturing_desc:0 "The crystals have begun to weather and spread through the crust. Their resonance is dulled, harder to measure, though those who live near the formations still swear by the clarity they bring."
+
+ hga_beauty_hidden_within_ancient:0 "The Beauty Hidden Within"
+ hga_beauty_hidden_within_ancient_desc:0 "Little remains of the formations that once defined this world. Scattered fragments, half-buried in sediment. The frequency is barely detectable now. More legend than fact, though the locals are proud of it regardless."
+
+ hga_beauty_hidden_gaia:0 "The Perfected Beauty"
+ hga_beauty_hidden_gaia_desc:0 "What began as a gas giant has become something that defies easy categorisation. The crystals remain intact and untouched, the flora has grown around them rather than over them, and the whole planet hums with a quiet resonance that biologists and physicists alike find irresistible."
+
+ hga_beauty_reconsecrated_country:0 "The Beauty Returned"
+ hga_beauty_reconsecrated_country_desc:0 "A world of extraordinary beauty was offered back rather than claimed. The faithful have taken note."
+
+ #special project (To be moved)
+ HGA_EXTRACT_PLANET_FROM_GIANT: "Extract the gas from the giant"
+
+ # >- Modifier Events -<
+ hga_modifier.10.name:0 "Something in the Deep"
+ hga_modifier.10.desc:0 "Further investigation of the phenomenon on [From.GetName] validates our concerns. Something unnatural is afoot on the planet -- either gas exchanges unknown to us, or another life form entirely."
+ hga_modifier.10.desc.addonUno:0 "\n\nShould we investigate further, or use what we have learned for our terraforming efforts?"
+ hga_modifier.10.desc.addonDos:0 "\n\nShould we investigate, leave it be... or might this be proof of the divine, rewarding us for our sacred consecration?"
+ hga_modifier.10.a:0 "Send the scientists in."
+ hga_modifier.10.b:0 "Leave it to the priests."
+ hga_modifier.10.c:0 "Leave it be. We have enough mysteries."
+
+ hga_modifier.11.name:0 "What Lies Within"
+ hga_modifier.11.desc:0 "Our probes have breached the outer atmosphere and the readings are... extraordinary. At the compressed core of [From.GetName] lies a structure of impossible beauty. Vast crystalline formations, resonating at frequencies that affect the gas giant itself. The planet is, in effect, a shell around something far more remarkable.\n\nHow we proceed will determine what becomes of this discovery."
+ hga_modifier.11.a:0 "Let our scientists extract and terraform it."
+ hga_modifier.11.b:0 "This is a sacred sign. The priests must double their efforts!"
+ hga_modifier.11.c:0 "Too much work for some weeds. We leave it untouched."
+
+ hga_modifier.12.name:0 "The Natural Beauty Within"
+ hga_modifier.12.desc:0 "Our cleansing process is working. The gas is slowly turning purple and dissipating, leaving behind an atmosphere fit for a [This.GetClassAdj] world.\n\nThe planet still seems young. Leaving it time to breathe may let the remaining gasses sustain and grow it further. The decision, however, is yours."
+ hga_modifier.12.a:0 "Remarkable."
+
+ hga_modifier.13.name:0 "A Paradise From Nothing"
+ hga_modifier.13.desc:0 "By leaving it to faith, we have been rewarded. No special measures, no intervention... just prayer. The gas has been recycled into the planet's flora and it has blossomed greatly: a Gaia world of true natural beauty.\n\nOur patron has made it clear: patience will be rewarded. Those who rush to settle may find that blessing withheld.\n\nThe priests, however, are already motioning for reconsecration. We should not wait too long. Leave it idle and our patron may see us for the opportunists we are."
+ hga_modifier.13.a:0 "We will claim it and make it ours."
+ hga_modifier.13.b:0 "This world belongs to the divine. We reconsecrate it."
+
+# Do not remove below v

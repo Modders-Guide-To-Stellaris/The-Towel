@@ -29,6 +29,8 @@ namespace = hga_menu
 
 			## DEFAULT SETTING SETTER
 			set_global_flag = hga_detox_tech_enabled
+			set_global_flag = hga_features_intensity_medium
+			set_global_flag = hga_features_production_medium
 
 			# Relic Wars >> default ON
 			# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
@@ -76,14 +78,13 @@ namespace = hga_menu
 
 		# <<->> Planetary Modifiers <<->>
 
-		# RESERVED, uncomment when planetary modifiers page is built
-		# option = {
-		# 	name = hga_menu.1.nav_planetary
-		# 	custom_tooltip = hga_menu.1.nav_planetaryTT
-		# 	hidden_effect = {
-		# 		country_event = { id = hga_menu.110 }
-		# 	}
-		# }
+		option = {
+			name = hga_menu.3.nav_planetfeatures
+			custom_tooltip = hga_menu.3.nav_planetfeaturesTT
+			hidden_effect = {
+				country_event = { id = hga_menu.110 }
+			}
+		}
 
 		# <<->> Start Game <<->>
 
@@ -285,55 +286,161 @@ namespace = hga_menu
 # /
 
 
-# >- PLANETARY MODIFIERS PAGE (RESERVED) -<
-	# country_event = {
-	# 	id = hga_menu.110
-	# 	title = hga_menu.110.name
-	# 	desc = hga_menu.110.desc
-	# 	picture = GFX_evt_star_chart
-	# 	is_triggered_only = yes
-	#
-	#	# <<->> Modifier Intensitity LOW > MEDIUM <<->>
-	# 	# option = {
-	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_low }
-	# 	# 	name = hga_menu.110.intensity_low
-	# 	# 	custom_tooltip = hga_menu.110.intensity_lowTT
-	# 	# 	hidden_effect = {
-	# 	# 		remove_global_flag = hga_modifier_intensity_low
-	# 	# 		set_global_flag = hga_modifier_intensity_medium
-	# 	# 		country_event = { id = hga_menu.110 }
-	# 	# 	}
-	# 	# }
-	# 	# <<->> Modifier Intensitity MEDIUM > HIGH <<->>
-	# 	# option = {
-	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_medium }
-	# 	# 	name = hga_menu.110.intensity_medium
-	# 	# 	custom_tooltip = hga_menu.110.intensity_mediumTT
-	# 	# 	hidden_effect = {
-	# 	# 		remove_global_flag = hga_modifier_intensity_medium
-	# 	# 		set_global_flag = hga_modifier_intensity_high
-	# 	# 		country_event = { id = hga_menu.110 }
-	# 	# 	}
-	# 	# }
-	# 	# <<->> Modifier Intensitity HIGH > LOW <<->>
-	# 	# option = {
-	# 	# 	trigger = { has_global_flag = hga_modifier_intensity_high }
-	# 	# 	name = hga_menu.110.intensity_high
-	# 	# 	custom_tooltip = hga_menu.110.intensity_highTT
-	# 	# 	hidden_effect = {
-	# 	# 		remove_global_flag = hga_modifier_intensity_high
-	# 	# 		set_global_flag = hga_modifier_intensity_low
-	# 	# 		country_event = { id = hga_menu.110 }
-	# 	# 	}
-	# 	# }
-	#
-	# 	# <<->> Return Button <<->>
-	#
-	# 	# option = {
-	# 	# 	name = hga_menu.back
-	# 	# 	hidden_effect = { country_event = { id = hga_menu.1 } }
-	# 	# }
-	# }
+# >- PLANETARY FEATURES PAGE -<
+country_event = {
+	id = hga_menu.110
+	title = hga_menu.110.name
+	desc = hga_menu.110.desc
+	picture = GFX_evt_star_chart
+	is_triggered_only = yes
+
+	# <<->> Enable / Disable <<->>
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			NOT = { has_global_flag = hga_planetary_features_disabled }
+		}
+		name = hga_menu.110.features_enabled
+		custom_tooltip = hga_menu.110.features_enabledTT
+		hidden_effect = {
+			set_global_flag = hga_planetary_features_disabled
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_planetary_features_disabled
+		}
+		name = hga_menu.110.features_disabled
+		custom_tooltip = hga_menu.110.features_disabledTT
+		hidden_effect = {
+			remove_global_flag = hga_planetary_features_disabled
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	# <<->> Production Tier <<->>
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_production_low
+		}
+		name = hga_menu.110.production_low
+		custom_tooltip = hga_menu.110.production_lowTT
+		hidden_effect = {
+			remove_global_flag = hga_features_production_low
+			set_global_flag = hga_features_production_medium
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_production_medium
+		}
+		name = hga_menu.110.production_medium
+		custom_tooltip = hga_menu.110.production_mediumTT
+		hidden_effect = {
+			remove_global_flag = hga_features_production_medium
+			set_global_flag = hga_features_production_high
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_production_high
+		}
+		name = hga_menu.110.production_high
+		custom_tooltip = hga_menu.110.production_highTT
+		hidden_effect = {
+			remove_global_flag = hga_features_production_high
+			set_global_flag = hga_features_production_low
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	# <<->> Intensity (Droprate) Tier <<->>
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_intensity_low
+		}
+		name = hga_menu.110.intensity_low
+		custom_tooltip = hga_menu.110.intensity_lowTT
+		hidden_effect = {
+			remove_global_flag = hga_features_intensity_low
+			set_global_flag = hga_features_intensity_medium
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_intensity_medium
+		}
+		name = hga_menu.110.intensity_medium
+		custom_tooltip = hga_menu.110.intensity_mediumTT
+		hidden_effect = {
+			remove_global_flag = hga_features_intensity_medium
+			set_global_flag = hga_features_intensity_high
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = hga_game_started }
+				has_global_flag = hga_game_started_override
+			}
+			has_global_flag = hga_features_intensity_high
+		}
+		name = hga_menu.110.intensity_high
+		custom_tooltip = hga_menu.110.intensity_highTT
+		hidden_effect = {
+			remove_global_flag = hga_features_intensity_high
+			set_global_flag = hga_features_intensity_low
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	# <<->> Return Button <<->>
+
+	option = {
+		name = hga_menu.back
+		hidden_effect = { country_event = { id = hga_menu.1 } }
+	}
+}
 
 # /
 

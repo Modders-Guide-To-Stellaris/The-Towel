@@ -16,6 +16,10 @@ hga_flag_holder = {
 		# >- Planetary Modifiers -<
 			set_global_flag = hga_planetary_features_disabled
 
+			set_global_flag = hga_features_production_low
+			set_global_flag = hga_features_production_medium
+			set_global_flag = hga_features_production_high
+
 			set_global_flag = hga_features_intensity_low
 			set_global_flag = hga_features_intensity_medium
 			set_global_flag = hga_features_intensity_high

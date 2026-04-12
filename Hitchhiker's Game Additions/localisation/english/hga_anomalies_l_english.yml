@@ -1,0 +1,9 @@
+﻿# localisation\english\hga_anomalies_l_english.yml
+# Authors: Curator Foxy
+
+l_english:
+
+ hga_beauty_gas_giant_anomaly: "Seismic Disturbances"
+ hga_beauty_gas_giant_anomaly_desc:0 "Our instruments are picking up highly irregular readings from within this gas giant. The patterns do not match any known atmospheric phenomenon."
+
+# Do not remove below v

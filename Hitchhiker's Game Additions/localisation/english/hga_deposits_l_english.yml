@@ -1,0 +1,12 @@
+﻿# localisation\english\hga_anomalies_l_english.yml
+# Authors: Curator Foxy
+
+l_english:
+
+ d_hga_crystalline_wonder:0 "Crystalline Formations"
+ d_hga_crystalline_wonder_desc:0 "Extraordinary crystal structures run deep through this world's crust — the remnants of the gas giant's interior processes."
+
+ d_hga_beauty_holy_unity:0 "Sacred Site of the Hidden Beauty"
+ d_hga_beauty_holy_unity_desc:0 "The reconsecrated heart of this world radiates spiritual significance. Pilgrims and faithful come from across the empire to feel its presence."
+
+# Do not remove below v

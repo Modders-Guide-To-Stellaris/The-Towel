@@ -43,7 +43,29 @@
 		resources = {
 			category = orbital_mining_deposits
 			produces = {
+				trigger = {
+					has_global_flag = hga_features_intensity_low
+				}
+
+				unity = 10
+				mult = planet.owner.trigger:num_ascension_perks
+			}
+
+			produces = {
+				trigger = {
+					has_global_flag = hga_features_intensity_medium
+				}
+
 				unity = 20
+				mult = planet.owner.trigger:num_ascension_perks
+			}
+
+			produces = {
+				trigger = {
+					has_global_flag = hga_features_intensity_high
+				}
+
+				unity = 30
 				mult = planet.owner.trigger:num_ascension_perks
 			}
 		}

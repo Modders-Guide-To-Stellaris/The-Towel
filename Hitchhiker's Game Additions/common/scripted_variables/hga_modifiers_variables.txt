@@ -1,0 +1,21 @@
+@hga_planetary_feature_mult_low    = 0.5
+@hga_planetary_feature_mult_medium = 1
+@hga_planetary_feature_mult_high   = 1.5
+
+# Trigger bloc:
+#
+# switch = {
+#     trigger = has_global_flag
+#
+#     hga_features_intensity_low = {
+#
+#     }
+#
+#     hga_features_intensity_medium = {
+#
+#     }
+#
+#     hga_features_intensity_high = {
+#
+#     }
+# }
