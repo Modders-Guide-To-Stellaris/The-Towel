@@ -15,7 +15,9 @@ special_project = {
     on_success = {
         if = {
             limit = {
-                has_country_flag = hga_gas_giant_consecrated_approach
+                root.owner = {
+                    has_country_flag = hga_gas_giant_consecrated_approach
+                }
             }
 
             random_list = {
