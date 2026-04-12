@@ -336,8 +336,6 @@ ship_event = {
 
                 set_planet_size = 10
 
-                add_random_non_blocker_deposit = yes
-
                 add_deposit = d_dust_desert
                 add_deposit = d_fuming_bog
 
@@ -506,8 +504,11 @@ ship_event = {
                     value = 4
                 }
             }
-
-            add_deposit = d_hga_beauty_holy_unity
+            solar_system = {
+                star = {
+                    add_deposit = d_hga_beauty_holy_unity
+                }
+            }
         }
     }
 }
