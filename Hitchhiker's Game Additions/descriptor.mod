@@ -4,3 +4,4 @@ tags={
 }
 name="Hitchhiker's Game Additions"
 supported_version="v4.3.*"
+remote_file_id="3702092080"
