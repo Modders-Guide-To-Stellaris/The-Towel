@@ -24,7 +24,7 @@ l_english:
   hga_menu.1.name: "HGA Host Options"
   hga_menu.1.desc: "Configure game settings before beginning. Use the buttons below to navigate each category, then start the game when ready."
 
-  hga_menu.1.nav_global: "Global Settings"
+  hga_menu.1.nav_global: "£menu_icon_edicts£ Global Settings"
   hga_menu.1.nav_globalTT: "Configure minor changes related to gameplay."
 
   hga_menu.2.nav_relic: "£minor_artifacts£ Relic Settings"
@@ -33,9 +33,8 @@ l_english:
   hga_menu.3.nav_planetfeatures: "£planet£ Planetary Features"
   hga_menu.3.nav_planetfeaturesTT: "Configure planetary features, enabling, dropchance and output."
 
-  # RESERVED >> uncomment with hga_menu.20
-  # hga_menu.1.nav_planetary: "Planetary Modifiers"
-  # hga_menu.1.nav_planetaryTT: "Configure planetary modifier intensity and types."
+  hga_menu.9.nav_crisis:0 "£menu_icon_policies£ Crisis Speeddial"
+  hga_menu.9.nav_crisisTT:0 "Open the crisis summoning panel. Call specific crises before they decide to show up on their own schedule."
 
   hga_menu.1.start: "Begin the Game"
   hga_menu.1.startTT: "Close this menu and start playing."
@@ -108,4 +107,44 @@ l_english:
   hga_menu.110.intensity_mediumTT:0 "Features are currently set to spawn at a §GMedium§! rate. Click to advance to §RHigh§!."
 
   hga_menu.110.intensity_high:0 "Drop Rate: §RHigh§!"
-  hga_menu.110.intensity_highTT:0 "Features are currently set to spawn at a §RHigh§!
+  hga_menu.110.intensity_highTT:0 "Features are currently set to spawn at a §RHigh§!"
+
+  # Hub - Crisis nav button
+  # >- CRISIS SPEEDDIAL PAGE -<
+
+  hga_menu.190.name:0 "Crisis Speeddial"
+  hga_menu.190.desc:0 "Choose a crisis to fast-track into the galaxy.\n\n§YMidgame crises§! require the relevant faction to exist.\n§YEndgame crises§! require the endgame era OR the Time Override to be enabled. Only one may be summoned per game unless the Crisis Lock is disabled in Global Settings.\n\n§RAberrant§! requires the Unbidden to be active first.\n§RVehement§! requires the Aberrant to have spawned and begun fighting the Unbidden."
+
+  # Global Settings - Crisis Type Override
+  hga_menu.190.crisis_type_override_on:0 "§REndgame Crisis Lock (ACTIVE)§!"
+  hga_menu.190.crisis_type_override_onTT:0 "Only one endgame crisis may be active at a time. Click to disable this restriction."
+  hga_menu.190.crisis_type_override_off:0 "§GEndgame Crisis Lock (DISABLED)§!"
+  hga_menu.190.crisis_type_override_offTT:0 "Multiple endgame crises may now be summoned. Click to re-enable the one-crisis restriction."
+
+  # Global Settings - Crisis Time Override
+  hga_menu.190.crisis_time_override_on:0 "§RCrisis Time Gate (ACTIVE)§!"
+  hga_menu.190.crisis_time_override_onTT:0 "Crises respect their mid/endgame year requirements. Click to allow summoning crises before their time."
+  hga_menu.190.crisis_time_override_off:0 "§GCrisis Time Gate (DISABLED)§!"
+  hga_menu.190.crisis_time_override_offTT:0 "Year requirements for crises are bypassed. Click to restore them."
+
+
+  # Option labels
+  hga_menu.190.khan:0 "Awaken the Khanate (Great Khan)"
+  hga_menu.190.voidworms:0 "Poke the Nest (Voidspawn)"
+  hga_menu.190.scourge:0 "Unleash the Brood (Prethoryn Scourge)"
+  hga_menu.190.contingency:0 "Initialise Class-5 Singularity (Contingency)"
+  hga_menu.190.unbidden:0 "Open the Wrong Astral Rift (The Unbidden)"
+  hga_menu.190.aberrant:0 "Trigger an Aberrant Echo (The Aberrant)"
+  hga_menu.190.vehement:0 "Invite Them to the Party (The Vehement)"
+  hga_menu.190.cetana:0 "Activate the Cetana Protocol (Cetana)"
+
+  # Tooltips (shown when allow fails — describe what's missing)
+  hga_menu.190.khan_TT:0 "Requires: Midgame era OR Time Override enabled. Dormant marauders must exist. Cannot fire if the Khan has already risen."
+  hga_menu.190.voidworms_TT:0 "Requires: Midgame era OR Time Override enabled. Voidworms must exist in the galaxy. Cannot fire if the Voidspawn crisis has already started."
+  hga_menu.190.scourge_TT:0 "Requires: Endgame era OR Time Override enabled. Crisis Lock must be inactive OR no other endgame crisis fired recently. Can only be summoned once."
+  hga_menu.190.contingency_TT:0 "Requires: Endgame era OR Time Override enabled. Crisis Lock must be inactive OR no other endgame crisis fired recently. Can only be summoned once."
+  hga_menu.190.unbidden_TT:0 "Requires: Endgame era OR Time Override enabled. Crisis Lock must be inactive OR no other endgame crisis fired recently. Can only be summoned once."
+  hga_menu.190.aberrant_TT:0 "Requires: The Unbidden must already have invaded. Can only be triggered once."
+  hga_menu.190.vehement_TT:0 "Requires: The Aberrant must have spawned and the two portals must be fighting each other. Can only be triggered once."
+  hga_menu.190.cetana_TT:0 "Requires: Endgame era OR Time Override enabled. A non-gestalt Fallen Empire must exist. No War in Heaven ongoing. Can only be summoned once."
+
