@@ -306,3 +306,26 @@ country_event = {
 		custom_tooltip = shroud.3270.a.tt
 	}
 }
+
+ship_event = {
+	id = shroud.10495
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = controller
+		controller = {
+			can_access_shroud = yes
+			has_patron_counter = po_build_ship_size_mult
+		}
+	}
+
+	immediate = {
+		controller = {
+			add_patron_objective_counter = {
+				counter = po_build_ship_size_mult
+				amount = prev.trigger:ship_size_multiplier
+			}
+		}
+	}
+}
