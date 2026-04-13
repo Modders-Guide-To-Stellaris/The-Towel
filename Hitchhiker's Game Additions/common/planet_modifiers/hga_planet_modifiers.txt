@@ -1,0 +1,194 @@
+# # common\planet_modifiers\hga_planet_modifiers.txt
+#
+# # Authors: Curator Foxy
+#
+# # >- FAUNA & FLORA SPAWN MODIFIERS -<
+# # These control when the modifiers are randomly generated on planets at game start.
+# # Might have to consider making multiple files if we get too many :P
+#
+# pm_hga_megafauna = {
+#     spawn_chance = {
+#         # Spawns on all standard habitable types except ocean (ocean has its own)
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_continental"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_tropical"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_arid"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_savannah"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_tundra"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_arctic"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_alpine"
+#         }
+#         modifier = {
+#             add = 8
+#             is_planet_class = "pc_desert"
+#         }
+#         modifier = {
+#             add = 12
+#             is_planet_class = "pc_gaia"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_ocean"
+#         }
+#         # No volcanic
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_volcanic"
+#         }
+#         modifier = {
+#             factor = 2
+#             has_planet_modifier = "pm_lush"
+#         }
+#         modifier = {
+#             factor = 2
+#             has_planet_modifier = "pm_high_gravity"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_dangerous_wildlife"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_titanic_life"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_hga_megafauna"
+#         }
+#         modifier = {
+#             factor = 0
+#             num_modifiers > 1
+#         }
+#     }
+#
+#     modifier = "hga_megafauna"
+# }
+#
+# pm_hga_underwater_megafauna = {
+#     spawn_chance = {
+#         modifier = {
+#             add = 10
+#             is_planet_class = "pc_ocean"
+#         }
+#         modifier = {
+#             factor = 0
+#             NOT = { is_planet_class = "pc_ocean" }
+#         }
+#         modifier = {
+#             factor = 2
+#             has_planet_modifier = "pm_lush"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_titanic_life"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_dangerous_wildlife"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_hga_underwater_megafauna"
+#         }
+#         modifier = {
+#             factor = 0
+#             num_modifiers > 1
+#         }
+#     }
+#
+#     modifier = "hga_underwater_megafauna"
+# }
+#
+# pm_hga_megaflora = {
+#     spawn_chance = {
+#         modifier = {
+#             add = 10
+#             is_planet_class = "pc_tropical"
+#         }
+#         modifier = {
+#             add = 10
+#             is_planet_class = "pc_continental"
+#         }
+#         modifier = {
+#             add = 10
+#             is_planet_class = "pc_ocean"
+#         }
+#         modifier = {
+#             add = 5
+#             is_planet_class = "pc_savannah"
+#         }
+#         modifier = {
+#             add = 5
+#             is_planet_class = "pc_tundra"
+#         }
+#         modifier = {
+#             add = 15
+#             is_planet_class = "pc_gaia"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_volcanic"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_arid"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_desert"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_arctic"
+#         }
+#         modifier = {
+#             factor = 0
+#             is_planet_class = "pc_alpine"
+#         }
+#         modifier = {
+#             factor = 2
+#             has_planet_modifier = "pm_lush"
+#         }
+#         modifier = {
+#             factor = 2
+#             has_planet_modifier = "pm_rich_mircoflora"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_bleak"
+#         }
+#         modifier = {
+#             factor = 0
+#             has_planet_modifier = "pm_hga_megaflora"
+#         }
+#         modifier = {
+#             factor = 0
+#             num_modifiers > 1
+#         }
+#     }
+#
+#     modifier = "hga_megaflora"
+#     potential = {
+#
+#     }
+# }
+#

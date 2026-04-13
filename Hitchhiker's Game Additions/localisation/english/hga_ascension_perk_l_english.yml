@@ -1,0 +1,9 @@
+﻿# localisation/english/hga_ascension_perk_l_english.yml
+# Authors: HGA
+
+l_english:
+ hga_allow_pa: "Allows the process of turning a gaia world into a utopian planet which gives half the jobs at twice the output."
+ # TODO: add game tooltip here for the decision
+
+ hga_fail_gaia_by_hive: "$TRIGGER_FAIL$ Our empire cannot focus on gaia worlds and create ['ascension_perk:ap_hive_worlds']"
+ hga_fail_hive_by_gaia: "$TRIGGER_FAIL$ Our empire cannot focus on hive worlds and be a ['ascension_perk:ap_world_shaper']"

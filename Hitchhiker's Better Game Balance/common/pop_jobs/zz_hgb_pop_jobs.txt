@@ -1,0 +1,361 @@
+fabricator = {
+    category = complex_drone
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_foundry_1
+        }
+        #Alloy Drone - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                    is_catalytic_empire = no
+                    is_wilderness_empire = no
+                }
+            }
+            name = alloy_drone
+            desc = alloy_drone
+            icon = alloy_drone
+            building_icon = building_foundry_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 2
+        }
+        #Catalytic Drone - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = yes
+                }
+            }
+            name = catalytic_drone
+            desc = catalytic_drone
+            icon = catalytic_drone
+            building_icon = building_foundry_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 3
+        }
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            name = forgesymbiont
+            desc = forgesymbiont
+            icon = forgesymbiont
+            building_icon = natural_furnace_3
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 10
+        }
+    }
+
+    tags = { alloys }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_metallurgists
+        inline_script = "output/foundry_output"
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_alloys
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            alloys = @requisitorium_alloys_overlord
+        }
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|fabricator|RESOURCE|alloys|
+        mult = value:scripted_job_weight_shroud_forged_mult
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+    inline_script = "jobs/automodding_priority_alloys"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+## Stupid Deposit Thing
+munitions_decommissioner = {
+    category = specialist
+    is_capped_by_modifier = yes
+
+    swappable_data = {
+        default = {
+            building_icon = building_research_lab_1
+        }
+    }
+
+    tags = { alloys research minor_artifacts}
+
+    possible_precalc = can_fill_specialist_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            alloys = 0.5
+            engineering_research = 3.5
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { NOT = { has_ascension_perk = ap_archaeoengineers } }
+            }
+            minor_artifacts = 0.05
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { has_ascension_perk = ap_archaeoengineers }
+            }
+            minor_artifacts = 0.1
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+munitions_decommissioning_unit = {
+    category = complex_drone
+    is_capped_by_modifier = yes
+
+    swappable_data = {
+        default = {
+            building_icon = building_research_lab_1
+        }
+    }
+
+    tags = { alloys research minor_artifacts}
+
+    possible_precalc = can_fill_drone_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible = {
+        is_lithoid = no
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            alloys = 0.5
+            engineering_research = 3.5
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { NOT = { has_ascension_perk = ap_archaeoengineers } }
+            }
+            minor_artifacts = 0.05
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { has_ascension_perk = ap_archaeoengineers }
+            }
+            minor_artifacts = 0.1
+        }
+        upkeep = {
+            food = 6
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+munitions_decommissioning_unit_lithoid = {
+    category = complex_drone
+    is_capped_by_modifier = yes
+
+    swappable_data = {
+        default = {
+            building_icon = building_research_lab_1
+        }
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible = {
+        is_lithoid = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            alloys = 0.5
+            engineering_research = 3.5
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { NOT = { has_ascension_perk = ap_archaeoengineers } }
+            }
+            minor_artifacts = 0.05
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { has_ascension_perk = ap_archaeoengineers }
+            }
+            minor_artifacts = 0.1
+        }
+        upkeep = {
+            minerals = 6
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+munitions_decommissioning_drone = {
+    category = complex_drone
+    is_capped_by_modifier = yes
+
+    swappable_data = {
+        default = {
+            building_icon = building_research_lab_1
+        }
+    }
+
+    tags = { alloys research minor_artifacts }
+
+    possible_precalc = can_fill_drone_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            alloys = 0.5
+            engineering_research = 3.5
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { NOT = { has_ascension_perk = ap_archaeoengineers } }
+            }
+            minor_artifacts = 0.05
+        }
+        produces = {
+            trigger = {
+                has_ancrel = yes
+                owner = { has_ascension_perk = ap_archaeoengineers }
+            }
+            minor_artifacts = 0.1
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}

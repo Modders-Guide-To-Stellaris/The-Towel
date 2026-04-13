@@ -1,0 +1,28 @@
+# common/inline_scripts/casus_belli/hga_relic_cb.txt
+# Authors: HGA
+
+# CB definition
+	$CB_KEY$ = {
+		show_in_diplomacy = yes
+		show_notification = yes
+
+		potential = {
+			is_country_type = default
+			from = { has_relic = $RELIC_ID$ }
+			has_intel_level = {
+				who = from
+				category = economy
+				level >= 2
+			}
+
+			NOT = { has_global_flag = hga_no_relic_war }
+		}
+
+		is_valid = {
+			hga_can_seize_relic_from = yes
+			from = { has_relic = $RELIC_ID$ }
+		}
+	}
+# /
+
+# Do not remove below v

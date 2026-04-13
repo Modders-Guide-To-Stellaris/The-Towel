@@ -1,0 +1,29 @@
+d_hga_beauty_holy_unity = {
+    icon = "GFX_deposit_d_crystal_reef" #todo: change
+
+    resources = {
+        category = orbital_research_deposits
+        # produces = {
+        # 	unity = 10
+        # 	mult = planet.solar_system.owner.trigger:num_ascension_perks
+        # }
+
+        produces = {
+            unity = 20
+            mult = planet.solar_system.owner.trigger:num_ascension_perks
+        }
+
+        # produces = {
+        # 	trigger = {
+        # 		has_global_flag = hga_features_intensity_high
+        # 	}
+        #
+        # 	unity = 30
+        # 	mult = planet.solar_system.owner.trigger:num_ascension_perks
+        # }# todo: fix it so that people can't just conquer it.. or just dont care and let them do it anyways XD
+    }
+
+    station = shipclass_research_station
+    is_for_colonizable = no
+    drop_weight = { weight = 0 }
+}

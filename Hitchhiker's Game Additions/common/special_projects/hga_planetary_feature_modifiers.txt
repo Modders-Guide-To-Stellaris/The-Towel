@@ -1,0 +1,48 @@
+special_project = {
+    key = "HGA_EXTRACT_PLANET_FROM_GIANT"
+    cost = 5000
+    tech_department = society_technology
+    picture = GFX_evt_gas_giant_station
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        #skill = 3
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                root.owner = {
+                    has_country_flag = hga_gas_giant_consecrated_approach
+                }
+            }
+
+            random_list = {
+                50 = {
+                    ship_event = {
+                        id = hga_modifier.12 #normal random planet
+                        days = 15
+                    }
+                }
+                50 = {
+                    ship_event = {
+                        id = hga_modifier.13 #gaia
+                        days = 15
+                    }
+                }
+            }
+        }
+        else = {
+            ship_event = {
+                id = hga_modifier.12
+                days = 15
+            }
+        }
+    }
+
+    on_fail = {
+    }
+}

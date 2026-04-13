@@ -1,0 +1,6 @@
+## Add Draconic Ferrodermis template
+component_set = {
+	key = "DRAGON_BIO_LM_ARMOR"
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+}

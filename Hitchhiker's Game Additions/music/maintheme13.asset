@@ -1,0 +1,5 @@
+music = {
+    name = "maintheme13"
+    file = "starsailer.ogg"
+    volume = 0.82
+}

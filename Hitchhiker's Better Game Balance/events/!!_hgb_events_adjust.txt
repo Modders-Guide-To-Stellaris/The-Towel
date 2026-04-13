@@ -1,0 +1,308 @@
+## Minor patron events can still trigger after forging our own path
+## Minor Patrons delve events
+# The Animator of Clay - Animatus
+namespace = shroud
+
+country_event = {
+	id = shroud.3200
+	base = shroud.3
+
+	title = shroud.3200.title
+	desc_clear = yes
+	desc = shroud.3200.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3200_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_animator_of_clay
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_cradle_of_souls
+			is_in_domain = the_composer_of_strands
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3200_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3200.a
+		custom_tooltip = shroud.3200.a.tt
+	}
+}
+
+# The Outsider - Will of Temperance
+country_event = {
+	id = shroud.3210
+	base = shroud.3
+
+	title = shroud.3210.title
+	desc_clear = yes
+	desc = {
+		trigger = {
+			if = {
+				limit = { has_country_flag = has_left_zroni_to_their_fate }
+				text = shroud.3210.desc.left_zroni
+			}
+			else_if = {
+				limit = { has_country_flag = has_met_zroni }
+				text = shroud.3210.desc.know_zroni
+			}
+			else = {
+				text = shroud.3210.desc.default
+			}
+		}
+	}
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3210_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_outsider
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_cradle_of_souls
+			is_in_domain = the_composer_of_strands
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3210_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3210.a
+		custom_tooltip = shroud.3210.a.tt
+	}
+}
+
+# The Golden Dream - Thoughtplay
+country_event = {
+	id = shroud.3220
+	base = shroud.3
+
+	title = shroud.3220.title
+	desc_clear = yes
+	desc = shroud.3220.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3220_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_golden_dream
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_cradle_of_souls
+			is_in_domain = the_instrument_of_desire
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3220_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3220.a
+		custom_tooltip = shroud.3220.a.tt
+	}
+}
+
+# The Endless Tide - Sands of Time
+country_event = {
+	id = shroud.3230
+	base = shroud.3
+
+	title = shroud.3230.title
+	desc_clear = yes
+	desc = shroud.3230.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3230_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_endless_tide
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_eater_of_worlds
+			is_in_domain = the_composer_of_strands
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3230_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3230.a
+		custom_tooltip = shroud.3230.a.tt
+	}
+}
+
+# The Pale Mountain - Reformed
+country_event = {
+	id = shroud.3240
+	base = shroud.3
+
+	title = shroud.3240.title
+	desc_clear = yes
+	desc = shroud.3240.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3240_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_pale_mountain
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_eater_of_worlds
+			is_in_domain = the_composer_of_strands
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3240_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3240.a
+		custom_tooltip = shroud.3240.a.tt
+	}
+}
+
+# The Hollow Point - The Strength of Abstention
+country_event = {
+	id = shroud.3250
+	base = shroud.3
+
+	title = shroud.3250.title
+	desc_clear = yes
+	desc = shroud.3250.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3250_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_hollow_point
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_cradle_of_souls
+			is_in_domain = the_instrument_of_desire
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3250_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3250.a
+		custom_tooltip = utopia.3041.tooltip
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_psionic_leader_trait = yes
+				}
+				add_trait = {
+					trait = leader_trait_shroud_age
+					show_message = no
+				}
+			}
+		}
+	}
+}
+
+# The Vacant Throne - Chaos into Order
+country_event = {
+	id = shroud.3260
+	base = shroud.3
+
+	title = shroud.3260.title
+	desc_clear = yes
+	desc = shroud.3260.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3260_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_vacant_throne
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_eater_of_worlds
+			is_in_domain = the_instrument_of_desire
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3260_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3260.a
+		custom_tooltip = shroud.3260.a.tt
+	}
+}
+
+# The Black River - Infinite Acceleration
+country_event = {
+	id = shroud.3270
+	base = shroud.3
+
+	title = shroud.3270.title
+	desc_clear = yes
+	desc = shroud.3270.desc
+
+	trigger = {
+		NOR = {
+			has_country_flag = shroud_3270_happened
+			#has_country_flag = forging_our_own_path
+		}
+		has_patron_relation = {
+			patron = the_black_river
+			contact = completed
+		}
+		OR = {
+			is_in_domain = the_eater_of_worlds
+			is_in_domain = the_instrument_of_desire
+		}
+	}
+
+	immediate = {
+		set_country_flag = shroud_3270_happened
+	}
+
+	option_clear = yes
+	option = {
+		name = shroud.3270.a
+		custom_tooltip = shroud.3270.a.tt
+	}
+}

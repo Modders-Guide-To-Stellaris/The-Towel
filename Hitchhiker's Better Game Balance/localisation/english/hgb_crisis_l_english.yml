@@ -1,0 +1,11 @@
+﻿l_english:
+
+ HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC: "We've no interest in chatterin' with the kindling. We are the flame to burn the galaxy."
+ HGB_TOOLTIP_CRISIS_BLOCKED_DIPLOMATIC_FROM: "We've no business parleyin' with an empire that'd see us wiped from existance!"
+
+ DRACONIC_LM_CARAPACE: "Draconic Ferrodermis"
+ DRAGON_BIO_LM_ARMOR: "$DRACONIC_LM_CARAPACE$"
+ DRAGON_BIO_LM_ARMOR_DESC: "The ultimate culmination of ferrodermal engineering, this apex carapace mimics the legendary defenses of spaceborne leviathans. Saturated with $r_living_metal$, these nearly indestructible bio-metallic scales regenerate from catastrophic damage with terrifying speed."
+ SMALL_DRAGON_BIO_LM_ARMOR: "Small $DRAGON_BIO_LM_ARMOR$"
+ MEDIUM_DRAGON_BIO_LM_ARMOR: "Medium $DRAGON_BIO_LM_ARMOR$"
+ LARGE_DRAGON_BIO_LM_ARMOR: "Large $DRAGON_BIO_LM_ARMOR$"

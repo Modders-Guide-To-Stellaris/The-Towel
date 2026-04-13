@@ -1,0 +1,17 @@
+entity = {
+    name = "frontend_background_entity"
+
+    locator = { name = "loc" position = { 0.0 0.0 0.0 } }
+
+    attach = { loc = "hga_frontend_attached_entity" }
+}
+
+entity = {
+    name = "hga_frontend_attached_entity"
+    pdxmesh = "hga_frontend_mesh"
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" }
+
+    scale = 1.2
+}

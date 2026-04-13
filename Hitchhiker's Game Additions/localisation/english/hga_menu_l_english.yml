@@ -1,0 +1,111 @@
+﻿# localisation/english/hga_menu_l_english.yml
+# Authors: HGA
+# >- HOST MENU LOCALISATION -<
+
+l_english:
+
+  maintheme13: "Starsailer - HGA Maintheme"
+  hga_version: "HGA Version: §KLongclaw§! v2.0.0"
+
+  # Blackfyre
+  # Brightroar
+  # Heartsbane
+  # Nightfall
+  # Bolton
+  # Cassel
+  # Next Major Version Names
+
+  # >- Shared -<
+  hga_menu.back: "< Back"
+  hga_game_time_override: "The Game has already started, you can override it within the settings."
+  hga_game_time_override_option: "Enable Game Started flag Override. Changing settings may break the current gameplay, just beware that here be dragons."
+
+ # >- Main Menu (hga_menu.1) -<
+  hga_menu.1.name: "HGA Host Options"
+  hga_menu.1.desc: "Configure game settings before beginning. Use the buttons below to navigate each category, then start the game when ready."
+
+  hga_menu.1.nav_global: "Global Settings"
+  hga_menu.1.nav_globalTT: "Configure minor changes related to gameplay."
+
+  hga_menu.2.nav_relic: "£minor_artifacts£ Relic Settings"
+  hga_menu.2.nav_relicTT: "Configure relic wars and relic trading restrictions for players and AI."
+
+  hga_menu.3.nav_planetfeatures: "£planet£ Planetary Features"
+  hga_menu.3.nav_planetfeaturesTT: "Configure planetary features, enabling, dropchance and output."
+
+  # RESERVED >> uncomment with hga_menu.20
+  # hga_menu.1.nav_planetary: "Planetary Modifiers"
+  # hga_menu.1.nav_planetaryTT: "Configure planetary modifier intensity and types."
+
+  hga_menu.1.start: "Begin the Game"
+  hga_menu.1.startTT: "Close this menu and start playing."
+
+  edict_hga_host_tool: "Host Tool"
+  edict_hga_host_tool_desc: "Jezzaj would say 'Look at this §RLegalized Cheating§!'"
+
+ # >- Global Settings (hga_menu.10) -<
+  hga_menu.10.name: "$hga_menu.1.nav_global$"
+  hga_menu.10.desc: "$hga_menu.1.nav_globalTT$ Changes apply globally."
+
+  hga_menu.10.release_detox_tech: "§HDetox:§! Technology"
+  hga_menu.10.release_detox_techTT: "Click to swap to Ascension-based detoxification."
+
+  hga_menu.10.force_detox_tech: "§HDetox:§! Ascension Perk"
+  hga_menu.100.force_detox_techTT: "Click to swap to Technology-based detoxification."
+
+ # >- Relic Settings (hga_menu.100) -<
+  hga_menu.100.name: "$hga_menu.2.nav_relic$"
+  hga_menu.100.desc: "Control who can start relic wars and who can trade relics. Changes apply globally."
+
+  # Relic Wars <<Player>>
+  hga_menu.100.lock_relic_war: "§HLock:§! Relic Wars"
+  hga_menu.100.lock_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for players."
+  hga_menu.100.unlock_relic_war: "Relic Wars §RLOCKED§!"
+  hga_menu.100.unlock_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for players."
+
+  # Relic Wars <<AI>>
+  hga_menu.100.lock_ai_relic_war: "§HLock:§! AI Relic Wars"
+  hga_menu.100.lock_ai_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for the AI."
+  hga_menu.100.unlock_ai_relic_war: "AI Relic Wars §RLOCKED§!"
+  hga_menu.100.unlock_ai_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for the AI."
+
+  # Relic Trade <<Player>>
+  hga_menu.100.lock_relic_trade: "§HLock:§! Relic Trading"
+  hga_menu.100.lock_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for players."
+  hga_menu.100.unlock_relic_trade: "Relic Trading §RLOCKED§!"
+  hga_menu.100.unlock_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for players."
+
+  # Relic Trade <<AI>>
+  hga_menu.100.lock_ai_relic_trade: "§HLock:§! AI Relic Trading"
+  hga_menu.100.lock_ai_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for the AI."
+  hga_menu.100.unlock_ai_relic_trade: "AI Relic Trading §RLOCKED§!"
+  hga_menu.100.unlock_ai_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for the AI."
+
+
+ # >- Planetary Modifiers (hga_menu.110) -<
+  hga_menu.110.name:0 "$hga_menu.3.nav_planetfeatures$"
+  hga_menu.110.desc:0 "Configure how planetary features behave across the galaxy. Changes here affect drop rates and the strength of modifiers on any world that has them."
+
+  hga_menu.110.features_enabled:0 "Planetary Features: §GEnabled§!"
+  hga_menu.110.features_enabledTT:0 "Features are currently §GEnabled§!. Click to §Rdisable§! them entirely. Features will no longer appear on any world."
+
+  hga_menu.110.features_disabled:0 "Planetary Features: §RDisabled§!"
+  hga_menu.110.features_disabledTT:0 "Features are currently §RDisabled§!. Click to §Genable§! them."
+
+  hga_menu.110.production_low:0 "Modifier Strength: §YLow§!"
+  hga_menu.110.production_lowTT:0 "Modifiers are currently at §YLow§! strength (0.5x). Click to advance to §GMedium§!."
+
+  hga_menu.110.production_medium:0 "Modifier Strength: §GMedium§!"
+  hga_menu.110.production_mediumTT:0 "Modifiers are currently at §GMedium§! strength (1x). Click to advance to §RHigh§!."
+
+  hga_menu.110.production_high:0 "Modifier Strength: §RHigh§!"
+  hga_menu.110.production_highTT:0 "Modifiers are currently at §RHigh§! strength (1.5x). Click to wrap back to §YLow§!."
+
+  hga_menu.110.intensity_low:0 "Drop Rate: §YLow§!"
+  hga_menu.110.intensity_lowTT:0 "Features are currently set to spawn at a §YLow§! rate. Click to advance to §GMedium§!."
+
+  hga_menu.110.intensity_medium:0 "Drop Rate: §GMedium§!"
+  hga_menu.110.intensity_mediumTT:0 "Features are currently set to spawn at a §GMedium§! rate. Click to advance to §RHigh§!."
+
+  hga_menu.110.intensity_high:0 "Drop Rate: §RHigh§!"
+  hga_menu.110.intensity_highTT:0 "Features are currently set to spawn at a §RHigh§!

@@ -1,0 +1,82 @@
+# common\static_modifiers\hga_static_modifiers.txt
+# Authors: Curator Foxy
+
+# >- FAUNA & FLORA MODIFIERS -
+hga_megafauna = {
+    planet_farmers_food_produces_mult = -0.20
+    planet_jobs_society_research_produces_mult = 0.1
+    biologist_jobs_bonus_workforce_mult = 0.1
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
+    icon_frame = 2
+}
+
+hga_underwater_megafauna = {
+    planet_farmers_food_produces_mult = -0.20
+    planet_jobs_society_research_produces_mult = 0.10
+    biologist_jobs_bonus_workforce_mult = 0.05
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds" # TODO: change picture
+    icon_frame = 2
+}
+
+hga_megaflora = {
+    planet_farmers_food_produces_add = 0.5
+    planet_clear_blocker_speed_mult = -0.5
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+    icon_frame = 1
+}
+# /
+
+# >- THE BEAUTY HIDDEN WITHIN -
+# Crystal resonance messes with concentration and clarity of thought.
+hga_beauty_hidden_within = {
+    # Base values — medium production = 1x
+    physicist_jobs_bonus_workforce_mult = 0.20
+    planet_entertainers_unity_produces_mult = 0.10
+    planet_jobs_society_research_produces_mult = 0.05
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_hidden_within_maturing = {
+    physicist_jobs_bonus_workforce_mult = 0.15
+    planet_entertainers_unity_produces_mult = 0.08
+    planet_jobs_society_research_produces_mult = 0.04
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+hga_beauty_hidden_within_ancient = {
+    physicist_jobs_bonus_workforce_mult = 0.10
+    planet_entertainers_unity_produces_mult = 0.05
+    planet_jobs_society_research_produces_mult = 0.02
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+
+# Best non-consecrated outcome — Gaia formed naturally through faith
+hga_beauty_hidden_gaia = {
+    planet_biologists_society_research_produces_add = 1
+    biologist_jobs_bonus_workforce_mult = 0.20
+    physicist_jobs_bonus_workforce_mult = 0.15
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+    icon_frame = 1
+}
+# /
+
+# >- COUNTRY MODIFIERS -
+hga_beauty_reconsecrated_country = {
+    country_unity_produces_mult = 0.05
+
+    icon = "gfx/interface/icons/modifiers/mod_country_unity_produces_mult.dds"
+    icon_frame = 1
+}
+# /
+
+# Do not remove below v

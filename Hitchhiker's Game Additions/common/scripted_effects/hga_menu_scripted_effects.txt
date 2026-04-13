@@ -1,0 +1,38 @@
+# common/scripted_effects/hga_menu_scripted_effects.txt
+# Authors: HGA
+# >- HOST MENU SCRIPTED EFFECTS -<
+
+hga_flag_holder = {
+	if = {
+		limit = { always = no }
+
+		# >- Relic Settings -<
+			set_global_flag = hga_no_relic_war		# player cannot declare relic wars
+			set_global_flag = hga_ai_no_relic_war		# AI cannot declare relic wars
+			set_global_flag = hga_no_relic_trade		# player cannot trade relics
+			set_global_flag = hga_ai_no_relic_trade	# AI cannot trade relics
+		# /
+
+		# >- Planetary Modifiers -<
+			set_global_flag = hga_planetary_features_disabled
+
+			set_global_flag = hga_features_production_low
+			set_global_flag = hga_features_production_medium
+			set_global_flag = hga_features_production_high
+
+			set_global_flag = hga_features_intensity_low
+			set_global_flag = hga_features_intensity_medium
+			set_global_flag = hga_features_intensity_high
+		# /
+
+		# >- Ascension Settings -<
+			set_global_flag = hga_detox_tech_enabled
+
+		# >- System -<
+			set_global_flag = hga_menu_initialized
+		# /
+	}
+}
+# /
+
+# Do not remove below v

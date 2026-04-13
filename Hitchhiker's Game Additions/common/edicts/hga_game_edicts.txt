@@ -1,0 +1,24 @@
+hga_host_tool = {
+    length = 1
+    icon = "GFX_edict_type_policy"
+
+    potential = {
+        has_country_flag = hga_is_host
+    }
+
+    allow = {
+        has_country_flag = hga_is_host
+    }
+
+    effect = {
+        hidden_effect = {
+            country_event = {
+                id = hga_menu.1
+            }
+        }
+    }
+
+    ai_weight = {
+        set = 0 # AI? pushing this button? lol no
+    }
+}
