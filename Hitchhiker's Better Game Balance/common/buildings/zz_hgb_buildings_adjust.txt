@@ -1,0 +1,48 @@
+## Betharian Halfed
+building_betharian_power_plant = {
+    base_buildtime = @b1_time
+    planet_limit = 1
+
+    category = resource
+
+    building_sets = {
+        betharian
+    }
+
+    potential = {
+        NOT = { has_modifier = resort_colony }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+        }
+        cost = {
+            trigger = {
+                owner = { is_wilderness_empire = yes }
+            }
+            biomass = @b2_biomass
+        }
+        produces = {
+            energy = 10
+        }
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    planet_modifier = {
+        planet_miners_energy_produces_add = 1
+    }
+
+    inline_script = {
+        script = jobs/miners_add
+        AMOUNT = 400
+    }
+
+    prerequisites = {
+        "tech_mine_betharian"
+    }
+}

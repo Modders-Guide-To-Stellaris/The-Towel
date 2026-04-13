@@ -658,7 +658,7 @@ trait_nascent_stage = {
 	species_potential_add = {
 		always = no
 	}
-	}
+
 	portrait_override = { fun16 fun4 lith_human lith_human_inf pla17 aqu5 mindwarden_01 }
 	opposites = { "trait_slow_breeders" "trait_humanoid_psychological_infertility" "trait_unplugged_cybernetic_positives_3" "trait_unplugged_cybernetic_positives_2" "trait_unplugged_cybernetic_positives_1" "trait_pathogenic_genes" "trait_wilderness" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
