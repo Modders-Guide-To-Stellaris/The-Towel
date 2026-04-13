@@ -269,8 +269,8 @@ auth_imperial = {
             is_corporeal_authority = yes
         }
         modifier = {
-            custom_tooltip = auth_shroud_imperial_corporeal_tt ## If down further, remember to adjust Loc ('loc/replace' folder)
-            psionic_pop_bonus_workforce_mult = -0.1 ## Down from 0.2
+            custom_tooltip = auth_shroud_imperial_corporeal_tt
+            # psionic_pop_bonus_workforce_mult = -0.2 DISABLED
             psionic_aura_effectiveness_mult = 0.25
             envoy_improve_relations_mult = 0.50
             envoy_harm_relations_mult = 0.50
