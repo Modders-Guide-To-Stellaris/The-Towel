@@ -1,0 +1,173 @@
+overlord_knight = {
+    category = specialist
+    can_set_priority = no
+
+    swappable_data = {
+        default = {
+            building_icon = building_order_keep
+            icon = knight
+        }
+    }
+
+    tags = { unity research soldier }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    overlord_resources = {
+        category = planet_knights
+        produces = {
+            unity = 1
+            mult = value:knights_unity_output_modifier
+        }
+        produces = {
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+            mult = value:knights_research_output_modifier
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_country_flag = cosmogenesis_knights
+                }
+            }
+            advanced_logic = 0.5
+            mult = value:knights_research_output_modifier
+        }
+    }
+
+    resources = {
+        category = planet_knights
+        upkeep = {
+            alloys = 1
+            mult = value:knights_upkeep_modifier
+        }
+    }
+
+    planet_modifier = {
+        planet_stability_add = 3
+        planet_defense_armies_add = 1
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+        mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
+        mult = value:job_weights_research_modifier|JOB|overlord_knight|
+        modifier = {
+            factor = 0
+            is_enslaved = yes
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+overlord_knight_drone = {
+    category = complex_drone
+    can_set_priority = no
+
+    swappable_data = {
+        default = {
+            building_icon = building_order_keep
+            icon = knight
+        }
+    }
+
+    tags = { unity research soldier }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    overlord_resources = {
+        category = planet_knights
+        produces = {
+            unity = 1
+            mult = value:knights_unity_output_modifier
+        }
+        produces = {
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+            mult = value:knights_research_output_modifier
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_country_flag = cosmogenesis_knights
+                }
+            }
+            advanced_logic = 0.5
+            mult = value:knights_research_output_modifier
+        }
+    }
+
+    resources = {
+        category = planet_knights
+        upkeep = {
+            alloys = 1
+            mult = value:knights_upkeep_modifier
+        }
+    }
+
+    planet_modifier = {
+        planet_stability_add = 3
+        planet_defense_armies_add = 1
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+        modifier = {
+            factor = 0
+            is_enslaved = yes
+        }
+        mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
+        mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
