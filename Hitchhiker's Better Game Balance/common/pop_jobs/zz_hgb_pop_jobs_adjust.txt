@@ -121,7 +121,7 @@ munitions_decommissioner = {
         }
     }
 
-    tags = { alloys research minor_artifacts}
+    tags = { alloys research minor_artifacts }
 
     possible_precalc = can_fill_specialist_job
     possible_pre_triggers = {
