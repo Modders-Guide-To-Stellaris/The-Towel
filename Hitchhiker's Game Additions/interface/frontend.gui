@@ -144,7 +144,7 @@ guiTypes = {
                 name = "version"
                 font = "cg_16b"
                 text = "1337"
-                position = { x = 310 y = -60 }
+                position = { x = 310 y = -65 }
                 maxWidth = 400
                 maxHeight = 20
                 fixedSize = yes

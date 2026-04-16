@@ -5,7 +5,7 @@
 l_english:
 
   maintheme13: "Starsailer - HGA Maintheme"
-  hga_version: "HGA Version: §KLongclaw§! v2.0.0"
+  hga_version: "HGA Version: §KLongclaw§! v2.1.0"
 
   # Blackfyre
   # Brightroar
@@ -19,12 +19,13 @@ l_english:
   hga_menu.back: "< Back"
   hga_game_time_override: "The Game has already started, you can override it within the settings."
   hga_game_time_override_option: "Enable Game Started flag Override. Changing settings may break the current gameplay, just beware that here be dragons."
+  hga_game_no_override_after_start: "This option can no longer be changed, doing so without major patch work would break stuff."
 
  # >- Main Menu (hga_menu.1) -<
   hga_menu.1.name: "HGA Host Options"
   hga_menu.1.desc: "Configure game settings before beginning. Use the buttons below to navigate each category, then start the game when ready."
 
-  hga_menu.1.nav_global: "£menu_icon_edicts£ Global Settings"
+  hga_menu.1.nav_global: "£edict_type_policy£ Global Settings"
   hga_menu.1.nav_globalTT: "Configure minor changes related to gameplay."
 
   hga_menu.2.nav_relic: "£minor_artifacts£ Relic Settings"
@@ -33,7 +34,7 @@ l_english:
   hga_menu.3.nav_planetfeatures: "£planet£ Planetary Features"
   hga_menu.3.nav_planetfeaturesTT: "Configure planetary features, enabling, dropchance and output."
 
-  hga_menu.9.nav_crisis:0 "£menu_icon_policies£ Crisis Speeddial"
+  hga_menu.9.nav_crisis:0 "Crisis Speeddial"
   hga_menu.9.nav_crisisTT:0 "Open the crisis summoning panel. Call specific crises before they decide to show up on their own schedule."
 
   hga_menu.1.start: "Begin the Game"
@@ -46,10 +47,10 @@ l_english:
   hga_menu.10.name: "$hga_menu.1.nav_global$"
   hga_menu.10.desc: "$hga_menu.1.nav_globalTT$ Changes apply globally."
 
-  hga_menu.10.release_detox_tech: "§HDetox:§! Technology"
+  hga_menu.10.release_detox_tech: "Detox: §GTechnology§!"
   hga_menu.10.release_detox_techTT: "Click to swap to Ascension-based detoxification."
 
-  hga_menu.10.force_detox_tech: "§HDetox:§! Ascension Perk"
+  hga_menu.10.force_detox_tech: "Detox: §MAscension Perk§!"
   hga_menu.100.force_detox_techTT: "Click to swap to Technology-based detoxification."
 
  # >- Relic Settings (hga_menu.100) -<
@@ -57,28 +58,28 @@ l_english:
   hga_menu.100.desc: "Control who can start relic wars and who can trade relics. Changes apply globally."
 
   # Relic Wars <<Player>>
-  hga_menu.100.lock_relic_war: "§HLock:§! Relic Wars"
-  hga_menu.100.lock_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for players."
-  hga_menu.100.unlock_relic_war: "Relic Wars §RLOCKED§!"
-  hga_menu.100.unlock_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for players."
+  hga_menu.100.lock_relic_war: "Relic Wars: §GEnabled§!"
+  hga_menu.100.lock_relic_warTT: "Click to disable relic wars for players."
+  hga_menu.100.unlock_relic_war: "Relic Wars: §RDisabled§!"
+  hga_menu.100.unlock_relic_warTT: "Click to enable relic wars for players."
 
   # Relic Wars <<AI>>
-  hga_menu.100.lock_ai_relic_war: "§HLock:§! AI Relic Wars"
-  hga_menu.100.lock_ai_relic_warTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic wars for the AI."
-  hga_menu.100.unlock_ai_relic_war: "AI Relic Wars §RLOCKED§!"
-  hga_menu.100.unlock_ai_relic_warTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic wars for the AI."
+  hga_menu.100.lock_ai_relic_war: "AI Relic Wars: §GEnabled§!"
+  hga_menu.100.lock_ai_relic_warTT: "Click to disable relic wars for the AI."
+  hga_menu.100.unlock_ai_relic_war: "AI Relic Wars: §RDISABLED§!"
+  hga_menu.100.unlock_ai_relic_warTT: "Click to enable relic wars for the AI."
 
   # Relic Trade <<Player>>
-  hga_menu.100.lock_relic_trade: "§HLock:§! Relic Trading"
-  hga_menu.100.lock_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for players."
-  hga_menu.100.unlock_relic_trade: "Relic Trading §RLOCKED§!"
-  hga_menu.100.unlock_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for players."
+  hga_menu.100.lock_relic_trade: "Relic Trading: §GEnabled§!"
+  hga_menu.100.lock_relic_tradeTT: "Click to disable relic trading for players."
+  hga_menu.100.unlock_relic_trade: "Relic Trading: §RDisabled§!"
+  hga_menu.100.unlock_relic_tradeTT: "Click to enable relic trading for players."
 
   # Relic Trade <<AI>>
-  hga_menu.100.lock_ai_relic_trade: "§HLock:§! AI Relic Trading"
-  hga_menu.100.lock_ai_relic_tradeTT: "Currently §GENABLED§!. Click to §RDISABLE§! relic trading for the AI."
-  hga_menu.100.unlock_ai_relic_trade: "AI Relic Trading §RLOCKED§!"
-  hga_menu.100.unlock_ai_relic_tradeTT: "Currently §RDISABLED§!. Click to §GENABLE§! relic trading for the AI."
+  hga_menu.100.lock_ai_relic_trade: "AI Relic Trading: §GEnabled§!"
+  hga_menu.100.lock_ai_relic_tradeTT: "Click to disable relic trading for the AI."
+  hga_menu.100.unlock_ai_relic_trade: "AI Relic Trading: §RDisabled§!"
+  hga_menu.100.unlock_ai_relic_tradeTT: "Click to enable relic trading for the AI."
 
 
  # >- Planetary Modifiers (hga_menu.110) -<
@@ -86,10 +87,10 @@ l_english:
   hga_menu.110.desc:0 "Configure how planetary features behave across the galaxy. Changes here affect drop rates and the strength of modifiers on any world that has them."
 
   hga_menu.110.features_enabled:0 "Planetary Features: §GEnabled§!"
-  hga_menu.110.features_enabledTT:0 "Features are currently §GEnabled§!. Click to §Rdisable§! them entirely. Features will no longer appear on any world."
+  hga_menu.110.features_enabledTT:0 "Features are currently enabled. Click to disable them entirely. Features will no longer appear on any world."
 
   hga_menu.110.features_disabled:0 "Planetary Features: §RDisabled§!"
-  hga_menu.110.features_disabledTT:0 "Features are currently §RDisabled§!. Click to §Genable§! them."
+  hga_menu.110.features_disabledTT:0 "Features are currently disabled. Click to enable them."
 
   hga_menu.110.production_low:0 "Modifier Strength: §YLow§!"
   hga_menu.110.production_lowTT:0 "Modifiers are currently at §YLow§! strength (0.5x). Click to advance to §GMedium§!."
@@ -113,19 +114,19 @@ l_english:
   # >- CRISIS SPEEDDIAL PAGE -<
 
   hga_menu.190.name:0 "Crisis Speeddial"
-  hga_menu.190.desc:0 "Choose a crisis to fast-track into the galaxy.\n\n§YMidgame crises§! require the relevant faction to exist.\n§YEndgame crises§! require the endgame era OR the Time Override to be enabled. Only one may be summoned per game unless the Crisis Lock is disabled in Global Settings.\n\n§RAberrant§! requires the Unbidden to be active first.\n§RVehement§! requires the Aberrant to have spawned and begun fighting the Unbidden."
+  hga_menu.190.desc:0 "Choose a crisis to fast-track into the galaxy.\n\n§YMidgame crises§! require the relevant faction to exist.\n§YEndgame crises§! require the endgame era OR the Time Override to be enabled. Only one may be summoned per game unless the Crisis Lock is disabled in Global Settings.\n\n§RAberrant§! requires the Unbidden to be active first.\n§RVehement§! requires the Aberrant to have spawned and begun fighting the Unbidden.\n\nNote: If there is a trigger that shows 'One must be true' and its the time override, that means it's limited to mid- or endgame."
 
-  # Global Settings - Crisis Type Override
-  hga_menu.190.crisis_type_override_on:0 "§REndgame Crisis Lock (ACTIVE)§!"
-  hga_menu.190.crisis_type_override_onTT:0 "Only one endgame crisis may be active at a time. Click to disable this restriction."
-  hga_menu.190.crisis_type_override_off:0 "§GEndgame Crisis Lock (DISABLED)§!"
-  hga_menu.190.crisis_type_override_offTT:0 "Multiple endgame crises may now be summoned. Click to re-enable the one-crisis restriction."
+  # Global Settings
+  hga_menu.190.crisis_type_override_on:0 "Endgame Crisis Lock: §GEnabled§!"
+  hga_menu.190.crisis_type_override_onTT:0 "Multiple endgame crises may now be summoned. Click to re-enable the one-crisis restriction."
+  hga_menu.190.crisis_type_override_off:0 "Endgame Crisis Lock: §RDisabled§!"
+  hga_menu.190.crisis_type_override_offTT:0 "Only one endgame crisis may be active at a time. Click to disable this restriction."
 
-  # Global Settings - Crisis Time Override
-  hga_menu.190.crisis_time_override_on:0 "§RCrisis Time Gate (ACTIVE)§!"
-  hga_menu.190.crisis_time_override_onTT:0 "Crises respect their mid/endgame year requirements. Click to allow summoning crises before their time."
-  hga_menu.190.crisis_time_override_off:0 "§GCrisis Time Gate (DISABLED)§!"
-  hga_menu.190.crisis_time_override_offTT:0 "Year requirements for crises are bypassed. Click to restore them."
+  # Global Settings
+  hga_menu.190.crisis_time_override_on:0 "Crisis Time Override: §GEnabled§!"
+  hga_menu.190.crisis_time_override_onTT:0 "Year requirements for crises are bypassed. Click to restore them."
+  hga_menu.190.crisis_time_override_off:0 "Crisis Time Gate: §RDisabled§!"
+  hga_menu.190.crisis_time_override_offTT:0 "Crises respect their mid/endgame year requirements. Click to allow summoning crises before their time."
 
 
   # Option labels
@@ -138,7 +139,7 @@ l_english:
   hga_menu.190.vehement:0 "Invite Them to the Party (The Vehement)"
   hga_menu.190.cetana:0 "Activate the Cetana Protocol (Cetana)"
 
-  # Tooltips (shown when allow fails — describe what's missing)
+  # Tooltips
   hga_menu.190.khan_TT:0 "Requires: Midgame era OR Time Override enabled. Dormant marauders must exist. Cannot fire if the Khan has already risen."
   hga_menu.190.voidworms_TT:0 "Requires: Midgame era OR Time Override enabled. Voidworms must exist in the galaxy. Cannot fire if the Voidspawn crisis has already started."
   hga_menu.190.scourge_TT:0 "Requires: Endgame era OR Time Override enabled. Crisis Lock must be inactive OR no other endgame crisis fired recently. Can only be summoned once."

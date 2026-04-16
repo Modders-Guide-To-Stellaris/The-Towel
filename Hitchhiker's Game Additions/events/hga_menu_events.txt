@@ -125,11 +125,18 @@ country_event = {
 	# <<->> Detoxification Tech <<->>
 
 	option = {
-		trigger = {
-			OR = {
-				NOT = { has_global_flag = hga_game_started }
-				has_global_flag = hga_game_started_override
+
+		allow = {
+			custom_tooltip = {
+				OR = {
+					NOT = { has_global_flag = hga_game_started }
+					has_global_flag = hga_game_started_override
+				}
+				fail_text = hga_game_no_override_after_start
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_detox_tech_enabled
 		}
 		name = hga_menu.10.release_detox_tech
@@ -141,12 +148,18 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
-			OR = {
-				NOT = { has_global_flag = hga_game_started }
-				has_global_flag = hga_game_started_override
-				fail_text = hga_game_time_override
+
+		allow = {
+			custom_tooltip = {
+				OR = {
+					NOT = { has_global_flag = hga_game_started }
+					has_global_flag = hga_game_started_override
+				}
+				fail_text = hga_game_no_override_after_start
 			}
+		}
+
+		trigger = {
 			NOT = { has_global_flag = hga_detox_tech_enabled }
 		}
 		name = hga_menu.10.force_detox_tech
@@ -162,10 +175,10 @@ country_event = {
 	option = {
 		default_hide_option = yes
 
-		name = hga_menu.190.crisis_type_override_off
-		custom_tooltip = hga_menu.190.crisis_type_override_offTT
+		name = hga_menu.190.crisis_type_override_on
+		custom_tooltip = hga_menu.190.crisis_type_override_onTT
 
-		allow = {
+		trigger = {
 			has_global_flag = hga_crisis_type_override
 		}
 
@@ -188,10 +201,10 @@ country_event = {
 	option = {
 		default_hide_option = yes
 
-		name = hga_menu.190.crisis_type_override_on
-		custom_tooltip = hga_menu.190.crisis_type_override_onTT
+		name = hga_menu.190.crisis_type_override_off
+		custom_tooltip = hga_menu.190.crisis_type_override_offTT
 
-		allow = {
+		trigger = {
 			NOT = { has_global_flag = hga_crisis_type_override }
 		}
 
@@ -216,10 +229,10 @@ country_event = {
 	option = {
 		default_hide_option = yes
 
-		name = hga_menu.190.crisis_time_override_off
-		custom_tooltip = hga_menu.190.crisis_time_override_offTT
+		name = hga_menu.190.crisis_time_override_on
+		custom_tooltip = hga_menu.190.crisis_time_override_onTT
 
-		allow = {
+		trigger = {
 			has_global_flag = hga_crisis_time_override
 		}
 
@@ -242,10 +255,10 @@ country_event = {
 	option = {
 		default_hide_option = yes
 
-		name = hga_menu.190.crisis_time_override_on
-		custom_tooltip = hga_menu.190.crisis_time_override_onTT
+		name = hga_menu.190.crisis_time_override_off
+		custom_tooltip = hga_menu.190.crisis_time_override_offTT
 
-		allow = {
+		trigger = {
 			NOT = { has_global_flag = hga_crisis_time_override }
 		}
 
@@ -414,13 +427,17 @@ country_event = {
 	# <<->> Enable / Disable <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			NOT = { has_global_flag = hga_planetary_features_disabled }
 		}
+
 		name = hga_menu.110.features_enabled
 		custom_tooltip = hga_menu.110.features_enabledTT
 		hidden_effect = {
@@ -430,13 +447,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_planetary_features_disabled
 		}
+
 		name = hga_menu.110.features_disabled
 		custom_tooltip = hga_menu.110.features_disabledTT
 		hidden_effect = {
@@ -448,13 +469,17 @@ country_event = {
 	# <<->> Production Tier <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_low
 		}
+
 		name = hga_menu.110.production_low
 		custom_tooltip = hga_menu.110.production_lowTT
 		hidden_effect = {
@@ -465,13 +490,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_medium
 		}
+
 		name = hga_menu.110.production_medium
 		custom_tooltip = hga_menu.110.production_mediumTT
 		hidden_effect = {
@@ -482,13 +511,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_high
 		}
+
 		name = hga_menu.110.production_high
 		custom_tooltip = hga_menu.110.production_highTT
 		hidden_effect = {
@@ -501,13 +534,17 @@ country_event = {
 	# <<->> Intensity (Droprate) Tier <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_low
 		}
+
 		name = hga_menu.110.intensity_low
 		custom_tooltip = hga_menu.110.intensity_lowTT
 		hidden_effect = {
@@ -518,13 +555,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_medium
 		}
+
 		name = hga_menu.110.intensity_medium
 		custom_tooltip = hga_menu.110.intensity_mediumTT
 		hidden_effect = {
@@ -535,13 +576,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_high
 		}
+
 		name = hga_menu.110.intensity_high
 		custom_tooltip = hga_menu.110.intensity_highTT
 		hidden_effect = {
@@ -581,7 +626,6 @@ country_event = {
 	}
 
 	# <<->> MID-GAME: Great Khan <<->>
-	# Requires midgame OR time override AND dormant marauders exist AND not already fired
 
 	option = {
 		name = hga_menu.190.khan
@@ -593,10 +637,13 @@ country_event = {
 					mid_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				NOT = { has_global_flag = marauder_crisis_started }
-				any_country = {
-					is_country_type = dormant_marauders
-				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = marauder_crisis_started }
+			any_country = {
+				is_country_type = dormant_marauders
 			}
 		}
 
@@ -618,10 +665,13 @@ country_event = {
 					mid_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				NOT = { has_global_flag = voidworms_plague_crisis_started }
-				any_country = {
-					is_country_type = voidworms
-				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = voidworms_plague_crisis_started }
+			any_country = {
+				is_country_type = voidworms
 			}
 		}
 
@@ -643,12 +693,15 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				NOR = {
+				OR = {
 					has_global_flag = hga_crisis_type_override
-					has_global_flag = galactic_crisis_recently_fired
-					has_global_flag = hga_scourge_summoned
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
 				}
 			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_scourge_summoned }
 		}
 
 		hidden_effect = {
@@ -670,12 +723,15 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				NOR = {
+				OR = {
 					has_global_flag = hga_crisis_type_override
-					has_global_flag = galactic_crisis_recently_fired
-					has_global_flag = hga_contingency_summoned
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
 				}
 			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_contingency_summoned }
 		}
 
 		hidden_effect = {
@@ -697,12 +753,15 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				NOR = {
+				OR = {
 					has_global_flag = hga_crisis_type_override
-					has_global_flag = galactic_crisis_recently_fired
-					has_global_flag = hga_unbidden_summoned
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
 				}
 			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_unbidden_summoned }
 		}
 
 		hidden_effect = {
@@ -725,8 +784,11 @@ country_event = {
 					has_global_flag = hga_crisis_time_override
 				}
 				has_global_flag = extradimensional_invasion_happened
-				NOT = { has_global_flag = hga_aberrant_summoned }
 			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_aberrant_summoned }
 		}
 
 		hidden_effect = {
@@ -748,10 +810,12 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				has_global_flag = hga_aberrant_summoned
 				has_global_flag = extradimensionals_fight
-				NOT = { has_global_flag = hga_vehement_summoned }
 			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_vehement_summoned }
 		}
 
 		hidden_effect = {
@@ -773,16 +837,23 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				any_country = {
-					is_country_type = fallen_empire
-					is_gestalt = no
-				}
-				NOT = { has_global_flag = war_in_heaven_ongoing }
-				NOR = {
+				OR = {
 					has_global_flag = hga_crisis_type_override
-					has_global_flag = galactic_crisis_recently_fired
-					has_global_flag = hga_cetana_summoned
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
 				}
+			}
+		}
+
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				is_gestalt = no
+			}
+
+			NAND = {
+				has_global_flag = hga_contingency_summoned
+				has_global_flag = war_in_heaven_ongoing
+				has_global_flag = hga_cetana_summoned
 			}
 		}
 
