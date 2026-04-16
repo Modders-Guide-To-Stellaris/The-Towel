@@ -1874,7 +1874,7 @@ trait_plantoid_bloomed = {
             }
         }
         pop_bonus_workforce_mult = 0.10
-        planet_pop_assembly_organic_mult = 0.10 # ADDED
+        bonus_pop_growth_mult = 0.10 # ADDED
         pop_amenities_usage_mult = -0.10
         pop_housing_usage_mult = -0.10
     }
@@ -1891,7 +1891,7 @@ trait_plantoid_bloomed = {
             }
         }
         pop_bonus_workforce_mult = 0.15
-        planet_pop_assembly_organic_mult = 0.15 # ADDED
+        bonus_pop_growth_mult = 0.15 # ADDED
         pop_amenities_usage_mult = -0.15
         pop_housing_usage_mult = -0.15
     }
