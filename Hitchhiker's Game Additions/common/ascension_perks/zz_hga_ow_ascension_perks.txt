@@ -69,9 +69,23 @@ ap_world_shaper = {
         add_attunement_the_composer_of_strands = 30
     }
 
+    triggered_modifier = {
+        potential = {
+            has_global_flag = hga_ecology_world_in_play
+        }
+
+        planetary_ascension_effect_mult = 1
+        ## MOVE TO CUSTOM DESIGNATIONS
+    }
+
     on_enabled = {
         custom_tooltip = "allow_gaia"
-        custom_tooltip = "hga_allow_pa"
+        if = {
+            limit = {
+                has_global_flag = hga_ecology_world_in_play
+            }
+            custom_tooltip = hga_allow_ecology
+        }
     }
 
     potential = {
