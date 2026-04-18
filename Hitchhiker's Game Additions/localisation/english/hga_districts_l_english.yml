@@ -1,0 +1,12 @@
+﻿l_english:
+ hga_district_food_arcology: "$hga_zone_food_arcology$"
+ hga_district_food_arcology_desc: "$hga_zone_food_arcology_desc$"
+ hga_district_food_arcology_plural: "$hga_zone_food_arcology_plural$"
+
+ hga_district_energy_arcology: "$hga_zone_energy_arcology$"
+ hga_district_energy_arcology_desc: "$hga_zone_energy_arcology_desc$"
+ hga_district_energy_arcology_plural: "$hga_zone_energy_arcology_plural$"
+
+ hga_district_mineral_arcology: "$hga_zone_mineral_arcology$"
+ hga_district_mineral_arcology_desc: "$hga_zone_mineral_arcology_desc$"
+ hga_district_mineral_arcology_plural: "$hga_zone_mineral_arcology_plural$"

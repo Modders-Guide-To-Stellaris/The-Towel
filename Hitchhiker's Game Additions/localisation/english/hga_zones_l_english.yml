@@ -1,0 +1,12 @@
+﻿l_english:
+ hga_zone_food_arcology: "Hydroponic Bay"
+ hga_zone_food_arcology_plural: "Hydroponic Bays"
+ hga_zone_food_arcology_desc: "Massive, climate-controlled vertical biomes that utilize nutrient-rich mists to produce a constant harvest, independent of a planet's natural soil or sunlight."
+
+ hga_zone_energy_arcology: "Thermodynamic Arcology"
+ hga_zone_energy_arcology_plural: "Thermodynamic Arcologies"
+ hga_zone_energy_arcology_desc: "By designating a section of our city-planet for mass-scale water vaporization, we can channel high-pressure steam through planetary turbines to generate a tremendous amount of power."
+
+ hga_zone_mineral_arcology: "Mineral Fabricator"
+ hga_zone_mineral_arcology_plural: "Mineral Fabricators"
+ hga_zone_mineral_arcology_desc: "By pumping chemically-enriched brines into massive evaporation basins, we can precipitate and harvest solid mineral compounds, allowing for large-scale extraction even on a fully paved world."
