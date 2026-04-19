@@ -1,0 +1,40 @@
+d_genesis_preserve = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    icon = d_quarantine_zone
+
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_hga_ecology
+            }
+        }
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_unity_produces_mult = 0.05
+        mult = owner.value:presapients_guided_mult
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            NOR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_hga_ecology
+            }
+        }
+        planet_jobs_society_research_produces_mult = 0.025
+        planet_jobs_unity_produces_mult = 0.025
+        mult = owner.value:presapients_guided_mult
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -2
+    }
+
+    potential = { always = no }
+
+    drop_weight = {
+        weight = 0
+    }
+}

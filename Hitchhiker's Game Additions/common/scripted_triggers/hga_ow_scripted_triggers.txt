@@ -1,0 +1,11 @@
+planet_is_ecu_equivalent = {
+    NOT = {
+        has_deposit = d_machine_prototype_pc_machine
+    }
+    OR = {
+        uses_district_set = city_world 			# Ecumenopoleis
+        uses_district_set = machine_world		# Machine & Nanotech Worlds
+        uses_district_set = hive_world			# Hive Worlds
+        uses_district_set = hga_ecology_world # Ecology Worlds
+    }
+}

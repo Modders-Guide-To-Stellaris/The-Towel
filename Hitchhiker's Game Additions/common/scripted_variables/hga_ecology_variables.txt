@@ -1,0 +1,5 @@
+@hga_grow_planet_time       = 360
+@hga_ecology_decision_time  = 3600
+@hga_rural_district_ai_coefficient = 0.75
+@base_cost = 300
+@city_cost = 500

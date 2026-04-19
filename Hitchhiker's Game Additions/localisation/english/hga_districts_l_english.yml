@@ -1,0 +1,97 @@
+﻿l_english:
+ hga_district_food_arcology: "$hga_zone_food_arcology$"
+ hga_district_food_arcology_desc: "$hga_zone_food_arcology_desc$"
+ hga_district_food_arcology_plural: "$hga_zone_food_arcology_plural$"
+
+ hga_district_energy_arcology: "$hga_zone_energy_arcology$"
+ hga_district_energy_arcology_desc: "$hga_zone_energy_arcology_desc$"
+ hga_district_energy_arcology_plural: "$hga_zone_energy_arcology_plural$"
+
+ hga_district_mineral_arcology: "$hga_zone_mineral_arcology$"
+ hga_district_mineral_arcology_desc: "$hga_zone_mineral_arcology_desc$"
+ hga_district_mineral_arcology_plural: "$hga_zone_mineral_arcology_plural$"
+
+ # ==========================================
+ # ECOLOGY DISTRICTS
+ # ==========================================
+
+ # >- Primary -<
+ district_ecology_name:0 "Ecology District"
+ hga_district_ecology_housing: "Garden Estates"
+ hga_district_ecology_housing_plural: "Garden Estates"
+ hga_district_ecology_housing_desc: "Spacious, beautiful residential sectors seamlessly woven into the landscape, offering our citizens an unparalleled standard of living amidst curated nature."
+
+ # >- Secondaries (Nature Shells) -<
+ hga_district_ecology_nature_1: "Surface Parklands"
+ hga_district_ecology_nature_1_plural: "Surface Parklands"
+ hga_district_ecology_nature_1_desc: "Expansive, curated green spaces at ground level. These parks anchor the local ecosystem and provide citizens with serene recreational areas."
+
+ hga_district_ecology_nature_2: "Terrace Gardens"
+ hga_district_ecology_nature_2_plural: "Terrace Gardens"
+ hga_district_ecology_nature_2_desc: "Elevated, overlapping biomes that act as vertical parks, purifying the air while serving as scenic transit routes."
+
+ hga_district_ecology_nature_3: "Skyward Conservatories"
+ hga_district_ecology_nature_3_plural: "Skyward Conservatories"
+ hga_district_ecology_nature_3_desc: "Towering, open-air structures that catch the optimal amount of sunlight, creating a perfect high-altitude environment for exotic flora."
+
+ # >- Menials -<
+ hga_district_food_ecology: "Agrarian Biosphere"
+ hga_district_food_ecology_plural: "Agrarian Biospheres"
+ hga_district_food_ecology_desc: "Vast, climate-perfected farmlands. Automated irrigation and engineered soil provide an endless, reliable bounty for the population."
+
+ hga_district_energy_ecology: "Geothermal Grid"
+ hga_district_energy_ecology_plural: "Geothermal Grids"
+ hga_district_energy_ecology_desc: "By tapping safely into the planetary crust, we draw limitless, clean thermal energy to power our cities without a single smokestack."
+
+ hga_district_mineral_ecology: "Precipitation Quarries"
+ hga_district_mineral_ecology_plural: "Precipitation Quarries"
+ hga_district_mineral_ecology_desc: "Advanced facilities that pump brines from deep underground, cleanly precipitating minerals into harvestable crystals without scarring the surface."
+
+ # >- Swappers (Urban/Specialized) -<
+ hga_district_ecology_research: "Ecological Campus"
+ hga_district_ecology_research_plural: "Ecological Campuses"
+ hga_district_ecology_research_desc: "Sprawling, open-air academic campuses that inspire our researchers to push the boundaries of science in a tranquil setting."
+
+ hga_district_ecology_research_physics: "Resonance Institutes"
+ hga_district_ecology_research_physics_plural: "Resonance Institutes"
+ hga_district_ecology_research_physics_desc: "Specialized laboratories built around atmospheric and energy dampeners, perfectly equipped to study the fundamental laws of physics."
+
+ hga_district_ecology_research_society: "Societal Campuses"
+ hga_district_ecology_research_society_plural: "Societal Campuses"
+ hga_district_ecology_research_society_desc: "Institutes dedicated to biology, sociology, and ensuring our society remains in perfect harmony with our engineered world."
+
+ hga_district_ecology_research_engineering: "Geo-Engineering Campuses"
+ hga_district_ecology_research_engineering_plural: "Geo-Engineering Campuses"
+ hga_district_ecology_research_engineering_desc: "Facilities dedicated to material sciences and architecture, utilizing the planet's unique construction to test new designs."
+
+ hga_district_ecology_archives: "Grand Conservatories"
+ hga_district_ecology_archives_plural: "Grand Conservatories"
+ hga_district_ecology_archives_desc: "Majestic, climate-controlled libraries blending classical architecture with natural beauty to protect the vast records of our civilization."
+
+ hga_district_ecology_unity: "Cultural Forums"
+ hga_district_ecology_unity_plural: "Cultural Forums"
+ hga_district_ecology_unity_desc: "Grand plazas, museums, and community centers where citizens gather to celebrate our achievements and shared values."
+
+ hga_district_ecology_unity_spiritualist: "Sanctuary Gardens"
+ hga_district_ecology_unity_spiritualist_plural: "Sanctuary Gardens"
+ hga_district_ecology_unity_spiritualist_desc: "Breathtaking temples set amidst tranquil groves, offering a serene, quiet environment for contemplation and worship."
+
+ hga_district_ecology_industrial: "Eco-Industrial Sectors"
+ hga_district_ecology_industrial_plural: "Eco-Industrial Sectors"
+ hga_district_ecology_industrial_desc: "Clean manufacturing districts where heavy industry is safely contained within subterranean or heavily filtered facilities."
+
+ hga_district_ecology_foundry: "Thermal Forges"
+ hga_district_ecology_foundry_plural: "Thermal Forges"
+ hga_district_ecology_foundry_desc: "Using focused, contained geothermal heat, these clean foundries smelt high-grade alloys without releasing toxic emissions."
+
+ hga_district_ecology_factory: "Artisan Ateliers"
+ hga_district_ecology_factory_plural: "Artisan Ateliers"
+ hga_district_ecology_factory_desc: "Spacious, highly-equipped workshops where citizens design and assemble complex consumer goods in a stress-free environment."
+
+ hga_district_ecology_trade: "Grand Boulevards"
+ hga_district_ecology_trade_plural: "Grand Boulevards"
+ hga_district_ecology_trade_desc: "Bustling, beautiful commercial hubs lined with exotic flora, attracting massive wealth and investment from across the stars."
+
+ hga_district_ecology_fortress: "Bulwark Citadels"
+ hga_district_ecology_fortress_plural: "Bulwark Citadels"
+ hga_district_ecology_fortress_desc: "Impenetrable military commands, structurally reinforced by the planet's geo-engineering, providing a safe haven for our defensive armies."
