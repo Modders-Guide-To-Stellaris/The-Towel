@@ -33,6 +33,8 @@ country_event = {
 		set_global_flag = hga_features_intensity_medium
 		set_global_flag = hga_features_production_medium
 
+		set_global_flag = hga_arcology_menials_in_play
+
 		# Crisis overrides >> default OFF
 		# Do not set hga_crisis_type_override or hga_crisis_time_override by default
 
@@ -424,7 +426,7 @@ country_event = {
 	picture = GFX_evt_star_chart
 	is_triggered_only = yes
 
-	# <<->> Enable / Disable <<->>
+	# <<->> Enable / Disable Features <<->>
 
 	option = {
 		allow = {
@@ -580,6 +582,7 @@ country_event = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
+				has_global_flag = hga_arcology_menials_in_play
 			}
 		}
 
@@ -592,6 +595,60 @@ country_event = {
 		hidden_effect = {
 			remove_global_flag = hga_features_intensity_high
 			set_global_flag = hga_features_intensity_low
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	# <<->> Menials Or Ecology Worlds <<->>
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_arcology_menials_in_play }
+		}
+
+		name = hga_menu.110.arcology_menials_off
+		custom_tooltip = hga_menu.110.arcology_menials_offTT
+		hidden_effect = {
+			set_global_flag = hga_arcology_menials_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_arcology_menials_in_play
+		}
+
+		name = hga_menu.110.arcology_menials_on
+		custom_tooltip = hga_menu.110.arcology_menials_onTT
+		hidden_effect = {
+			remove_global_flag = hga_arcology_menials_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_ecology_worlds_in_play }
+		}
+
+		name = hga_menu.110.ecology_worlds_off
+		custom_tooltip = hga_menu.110.ecology_worlds_offTT
+		hidden_effect = {
+			set_global_flag = hga_ecology_worlds_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_ecology_worlds_in_play
+		}
+
+		name = hga_menu.110.ecology_worlds_on
+		custom_tooltip = hga_menu.110.ecology_worlds_onTT
+		hidden_effect = {
+			remove_global_flag = hga_ecology_worlds_in_play
 			country_event = { id = hga_menu.110 }
 		}
 	}

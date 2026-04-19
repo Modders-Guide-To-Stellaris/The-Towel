@@ -99,6 +99,18 @@ l_english:
   hga_menu.110.intensity_high:0 "Drop Rate: §RHigh§!"
   hga_menu.110.intensity_highTT:0 "Features are currently set to spawn at a §RHigh§!"
 
+  hga_menu.110.arcology_menials_off: "Arcology Menials: §RDisabled§!"
+  hga_menu.110.arcology_menials_offTT: "Arcologies are restricted to standard urban and industrial districts. Click to §Genable§! basic resource production (Food, Energy, Minerals) for Ecumenopoli."
+
+  hga_menu.110.arcology_menials_on: "Arcology Menials: §GEnabled§!"
+  hga_menu.110.arcology_menials_onTT: "Arcologies can now support basic resource districts. Click to §Rdisable§! this and return to standard urban-only industrial sets."
+
+  hga_menu.110.ecology_worlds_off: "Synthetic Genesis: §RDisabled§!"
+  hga_menu.110.ecology_worlds_offTT: "Advanced Alvanian Ecogenesis is currently disabled. Click to §Genable§! the project to transform Gaia worlds into Synthetic Edens."
+
+  hga_menu.110.ecology_worlds_on: "Synthetic Genesis: §GEnabled§!"
+  hga_menu.110.ecology_worlds_onTT: "Planetary transformation projects are available. Click to §Rdisable§! the ability to create Alvanian Ecologies."
+
   # Hub - Crisis nav button
   # >- CRISIS SPEEDDIAL PAGE -<
 
