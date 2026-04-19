@@ -13,6 +13,8 @@ decision_arcology_project = {
     }
 
     potential = {
+        host_has_dlc = "Megacorp" #EULA thing
+
         NOR = {
             is_planet_class = pc_city
             is_planet_class = pc_relic
