@@ -538,4 +538,4 @@ auth_hive_mind = {
 			council_agenda_finishing_effect_duration_mult = 0.3
 		}
 	}
-}
+}   
