@@ -1,0 +1,38 @@
+# common\inline_scripts\districts\hga_arcology_housing_standard.txt
+
+#inline_script = {
+#	script = districts/hga_arcology_housing_standard
+#}
+# Base housing
+planet_modifier = {
+    planet_housing_add = 200
+}
+# /
+
+# Agrarian Idyll bonus
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            has_valid_civic = civic_agrarian_idyll
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 300
+    }
+}
+# /
+
+# Gestalt housing
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_gestalt = yes }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 100
+    }
+}
+# /

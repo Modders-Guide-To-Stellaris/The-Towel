@@ -31,6 +31,11 @@ hga_flag_holder = {
 		# >- System -<
 			set_global_flag = hga_menu_initialized
 		# /
+
+		# >- Planets -<
+			set_global_flag = hga_ecology_world_in_play
+			set_global_flag = hga_arcology_menials_in_play
+		# /
 	}
 }
 # /

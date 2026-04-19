@@ -1,0 +1,168 @@
+hga_grow_planet = {
+    icon = decision_baol_life_seed
+    enactment_time = @hga_grow_planet_time
+
+    potential = {
+        AND = {
+            planet = {
+                is_planet_class = pc_hga_ecology
+
+                if = {
+                    limit = {
+                        is_wilderness_empire = yes
+                    }
+
+                    planet_size < 40
+                }
+                else = {
+                    planet_size < 30
+                }
+            }
+
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            influence = 50
+        }
+
+        cost = {
+            energy = 10
+            minerals = 10
+            food = 10
+            multiplier = value:wilderness_planet_size_mod
+        }
+    }
+
+    effect = {
+        planet = {
+            change_planet_size = 1
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            free_district_slots = 0
+            mult = 100
+        }
+        modifier = {
+            free_building_slots = 0
+            mult = 10
+        }
+    }
+}
+
+hga_ecology_project = {
+    icon = decision_arcology_project
+    enactment_time = @hga_ecology_decision_time
+
+    potential = {
+        planet = {
+            AND = {
+                has_global_flag = hga_ecology_world_in_play
+                is_planet_class = pc_gaia
+            }
+        }
+
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_world_shaper
+        }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = legendary_leader_decision_arcology_project
+            NOT = { has_planet_flag = legendary_leader_planet }
+        }
+        custom_tooltip = {
+            fail_text = hga_cannot_construct_ecology_because_arcology
+            has_planet_flag = arcology_project_construction
+        }
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            influence = 100
+            energy = 15000
+            minerals = 15000
+            food = 15000
+        }
+    }
+
+    on_queued = {
+        set_planet_flag = ecology_project_construction
+        ## If people somehow manage to make a city planet, then a ecology and that gives them buffs, override the decision and add this to the no block
+        ## otherwise, just a flag for other modders.
+    }
+
+    on_unqueued = {
+        remove_planet_flag = ecology_project_construction
+    }
+
+    effect = {
+        remove_planet_flag = ecology_project_construction
+
+        custom_tooltip = decision_arcology_project_effects ## todo: change that lol
+        hidden_effect = {
+            save_deposits = yes
+            clear_deposits = yes
+            restore_saved_deposits = yes
+            change_pc = pc_hga_ecology
+
+            set_planet_entity = {
+                entity = "hga_ecology_planet"
+                graphical_culture = owner
+            }
+
+            planet_event = { id = action.68 }
+            owner = {
+                country_event = { id = distar.201 }
+            }
+
+            planet_event = { id = mega.200 } ## todo: change that lol
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 100
+            exists = owner
+            OR = {
+                pop_amount >= 7000
+                is_capital = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                OR = {
+                    has_origin = origin_life_seeded
+                    has_civic = civic_environmental_architects
+                    OR = {
+                        has_civic = civic_idyllic_bloom
+                        has_civic = civic_hive_idyllic_bloom
+                        has_civic = civic_wilderness_idyllic_bloom
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            exists = owner
+            owner = {
+                is_wilderness_empire = yes
+            }
+        }
+    }
+}

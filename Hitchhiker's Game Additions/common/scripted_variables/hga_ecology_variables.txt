@@ -1,0 +1,2 @@
+@hga_grow_planet_time       = 360
+@hga_ecology_decision_time  = 3600

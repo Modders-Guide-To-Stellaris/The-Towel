@@ -1,48 +1,23 @@
-@base_cost = 300
-@city_cost = 500
-@rural_district_ai_coefficient = 0.75
+# common\districts\hga_arcology_districts.txt
 
 hga_district_food_arcology = {
-    expansion_planner = yes
-    base_buildtime = 600
-    icon = district_farming
-    overlay_icon = GFX_district_food
-
-    zone_slots = {
-        slot_arcology_urban_1
-        slot_arcology_urban_2
-        slot_arcology_urban_3
-    }
-
-    show_on_uncolonized = {
-        uses_district_set = city_world
-    }
-
-    potential = {
-        always = no
-    }
-
-    conversion_ratio = 1
-    convert_to = {
-        district_farming
-        district_rw_farming
-        district_orchard_forests
-        district_hive_3
-    }
-
-    resources = {
-        category = planet_districts ## change to planet_districts_farming if off
-        cost = {
-            alloys = 500
-        }
-        upkeep = {
-            energy = 5
-        }
-    }
-
     inline_script = {
-        script = jobs/farmers_add
-        AMOUNT = @b3_jobs
+        script = districts/hga_arcology_districts
+        ICON              = district_farming
+        OVERLAY_ICON      = GFX_district_food
+        RESOURCE_CATEGORY = planet_districts
+        JOB_SCRIPT        = "jobs/farmers_add"
+        JOB_AMOUNT        = @b3_jobs
+        NAME_SCRIPT       = "districts/district_triggered_name_farming"
+        FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_farming"
+        PREREQUISITE      = tech_industrial_farming
+        HOUSING_INLINE    = "districts/hga_arcology_housing_food"
+        CONVERT_TO = "
+            district_farming
+            district_rw_farming
+            district_orchard_forests
+            district_hive_3
+        "
     }
 
     triggered_planet_modifier = {
@@ -63,9 +38,10 @@ hga_district_food_arcology = {
             }
         }
         modifier = {
-            planet_housing_add = 400
+            planet_housing_add = 100 ## less because inline handles the other 300 :P
         }
     }
+
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -79,28 +55,6 @@ hga_district_food_arcology = {
         }
     }
 
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        modifier = {
-            planet_housing_add = 100
-        }
-    }
-
-    inline_script = {
-        script = districts/district_triggered_name_farming
-    }
-
-    inline_script = {
-        script = districts/district_triggered_flavor_desc_farming
-    }
-
-    prerequisites = {
-        tech_industrial_farming
-    }
-
     destroy_trigger = {
         exists = owner
         AND = {
@@ -108,175 +62,47 @@ hga_district_food_arcology = {
             owner = { country_uses_food = no }
         }
     }
-
-    ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 hga_district_energy_arcology = {
-    expansion_planner = yes
-    base_buildtime = 600
-    icon = district_hab_energy
-    overlay_icon = GFX_district_energy
-
-    zone_slots = {
-        slot_arcology_urban_1
-        slot_arcology_urban_2
-        slot_arcology_urban_3
-    }
-
-    show_on_uncolonized = {
-        uses_district_set = city_world
-    }
-
-    potential = {
-        always = no
-    }
-
-    conversion_ratio = 1
-    convert_to = {
-        district_farming
-        district_rw_farming
-        district_orchard_forests
-        district_hive_3
-    }
-
-    resources = {
-        category = planet_districts ## change to planet_districts_generator if off
-        cost = {
-            alloys = 500
-        }
-        upkeep = {
-            energy = 5
-        }
-    }
-
     inline_script = {
-        script = jobs/technicians_add
-        AMOUNT = @base_rural_district_jobs
+        script = districts/hga_arcology_districts
+        ICON              = district_hab_energy
+        OVERLAY_ICON      = GFX_district_energy
+        RESOURCE_CATEGORY = planet_districts
+        JOB_SCRIPT        = "jobs/technicians_add"
+        JOB_AMOUNT        = @base_rural_district_jobs
+        NAME_SCRIPT       = "districts/district_triggered_name_generator"
+        FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_generator"
+        PREREQUISITE      = tech_power_plant_1
+        HOUSING_INLINE    = "districts/hga_arcology_housing_standard"
+        CONVERT_TO        = "district_generator"
     }
-
-    planet_modifier = {
-        planet_housing_add = 200
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-            }
-        }
-        modifier = {
-            planet_housing_add = 300
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        modifier = {
-            planet_housing_add = 100
-        }
-    }
-
-    inline_script = {
-        script = districts/district_triggered_name_generator
-    }
-
-    inline_script = {
-        script = districts/district_triggered_flavor_desc_generator
-    }
-
-    prerequisites = {
-        tech_power_plant_1
-    }
-
-    ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 hga_district_mineral_arcology = {
-    expansion_planner = yes
-    base_buildtime = 600
-    icon = district_hab_mining
-    overlay_icon = GFX_district_minerals
-
-    zone_slots = {
-        slot_arcology_urban_1
-        slot_arcology_urban_2
-        slot_arcology_urban_3
-    }
-
-    show_on_uncolonized = {
-        uses_district_set = city_world
-    }
-
-    potential = {
-        always = no
-    }
-
-    conversion_ratio = 1
-    convert_to = {
-        district_mining
-        district_hollow_mountains
-        district_nexus_2
-        district_hive_2
-        district_melting
-    }
-
-    resources = {
-        category = planet_districts ## change to planet_districts_mining if off
-        cost = {
-            alloys = 500
-        }
-        upkeep = {
-            energy = 5
-        }
-    }
-
     inline_script = {
-        script = jobs/miners_add
-        AMOUNT = @base_rural_district_jobs
-    }
-
-    planet_modifier = {
-        planet_housing_add = 200
-    }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-            }
-        }
-        planet_housing_add = 300
+        script = districts/hga_arcology_districts
+        ICON              = district_hab_mining
+        OVERLAY_ICON      = GFX_district_minerals
+        RESOURCE_CATEGORY = planet_districts
+        JOB_SCRIPT        = "jobs/miners_add"
+        JOB_AMOUNT        = @base_rural_district_jobs
+        NAME_SCRIPT       = "districts/district_triggered_name_mining"
+        FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_mining"
+        PREREQUISITE      = tech_mechanized_mining
+        HOUSING_INLINE    = "districts/hga_arcology_housing_standard"
+        CONVERT_TO        = "
+            district_mining
+            district_hollow_mountains
+            district_nexus_2
+            district_hive_2
+            district_melting
+        "
     }
 
     triggered_planet_modifier = {
         planet_housing_add = 1
         mult = modifier:mining_district_housing_add
     }
-
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        planet_housing_add = 100
-    }
-
-    inline_script = {
-        script = districts/district_triggered_name_mining
-    }
-
-    inline_script = {
-        script = districts/district_triggered_flavor_desc_mining
-    }
-
-    prerequisites = {
-        tech_mechanized_mining
-    }
-
-    ai_weight_coefficient = @rural_district_ai_coefficient
 }

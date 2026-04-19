@@ -4,17 +4,6 @@
 
 l_english:
 
-  maintheme13: "Starsailer - HGA Maintheme"
-  hga_version: "HGA Version: §KLongclaw§! v2.1.0"
-
-  # Blackfyre
-  # Brightroar
-  # Heartsbane
-  # Nightfall
-  # Bolton
-  # Cassel
-  # Next Major Version Names
-
   # >- Shared -<
   hga_menu.back: "< Back"
   hga_game_time_override: "The Game has already started, you can override it within the settings."

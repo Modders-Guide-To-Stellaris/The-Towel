@@ -2121,6 +2121,15 @@ trait_plantoid_budding = {
     triggered_planet_pop_group_modifier_for_species = {
         potential = {
             has_budding_trait = yes
+            NOT = {
+                exists = planet
+                planet = {
+                    OR = {
+                        has_building = building_gaiaseeders_pc_gaia
+                        has_building = building_gaiaseeders_4
+                    }
+                }
+            }
         }
         divide_over_pop_groups = no
         bonus_pop_growth = @plantoid_budding_rate
@@ -2138,7 +2147,7 @@ trait_plantoid_budding = {
             }
         }
         divide_over_pop_groups = no
-        bonus_pop_growth = 0.01
+        bonus_pop_growth = 0.03
     }
 
     slave_cost = {
@@ -2240,7 +2249,15 @@ trait_lithoid_budding = {
         potential = {
             has_budding_trait = yes
             exists = planet
-            NOT = { planet = { has_deposit = d_lithoid_crater } }
+            NOR = {
+                planet = {
+                    has_deposit = d_lithoid_crater
+                    OR = {
+                        has_building = building_gaiaseeders_pc_gaia
+                        has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
+                    }
+                }
+            }
         }
         divide_over_pop_groups = no
         bonus_pop_growth = @plantoid_budding_rate
@@ -2249,7 +2266,15 @@ trait_lithoid_budding = {
         potential = {
             has_budding_trait = yes
             exists = planet
-            planet = { has_deposit = d_lithoid_crater }
+            planet = {
+                NOT = {
+                    OR = {
+                        has_building = building_gaiaseeders_pc_gaia
+                        has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
+                    }
+                }
+                has_deposit = d_lithoid_crater
+            }
         }
         bonus_pop_growth = @lithoid_crater_budding_rate
     }
@@ -2264,9 +2289,26 @@ trait_lithoid_budding = {
                     has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
                 }
             }
+            planet = { has_deposit = d_lithoid_crater }
         }
         divide_over_pop_groups = no
-        bonus_pop_growth = 0.01
+        bonus_pop_growth = 0.04
+    }
+
+    triggered_planet_pop_group_modifier_for_species = {
+        potential = {
+            has_budding_trait = yes
+            exists = planet
+            planet = {
+                OR = {
+                    has_building = building_gaiaseeders_pc_gaia
+                    has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
+                }
+            }
+            NOT = { planet = { has_deposit = d_lithoid_crater } }
+        }
+        divide_over_pop_groups = no
+        bonus_pop_growth = 0.03
     }
 
     slave_cost = {

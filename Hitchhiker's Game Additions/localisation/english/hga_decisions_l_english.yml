@@ -1,0 +1,9 @@
+﻿l_english:
+ hga_cannot_construct_arcology_because_ecology: "We cannot construct an arcology whilst we are already aiming to create an ecology."
+ hga_cannot_construct_ecology_because_arcology: "We cannot construct an ecology whilst we are already aiming to create an arcology."
+
+ hga_grow_planet: "Planetary Accretion"
+ hga_grow_planet_desc: "By bombarding the planet with high-density mineral slurries and organic matter, held together by intense electromagnetic containment fields, we can physically add new layers to the planetary crust. The energy required to stabilize this new mass increases exponentially with the world's existing volume."
+
+ hga_ecology_project: "Synthetic Genesis"
+ hga_ecology_project_desc: "By committing 15,000 units of minerals, energy, and food, we can adapt the natural biosphere of this Gaia world with an optimized, artificial equivalent, maintaining the beauty of nature whilst elevating it to new heights."
