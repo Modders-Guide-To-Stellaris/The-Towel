@@ -25,7 +25,7 @@ pc_hga_ecology = {
     spawn_odds = 0
 
     colonizable = yes
-    district_set = hga_ecology
+    district_set = hga_ecology_world
     ideal = yes
     starting_planet = no
     uses_alternative_skies_for_moons = yes

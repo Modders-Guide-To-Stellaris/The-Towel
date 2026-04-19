@@ -1,0 +1,88 @@
+# common\inline_scripts\districts\hga_ecology_secondary.txt
+
+## Example
+#inline_script = {
+#	script = districts/hga_ecology_secondary
+#	ICON         = district_arcology_housing_secondary
+#	OVERLAY_ICON = GFX_district_housing
+#	SLOT         = slot_ecology_urban_01
+#	CONVERT_TO   = "
+#		district_city
+#		district_nexus
+#		district_hive
+#	"
+#}
+
+icon = $ICON$
+base_buildtime = 600
+exempt_from_ai_planet_specialization = yes
+overlay_icon = $OVERLAY_ICON$
+
+zone_slots = {
+    $SLOT$
+}
+
+show_on_uncolonized = {
+    uses_district_set = hga_ecology_world
+}
+
+potential = {
+    uses_district_set = hga_ecology_world
+}
+
+conversion_ratio = 1
+convert_to = {
+    $CONVERT_TO$
+}
+
+resources = {
+    category = planet_districts
+    cost = {
+        alloys = 500
+    }
+    upkeep = {
+        energy = 5
+    }
+}
+
+planet_modifier = {
+    planet_housing_add = 1500
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { has_active_tradition = tr_prosperity_public_works }
+    }
+    modifier = {
+        planet_housing_add = 300
+    }
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { has_technology = tech_housing_1 }
+    }
+    modifier = {
+        planet_housing_add = 300
+    }
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_housing_2
+            NOT = { has_valid_civic = civic_agrarian_idyll }
+        }
+    }
+    modifier = {
+        planet_housing_add = 300
+    }
+}
+
+triggered_name = {
+    text = district_ecology_name
+}
+# /

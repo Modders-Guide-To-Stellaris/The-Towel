@@ -1,0 +1,154 @@
+# common\zones\hga_ecology_zones.txt
+
+# >- Menials -
+
+hga_zone_food_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_food_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_food_ecology
+        POTENTIAL       = "has_global_flag = hga_ecology_menials_in_play"
+    }
+}
+
+hga_zone_energy_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_energy_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_energy_ecology
+        POTENTIAL       = "has_global_flag = hga_ecology_menials_in_play"
+    }
+}
+
+hga_zone_mineral_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_minerals_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_mineral_ecology
+        POTENTIAL       = "has_global_flag = hga_ecology_menials_in_play"
+    }
+}
+
+# >- Urban -
+
+hga_zone_research_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_research_zone"
+        AMOUNT          = @doubled_scaling_district_3_jobs
+        SWAP_DISTRICT   = district_arcology_research
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_research_physics_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_research_physics_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_research_physics
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_research_society_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_research_society_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_research_society
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_research_engineering_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_research_engineering_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_research_engineering
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_unity_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_unity_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_administrative
+        POTENTIAL       = ""
+    }
+
+    convert_to = {
+        hga_zone_unity_spiritualist_ecology
+    }
+}
+
+hga_zone_unity_spiritualist_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_unity_spiritualist_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_spiritualist
+        POTENTIAL       = ""
+    }
+
+    convert_to = {
+        hga_zone_unity_ecology
+    }
+}
+
+hga_zone_trade_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_trade_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_trade
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_fortress_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_fortress_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_fortress
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_industrial_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_industrial_zone"
+        AMOUNT          = @doubled_scaling_district_2_jobs
+        SWAP_DISTRICT   = district_arcology_mixed_industry
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_foundry_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_industrial_foundry_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_arms_industry
+        POTENTIAL       = ""
+    }
+}
+
+hga_zone_factory_ecology = {
+    inline_script = {
+        script = zones/hga_ecology_zones
+        JOB_ZONE_SCRIPT = "shared_industrial_factory_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = district_arcology_civilian_industry
+        POTENTIAL       = ""
+    }
+}
+# /

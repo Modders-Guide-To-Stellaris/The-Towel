@@ -10,7 +10,7 @@
 icon = $ICON$
 
 potential = {
-    uses_district_set = hga_ecology
+    uses_district_set = hga_ecology_world
     is_capital = no
 }
 
