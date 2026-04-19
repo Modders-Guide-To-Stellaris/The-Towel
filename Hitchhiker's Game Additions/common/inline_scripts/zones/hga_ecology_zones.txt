@@ -2,11 +2,11 @@
 
 ## Example
 #inline_script = {
-#	script = zones/hga_ecology_zone
-#	JOB_ZONE_SCRIPT = "shared_research_zone"
-#	AMOUNT          = @doubled_scaling_district_3_jobs
-#	SWAP_DISTRICT   = district_arcology_research
-#	POTENTIAL       = "has_global_flag = hga_ecology_in_play"
+#	script = zones/hga_ecology_zones
+#	JOB_ZONE_SCRIPT = "shared_food_zone"
+#	AMOUNT          = @doubled_scaling_district_1_job
+#	SWAP_DISTRICT   = hga_district_food_ecology
+#	POTENTIAL       = "has_global_flag = hga_ecology_menials_in_play"
 #}
 
 inline_script = {

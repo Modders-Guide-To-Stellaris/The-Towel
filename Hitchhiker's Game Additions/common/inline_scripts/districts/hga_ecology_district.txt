@@ -2,7 +2,7 @@
 
 ## Example
 #inline_script = {
-#	script = districts/hga_ecology_district_shell
+#	script = districts/hga_ecology_district
 #	ICON              = district_farming
 #	OVERLAY_ICON      = GFX_district_food
 #	RESOURCE_CATEGORY = planet_districts
@@ -24,9 +24,9 @@ icon = $ICON$
 overlay_icon = $OVERLAY_ICON$
 
 zone_slots = {
-    slot_ecology_urban_1
-    slot_ecology_urban_2
-    slot_ecology_urban_3
+    slot_ecology_urban_01
+    slot_ecology_urban_02
+    slot_ecology_urban_03
 }
 
 show_on_uncolonized = {
@@ -73,5 +73,5 @@ prerequisites = {
     $PREREQUISITE$
 }
 
-ai_weight_coefficient = @rural_district_ai_coefficient
+ai_weight_coefficient = @hga_rural_district_ai_coefficient
 # /

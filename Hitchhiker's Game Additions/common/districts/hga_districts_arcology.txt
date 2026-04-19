@@ -11,7 +11,7 @@ hga_district_food_arcology = {
         NAME_SCRIPT       = "districts/district_triggered_name_farming"
         FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_farming"
         PREREQUISITE      = tech_industrial_farming
-        HOUSING_INLINE    = "districts/hga_arcology_housing_food"
+        HOUSING_INLINE    = "districts/hga_arcology_housing_standard"
         CONVERT_TO = "
             district_farming
             district_rw_farming

@@ -1,27 +1,33 @@
-slot_arcology_urban_01 = {
+# common\zone_slots\hga_zone_slots.txt
+
+## Ecology
+slot_ecology_urban_01 = {
     included_zone_sets = {
-        hga_ecology_set
+        hga_ecology
     }
 
     unlock = { # planet scope
         uses_district_set = hga_ecology_world
     }
 }
-slot_arcology_urban_02 = {
+
+slot_ecology_urban_02 = {
     included_zone_sets = {
-        hga_ecology_set
+        hga_ecology
     }
 
     unlock = { # planet scope
         uses_district_set = hga_ecology_world
     }
 }
-slot_arcology_urban_03 = {
+
+slot_ecology_urban_03 = {
     included_zone_sets = {
-        hga_ecology_set
+        hga_ecology
     }
 
     unlock = { # planet scope
         uses_district_set = hga_ecology_world
     }
 }
+# /

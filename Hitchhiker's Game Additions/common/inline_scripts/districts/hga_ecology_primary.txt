@@ -2,7 +2,7 @@
 
 ## Example
 #inline_script = {
-#	script = districts/hga_ecology_primary_shell
+#	script = districts/hga_ecology_primary
 #	OVERLAY_ICON = GFX_district_government
 #	CONVERT_TO   = "
 #		district_city
@@ -16,9 +16,9 @@ exempt_from_ai_planet_specialization = yes
 overlay_icon = $OVERLAY_ICON$
 
 zone_slots = {
-    slot_ecology_city_government
-    slot_ecology_city_01
-    slot_ecology_city_02
+    slot_city_government
+    slot_city_01
+    slot_city_02
 }
 
 show_on_uncolonized = {

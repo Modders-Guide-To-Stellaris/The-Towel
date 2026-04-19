@@ -1,0 +1,18 @@
+# common\inline_scripts\districts\hga_ecology_swapper.txt
+
+## Example
+#inline_script = {
+#	script = districts/hga_ecology_swapper
+#	ICON           = district_arcology_research
+#	OVERLAY_ICON   = GFX_district_research
+#	TRIGGERED_NAME = city_research_1
+#}
+
+icon = $ICON$
+overlay_icon = $OVERLAY_ICON$
+zone_slots = { slot_empty }
+show_on_uncolonized = { always = no }
+potential = { always = no }
+
+triggered_name = { text = $TRIGGERED_NAME$ }
+# /

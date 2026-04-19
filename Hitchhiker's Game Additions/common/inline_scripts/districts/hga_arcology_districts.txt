@@ -1,11 +1,8 @@
 # common\inline_scripts\districts\hga_arcology_districts.txt
-@base_cost = 300
-@city_cost = 500
-@rural_district_ai_coefficient = 0.75
 
 ## Example
 #inline_script = {
-#	script = districts/hga_arcology_district_shell
+#	script = districts/hga_arcology_districts
 #	ICON              = district_farming
 #	OVERLAY_ICON      = GFX_district_food
 #	RESOURCE_CATEGORY = planet_districts
@@ -15,13 +12,10 @@
 #	FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_farming"
 #	PREREQUISITE      = tech_industrial_farming
 #	HOUSING_INLINE    = "districts/hga_arcology_housing_food"
-#	HAS_FOOD_DESTROY  = no
-#   CONVERT_TO        = "
-#       district_farming
-#       district_rw_farming
-#       district_orchard_forests
-#       district_hive_3
-#   "
+#	CONVERT_TO        = "
+#		district_farming
+#		district_rw_farming
+#	"
 #}
 
 expansion_planner = yes
@@ -30,9 +24,9 @@ icon = $ICON$
 overlay_icon = $OVERLAY_ICON$
 
 zone_slots = {
-    slot_arcology_urban_1
-    slot_arcology_urban_2
-    slot_arcology_urban_3
+    slot_arcology_urban_01
+    slot_arcology_urban_02
+    slot_arcology_urban_03
 }
 
 show_on_uncolonized = {
@@ -44,7 +38,7 @@ potential = {
 }
 
 conversion_ratio = 1
-convert_to = convert_to = {
+convert_to = {
     $CONVERT_TO$
 }
 
@@ -64,7 +58,7 @@ inline_script = {
 }
 
 inline_script = {
-    $HOUSING_INLINE$
+    script = $HOUSING_INLINE$
 }
 
 inline_script = {
@@ -79,13 +73,5 @@ prerequisites = {
     $PREREQUISITE$
 }
 
-destroy_trigger = {
-    exists = owner
-    AND = {
-        owner = { is_ai = yes }
-        owner = { country_uses_food = no }
-    }
-}
-
-ai_weight_coefficient = @rural_district_ai_coefficient
+ai_weight_coefficient = @hga_rural_district_ai_coefficient
 # /

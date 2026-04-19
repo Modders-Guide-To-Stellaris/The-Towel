@@ -1,8 +1,10 @@
-# common\districts\hga_ecology_districts.txt
+# common\districts\hga_districts_ecology.txt
 
 # >- Primary -
 
 hga_district_ecology_housing = {
+    icon = district_craglands
+
     inline_script = {
         script = districts/hga_ecology_primary
         OVERLAY_ICON = GFX_district_government
@@ -19,7 +21,7 @@ hga_district_ecology_housing = {
 hga_district_ecology_nature_1 = {
     inline_script = {
         script = districts/hga_ecology_secondary
-        ICON         = district_arcology_housing_secondary
+        ICON         = district_metallic_dew_plains
         OVERLAY_ICON = GFX_district_housing
         SLOT         = slot_ecology_urban_01
         CONVERT_TO   = "
@@ -33,7 +35,7 @@ hga_district_ecology_nature_1 = {
 hga_district_ecology_nature_2 = {
     inline_script = {
         script = districts/hga_ecology_secondary
-        ICON         = district_arcology_housing_secondary
+        ICON         = district_photosynthesis_fields
         OVERLAY_ICON = GFX_district_housing
         SLOT         = slot_ecology_urban_02
         CONVERT_TO   = "
@@ -47,7 +49,7 @@ hga_district_ecology_nature_2 = {
 hga_district_ecology_nature_3 = {
     inline_script = {
         script = districts/hga_ecology_secondary
-        ICON         = district_arcology_housing_secondary
+        ICON         = district_orchard_forests
         OVERLAY_ICON = GFX_district_housing
         SLOT         = slot_ecology_urban_03
         CONVERT_TO   = "
@@ -58,7 +60,7 @@ hga_district_ecology_nature_3 = {
     }
 }
 
-# >- Menials -
+# >- Menials -<
 
 hga_district_food_ecology = {
     inline_script = {
@@ -71,13 +73,48 @@ hga_district_food_ecology = {
         NAME_SCRIPT       = "districts/district_triggered_name_farming"
         FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_farming"
         PREREQUISITE      = tech_industrial_farming
-        HOUSING_INLINE    = "districts/hga_arcology_housing_food"
+        HOUSING_INLINE    = "districts/hga_arcology_housing_standard"
         CONVERT_TO        = "
 			district_farming
 			district_rw_farming
 			district_orchard_forests
 			district_hive_3
 		"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_wilderness_empire = no }
+        }
+        modifier = {
+            planet_housing_add = 200
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 100 ## less because inline handles the other 300 :P
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_agrarian_idyll
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 200
+        }
     }
 
     destroy_trigger = {
@@ -129,6 +166,116 @@ hga_district_mineral_ecology = {
     triggered_planet_modifier = {
         planet_housing_add = 1
         mult = modifier:mining_district_housing_add
+    }
+}
+
+# >- Swappers -
+
+hga_district_ecology_research = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_research
+        OVERLAY_ICON   = GFX_district_research
+        TRIGGERED_NAME = city_research_1
+    }
+}
+
+hga_district_ecology_research_physics = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_research_physics
+        OVERLAY_ICON   = GFX_district_physics
+        TRIGGERED_NAME = city_research_1
+    }
+}
+
+hga_district_ecology_research_society = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_research_society
+        OVERLAY_ICON   = GFX_district_society
+        TRIGGERED_NAME = city_research_1
+    }
+}
+
+hga_district_ecology_research_engineering = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_research_engineering
+        OVERLAY_ICON   = GFX_district_engineering
+        TRIGGERED_NAME = city_research_1
+    }
+}
+
+hga_district_ecology_archives = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_administrative
+        OVERLAY_ICON   = GFX_district_unity
+        TRIGGERED_NAME = hga_district_ecology_archives_name
+    }
+}
+
+hga_district_ecology_unity = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_administrative
+        OVERLAY_ICON   = GFX_district_unity
+        TRIGGERED_NAME = city_bureaucracy_1
+    }
+}
+
+hga_district_ecology_unity_spiritualist = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_spiritualist
+        OVERLAY_ICON   = GFX_district_unity
+        TRIGGERED_NAME = city_temple_1
+    }
+}
+
+hga_district_ecology_industrial = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_mixed_industry
+        OVERLAY_ICON   = GFX_district_mixed_industry
+        TRIGGERED_NAME = city_industrial_1
+    }
+}
+
+hga_district_ecology_foundry = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_arms_industry
+        OVERLAY_ICON   = GFX_district_alloys
+        TRIGGERED_NAME = city_foundry_1
+    }
+}
+
+hga_district_ecology_factory = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_civilian_industry
+        OVERLAY_ICON   = GFX_district_consumer_goods
+        TRIGGERED_NAME = city_factory_1
+    }
+}
+
+hga_district_ecology_trade = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_trade
+        OVERLAY_ICON   = GFX_district_trade
+        TRIGGERED_NAME = city_trade_1
+    }
+}
+
+hga_district_ecology_fortress = {
+    inline_script = {
+        script = districts/hga_ecology_swapper
+        ICON           = district_arcology_fortress
+        OVERLAY_ICON   = GFX_district_fortress
+        TRIGGERED_NAME = city_fortress_1
     }
 }
 # /
