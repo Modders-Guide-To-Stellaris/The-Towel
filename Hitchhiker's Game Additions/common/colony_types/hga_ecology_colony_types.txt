@@ -1,0 +1,258 @@
+# common\colony_types\hga_ecology_colony_types.txt
+
+@stickiness = 10
+@stickiness_low = 5
+@zone_urban = 100
+@zone_rural = 10
+@rural_max_size = 13
+@rural_over_max_size = -20
+
+# Energy
+col_hga_ecology_energy = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_generator
+        MODIFIER = technician_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_energy
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_energy
+                value > 0
+            }
+            add = @zone_rural
+        }
+    }
+}
+
+# Minerals
+col_hga_ecology_minerals = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_mining
+        MODIFIER = miner_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_minerals
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_minerals
+                value > 0
+            }
+            add = @zone_rural
+        }
+    }
+}
+
+# Food
+col_hga_ecology_food = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_farming
+        MODIFIER = farmer_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_food
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_food
+                value > 0
+            }
+            add = @zone_rural
+        }
+    }
+}
+
+# Alloys
+col_hga_ecology_alloys = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_foundry
+        MODIFIER = foundry_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_alloys
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_alloys
+                value > 0
+            }
+            add = @zone_urban
+        }
+    }
+}
+
+# Consumer goods
+col_hga_ecology_consumer_goods = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_factory
+        MODIFIER = artisan_jobs_bonus_workforce_mult
+    }
+
+    potential = {
+        uses_district_set = hga_ecology
+        is_capital = no
+        exists = owner_or_space_owner
+        owner_or_space_owner = { country_uses_consumer_goods = yes }
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_consumer_goods
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_consumer_goods
+                value > 0
+            }
+            add = @zone_urban
+        }
+    }
+}
+
+# Research
+col_hga_ecology_research = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_research
+        MODIFIER = researcher_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_research
+        }
+        modifier = {
+            OR = {
+                num_zones = {
+                    type = zone_hga_research
+                    value > 0
+                }
+                num_zones = {
+                    type = zone_research_engineering
+                    value > 0
+                }
+                num_zones = {
+                    type = zone_research_physics
+                    value > 0
+                }
+                num_zones = {
+                    type = zone_research_society
+                    value > 0
+                }
+            }
+            add = @zone_urban
+        }
+        inline_script = {
+            script = colony_types/shared_weights_research
+        }
+    }
+}
+
+# Trade
+col_hga_ecology_trade = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_urban
+        MODIFIER = trader_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness_low
+            has_designation = col_hga_ecology_trade
+        }
+        modifier = {
+            num_zones = {
+                type = zone_trade
+                value > 0
+            }
+            add = @zone_rural
+        }
+    }
+}
+
+# Unity
+col_hga_ecology_unity = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_unity
+        MODIFIER = bureaucrat_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_unity
+        }
+        modifier = {
+            num_zones = {
+                type = zone_hga_unity
+                value > 0
+            }
+            add = @zone_urban
+        }
+    }
+}
+
+# Industrial (alloys + consumer goods combined, gated on consumer goods)
+col_hga_ecology_industrial = {
+    inline_script = {
+        script = colony_types/hga_ecology_designations
+        ICON     = GFX_colony_type_industrial
+        MODIFIER = artisan_jobs_bonus_workforce_mult
+    }
+
+    potential = {
+        uses_district_set = hga_ecology
+        is_capital = no
+        exists = owner_or_space_owner
+        owner_or_space_owner = { country_uses_consumer_goods = yes }
+    }
+
+    inline_script = {
+        script = colony_types/colony_type_planet_modifier_split
+        MODIFIER  = artisan_jobs_bonus_workforce_mult
+        MODIFIER2 = foundry_jobs_bonus_workforce_mult
+    }
+
+    weight_modifier = {
+        modifier = {
+            add = @stickiness
+            has_designation = col_hga_ecology_industrial
+        }
+        modifier = {
+            OR = {
+                num_zones = {
+                    type = zone_hga_alloys
+                    value > 0
+                }
+                num_zones = {
+                    type = zone_hga_consumer_goods
+                    value > 0
+                }
+            }
+            add = @zone_urban
+        }
+    }
+}

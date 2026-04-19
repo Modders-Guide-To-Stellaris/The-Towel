@@ -1,0 +1,20 @@
+# common\inline_scripts\colony_types\hga_ecology_designations.txt
+
+## Usage
+#inline_script = {
+#	script = colony_types/hga_ecology_designation
+#	ICON     = GFX_colony_type_generator
+#	MODIFIER = technician_jobs_bonus_workforce_mult
+#}
+
+icon = $ICON$
+
+potential = {
+    uses_district_set = hga_ecology
+    is_capital = no
+}
+
+inline_script = {
+    script = colony_types/colony_type_planet_modifier
+    MODIFIER = $MODIFIER$
+}
