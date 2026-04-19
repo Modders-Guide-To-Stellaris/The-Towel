@@ -1,5 +1,4 @@
 hga_grow_planet = {
-    icon = decision_baol_life_seed
     enactment_time = @hga_grow_planet_time
 
     potential = {
@@ -60,7 +59,7 @@ hga_grow_planet = {
 }
 
 hga_ecology_project = {
-    icon = decision_arcology_project
+    icon = decision_resort_colony
     enactment_time = @hga_ecology_decision_time
 
     potential = {
@@ -84,7 +83,7 @@ hga_ecology_project = {
         }
         custom_tooltip = {
             fail_text = hga_cannot_construct_ecology_because_arcology
-            has_planet_flag = arcology_project_construction
+            NOT = { has_planet_flag = arcology_project_construction }
         }
     }
 
