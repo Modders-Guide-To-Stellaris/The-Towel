@@ -629,26 +629,26 @@ country_event = {
 
 	option = {
 		trigger = {
-			NOT = { has_global_flag = hga_ecology_worlds_in_play }
+			NOT = { has_global_flag = hga_ecology_world_in_play }
 		}
 
 		name = hga_menu.110.ecology_worlds_off
 		custom_tooltip = hga_menu.110.ecology_worlds_offTT
 		hidden_effect = {
-			set_global_flag = hga_ecology_worlds_in_play
+			set_global_flag = hga_ecology_world_in_play
 			country_event = { id = hga_menu.110 }
 		}
 	}
 
 	option = {
 		trigger = {
-			has_global_flag = hga_ecology_worlds_in_play
+			has_global_flag = hga_ecology_world_in_play
 		}
 
 		name = hga_menu.110.ecology_worlds_on
 		custom_tooltip = hga_menu.110.ecology_worlds_onTT
 		hidden_effect = {
-			remove_global_flag = hga_ecology_worlds_in_play
+			remove_global_flag = hga_ecology_world_in_play
 			country_event = { id = hga_menu.110 }
 		}
 	}

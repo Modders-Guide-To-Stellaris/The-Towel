@@ -2,7 +2,7 @@
 # Authors: HGA
 
 l_english:
- hga_allow_ecology: "Unlocks the §YAlvanian Ecogenesis§! planetary decision.\n\nThis allow us to initiate the §Y'Synthetic Genesis'§! project on §YGaia Worlds§!, transforming them into §YAlvanian Ecologies§!; post-natural masterpieces where every leaf and breeze is tuned for the benefit of our civilization."
+ hga_allow_ecology: "\nUnlocks the §YAlvanian Ecogenesis§! planetary decision.\n\nThis allow us to initiate the §Y'Synthetic Genesis'§! project on §YGaia Worlds§!, transforming them into §YAlvanian Ecologies§!; post-natural masterpieces where every leaf and breeze is tuned for the benefit of our civilization."
 
  hga_fail_gaia_by_hive: "$TRIGGER_FAIL$ Our empire cannot focus on gaia worlds and create ['ascension_perk:ap_hive_worlds']"
  hga_fail_hive_by_gaia: "$TRIGGER_FAIL$ Our empire cannot focus on hive worlds and be a ['ascension_perk:ap_world_shaper']"

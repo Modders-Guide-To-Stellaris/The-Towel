@@ -28,7 +28,7 @@ hga_grow_planet = {
     resources = {
         category = decisions
         cost = {
-            influence = 50
+            influence = 25
         }
 
         cost = {
@@ -90,7 +90,7 @@ hga_ecology_project = {
     resources = {
         category = decisions
         cost = {
-            influence = 100
+            influence = 200
             energy = 15000
             minerals = 15000
             food = 15000
@@ -110,7 +110,7 @@ hga_ecology_project = {
     effect = {
         remove_planet_flag = ecology_project_construction
 
-        custom_tooltip = decision_arcology_project_effects ## todo: change that lol
+        custom_tooltip = decision_hga_ecology_project_effects
         hidden_effect = {
             save_deposits = yes
             clear_deposits = yes
@@ -127,7 +127,7 @@ hga_ecology_project = {
                 country_event = { id = distar.201 }
             }
 
-            planet_event = { id = mega.200 } ## todo: change that lol
+            planet_event = { id = hga_planetary_features.200 }
         }
     }
 
