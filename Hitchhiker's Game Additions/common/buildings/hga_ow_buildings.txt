@@ -1,3 +1,83 @@
+building_gaiaseeders_1 = {
+    base_buildtime = @b2_time
+    planet_limit = 1
+    can_be_disabled = no
+    upgrades = { "building_gaiaseeders_2" }
+
+    category = government
+
+    building_sets = {
+        government
+        urban
+    }
+
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = default
+            is_idyllic_bloom_empire = yes
+        }
+        NOR = {
+            is_planet_class = pc_hga_ecology
+            is_planet_class = pc_gaia
+            is_planet_class = pc_city
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_relic
+        }
+        is_artificial = no
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    destroy_trigger = {
+        OR = {
+            is_planet_class = pc_gaia	# No double bonuses if player uses other tools to turn it into a Gaia world.
+            is_planet_class = pc_city
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_relic
+            NOT = { exists = owner }
+            owner = {
+                is_idyllic_bloom_empire = no
+            }
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1500
+            multiplier = value:gaiaseeder_cost_mult
+        }
+
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            biomass = 200
+        }
+
+        upkeep = {
+            energy = 20
+            multiplier = value:gaiaseeder_upkeep
+        }
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    planet_modifier = {
+        logistic_growth_mult = 0.1
+    }
+}
+
 building_gaiaseeders_4 = {
     base_buildtime = @b2_time
     can_build = no
@@ -133,8 +213,6 @@ building_gaiaseeders_pc_gaia = {
     }
 
     potential = {
-        host_has_dlc = "plantoids species pack"
-
         hidden_trigger = {
             exists = owner
             owner = {

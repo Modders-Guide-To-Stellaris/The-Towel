@@ -90,12 +90,14 @@ hga_zone_unity_ecology = {
         JOB_ZONE_SCRIPT = "shared_unity_zone"
         AMOUNT          = @doubled_scaling_district_1_job
         SWAP_DISTRICT   = hga_district_ecology_unity
-        POTENTIAL       = "owner = {
-            OR = {
-                has_ethic = ethic_spiritualist
-                has_ethic = ethic_fanatic_spiritualist
+        POTENTIAL       = "
+            owner = {
+                NOR = {
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
             }
-        }"
+        "
     }
 
     convert_to = {
@@ -109,7 +111,14 @@ hga_zone_unity_spiritualist_ecology = {
         JOB_ZONE_SCRIPT = "shared_unity_spiritualist_zone"
         AMOUNT          = @doubled_scaling_district_1_job
         SWAP_DISTRICT   = hga_district_ecology_unity_spiritualist
-        POTENTIAL       = ""
+        POTENTIAL       = "
+            owner = {
+                OR = {
+                    has_ethic = ethic_spiritualist
+                    has_ethic = ethic_fanatic_spiritualist
+                }
+            }
+        "
     }
 
     convert_to = {
