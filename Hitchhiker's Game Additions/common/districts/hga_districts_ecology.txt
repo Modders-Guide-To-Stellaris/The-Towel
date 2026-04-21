@@ -212,7 +212,7 @@ hga_district_ecology_archives = {
         script = districts/hga_ecology_swapper
         ICON           = district_arcology_administrative
         OVERLAY_ICON   = GFX_district_unity
-        TRIGGERED_NAME = hga_district_ecology_archives_name
+        TRIGGERED_NAME = city_archive_1
     }
 }
 

@@ -8,7 +8,9 @@ hga_grow_planet = {
 
                 if = {
                     limit = {
-                        is_wilderness_empire = yes
+                        owner = {
+                            is_wilderness_empire = yes
+                        }
                     }
 
                     planet_size < 40
@@ -151,7 +153,6 @@ hga_ecology_project = {
                     OR = {
                         has_civic = civic_idyllic_bloom
                         has_civic = civic_hive_idyllic_bloom
-                        has_civic = civic_wilderness_idyllic_bloom
                     }
                 }
             }

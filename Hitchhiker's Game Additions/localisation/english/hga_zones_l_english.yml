@@ -45,6 +45,7 @@
  hga_zone_research_engineering_ecology_plural: "Geo-Engineering Campuses"
  hga_zone_research_engineering_ecology_desc: "A localized testing site for material sciences and architectural design."
 
+ city_archive_1:"$hga_zone_archives_ecology$"
  hga_zone_archives_ecology: "Archive Vault"
  hga_zone_archives_ecology_plural: "Archive Vaults"
  hga_zone_archives_ecology_desc: "A localized, climate-controlled library blending natural beauty with the preservation of our civilization's records."

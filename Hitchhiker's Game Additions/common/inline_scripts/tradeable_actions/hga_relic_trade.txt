@@ -22,11 +22,6 @@
 			}
 		}
 
-		# Prevent trade while a seize war is active for this relic
-		possible = {
-			NOT = { has_country_flag = $FLAG_KEY$ }
-		}
-
 		on_traded_effect = {
 			remove_relic = $RELIC_ID$
 			from = { add_relic = $RELIC_ID$ }
