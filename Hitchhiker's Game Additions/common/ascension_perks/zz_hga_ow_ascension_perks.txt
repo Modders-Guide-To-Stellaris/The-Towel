@@ -62,6 +62,13 @@ ap_world_shaper = {
             fail_text = "hga_fail_gaia_by_hive"
             NOT = { has_ascension_perk = ap_hive_worlds }
         }
+        custom_tooltip = {
+            fail_text = "hga_no_gaia_and_ecu"
+            NOT = {
+                has_ascension_perk = ap_arcology_project
+                has_global_flag = hga_ecology_world_in_play
+            }
+        }
     }
 
     modifier = {
@@ -69,23 +76,27 @@ ap_world_shaper = {
         add_attunement_the_composer_of_strands = 30
     }
 
-    triggered_modifier = {
-        potential = {
+    on_enabled = {
+        custom_tooltip = "allow_gaia"
+    }
+
+    tradition_swap = {
+        inherit_name = yes
+        inherit_effects = yes
+        inherit_icon = yes
+        trigger = {
             has_global_flag = hga_ecology_world_in_play
         }
 
-        planetary_ascension_effect_mult = 1
-        ## MOVE TO CUSTOM DESIGNATIONS
-    }
+        modifier = {
+            planetary_ascension_effect_mult = @ecology_ap_ascension_effect_mult
+        }
 
-    on_enabled = {
-        custom_tooltip = "allow_gaia"
-        if = {
-            limit = {
-                has_global_flag = hga_ecology_world_in_play
-            }
+        on_enabled = {
             custom_tooltip = hga_allow_ecology
         }
+
+        weight = { factor = 1 }
     }
 
     potential = {
@@ -128,6 +139,67 @@ ap_world_shaper = {
         modifier = { #only way to get more nice planets
             factor = 100
             has_origin = origin_life_seeded
+        }
+    }
+}
+
+ap_arcology_project = {
+    potential = {
+        host_has_dlc = "Megacorp"
+        OR = {
+            is_regular_empire = yes
+            has_valid_civic = civic_machine_servitor
+        }
+        NOT = { has_valid_civic = civic_agrarian_idyll }
+        NOT = {
+            has_ascension_perk = ap_arcology_project
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_housing_2"
+            has_technology = tech_housing_2
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "hga_no_gaia_and_ecu"
+            NOT = {
+                has_ascension_perk = ap_world_shaper
+                has_global_flag = hga_ecology_world_in_play
+            }
+        }
+    }
+
+    on_enabled = {
+        custom_tooltip = "allow_arcology_project"
+        custom_tooltip = "decision_arcology_project_effects"
+    }
+
+    modifier = {
+        add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
+    }
+
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_materialist
         }
     }
 }

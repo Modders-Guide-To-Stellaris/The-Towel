@@ -24,13 +24,13 @@ special_project = {
                 50 = {
                     ship_event = {
                         id = hga_modifier.12 #normal random planet
-                        days = 15
+                        days = @duration_project_short
                     }
                 }
                 50 = {
                     ship_event = {
                         id = hga_modifier.13 #gaia
-                        days = 15
+                        days = @duration_project_short
                     }
                 }
             }
@@ -38,7 +38,7 @@ special_project = {
         else = {
             ship_event = {
                 id = hga_modifier.12
-                days = 15
+                days = @duration_project_short
             }
         }
     }

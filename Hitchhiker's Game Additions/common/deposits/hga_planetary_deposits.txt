@@ -2,7 +2,7 @@ d_hga_crystalline_wonder = {
     is_for_colonizable = yes
     category = deposit_cat_rare_resource
 
-    icon = "GFX_deposit_d_crystal_reef"
+    icon = "d_crystalline_caverns"
 
     triggered_planet_modifier = {
         potential = {

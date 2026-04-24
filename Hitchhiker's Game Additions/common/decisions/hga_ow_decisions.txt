@@ -278,10 +278,23 @@ decision_wilderness_expand = {
         OR = {
             planet_size < @habitable_planet_max_size
             AND = {
+                NOT = { is_planet_class = pc_hga_ecology }
                 owner = { has_tradition = tr_purity_stage_3_swap }
                 planet_size < 30
             }
+            AND = {
+                ## Wilderness can just grow ecologies without having to have the AP.. I guess? They're just that skilled
+                NOT = { owner = { has_tradition = tr_purity_stage_3_swap } }
+                is_planet_class = pc_hga_ecology
+                planet_size < @size_max_ecology_planet_wilderness
+            }
+            AND = {
+                owner = { has_tradition = tr_purity_stage_3_swap }
+                is_planet_class = pc_hga_ecology
+                planet_size < @size_max_ecology_planet_purity_wilderness
+            }
         }
+
     }
 
     resources = {
@@ -291,7 +304,7 @@ decision_wilderness_expand = {
             mult = value:wilderness_planet_size_mod
         }
         cost = {
-            influence = 25
+            influence = @grow_planet_decision_base_cost_infl
         }
     }
 

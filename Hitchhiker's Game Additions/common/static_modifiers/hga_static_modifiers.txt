@@ -74,7 +74,7 @@ hga_beauty_hidden_gaia = {
 hga_beauty_reconsecrated_country = {
     country_unity_produces_mult = 0.05
 
-    icon = "gfx/interface/icons/modifiers/mod_country_unity_produces_mult.dds"
+    icon = "gfx/interface/icons/modifiers/mod_unity_produces_mult.dds"
     icon_frame = 1
 }
 # /
