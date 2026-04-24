@@ -64,8 +64,8 @@ ap_world_shaper = {
         }
         custom_tooltip = {
             fail_text = "hga_no_gaia_and_ecu"
-            NOT = {
-                has_ascension_perk = ap_arcology_project
+            AND = {
+                NOT = { has_ascension_perk = ap_arcology_project }
                 has_global_flag = hga_ecology_world_in_play
             }
         }
@@ -82,18 +82,23 @@ ap_world_shaper = {
 
     tradition_swap = {
         inherit_name = yes
-        inherit_effects = yes
+        inherit_effects = no
         inherit_icon = yes
         trigger = {
-            has_global_flag = hga_ecology_world_in_play
+            no_scope = {
+                has_global_flag = hga_ecology_world_in_play
+            }
         }
 
         modifier = {
+            terraforming_cost_mult = -0.25
             planetary_ascension_effect_mult = @ecology_ap_ascension_effect_mult
+            add_attunement_the_composer_of_strands = 30
         }
 
         on_enabled = {
-            custom_tooltip = hga_allow_ecology
+            custom_tooltip = "allow_gaia"
+            custom_tooltip = "hga_allow_ecology"
         }
 
         weight = { factor = 1 }
@@ -167,8 +172,8 @@ ap_arcology_project = {
         }
         custom_tooltip = {
             fail_text = "hga_no_gaia_and_ecu"
-            NOT = {
-                has_ascension_perk = ap_world_shaper
+            AND = {
+                NOT = { has_ascension_perk = ap_world_shaper }
                 has_global_flag = hga_ecology_world_in_play
             }
         }
