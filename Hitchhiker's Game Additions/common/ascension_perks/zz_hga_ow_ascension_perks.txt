@@ -66,7 +66,7 @@ ap_world_shaper = {
             fail_text = "hga_no_gaia_and_ecu"
             NAND = {
                 has_global_flag = hga_ecology_world_in_play
-                NOT = { has_ascension_perk = ap_arcology_project }
+                has_ascension_perk = ap_arcology_project
             }
         }
     }
@@ -77,7 +77,8 @@ ap_world_shaper = {
     }
 
     tradition_swap = {
-        name = ap_world_shaper
+        name = ap_world_shaper_ecology
+        custom_tooltip = hga_allow_ecology
         inherit_name = no
         inherit_effects = no
         inherit_icon = yes
@@ -89,12 +90,9 @@ ap_world_shaper = {
 
         modifier = {
             terraforming_cost_mult = -0.25
-            planetary_ascension_effect_mult = @ecology_ap_ascension_effect_mult
+            # disabled cuz soncio is being a baby
+            # planetary_ascension_effect_mult = @ecology_ap_ascension_effect_mult
             add_attunement_the_composer_of_strands = 30
-        }
-
-        on_enabled = {
-            custom_tooltip = "hga_allow_ecology"
         }
 
         weight = { factor = 1 }
@@ -174,7 +172,7 @@ ap_arcology_project = {
             fail_text = "hga_no_gaia_and_ecu"
             NAND = {
                 has_global_flag = hga_ecology_world_in_play
-                NOT = { has_ascension_perk = ap_world_shaper }
+                has_ascension_perk = ap_world_shaper
             }
         }
     }
