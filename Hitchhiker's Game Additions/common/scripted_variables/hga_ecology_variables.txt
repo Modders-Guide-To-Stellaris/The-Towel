@@ -5,7 +5,7 @@
 @base_cost = 300
 @city_cost = 500
 
-@ecology_ap_ascension_effect_mult = 1
+@ecology_ap_ascension_effect_mult = 0.25
 
 @grow_planet_decision_base_cost = 10
 @grow_planet_decision_base_cost_infl = 25 ##also affects wilderness :P

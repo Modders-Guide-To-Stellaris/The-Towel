@@ -64,9 +64,9 @@ ap_world_shaper = {
         }
         custom_tooltip = {
             fail_text = "hga_no_gaia_and_ecu"
-            AND = {
-                NOT = { has_ascension_perk = ap_arcology_project }
+            NAND = {
                 has_global_flag = hga_ecology_world_in_play
+                NOT = { has_ascension_perk = ap_arcology_project }
             }
         }
     }
@@ -76,12 +76,9 @@ ap_world_shaper = {
         add_attunement_the_composer_of_strands = 30
     }
 
-    on_enabled = {
-        custom_tooltip = "allow_gaia"
-    }
-
     tradition_swap = {
-        inherit_name = yes
+        name = ap_world_shaper
+        inherit_name = no
         inherit_effects = no
         inherit_icon = yes
         trigger = {
@@ -97,11 +94,14 @@ ap_world_shaper = {
         }
 
         on_enabled = {
-            custom_tooltip = "allow_gaia"
             custom_tooltip = "hga_allow_ecology"
         }
 
         weight = { factor = 1 }
+    }
+
+    on_enabled = {
+        custom_tooltip = "allow_gaia"
     }
 
     potential = {
@@ -172,9 +172,9 @@ ap_arcology_project = {
         }
         custom_tooltip = {
             fail_text = "hga_no_gaia_and_ecu"
-            AND = {
-                NOT = { has_ascension_perk = ap_world_shaper }
+            NAND = {
                 has_global_flag = hga_ecology_world_in_play
+                NOT = { has_ascension_perk = ap_world_shaper }
             }
         }
     }
