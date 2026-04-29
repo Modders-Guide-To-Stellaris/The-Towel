@@ -103,9 +103,9 @@ hga_ecology_project = {
 
         custom_tooltip = decision_hga_ecology_project_effects
         hidden_effect = {
-            save_deposits = yes
-            clear_deposits = yes
-            restore_saved_deposits = yes
+            # save_deposits = yes
+            # clear_deposits = yes
+            # restore_saved_deposits = yes
             change_pc = pc_hga_ecology
 
             set_planet_entity = {
