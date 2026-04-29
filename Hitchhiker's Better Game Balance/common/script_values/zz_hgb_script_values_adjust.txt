@@ -1,6 +1,6 @@
 
 
-#Removed cap on growth factor to incentivize crisis playstile
+#Removed cap on growth factor to incentivize crisis playstile Behemoth
 growth_factor = {
 	base = 0
 	add = owner.growth_factor_variable
@@ -12,7 +12,7 @@ growth_factor = {
 	#max = 6.55
 }
 
-#Reduced negative empire size impact on growth
+#Reduced negative empire size impact on growth Behemoth
 negative_empire_size_percent = {
 	base = 0.001
 	mult = trigger:empire_size
