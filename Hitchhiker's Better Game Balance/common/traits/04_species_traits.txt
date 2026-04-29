@@ -2249,8 +2249,8 @@ trait_lithoid_budding = {
         potential = {
             has_budding_trait = yes
             exists = planet
-            NOR = {
-                planet = {
+            planet = {
+                NOR = {
                     has_deposit = d_lithoid_crater
                     OR = {
                         has_building = building_gaiaseeders_pc_gaia
@@ -2267,11 +2267,9 @@ trait_lithoid_budding = {
             has_budding_trait = yes
             exists = planet
             planet = {
-                NOT = {
-                    OR = {
-                        has_building = building_gaiaseeders_pc_gaia
-                        has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
-                    }
+                NOR = {
+                    has_building = building_gaiaseeders_pc_gaia
+                    has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
                 }
                 has_deposit = d_lithoid_crater
             }
@@ -2288,8 +2286,8 @@ trait_lithoid_budding = {
                     has_building = building_gaiaseeders_pc_gaia
                     has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
                 }
+                has_deposit = d_lithoid_crater
             }
-            planet = { has_deposit = d_lithoid_crater }
         }
         divide_over_pop_groups = no
         bonus_pop_growth = 0.04
@@ -2304,8 +2302,8 @@ trait_lithoid_budding = {
                     has_building = building_gaiaseeders_pc_gaia
                     has_building = building_gaiaseeders_4 # Not sure if this is right but im keeping it here incase it is (otherwise its a buff ig)
                 }
+                NOT = { has_deposit = d_lithoid_crater }
             }
-            NOT = { planet = { has_deposit = d_lithoid_crater } }
         }
         divide_over_pop_groups = no
         bonus_pop_growth = 0.03
