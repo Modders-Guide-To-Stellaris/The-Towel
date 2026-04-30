@@ -2122,12 +2122,11 @@ trait_plantoid_budding = {
         potential = {
             has_budding_trait = yes
             exists = planet
-                planet = {
-                    NOT = {
-                        OR = {
-                            has_building = building_gaiaseeders_pc_gaia
-                            has_building = building_gaiaseeders_4
-                        }
+            planet = {
+                NOT = {
+                    OR = {
+                        has_building = building_gaiaseeders_pc_gaia
+                        has_building = building_gaiaseeders_4
                     }
                 }
             }
