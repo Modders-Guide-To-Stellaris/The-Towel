@@ -253,6 +253,7 @@ auth_imperial = {
         }
         modifier = {
             custom_tooltip = auth_shroud_imperial_transcendent_tt
+            psionic_pop
             psionic_aura_hyperlane_range_add = 2
             envoy_improve_relations_mult = 0.50
             envoy_harm_relations_mult = 0.50
@@ -272,7 +273,7 @@ auth_imperial = {
         }
         modifier = {
             custom_tooltip = auth_shroud_imperial_corporeal_tt
-            # psionic_pop_bonus_workforce_mult = -0.2 DISABLED
+            psionic_pop_bonus_workforce_mult = -0.2 DISABLED
             psionic_aura_effectiveness_mult = 0.25
             envoy_improve_relations_mult = 0.50
             envoy_harm_relations_mult = 0.50
