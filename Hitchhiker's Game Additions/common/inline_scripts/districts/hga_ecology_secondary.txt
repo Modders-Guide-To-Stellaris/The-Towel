@@ -38,7 +38,8 @@ convert_to = {
 resources = {
     category = planet_districts
     cost = {
-        alloys = 500
+        minerals = 500
+        multiplier = $DISTRICT_COST_MULT$
     }
     upkeep = {
         energy = 5

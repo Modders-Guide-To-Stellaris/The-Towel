@@ -13,6 +13,7 @@ hga_district_ecology_housing = {
 			district_nexus
 			district_hive
 		"
+        DISTRICT_COST_MULT = 2
     }
 }
 
@@ -29,6 +30,7 @@ hga_district_ecology_nature_1 = {
 			district_nexus
 			district_hive
 		"
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -43,6 +45,7 @@ hga_district_ecology_nature_2 = {
 			district_nexus
 			district_hive
 		"
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -57,6 +60,7 @@ hga_district_ecology_nature_3 = {
 			district_nexus
 			district_hive
 		"
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -80,6 +84,7 @@ hga_district_food_ecology = {
 			district_orchard_forests
 			district_hive_3
 		"
+        DISTRICT_COST_MULT = 1
     }
 
     triggered_planet_modifier = {
@@ -139,6 +144,7 @@ hga_district_energy_ecology = {
         PREREQUISITE      = tech_power_plant_1
         HOUSING_INLINE    = "districts/hga_arcology_housing_standard"
         CONVERT_TO        = "district_generator"
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -161,6 +167,7 @@ hga_district_mineral_ecology = {
 			district_hive_2
 			district_melting
 		"
+        DISTRICT_COST_MULT = 1
     }
 
     triggered_planet_modifier = {
@@ -177,6 +184,7 @@ hga_district_ecology_research = {
         ICON           = district_arcology_research
         OVERLAY_ICON   = GFX_district_research
         TRIGGERED_NAME = city_research_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -186,6 +194,7 @@ hga_district_ecology_research_physics = {
         ICON           = district_arcology_research_physics
         OVERLAY_ICON   = GFX_district_physics
         TRIGGERED_NAME = city_research_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -195,6 +204,7 @@ hga_district_ecology_research_society = {
         ICON           = district_arcology_research_society
         OVERLAY_ICON   = GFX_district_society
         TRIGGERED_NAME = city_research_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -204,6 +214,7 @@ hga_district_ecology_research_engineering = {
         ICON           = district_arcology_research_engineering
         OVERLAY_ICON   = GFX_district_engineering
         TRIGGERED_NAME = city_research_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -213,6 +224,7 @@ hga_district_ecology_archives = {
         ICON           = district_arcology_administrative
         OVERLAY_ICON   = GFX_district_unity
         TRIGGERED_NAME = city_archive_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -222,6 +234,7 @@ hga_district_ecology_unity = {
         ICON           = district_arcology_administrative
         OVERLAY_ICON   = GFX_district_unity
         TRIGGERED_NAME = city_bureaucracy_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -231,6 +244,7 @@ hga_district_ecology_unity_spiritualist = {
         ICON           = district_arcology_spiritualist
         OVERLAY_ICON   = GFX_district_unity
         TRIGGERED_NAME = city_temple_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -240,6 +254,7 @@ hga_district_ecology_industrial = {
         ICON           = district_arcology_mixed_industry
         OVERLAY_ICON   = GFX_district_mixed_industry
         TRIGGERED_NAME = city_industrial_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -249,6 +264,7 @@ hga_district_ecology_foundry = {
         ICON           = district_arcology_arms_industry
         OVERLAY_ICON   = GFX_district_alloys
         TRIGGERED_NAME = city_foundry_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -258,6 +274,7 @@ hga_district_ecology_factory = {
         ICON           = district_arcology_civilian_industry
         OVERLAY_ICON   = GFX_district_consumer_goods
         TRIGGERED_NAME = city_factory_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -267,6 +284,7 @@ hga_district_ecology_trade = {
         ICON           = district_arcology_trade
         OVERLAY_ICON   = GFX_district_trade
         TRIGGERED_NAME = city_trade_1
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -276,6 +294,7 @@ hga_district_ecology_fortress = {
         ICON           = district_arcology_fortress
         OVERLAY_ICON   = GFX_district_fortress
         TRIGGERED_NAME = city_fortress_1
+        DISTRICT_COST_MULT = 1
     }
 }
 # /
