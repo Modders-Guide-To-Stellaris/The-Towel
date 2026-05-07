@@ -1889,6 +1889,25 @@ trait_plantoid_bloomed = {
                     is_planet_class = pc_gaia
                     is_planet_class = pc_hga_ecology
                 }
+                OR = {
+                    has_active_building = building_gaiaseeders_4
+                    has_active_building = building_gaiaseeders_pc_gaia
+                }
+            }
+        }
+        pop_bonus_workforce_mult = 0.15
+        pop_amenities_usage_mult = -0.15
+        pop_housing_usage_mult = -0.15
+    }
+
+    triggered_pop_group_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                OR = { ## HGA
+                    is_planet_class = pc_gaia
+                    is_planet_class = pc_hga_ecology
+                }
                 NOR = {
                     has_active_building = building_gaiaseeders_4
                     has_active_building = building_gaiaseeders_pc_gaia
@@ -1912,28 +1931,8 @@ trait_plantoid_bloomed = {
                     has_active_building = building_gaiaseeders_pc_gaia
                 }
             }
-        }
-        pop_bonus_workforce_mult = 0.15
-        pop_amenities_usage_mult = -0.15
-        pop_housing_usage_mult = -0.15
-    }
-
-    triggered_pop_group_modifier = {
-        potential = {
-            exists = planet
-            planet = {
-                OR = { ## HGA
-                    is_planet_class = pc_gaia
-                    is_planet_class = pc_hga_ecology
-                }
-                OR = {
-                    has_active_building = building_gaiaseeders_4
-                    has_active_building = building_gaiaseeders_pc_gaia
-                }
-            }
             has_hitchhiker_better_game_balance = yes
         }
-        logistic_growth_mult = 0.15
         bonus_pop_growth_mult = 0.15 # ADDED
     }
 
@@ -1942,6 +1941,7 @@ trait_plantoid_bloomed = {
             exists = planet
             planet = {
                 is_planet_class = pc_gaia
+                is_planet_class = pc_hga_ecology
                 NOR = {
                     has_active_building = building_gaiaseeders_4
                     has_active_building = building_gaiaseeders_pc_gaia
@@ -1949,7 +1949,6 @@ trait_plantoid_bloomed = {
             }
         }
         logistic_growth_mult = 0.1
-        bonus_pop_growth_mult = 0.1 # ADDED
     }
 
     triggered_planet_growth_habitability_modifier = {
@@ -1957,6 +1956,7 @@ trait_plantoid_bloomed = {
             exists = planet
             planet = {
                 is_planet_class = pc_gaia
+                is_planet_class = pc_hga_ecology
                 OR = {
                     has_active_building = building_gaiaseeders_4
                     has_active_building = building_gaiaseeders_pc_gaia
