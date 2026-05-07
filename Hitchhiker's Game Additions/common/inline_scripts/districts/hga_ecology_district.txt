@@ -45,7 +45,7 @@ convert_to = {
 resources = {
     category = $RESOURCE_CATEGORY$
     cost = {
-        minerals = 500
+        alloys = 500
         multiplier = $DISTRICT_COST_MULT$
     }
     upkeep = {

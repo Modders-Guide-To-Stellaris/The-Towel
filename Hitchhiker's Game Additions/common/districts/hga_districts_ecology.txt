@@ -13,7 +13,7 @@ hga_district_ecology_housing = {
 			district_nexus
 			district_hive
 		"
-        DISTRICT_COST_MULT = 2
+        DISTRICT_COST_MULT = 1
     }
 }
 
@@ -222,7 +222,7 @@ hga_district_ecology_archives = {
     inline_script = {
         script = districts/hga_ecology_swapper
         ICON           = district_arcology_administrative
-        OVERLAY_ICON   = GFX_district_unity
+        OVERLAY_ICON   = GFX_district_archives
         TRIGGERED_NAME = city_archive_1
         DISTRICT_COST_MULT = 1
     }
