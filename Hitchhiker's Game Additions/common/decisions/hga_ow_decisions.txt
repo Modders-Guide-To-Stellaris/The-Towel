@@ -356,3 +356,222 @@ decision_wilderness_expand = {
         }
     }
 }
+
+
+# >- Special Colony -<
+decision_penal_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_penal_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        NOT = { has_modifier = resort_colony }
+        NOT = { has_modifier = slave_colony }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { is_planet_class = pc_city }
+        NOT = { is_planet_class = pc_hga_ecology }
+        NOT = {
+            owner = {
+                any_owned_planet = { has_modifier = penal_colony }
+            }
+        }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    effect = {
+        add_modifier = {
+            modifier = penal_colony
+            days = -1
+        }
+        owner = {
+            if = {
+                limit = {
+                    is_twisted_experimenters_empire = yes
+                    NOT = { has_modifier = penal_experimental_sentencing }
+                }
+                add_modifier = {
+                    modifier = penal_experimental_sentencing
+                    days = -1
+                }
+            }
+        }
+
+        hidden_effect = { validate_planet_buildings_and_districts = yes }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_slave_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_slave_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        ## the hell is going on here lol
+        NOT = { is_planet_class = pc_city }
+        NOT = { is_planet_class = pc_hga_ecology }
+        NOT = { has_modifier = resort_colony }
+        NOT = { has_modifier = penal_colony }
+        NOT = { has_modifier = slave_colony }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = decision_slave_colony_must_have_slave
+            any_owned_pop_group = {
+                has_citizenship_type = { type = citizenship_slavery country = owner }
+            }
+        }
+        custom_tooltip = {
+            fail_text = decision_resort_colony_no_districts
+            num_districts = { type = any value < 2 }
+            num_buildings = { type = any value < 2 }
+        }
+    }
+
+    effect = {
+        custom_tooltip = decision_slave_colony_effects
+        add_modifier = {
+            modifier = slave_colony
+            days = -1
+        }
+        hidden_effect = { validate_planet_buildings_and_districts = yes }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_resort_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_resort_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        NOR = {
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+            is_planet_class = pc_city
+            is_planet_class = pc_hga_ecology
+            AND = {
+                is_planet_class = pc_nuked
+                NOR = {
+                    owner = {
+                        OR = {
+                            is_memorialist_empire = yes
+                            has_trait = trait_survivor
+                            has_trait = trait_pc_nuked_preference
+                            has_trait = trait_plantoid_radiotrophic
+                        }
+                    }
+                }
+            }
+            AND = {
+                is_planet_class = pc_relic
+                NOT = { owner = { is_memorialist_empire = yes } }
+            }
+        }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = decision_resort_colony_no_districts
+            num_districts = { type = district_farming value < 1 }
+            num_districts = { type = district_mining value < 1 }
+            num_districts = { type = district_generator value < 1 }
+            # Volcanic Worlds
+            num_districts = { type = district_geothermal value < 1 }
+            num_districts = { type = district_melting value < 1 }
+            num_districts = { type = district_polytechnic value < 1 }
+        }
+        custom_tooltip = {
+            fail_text = decision_resort_colony_only_one
+            NOT = {
+                owner = {
+                    any_owned_planet = { has_modifier = resort_colony }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = decision_cant_be_building_anything
+            has_building_construction = no
+        }
+    }
+
+    effect = {
+        add_modifier = {
+            modifier = resort_colony
+            days = -1
+        }
+        hidden_effect = {
+            remove_building = building_colony_shelter
+            remove_building = building_capital
+            remove_building = building_major_capital
+            remove_building = building_system_capital
+            add_building = building_resort_capital
+            # Summer Vacation achievement
+            if = {
+                limit = { is_planet_class = pc_volcanic }
+                owner = { set_country_flag = INF_A_volcanic_resort }
+            }
+        }
+        hidden_effect = {
+            validate_planet_buildings_and_districts = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

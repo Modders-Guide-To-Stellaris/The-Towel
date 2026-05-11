@@ -58,6 +58,11 @@ hga_ecology_project = {
             AND = {
                 has_global_flag = hga_ecology_world_in_play
                 is_planet_class = pc_gaia
+                NOR = {
+                    has_modifier = resort_colony
+                    has_modifier = penal_colony
+                    has_modifier = slave_colony
+                }
             }
         }
 
