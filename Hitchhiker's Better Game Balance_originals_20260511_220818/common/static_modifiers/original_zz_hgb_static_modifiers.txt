@@ -1,0 +1,7 @@
+# === imperial_security_directorate ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\static_modifiers\13_static_modifiers_nemesis.txt -----
+imperial_security_directorate = {
+	intel_decryption_add = 2
+	intel_encryption_add = 4
+}
+

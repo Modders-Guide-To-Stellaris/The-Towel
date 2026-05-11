@@ -1,0 +1,1009 @@
+# === potential ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+potential = { # planet scope
+	has_deposit = d_betharian_deposit
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+potential = { # planet scope
+	has_exotic_gases_deposit = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+potential = { # planet scope
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_anglers_empire = yes }
+		}
+		is_wet = no
+	}
+	else = {
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+potential = { # planet scope
+	hidden_trigger ={
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+potential = { # planet scope
+	exists = owner
+	owner = {
+		country_uses_consumer_goods = yes
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+potential = { # planet scope
+	has_rare_crystals_deposit = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_spawning_zone.txt -----
+potential = { # planet scope
+	is_planet_class = pc_hive
+	owner = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_hive_worlds
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+potential = { # planet scope
+	exists = owner
+	owner = {
+		is_wilderness_empire = no
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_research_zone = no
+		has_any_industrial_zone = no
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = { exists = owner }
+	owner = {
+		is_spiritualist = yes
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		AND = {
+			has_any_research_zone = no
+			has_any_industrial_zone = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+potential = { # planet scope
+	hidden_trigger = { exists = owner }
+	owner = {
+		is_wilderness_empire = no
+		is_spiritualist = no
+		NOT = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		AND = {
+			has_any_research_zone = no
+			has_any_industrial_zone = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+potential = { # planet scope
+	has_volatile_motes_deposit = yes
+}
+
+# === unlock ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		has_deposit = d_betharian_deposit
+		exists = owner
+	}
+	owner = {
+		has_technology = tech_mine_betharian
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		has_exotic_gases_deposit = yes
+		exists = owner
+	}
+	owner = {
+		has_technology = tech_mine_exotic_gases
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+unlock = { # planet scope
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_anglers_empire = yes }
+		}
+		is_wet = no
+	}
+	else = {
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger ={
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		has_rare_crystals_deposit = yes
+		exists = owner
+	}
+	owner = {
+		has_technology = tech_mine_rare_crystals
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_spawning_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	owner = {
+		has_ascension_perk = ap_hive_worlds
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+unlock = { # planet scope
+	always = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+unlock = { # planet scope
+	always = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_wilderness_empire = no
+				NOT = { has_valid_civic = civic_machine_servitor }
+			}
+		}
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+unlock = { # planet scope
+	hidden_trigger = {
+		has_volatile_motes_deposit = yes
+		exists = owner
+	}
+	owner = {
+		has_technology = tech_mine_volatile_motes
+	}
+}
+
+# === resources ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_spawning_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+# === inline_script ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+inline_script = {
+	script = jobs/zone_miner_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+inline_script = {
+	script = jobs/zone_technicians_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+inline_script = {
+	script = jobs/zone_farmers_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+inline_script = {
+	script = jobs/zone_farmers_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+inline_script = {
+	script = jobs/zone_factory_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+inline_script = {
+	script = jobs/zone_foundry_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+inline_script = {
+	script = jobs/zone_foundry_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+inline_script = {
+	script = jobs/zone_factory_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+inline_script = {
+	script = jobs/zone_miner_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+inline_script = {
+	script = jobs/zone_miner_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+inline_script = {
+	script = jobs/zone_engineers_add
+	LARGE_AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+inline_script = {
+	script = jobs/zone_physicists_add
+	LARGE_AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+inline_script = {
+	script = jobs/zone_biologists_add
+	LARGE_AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+inline_script = {
+	script = jobs/zone_researchers_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+inline_script = {
+	script = jobs/zone_trader_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+inline_script = {
+	script = jobs/zone_unity_jobs_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+inline_script = {
+	script = jobs/zone_unity_jobs_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+inline_script = {
+	script = jobs/zone_unity_jobs_add
+	AMOUNT = $AMOUNT$
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+inline_script = {
+	script = jobs/zone_technicians_add
+	AMOUNT = $AMOUNT$
+}
+
+# === included_building_sets ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+included_building_sets = {
+	mining
+	fallen_empire_mining
+	betharian
+	mining_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+included_building_sets = {
+	generator
+	fallen_empire_generator
+	generator_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+included_building_sets = {
+	farming
+	hydroponics
+	fallen_empire_farming
+	farming_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+included_building_sets = {
+	farming
+	hydroponics
+	farming_automation
+	fallen_empire_farming
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+included_building_sets = {
+	fortress
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+included_building_sets = {
+	factory
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+included_building_sets = {
+	foundry
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+included_building_sets = {
+	industrial
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+included_building_sets = {
+	mining
+	fallen_empire_mining
+	mining_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+included_building_sets = {
+	mining
+	fallen_empire_mining
+	mining_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+included_building_sets = {
+	physics
+	research
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+included_building_sets = {
+	physics
+	research
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+included_building_sets = {
+	physics
+	research
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+included_building_sets = {
+	research
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_spawning_zone.txt -----
+included_building_sets = {
+	urban
+	urban_automation
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+included_building_sets = {
+	urban
+	trade
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+included_building_sets = {
+	unity
+	bio_trophy
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+included_building_sets = {
+	unity
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+included_building_sets = {
+	unity
+	urban_automation
+	origin
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+included_building_sets = {
+	generator
+	generator_automation
+	fallen_empire_generator
+}
+
+# === convert_to ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+convert_to = {
+	zone_betharian
+	zone_betharian_nexus
+	zone_betharian_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+convert_to = {
+	zone_energy
+	zone_energy_nexus
+	zone_energy_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+convert_to = {
+	zone_exotic_gases
+	zone_exotic_gases_nexus
+	zone_exotic_gases_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+convert_to = {
+	zone_food
+	zone_food_ring_world
+	zone_food_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+convert_to = {
+	zone_minerals
+	zone_minerals_nexus
+	zone_minerals_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+convert_to = {
+	zone_rare_crystals
+	zone_rare_crystals_nexus
+	zone_rare_crystals_hive
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+convert_to = {
+	zone_volatile_motes
+	zone_volatile_motes_nexus
+	zone_volatile_motes_hive
+}
+
+# === planet_modifier ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_betharian_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+	planet_miners_energy_produces_add = 6
+	planet_miners_minerals_produces_add = -2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_energy_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_exotic_gases_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+	planet_farmers_exotic_gases_produces_add = 0.75
+	planet_farmers_food_produces_add = -3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_food_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_fortress_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_factory_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_foundry_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_industrial_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_minerals_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_rare_crystals_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+	planet_miners_rare_crystals_produces_add = 0.75
+	planet_miners_minerals_produces_add = -2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_engineering_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_physics_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_society_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_research_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_spawning_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_trade_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_bio_trophy_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_spiritualist_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_unity_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\zones\shared_volatile_motes_zone.txt -----
+planet_modifier = {
+	zone_building_slots_add = 3
+	planet_technician_volatile_motes_produces_add = 0.75
+	planet_technician_energy_produces_add = -3
+}
+

@@ -4,9 +4,9 @@ d_weapon_extraction_facility = {
     category = deposit_cat_rare
 
     planet_modifier = {
-        engineer_jobs_bonus_workforce_mult = 0.1
-        planet_engineers_engineering_research_produces_add = 0.5
-        planet_engineers_alloys_produces_add = 0.5
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_engineers_engineering_research_produces_add = 2
+        planet_engineers_alloys_produces_add = 1
     }
 
     triggered_planet_modifier = {
@@ -14,7 +14,7 @@ d_weapon_extraction_facility = {
             exists = owner
             owner = { is_gestalt = no }
         }
-        planet_engineers_consumer_goods_upkeep_add = 1.5
+        planet_engineers_consumer_goods_upkeep_add = 3
     }
 
     triggered_planet_modifier = {
@@ -22,7 +22,7 @@ d_weapon_extraction_facility = {
             exists = owner
             owner = { is_hive_empire = yes }
         }
-        planet_engineers_minerals_upkeep_add = 4
+        planet_engineers_minerals_upkeep_add = 4.5
     }
 
     triggered_planet_modifier = {
@@ -30,7 +30,7 @@ d_weapon_extraction_facility = {
             exists = owner
             owner = { is_machine_empire = yes }
         }
-        planet_engineers_energy_upkeep_add = 3
+        planet_engineers_energy_upkeep_add = 6.75
     }
 
     triggered_planet_modifier = {
@@ -43,7 +43,7 @@ d_weapon_extraction_facility = {
                 }
             }
         }
-        planet_engineers_minor_artifacts_produces_add = 0.05
+        planet_engineers_minor_artifacts_produces_add = 0.25
     }
 
     triggered_planet_modifier = {
@@ -54,7 +54,7 @@ d_weapon_extraction_facility = {
                 has_ascension_perk = ap_archaeoengineers
             }
         }
-        planet_engineers_minor_artifacts_produces_add = 0.1
+        planet_engineers_minor_artifacts_produces_add = 0.5
     }
 
     triggered_planet_modifier = {

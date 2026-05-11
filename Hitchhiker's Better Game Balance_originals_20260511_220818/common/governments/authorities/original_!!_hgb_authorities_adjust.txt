@@ -1,0 +1,536 @@
+# === auth_imperial ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\governments\authorities\00_authorities.txt -----
+auth_imperial = {
+	has_heir = yes
+
+	has_agendas = yes
+
+	color = { 141 38 38 255 }
+
+	ruler_council_position = councilor_ruler_imperial
+
+	possible = {
+		origin = {
+			NOT = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	country_modifier = {
+		country_leader_pool_size = -1
+		# Additional modifiers are found in inline_scripts\buildings\on_all_capital_buildings.txt
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_imperial"
+		description = "auth_cyber_creed_imperial_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.20
+			pop_non_cyborg_happiness = -0.20
+			ruler_skill_add = 3
+			all_technology_research_speed = 0.05
+			planet_jobs_worker_produces_mult = 0.10
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_imperial_individualist"
+		description = "auth_cyber_imperial_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_individualist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_imperial_collectivist"
+		description = "auth_cyber_imperial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_collectivist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_imperial_physical"
+		description = "auth_synth_imperial_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			leader_initial_skill = 2
+			species_leader_exp_gain = 0.10
+			planet_jobs_worker_produces_mult = 0.10
+			custom_tooltip = auth_synth_imperial_physical_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_imperial_virtual"
+		description = "auth_synth_imperial_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.10
+			ship_hull_regen_add_perc = 0.05
+			ship_armor_regen_add_perc = 0.05
+			custom_tooltip = auth_synth_imperial_virtual_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Biotic Dominion (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_purity"
+		description = "auth_bio_imperial_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_purity_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	# Cloning
+	# Hereditary Continuity (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_cloning"
+		description = "auth_bio_imperial_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		has_heir = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_cloning_tt
+			show_only_custom_tooltip = no
+			ruler_skill_add = 5
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_CLONE
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	# Mutation
+	# Genomic Expansionist (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_mutation"
+		description = "auth_bio_imperial_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_mutation_habitability_tt
+			show_only_custom_tooltip = no
+			country_leader_pool_size = -1
+			species_leader_exp_gain = 0.10
+			all_technology_research_speed = 0.05
+			pop_cat_worker_bonus_workforce_mult = 0.15
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	# EvoPred (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_evopred"
+		description = "auth_bio_imperial_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_evopred_tt
+			show_only_custom_tooltip = no
+			logistic_growth_mult = -0.1
+			country_produces_mult = 0.1
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_shroud_imperial_transcendent"
+		description = "auth_shroud_imperial_transcendent_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_transcendent
+		trigger = {
+			is_scope_valid = yes
+			is_transcendent_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_imperial_transcendent_tt
+			psionic_aura_hyperlane_range_add = 2
+			envoy_improve_relations_mult = 0.50
+			envoy_harm_relations_mult = 0.50
+			envoy_attunement_mult = 0.50
+			planet_crime_add = 20
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_shroud_imperial_corporeal"
+		description = "auth_shroud_imperial_corporeal_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_corporeal_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_imperial_corporeal_tt
+			psionic_pop_bonus_workforce_mult = -0.2
+			psionic_aura_effectiveness_mult = 0.25
+			envoy_improve_relations_mult = 0.50
+			envoy_harm_relations_mult = 0.50
+			envoy_attunement_mult = 0.50
+			ruler_skill_add = 2
+			councilor_skill_add = 1
+			leader_lifespan_add = 10
+			logistic_growth_mult = -0.05
+			planet_pop_assembly_mult = -0.05
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_HAS_HEIR
+		AUTH_IMPERIAL_CAPITAL_SYSTEM_BONUS
+	}
+}
+
+# === auth_hive_mind ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\governments\authorities\00_authorities.txt -----
+auth_hive_mind = {
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = hive_mind
+	trait_localization_postfix = _hive
+
+	color = { 225 165 33 255 }
+
+	valid_for_released_vassal = yes
+
+	ruler_council_position = councilor_ruler_hive_mind
+
+	possible = {
+		ethics = {
+			value = ethic_gestalt_consciousness
+		}
+		species_archetype = { NOT = { value = MACHINE } }
+	}
+	random_weight = {
+		base = 2
+	}
+
+	traits = {
+		trait = trait_hive_mind
+	}
+
+	country_modifier = {
+		logistic_growth_mult = 0.25
+		empire_size_penalty_mult = -0.25
+	}
+
+	tags = {
+		AUTH_HIVE_MIND_AI_RESTRICTIONS
+		AUTH_HIVE_MIND_FOREIGN_POP_SURVIVAL
+		AUTH_HIVE_MIND_GENEMODDING
+		AUTH_HIVE_MIND_ASCENSION_RESTRICTIONS
+		NEW_LINE
+		AUTHORITY_SUCCESSION_TYPE
+		AUTH_GESTALT_IMMORTAL_LEADERS
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_hive_volitional"
+		description = "auth_cyber_hive_volitional_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_hive_volitional
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.15
+			country_leader_cap_add = 1
+			num_tech_alternatives_add = 1
+			planet_crime_no_happiness_mult = 0.5
+			leaders_upkeep_mult = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_hive_integrated"
+		description = "auth_cyber_hive_integrated_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_hive_integrated
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.15
+			custom_tooltip = auth_cyber_hive_integrated_tt
+			empire_size_penalty_mult = -0.33
+			leaders_upkeep_mult = 0.05
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# BioGensis
+	# (Hive)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_purity"
+		description = "auth_bio_hive_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_purity_tt
+			show_only_custom_tooltip = no
+			subspecies_integration_mult = 3
+			modify_species_cost_mult = -0.25
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_cloning"
+		description = "auth_bio_hive_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_cloning_tt
+			show_only_custom_tooltip = no
+			bonus_pop_growth_mult = 0.15
+			empire_size_penalty_mult = -0.33
+			leaders_upkeep_mult = 0.05
+			num_tech_alternatives_add = 1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_mutation"
+		description = "auth_bio_hive_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_mutation_habitability_tt
+			show_only_custom_tooltip = no
+			planet_stability_add = 3
+			empire_size_pops_mult = -0.10
+			pop_environment_tolerance = 0.15
+			pop_cat_simple_drone_bonus_workforce_mult = 0.15
+		}
+	}
+
+	# EvoPred Mutation (Hive Mind)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_mind_evopred"
+		description = "auth_bio_hive_mind_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_mind_evopred_tt
+			show_only_custom_tooltip = no
+			pop_cat_purge_bonus_workforce_mult = 0.5
+			empire_size_penalty_mult = -0.20
+		}
+	}
+
+	# Wilderness Mutualistic Intelligence
+
+	advanced_authority_swap = {
+		name = "auth_mutualistic_intelligence"
+		description = "auth_mutualistic_intelligence_desc"
+
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_wilderness_empire = yes
+		}
+		tags = { # note: completely replaces all Hive Mind tags, so repetition is intentional
+			AUTH_HIVE_MIND_AI_RESTRICTIONS
+			AUTH_MUTUALISTIC_FOREIGN_POP_SURVIVAL
+			AUTH_MUTUALISTIC_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+		modifier = {
+			empire_size_penalty_mult = -0.25
+			empire_size_districts_mult = 2
+			empire_size_colonies_mult = 1
+			diplo_weight_economy_mult = 1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_shroud_hive_transcendent"
+		description = "auth_shroud_hive_transcendent_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_transcendent_authority = yes
+		}
+		tags = {
+			AUTH_HIVE_MIND_AI_RESTRICTIONS
+			AUTH_HIVE_MIND_FOREIGN_POP_SURVIVAL
+			AUTH_HIVE_MIND_GENEMODDING_ASCENDED
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+		modifier = {
+			custom_tooltip = transcendent_hive_mind_tt
+			psionic_aura_hyperlane_range_add = 2
+			planet_stability_mult = 0.10
+			planet_jobs_complex_drone_produces_mult = 0.1
+			empire_size_mult = -0.1
+			pop_environment_tolerance = -0.1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_shroud_hive_corporeal"
+		description = "auth_shroud_hive_corporeal_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_corporeal_authority = yes
+		}
+		tags = {
+			AUTH_HIVE_MIND_AI_RESTRICTIONS
+			AUTH_HIVE_MIND_FOREIGN_POP_SURVIVAL
+			AUTH_HIVE_MIND_GENEMODDING_ASCENDED
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+		modifier = {
+			custom_tooltip = corporeal_hive_mind_tt
+			psionic_aura_effectiveness_mult = 0.25
+			planet_stability_mult = 0.10
+			council_agenda_progress_speed = 0.3
+			council_agenda_finishing_effect_duration_mult = 0.3
+		}
+	}
+}
+

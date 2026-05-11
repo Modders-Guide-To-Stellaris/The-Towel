@@ -1,0 +1,13 @@
+# === can_generate_leader_from_pop_group ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\game_rules\00_rules.txt -----
+can_generate_leader_from_pop_group = {
+	can_be_leader = yes
+}
+
+# === can_generate_military_leader_from_pop_group ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\game_rules\00_rules.txt -----
+can_generate_military_leader_from_pop_group = {
+	can_be_leader = yes
+	can_be_military_leader = yes
+}
+

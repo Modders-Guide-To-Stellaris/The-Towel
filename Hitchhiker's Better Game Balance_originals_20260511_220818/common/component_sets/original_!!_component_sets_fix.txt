@@ -1,0 +1,3351 @@
+# === component_set ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_fallen_empire_utilities.txt -----
+component_set = {
+	key = "DARK_MATTER_DEFLECTOR"
+
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_fallen_empire_utilities.txt -----
+component_set = {
+	key = "DARK_MATTER_REACTOR"
+
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_leviathans_utilities.txt -----
+component_set = {
+	key = "DRAGON_ARMOR"
+
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_leviathans_utilities.txt -----
+component_set = {
+	key = "ENIGMATIC_DISRUPTION_FIELD"
+
+	icon = "GFX_ship_part_enigmatic_disruption_field"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_leviathans_utilities.txt -----
+component_set = {
+	key = "TIYANKI_ARMOR"
+
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "ftl_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_hyperdrive"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "ftl_components_bio"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_bio_hyperdrive"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "thruster_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "thruster_components_bio"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_bio_thruster_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "sensor_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "sensor_components_bio"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_bio_sensor"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "power_core"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "station_power_core"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "combat_computers"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	affects_target_type = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "neurochips"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	is_space_fauna_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "corvette_combat_computers"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "destroyer_combat_computers"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "cruiser_combat_computers"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "battleship_combat_computers"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "aura_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "ftl_inhibitor"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "ship_aura_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "station_small_aura_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "station_medium_aura_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "station_large_aura_components"
+
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "science_cloaking_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_cloak_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_required_sets.txt -----
+component_set = {
+	key = "dsc_aura_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "SCOUT_HANGAR_1"
+
+	icon = "GFX_ship_part_strike_craft_scout_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "STRIKE_CRAFT_HANGAR_1"
+
+	icon = "GFX_ship_part_strike_craft_bomber_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "STRIKE_CRAFT_HANGAR_2"
+
+	icon = "GFX_ship_part_strike_craft_bomber_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "STRIKE_CRAFT_HANGAR_3"
+
+	icon = "GFX_ship_part_strike_craft_bomber_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "STRIKE_CRAFT_SKRAND"
+
+	icon = "GFX_ship_part_strike_craft_skrand"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "STRIKE_CRAFT_CETANA"
+
+	icon = "GFX_ship_part_strike_craft_skrand"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "AMOEBA_STRIKE_CRAFT_1"
+
+	icon = "GFX_ship_part_amoeba_strike_craft_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "AMOEBA_STRIKE_CRAFT_1_BIO"
+
+	icon = "GFX_ship_part_amoeba_strike_craft_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "SWARM_STRIKE_CRAFT_1"
+
+	icon = "GFX_ship_part_swarm_strike_craft_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "AI_STRIKE_CRAFT_1"
+
+	icon = "GFX_ship_part_swarm_strike_craft_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "DRONE_STRIKE_CRAFT"
+
+	icon = "GFX_ship_part_strike_craft_scout_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_strike_craft.txt -----
+component_set = {
+	key = "ARCHAEO_STRIKECRAFT"
+
+	icon = "GFX_ship_part_archaeo_strike_craft"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "OBSERVATORY_1"
+
+	icon = "GFX_ship_part_sensor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "OBSERVATORY_2"
+
+	icon = "GFX_ship_part_sensor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "OBSERVATORY_3"
+
+	icon = "GFX_ship_part_sensor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "OBSERVATORY_4"
+
+	icon = "GFX_ship_part_sensor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_1"
+
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_2"
+
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_3"
+
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_4"
+
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_5"
+
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "CRYSTAL_ARMOR_1"
+
+	icon = "GFX_ship_part_crystal_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "CRYSTAL_ARMOR_2"
+
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "CRYSTAL_ARMOR_1_BIO"
+
+	icon = "GFX_ship_part_crystal_armor_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "CRYSTAL_ARMOR_2_BIO"
+
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "AUTO_REPAIR"
+
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "BIO_AUTO_REPAIR"
+
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "BULWARK_3_BATTLEWRIGHT"
+
+	icon = "GFX_ship_part_crystal_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_HARDENER_1"
+
+	icon = "GFX_ship_part_armor_hardener_1"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARMOR_HARDENER_2"
+
+	icon = "GFX_ship_part_armor_hardener_2"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ARCHAEO_ARMOR"
+
+	icon = "GFX_ship_part_archaeo_armor"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "ASTEROIDAL_CARAPACE_ARMOR"
+
+	icon = "GFX_ship_part_asteroidal_carapace"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "LM_ARMOR_1"
+
+	icon = "GFX_ship_part_lm_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "LM_ARMOR_2"
+
+	icon = "GFX_ship_part_lm_armor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "LM_ARMOR_3"
+
+	icon = "GFX_ship_part_lm_armor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "LM_ARMOR_4"
+
+	icon = "GFX_ship_part_lm_armor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities.txt -----
+component_set = {
+	key = "LM_ARMOR_5"
+
+	icon = "GFX_ship_part_lm_armor_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_afterburners.txt -----
+component_set = {
+	key = "AFTERBURNER_1"
+
+	icon = "GFX_ship_part_afterburner_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_afterburners.txt -----
+component_set = {
+	key = "AFTERBURNER_2"
+
+	icon = "GFX_ship_part_afterburner_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "REACTOR_BOOSTER_1"
+
+	icon = "GFX_ship_part_reactor_booster_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "REACTOR_BOOSTER_2"
+
+	icon = "GFX_ship_part_reactor_booster_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "REACTOR_BOOSTER_3"
+
+	icon = "GFX_ship_part_reactor_booster_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "FIRE_CONTROL_1"
+
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "ENIGMATIC_DECODER"
+
+	icon = "GFX_ship_part_enigmatic_decoder"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "ENIGMATIC_ENCODER"
+
+	icon = "GFX_ship_part_enigmatic_encoder"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "COMPOSER_MARK"
+
+	icon = "GFX_ship_part_composer_covenant_aux"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "EATER_MARK"
+
+	icon = "GFX_ship_part_eater_covenant_aux"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "INSTRUMENT_MARK"
+
+	icon = "GFX_ship_part_instrument_covenant_aux"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "CRADLE_MARK"
+
+	icon = "GFX_ship_part_cradle_covenant_aux"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "WHISPERERS_MARK"
+
+	icon = "GFX_ship_part_whisperers_covenant_aux"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux.txt -----
+component_set = {
+	key = "AUTO_REPAIR_3"
+
+	icon = "GFX_ship_part_nanite_repair_system_synth_queen"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_first_contact.txt -----
+component_set = {
+	key = "CLOAKING_1"
+
+	icon = "GFX_ship_part_cloak_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_first_contact.txt -----
+component_set = {
+	key = "CLOAKING_2"
+
+	icon = "GFX_ship_part_cloak_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_first_contact.txt -----
+component_set = {
+	key = "CLOAKING_3"
+
+	icon = "GFX_ship_part_cloak_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_first_contact.txt -----
+component_set = {
+	key = "CLOAKING_DARK_MATTER"
+
+	icon = "GFX_ship_part_cloak_dark_matter"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_first_contact.txt -----
+component_set = {
+	key = "CLOAKING_PSI"
+
+	icon = "GFX_ship_part_cloak_psi"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_aux_megacorp.txt -----
+component_set = {
+	key = "ORBITAL_TRASH_1"
+
+	icon = "GFX_ship_part_orbital_trash_dispersal"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_distant_stars.txt -----
+component_set = {
+	key = "AUTO_REPAIR_2"
+
+	icon = "GFX_ship_part_ship_part_nanite_repair_system"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_grand_archive.txt -----
+component_set = {
+	key = "GRAVITY_SNARE_1"
+
+	icon = "GFX_ship_part_cloak_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_grand_archive.txt -----
+component_set = {
+	key = "BOARDING_CABLES"
+
+	icon = "GFX_ship_part_boarding_cables"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_reactors.txt -----
+component_set = {
+	key = "FISSION_REACTOR"
+
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_reactors.txt -----
+component_set = {
+	key = "FUSION_REACTOR"
+
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_reactors.txt -----
+component_set = {
+	key = "COLD_FUSION_REACTOR"
+
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_reactors.txt -----
+component_set = {
+	key = "ANTIMATTER_REACTOR"
+
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_reactors.txt -----
+component_set = {
+	key = "ZERO_POINT_REACTOR"
+
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_1"
+
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_2"
+
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_3"
+
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_4"
+
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_5"
+
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "PSI_SHIELD"
+
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_BOOSTER"
+
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "PSI_BARRIER"
+
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_HARDENER_1"
+
+	icon = "GFX_ship_part_shield_hardener_1"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "SHIELD_HARDENER_2"
+
+	icon = "GFX_ship_part_shield_hardener_2"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_utilities_shields.txt -----
+component_set = {
+	key = "ARCHAEO_SHIELD"
+
+	icon = "GFX_ship_part_archaeo_shield"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "RED_LASER"
+
+	icon = "GFX_ship_part_laser_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "BLUE_LASER"
+
+	icon = "GFX_ship_part_laser_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "UV_LASER"
+
+	icon = "GFX_ship_part_laser_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "XRAY_LASER"
+
+	icon = "GFX_ship_part_laser_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "GAMMA_LASER"
+
+	icon = "GFX_ship_part_laser_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "TITAN_LASER"
+
+	icon = "GFX_ship_part_laser_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "PERDITION_BEAM"
+
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ARCHAEO_TITAN_BEAM"
+
+	icon = "GFX_ship_part_archaeo_titan_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ENERGY_LANCE_1"
+
+	icon = "GFX_ship_part_energy_lance_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ENERGY_LANCE_2"
+
+	icon = "GFX_ship_part_energy_lance_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "LENS_FLARE_BEAM"
+
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "SOLARFLARE_EMITTER"
+
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "PLASMA_1"
+
+	icon = "GFX_ship_part_plasma_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "PLASMA_2"
+
+	icon = "GFX_ship_part_plasma_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "PLASMA_3"
+
+	icon = "GFX_ship_part_plasma_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ARC_EMITTER_1"
+
+	icon = "GFX_ship_part_arc_emitter_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ARC_EMITTER_2"
+
+	icon = "GFX_ship_part_arc_emitter_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "DISRUPTOR_1"
+
+	icon = "GFX_ship_part_disruptor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "DISRUPTOR_2"
+
+	icon = "GFX_ship_part_disruptor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "DISRUPTOR_3"
+
+	icon = "GFX_ship_part_disruptor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ENERGY_TORPEDO_1"
+
+	icon = "GFX_ship_part_energy_torpedo_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ENERGY_TORPEDO_2"
+
+	icon = "GFX_ship_part_energy_torpedo_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ARCHAEO_LASER"
+
+	icon = "GFX_ship_part_archaeo_laser"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_energy.txt -----
+component_set = {
+	key = "ARCHAEO_TITAN"
+
+	icon = "GFX_ship_part_archaeo_titan_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "MISSILE_1"
+
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "MISSILE_2"
+
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "MISSILE_3"
+
+	icon = "GFX_ship_part_missile_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "MISSILE_4"
+
+	icon = "GFX_ship_part_missile_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "MISSILE_5"
+
+	icon = "GFX_ship_part_missile_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "SWARMER_MISSILE_1"
+
+	icon = "GFX_ship_part_swarmer_missile_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "SWARMER_MISSILE_2"
+
+	icon = "GFX_ship_part_swarmer_missile_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "TORPEDO_1"
+
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "TORPEDO_2"
+
+	icon = "GFX_ship_part_torpedo_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "TORPEDO_3"
+
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "ARCHAEO_MISSILE"
+
+	icon = "GFX_ship_part_archaeo_missiles"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "SPIKESPORES"
+
+	icon = "GFX_ship_part_spikespores"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_missiles.txt -----
+component_set = {
+	key = "VOIDWORM_BITE"
+
+	icon = "GFX_ship_part_voidworm_bite"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # World Cracker
+	key = "PLANET_KILLER_CRACKER"
+
+	icon = "GFX_ship_part_world_cracker"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Pacifier
+	key = "PLANET_KILLER_SHIELDER"
+
+	icon = "GFX_ship_part_global_pacifier"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Neutron Beam
+	key = "PLANET_KILLER_NEUTRON"
+
+	icon = "GFX_ship_part_neutron_sweep"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # God Ray
+	key = "PLANET_KILLER_GODRAY"
+
+	icon = "GFX_ship_part_divine_enforcer"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Nanobot Assimilation
+	key = "PLANET_KILLER_NANOBOTS"
+
+	icon = "GFX_ship_part_nanobot_diffuser"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Star Cracker
+	key = "PLANET_KILLER_STAR_CRACKER"
+
+	icon = "GFX_ship_part_nanobot_diffuser"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Toxifier of the Toxic God
+	key = "PLANET_KILLER_TOXIFIER"
+
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Deluge
+	key = "PLANET_KILLER_DELUGE"
+
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Devolving Beam
+	key = "PLANET_KILLER_DEVOLVER"
+
+	icon = "GFX_ship_part_devolution_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Behemoth Maw
+	key = "PLANET_KILLER_MAW"
+
+	icon = "GFX_ship_part_preying_maw"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_planet_killer.txt -----
+component_set = { # Planet Smelter
+	key = "PLANET_KILLER_SMELTER"
+
+	icon = "GFX_ship_part_planet_smelter"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_pointdefence.txt -----
+component_set = {
+	key = "POINT_DEFENCE_1"
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_pointdefence.txt -----
+component_set = {
+	key = "POINT_DEFENCE_2"
+	icon = "GFX_ship_part_point_defense_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_pointdefence.txt -----
+component_set = {
+	key = "POINT_DEFENCE_3"
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_pointdefence.txt -----
+component_set = {
+	key = "ARCHAEO_POINTDEFENCE"
+	icon = "GFX_ship_part_archaeo_point_defence"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_DRIVER_1"
+
+	icon = "GFX_ship_part_mass_driver_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_DRIVER_2"
+
+	icon = "GFX_ship_part_mass_driver_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_DRIVER_3"
+
+	icon = "GFX_ship_part_mass_driver_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_DRIVER_4"
+
+	icon = "GFX_ship_part_mass_driver_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_DRIVER_5"
+
+	icon = "GFX_ship_part_mass_driver_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "KINETIC_ARTILLERY_1"
+
+	icon = "GFX_ship_part_kinetic_artillery_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "KINETIC_ARTILLERY_2"
+
+	icon = "GFX_ship_part_kinetic_artillery_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_ACCELERATOR_1"
+
+	icon = "GFX_ship_part_mass_accelerator_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "MASS_ACCELERATOR_2"
+
+	icon = "GFX_ship_part_mass_accelerator_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "AUTOCANNON_1"
+
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "AUTOCANNON_2"
+
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "AUTOCANNON_3"
+
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "AUTOCANNON_4"
+
+	icon = "GFX_ship_part_autocannon_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "FLAK_BATTERY_1"
+
+	icon = "GFX_ship_part_flak_batteries_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "FLAK_BATTERY_2"
+
+	icon = "GFX_ship_part_flak_batteries_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "FLAK_BATTERY_3"
+
+	icon = "GFX_ship_part_flak_batteries_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "FLAK_BATTERY_4"
+
+	icon = "GFX_ship_part_flak_batteries_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "ARCHAEO_KINETIC"
+
+	icon = "GFX_ship_part_archaeo_mass_driver"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "ARCHAEO_X"
+
+	icon = "GFX_ship_part_archaeo_mass_accelerator"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "METEOROID_SLINGER_1"
+
+	icon = "GFX_ship_part_meteoroid_slinger_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "METEOROID_SLINGER_2"
+
+	icon = "GFX_ship_part_meteoroid_slinger_2"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "LM_ACCELERATOR_SET"
+
+	icon = "GFX_ship_part_lm_accelerator"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_projectile.txt -----
+component_set = {
+	key = "LM_BIO_ACCELERATOR_SET"
+
+	icon = "GFX_ship_part_lm_bio_accelerator"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "EXTRADIMENSIONAL_1"
+
+	icon = "GFX_ship_part_extradimensional_weapon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "MINING_DRONE_LASER_1"
+
+	icon = "GFX_ship_part_mining_drone_laser_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "SPACE_CLOUD_WEAPON_1"
+
+	icon = "GFX_ship_part_space_cloud_weapon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "BLUE_CRYSTAL_WEAPON_1"
+
+	icon = "GFX_ship_part_blue_crystal_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "GREEN_CRYSTAL_WEAPON_1"
+
+	icon = "GFX_ship_part_green_crystal_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "YELLOW_CRYSTAL_WEAPON_1"
+
+	icon = "GFX_ship_part_yellow_crystal_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "RED_CRYSTAL_WEAPON_1"
+
+	icon = "GFX_ship_part_red_crystal_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "SPACE_AMOEBA_WEAPON"
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "SPACE_WHALE_WEAPON"
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "SPACE_WHALE_WEAPON_BIO"
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+	is_default_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "PSIONIC_BLAST_1"
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "SCOURGE_MISSILE_1"
+
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "PLANET_KILLER_1"
+
+	icon = "GFX_ship_part_energy_lance_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "NULL_VOID"
+
+	icon = "GFX_ship_part_null_void_weapon"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\00_weapons_special.txt -----
+component_set = {
+	key = "CUTHOLOID_PREYING_MAW"
+
+	icon = "GFX_ship_part_preying_maw"
+	icon_frame = 1
+
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "RED_EYE_BEAM"
+	icon = "GFX_mutation_eye_beam_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BLUE_EYE_BEAM"
+	icon = "GFX_mutation_eye_beam_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "UV_EYE_BEAM"
+	icon = "GFX_mutation_eye_beam_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "XRAY_EYE_BEAM"
+	icon = "GFX_mutation_eye_beam_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "GAMMA_EYE_BEAM"
+	icon = "GFX_mutation_eye_beam_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_THROWER"
+	icon = "GFX_mutation_bio_plasma_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_ACCELERATOR"
+	icon = "GFX_mutation_bio_plasma_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_CANNON"
+	icon = "GFX_mutation_bio_plasma_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PARTICLE_BEAM"
+	icon = "GFX_mutation_beam_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "TACHYON_BEAM"
+	icon = "GFX_mutation_beam_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SHARP_EYE_LASER"
+	icon = "GFX_mutation_laser_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PROTON_THROWER"
+	icon = "GFX_mutation_thrower_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NEUTRON_THROWER"
+	icon = "GFX_mutation_thrower_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_DISINTEGRATOR"
+	icon = "GFX_mutation_disintigrator"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "MOLECULAR_DISRUPTOR"
+	icon = "GFX_mutation_disruptor_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ION_MOLECULAR_DISRUPTOR"
+	icon = "GFX_mutation_disruptor_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PHASED_MOLECULAR_DISRUPTOR"
+	icon = "GFX_mutation_disruptor_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "LIGHTNING_BREATH"
+	icon = "GFX_mutation_lightning_breath_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "LIGHTNING_EMITTER"
+	icon = "GFX_mutation_lightning_emitter_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "FOCUSED_LIGHTNING_EMITTER"
+	icon = "GFX_mutation_lightning_emitter_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENERGY_SIPHON"
+	icon = "GFX_mutation_siphon_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NULL_VOID_SIPHON"
+	icon = "GFX_mutation_siphon_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SHARD_ACCELERATOR"
+	icon = "GFX_mutation_shard_accelerator_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_COIL_SHARD_ACCELERATOR"
+	icon = "GFX_mutation_shard_accelerator_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SHARD_RAIL_ACCELERATOR"
+	icon = "GFX_mutation_shard_accelerator_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ADVANCED_SHARD_RAIL_ACCELERATOR"
+	icon = "GFX_mutation_shard_accelerator_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SHARD_GAUSS_ACCELERATOR"
+	icon = "GFX_mutation_shard_accelerator_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "THORN_CANNON"
+	icon = "GFX_mutation_thorn_cannon_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "RIPPER_THORN_CANNON"
+	icon = "GFX_mutation_thorn_cannon_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ACIDSTORM_THORN_CANNON"
+	icon = "GFX_mutation_thorn_cannon_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NANITE_INFUSED_THORN_CANNON"
+	icon = "GFX_mutation_thorn_cannon_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CHITIN_BATTERY"
+	icon = "GFX_mutation_chitin_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CHITIN_ARTILLERY"
+	icon = "GFX_mutation_chitin_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "MEGA_BOMBARD"
+	icon = "GFX_mutation_bombard_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "GIGA_BOMBARD"
+	icon = "GFX_mutation_bombard_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "MIASMA_LAUNCHER"
+	icon = "GFX_mutation_launcher_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "VOLATILE_MIASMA_LAUNCHER"
+	icon = "GFX_mutation_launcher_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANTIMATTER_LAUNCHER"
+	icon = "GFX_mutation_launcher_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "QUANTUM_LAUNCHER"
+	icon = "GFX_mutation_launcher_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "MARAUDER_LAUNCHER"
+	icon = "GFX_mutation_launcher_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "REGULAR_SPORE_LAUNCHER"
+	icon = "GFX_mutation_spore_launcher_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BARBED_SPORE_LAUNCHER"
+	icon = "GFX_mutation_spore_launcher_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BIO_TORPEDOES"
+	icon = "GFX_mutation_bio_torpedoes_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CARAPACE_BIO_TORPEDOES"
+	icon = "GFX_mutation_bio_torpedoes_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "DEVASTATOR_BIO_TORPEDOES"
+	icon = "GFX_mutation_bio_torpedoes_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "LARGE_SCOURGE_MISSILE"
+	icon = "GFX_mutation_scourge_missile_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BARB_BATTERIES"
+	icon = "GFX_mutation_barb_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BARB_CANNONS"
+	icon = "GFX_mutation_barb_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BARB_ARTILLERY"
+	icon = "GFX_mutation_barb_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NANITE_INFUSED_BARB_ARTILLERY"
+	icon = "GFX_mutation_barb_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SENTINEL_SPITTER_GUN"
+	icon = "GFX_mutation_spitter_gun_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BARRIER_SPITTER_GUN"
+	icon = "GFX_mutation_spitter_gun_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "GUARDIAN_SPITTER_GUN"
+	icon = "GFX_mutation_spitter_gun_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "FLAGELLA_MARSUPIUM"
+	icon = "GFX_mutation_flagella_marsupium_0"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENHANCED_FLAGELLA"
+	icon = "GFX_mutation_flagella_marsupium_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CYBER_FLAGELLA"
+	icon = "GFX_mutation_flagella_marsupium_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SUPER_FLAGELLA"
+	icon = "GFX_mutation_flagella_marsupium_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "WARMASTER_FLAGELLA"
+	icon = "GFX_mutation_flagella_marsupium_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "FLAGELLA_SWARMERS"
+	icon = "GFX_mutation_flagella_swarmers"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "SCOURGE_SWARMERS"
+	icon = "GFX_mutation_scourge_swarmers"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_COLLAPSER_BEAM"
+	icon = "GFX_mutation_ancient_collapser_beam"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_MACRO_SHARD_BATTERIES"
+	icon = "GFX_mutation_ancient_macro_shard_batteries"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_FRAGMENTOR_ARTILLERY"
+	icon = "GFX_mutation_ancient_fragmentor_artillery"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_NANO_TALON_CLOUD_LAUNCHER"
+	icon = "GFX_mutation_ancient_nano_talon_cloud_launcher"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_DRILLER_BEASTS"
+	icon = "GFX_mutation_ancient_driller_beasts"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_WEB_SLINGER"
+	icon = "GFX_mutation_ancient_web_slinger"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENERGY_EPIDERMIS"
+	icon = "GFX_mutation_energy_epidermis_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "IMPROVED_ENERGY_EPIDERMIS"
+	icon = "GFX_mutation_energy_epidermis_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "HIGH_ENERGY_SKIN"
+	icon = "GFX_mutation_energy_epidermis_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ADVANCED_ENERGY_SKIN"
+	icon = "GFX_mutation_energy_epidermis_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "HYPER_ENERGY_SKIN"
+	icon = "GFX_mutation_energy_epidermis_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "DARK_MATTER_ENERGY_EPIDERMIS"
+	icon = "GFX_mutation_energy_epidermis_6"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_SKIN"
+	icon = "GFX_mutation_energy_epidermis_7"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_EPIDERMIS"
+	icon = "GFX_mutation_energy_epidermis_7"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NANOCOMPOSITE_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CERAMO_CHITIN_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PLASTEEL_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "DURASTEEL_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "NEUTRONIUM_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "DRACONIC_CARAPACE"
+	icon = "GFX_mutation_nanocomposite_carapace_6"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CRYSTAL_INFUSED_INNARDS"
+	icon = "GFX_mutation_crystal_infused_innards_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CRYSTAL_FORGED_INNARDS"
+	icon = "GFX_mutation_crystal_infused_innards_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_SUSPENSION_EPIDERMIS"
+	icon = "GFX_mutation_ancient_suspension_epidermis"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ANCIENT_ENERGISED_CARAPACE"
+	icon = "GFX_mutation_ancient_energised_carapace"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "MANEUVERING_TENTACLES"
+	icon = "GFX_mutation_maneuvering_tentacles_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENHANCED_MANEUVERING_TENTACLES"
+	icon = "GFX_mutation_maneuvering_tentacles_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "REACTIVE_SCALES"
+	icon = "GFX_mutation_reactive_scales_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "LIVING_REACTIVE_SCALES"
+	icon = "GFX_mutation_reactive_scales_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENERGY_FIELD_HARDENER"
+	icon = "GFX_mutation_energy_field_hardener_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "IMPROVED_ENERGY_FIELD_HARDENER"
+	icon = "GFX_mutation_energy_field_hardener_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ARTIFICIAL_FIRE_CONTROL_INSTINCT"
+	icon = "GFX_mutation_artificial_fire_control_instinct"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENIGMATIC_DECODER_CHIP"
+	icon = "GFX_mutation_enigmatic_decoder_chip"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ENIGMATIC_ENCODER_CHIP"
+	icon = "GFX_mutation_enigmatic_encoder_chip"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ORBITAL_SHED_DISPERSER"
+	icon = "GFX_mutation_orbital_shed_disperser"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "COMPOSER_BLESSING"
+	icon = "GFX_mutation_composer_blessing"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "EATER_BLESSING"
+	icon = "GFX_mutation_eater_blessing"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "INSTRUMENT_BLESSING"
+	icon = "GFX_mutation_instrument_blessing"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CRADLE_BLESSING"
+	icon = "GFX_mutation_cradle_blessing"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "WHISPERERS_BLESSING"
+	icon = "GFX_mutation_whisperers_blessing"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CAMOUFLAGE_1"
+	icon = "GFX_mutation_camouflage_1"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CAMOUFLAGE_2"
+	icon = "GFX_mutation_camouflage_2"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CAMOUFLAGE_3"
+	icon = "GFX_mutation_camouflage_3"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CAMOUFLAGE_4"
+	icon = "GFX_mutation_camouflage_4"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CAMOUFLAGE_5"
+	icon = "GFX_mutation_camouflage_5"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "VIRULENT_CYSTS"
+	icon = "GFX_mutation_virulent_cysts"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "LEECHCRAFT"
+	icon = "GFX_mutation_leechcraft"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "HERDSONG_CHORDS"
+	icon = "GFX_mutation_herdsong_chords"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "GASTRIC_FOUNTAIN"
+	icon = "GFX_mutation_gastric_fountain"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "FISSILE_CORES"
+	icon = "GFX_mutation_fissile_cores"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "STARBORNE_BIOLOGY"
+	icon = "GFX_mutation_starborne_biology"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "ELASTIC_TISSUE"
+	icon = "GFX_mutation_elastic_tissue"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "RESTORATIVE_ENZYMES"
+	icon = "GFX_mutation_restorative_enzymes"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "COMBAT_SYNAPSES"
+	icon = "GFX_mutation_combat_synapses"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "BERSERKER_GLANDS"
+	icon = "GFX_mutation_berserker_glands"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "CATALYTIC_BLADDER"
+	icon = "GFX_mutation_catalytic_bladder"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_SAPPERS"
+	icon = "GFX_mutation_psionic_sappers"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_BIO_LIGHTNING"
+	icon = "GFX_mutation_psionic_bio_lightning"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_BIO_DISRUPTOR"
+	icon = "GFX_mutation_psionic_bio_disruptor"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\01_mutations_components.txt -----
+component_set = {
+	key = "PSIONIC_BIO_LAUNCHER"
+	icon = "GFX_mutation_psionic_bio_launcher"
+	is_space_fauna_component_set = yes
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "bio_ship_unique_components"
+	required_component_set = yes
+	is_core_component_set = yes
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARMOR_1"
+	icon = "GFX_ship_part_bio_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARMOR_2"
+	icon = "GFX_ship_part_bio_armor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARMOR_3"
+	icon = "GFX_ship_part_bio_armor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARMOR_4"
+	icon = "GFX_ship_part_bio_armor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARMOR_5"
+	icon = "GFX_ship_part_bio_armor_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "DRAGON_BIO_ARMOR"
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_ARMOR"
+	icon = "GFX_ship_part_bio_archaeo_armor"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SHIELD_1"
+	icon = "GFX_ship_part_bio_shield_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SHIELD_2"
+	icon = "GFX_ship_part_bio_shield_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SHIELD_3"
+	icon = "GFX_ship_part_bio_shield_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SHIELD_4"
+	icon = "GFX_ship_part_bio_shield_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SHIELD_5"
+	icon = "GFX_ship_part_bio_shield_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "DARK_MATTER_BIO_DEFLECTOR"
+	icon = "GFX_ship_part_bio_dark_matter_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "PSI_BIO_SHIELD"
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "PSI_BIO_BARRIER"
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_SHIELD"
+	icon = "GFX_ship_part_bio_archaeo_shield"
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "MANDIBLE_1"
+	icon = "GFX_ship_part_mandible_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "MANDIBLE_2"
+	icon = "GFX_ship_part_mandible_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "MANDIBLE_3"
+	icon = "GFX_ship_part_mandible_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_0"
+	icon = "GFX_ship_part_bio_plasma_0"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_1"
+	icon = "GFX_mutation_bio_plasma_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_2"
+	icon = "GFX_mutation_bio_plasma_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_PLASMA_3"
+	icon = "GFX_mutation_bio_plasma_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_AUTOCANNON_1"
+	icon = "GFX_ship_part_bio_autocannon_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_AUTOCANNON_2"
+	icon = "GFX_ship_part_bio_autocannon_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_AUTOCANNON_3"
+	icon = "GFX_ship_part_bio_autocannon_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_AUTOCANNON_4"
+	icon = "GFX_ship_part_bio_autocannon_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SWARMER_MISSILE_1"
+	icon = "GFX_ship_part_bio_swarmer_missile_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SWARMER_MISSILE_2"
+	icon = "GFX_ship_part_bio_swarmer_missile_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "RED_BIO_LASER"
+
+	icon = "GFX_mutation_eye_beam_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BLUE_BIO_LASER"
+
+	icon = "GFX_mutation_eye_beam_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "UV_BIO_LASER"
+
+	icon = "GFX_mutation_eye_beam_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "XRAY_BIO_LASER"
+
+	icon = "GFX_mutation_eye_beam_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "GAMMA_BIO_LASER"
+
+	icon = "GFX_mutation_eye_beam_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "ARCHAEO_BIO_LASER"
+
+	icon = "GFX_mutation_ancient_collapser_beam"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "MINING_BIO_LASER"
+
+	icon = "GFX_mutation_laser_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_DRIVER_1"
+
+	icon = "GFX_mutation_shard_accelerator_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_DRIVER_2"
+
+	icon = "GFX_mutation_shard_accelerator_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_DRIVER_3"
+
+	icon = "GFX_mutation_shard_accelerator_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_DRIVER_4"
+
+	icon = "GFX_mutation_shard_accelerator_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_DRIVER_5"
+
+	icon = "GFX_mutation_shard_accelerator_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_KINETIC"
+
+	icon = "GFX_mutation_ancient_macro_shard_batteries"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_DISRUPTOR_1"
+
+	icon = "GFX_mutation_disruptor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_DISRUPTOR_2"
+
+	icon = "GFX_mutation_disruptor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_DISRUPTOR_3"
+
+	icon = "GFX_mutation_disruptor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_POINT_DEFENCE_1"
+	icon = "GFX_mutation_spitter_gun_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_POINT_DEFENCE_2"
+	icon = "GFX_mutation_spitter_gun_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_POINT_DEFENCE_3"
+	icon = "GFX_mutation_spitter_gun_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_POINTDEFENCE"
+	icon = "GFX_mutation_ancient_web_slinger"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FLAK_BATTERY_1"
+
+	icon = "GFX_mutation_barb_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FLAK_BATTERY_2"
+
+	icon = "GFX_mutation_barb_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FLAK_BATTERY_3"
+
+	icon = "GFX_mutation_barb_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FLAK_BATTERY_4"
+
+	icon = "GFX_mutation_barb_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ENERGY_TORPEDO_1"
+
+	icon = "GFX_mutation_thrower_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ENERGY_TORPEDO_2"
+
+	icon = "GFX_mutation_thrower_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_ACCELERATOR_1"
+
+	icon = "GFX_mutation_bombard_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_MASS_ACCELERATOR_2"
+
+	icon = "GFX_mutation_bombard_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_X"
+
+	icon = "GFX_mutation_ancient_fragmentor_artillery"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_KINETIC_ARTILLERY_1"
+
+	icon = "GFX_mutation_chitin_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_KINETIC_ARTILLERY_2"
+
+	icon = "GFX_mutation_chitin_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ENERGY_LANCE_1"
+
+	icon = "GFX_mutation_beam_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ENERGY_LANCE_2"
+
+	icon = "GFX_mutation_beam_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARC_EMITTER_1"
+
+	icon = "GFX_mutation_lightning_emitter_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARC_EMITTER_2"
+
+	icon = "GFX_mutation_lightning_emitter_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_SCOUT_HANGAR_1"
+
+	icon = "GFX_mutation_flagella_marsupium_0"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_STRIKE_CRAFT_HANGAR_1"
+
+	icon = "GFX_mutation_flagella_marsupium_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_STRIKE_CRAFT_HANGAR_2"
+
+	icon = "GFX_mutation_flagella_marsupium_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_STRIKE_CRAFT_HANGAR_3"
+
+	icon = "GFX_mutation_flagella_marsupium_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_STRIKE_CRAFT_SKRAND"
+
+	icon = "GFX_mutation_flagella_marsupium_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ARCHAEO_STRIKECRAFT"
+
+	icon = "GFX_mutation_ancient_driller_beasts"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_1"
+	icon = "GFX_ship_part_bio_healing_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_2"
+	icon = "GFX_ship_part_bio_healing_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_3"
+	icon = "GFX_ship_part_bio_healing_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_4"
+	icon = "GFX_ship_part_bio_healing_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_5"
+	icon = "GFX_ship_part_bio_healing_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_HEALING_GUN_6"
+	icon = "GFX_ship_part_bio_healing_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_1"
+	icon = "GFX_ship_part_bio_confuser_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_2"
+	icon = "GFX_ship_part_bio_confuser_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_3"
+	icon = "GFX_ship_part_bio_confuser_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_4"
+	icon = "GFX_ship_part_bio_confuser_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_5"
+	icon = "GFX_ship_part_bio_confuser_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_CONFUSER_GUN_6"
+	icon = "GFX_ship_part_bio_confuser_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_1"
+	icon = "GFX_ship_part_bio_anti_evasion_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_2"
+	icon = "GFX_ship_part_bio_anti_evasion_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_3"
+	icon = "GFX_ship_part_bio_anti_evasion_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_4"
+	icon = "GFX_ship_part_bio_anti_evasion_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_5"
+	icon = "GFX_ship_part_bio_anti_evasion_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_EVASION_GUN_6"
+	icon = "GFX_ship_part_bio_anti_evasion_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_1"
+	icon = "GFX_ship_part_bio_evasion_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_2"
+	icon = "GFX_ship_part_bio_evasion_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_3"
+	icon = "GFX_ship_part_bio_evasion_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_4"
+	icon = "GFX_ship_part_bio_evasion_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_5"
+	icon = "GFX_ship_part_bio_evasion_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_EVASION_GUN_6"
+	icon = "GFX_ship_part_bio_evasion_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_1"
+	icon = "GFX_ship_part_bio_anti_fire_rate_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_2"
+	icon = "GFX_ship_part_bio_anti_fire_rate_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_3"
+	icon = "GFX_ship_part_bio_anti_fire_rate_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_4"
+	icon = "GFX_ship_part_bio_anti_fire_rate_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_5"
+	icon = "GFX_ship_part_bio_anti_fire_rate_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_ANTI_FIRE_RATE_GUN_6"
+	icon = "GFX_ship_part_bio_anti_fire_rate_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_1"
+	icon = "GFX_ship_part_bio_fire_rate_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_2"
+	icon = "GFX_ship_part_bio_fire_rate_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_3"
+	icon = "GFX_ship_part_bio_fire_rate_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_4"
+	icon = "GFX_ship_part_bio_fire_rate_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_5"
+	icon = "GFX_ship_part_bio_fire_rate_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_FIRE_RATE_GUN_6"
+	icon = "GFX_ship_part_bio_fire_rate_6"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BEHEMOTH_ARMOR"
+	icon = "GFX_ship_part_behemoth_armor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BEHEMOTH_LIGHTNING_WEAPON"
+	icon = "GFX_mutation_lightning_breath_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BEHEMOTH_TITAN_WEAPON"
+	icon = "GFX_mutation_laser_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_LM_ARMOR_1"
+	icon = "GFX_ship_part_bio_lm_armor_1"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_LM_ARMOR_2"
+	icon = "GFX_ship_part_bio_lm_armor_2"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_LM_ARMOR_3"
+	icon = "GFX_ship_part_bio_lm_armor_3"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_LM_ARMOR_4"
+	icon = "GFX_ship_part_bio_lm_armor_4"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\02_biogenesis_components.txt -----
+component_set = {
+	key = "BIO_LM_ARMOR_5"
+	icon = "GFX_ship_part_bio_lm_armor_5"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "PSIONIC_DISRUPTOR"
+	icon = "GFX_ship_part_psionic_disruptor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "PSIONIC_TORPEDO"
+	icon = "GFX_ship_part_psionic_torpedo"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "PSIONIC_STRIKE_CRAFT"
+	icon = "GFX_ship_part_psionic_bombers"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "PSIONIC_LIGHTNING"
+	icon = "GFX_ship_part_psionic_lightning"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "BIO_PSIONIC_DISRUPTOR"
+	icon = "GFX_mutation_psionic_bio_disruptor"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "BIO_PSIONIC_TORPEDO"
+	icon = "GFX_mutation_psionic_bio_launcher"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "BIO_PSIONIC_STRIKE_CRAFT"
+	icon = "GFX_mutation_psionic_sappers"
+	icon_frame = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\component_sets\03_shroud_components.txt -----
+component_set = {
+	key = "BIO_PSIONIC_LIGHTNING"
+	icon = "GFX_mutation_psionic_bio_lightning"
+	icon_frame = 1
+}
+
