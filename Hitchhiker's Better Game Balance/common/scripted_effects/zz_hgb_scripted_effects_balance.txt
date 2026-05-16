@@ -1,0 +1,124 @@
+## zroni be like... man I don't wanna be here
+
+zroni_digsite_spawn_effect = {
+    closest_system = {
+        limit = {
+            has_access_fleet = root.owner
+            is_capital_system = no
+            NOR = {
+                is_same_value = root.solar_system
+                has_star_flag = first_zroni_site@root.owner
+                is_same_value = root.owner.capital_scope.solar_system
+                has_star_flag = hostile_system
+            }
+            is_fe_cluster = no
+            OR = {
+                has_owner = no
+                owner = { is_same_value = root.owner }
+            }
+            any_system_planet = {
+                habitable_planet = yes
+                OR = {
+                    is_colony = no
+                    sapient_pop_amount < 1000
+                }
+                has_anomaly = no
+                NOR = {
+                    exists = archaeological_site
+                    has_planet_flag = hatchling_egg
+                    has_planet_flag = suppress_archaeological_sites #for modders
+                    has_planet_flag = colony_event
+                }
+            }
+            root.owner = {
+                any_controlled_fleet = {
+                    is_ship_class = shipclass_science_ship
+                    can_access_system = prevprev
+                }
+            }
+        }
+        # min_steps = 3
+        # max_steps = 15
+        min_steps = 1
+        max_steps = 5
+        root.owner = { set_visited = prev }
+        random_system_planet = {
+            limit = {
+                habitable_planet = yes
+                has_anomaly = no
+                OR = {
+                    is_colony = no
+                    sapient_pop_amount < 1000
+                }
+                NOR = {
+                    exists = archaeological_site
+                    has_planet_flag = hatchling_egg
+                    has_planet_flag = suppress_archaeological_sites
+                    has_planet_flag = colony_event
+                }
+            }
+            create_archaeological_site = $DIGSITE$
+            root.owner = {
+                set_country_flag = zroni_arc_chain_@prev
+            }
+            add_deposit = $DEPOSIT$
+            save_event_target_as = new_zroni_digsite
+        }
+    }
+    if = {
+        limit = {
+            NOT = { exists = event_target:new_zroni_digsite }
+        }
+        closest_system = {
+            limit = {
+                has_access_fleet = root.owner
+                is_capital_system = no
+                NOR = {
+                    is_same_value = root.solar_system
+                    has_star_flag = first_zroni_site@root.owner
+                    is_same_value = root.owner.capital_scope.solar_system
+                    has_star_flag = hostile_system
+                }
+                is_fe_cluster = no
+                OR = {
+                    has_owner = no
+                    owner = { is_same_value = root.owner }
+                }
+                any_system_planet = {
+                    OR = {
+                        is_planet_class = pc_barren
+                        is_planet_class = pc_barren_cold
+                    }
+                    has_anomaly = no
+                    NOR = {
+                        exists = archaeological_site
+                        has_planet_flag = hatchling_egg
+                        has_planet_flag = suppress_archaeological_sites
+                    }
+                }
+            }
+            min_steps = 1
+            root.owner = { set_visited = prev }
+            random_system_planet = {
+                limit = {
+                    OR = {
+                        is_planet_class = pc_barren
+                        is_planet_class = pc_barren_cold
+                    }
+                    has_anomaly = no
+                    NOR = {
+                        exists = archaeological_site
+                        has_planet_flag = hatchling_egg
+                        has_planet_flag = suppress_archaeological_sites
+                    }
+                }
+                create_archaeological_site = $DIGSITE$
+                root.owner = {
+                    set_country_flag = zroni_arc_chain_@prev
+                }
+                add_deposit = $DEPOSIT$
+                save_event_target_as = new_zroni_digsite
+            }
+        }
+    }
+}

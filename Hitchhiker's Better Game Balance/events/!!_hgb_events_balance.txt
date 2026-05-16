@@ -1,0 +1,278 @@
+## Imagine spawning 30000 jumps away from you... couldn't be the baol or zroni bruh
+
+namespace = ancrel
+
+# Grunur Digsite Stage 2
+fleet_event = {
+    id = ancrel.2002
+    title = "ancrel.2002.name"
+    desc = "ancrel.2002.desc"
+    picture = GFX_evt_baol_datacrystals
+    show_sound = event_finding_loot
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    specimen = grunur_data_crystal
+
+    immediate = {
+        closest_system = {
+            limit = { baol_colony_1_trigger = yes }
+            # min_steps = 3
+            # max_steps = 10
+
+            min_steps = 1
+            max_steps = 5
+            setup_baol_colony_1 = yes
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:baol_colony_1 }
+            }
+            closest_system = {
+                limit = { baol_colony_1_trigger = yes }
+                min_steps = 1
+                setup_baol_colony_1 = yes
+            }
+        }
+    }
+
+    option = {
+        name = "ancrel.2002.a"
+        owner = {
+            add_resource = { minor_artifacts = 50 }
+            begin_event_chain = {
+                event_chain = "baol_chain"
+                target = this
+            }
+            event_target:baol_colony_1 = {
+                enable_special_project = {
+                    name = "BAOL_COLONY_1"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+}
+
+# Digsite 2 Stage 3
+fleet_event = {
+    id = ancrel.2006
+    title = "ancrel.2006.name"
+    desc = "ancrel.2006.desc"
+    picture = GFX_evt_baol_datacrystals
+    show_sound = event_finding_loot
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        closest_system = {
+            limit = {
+                baol_colony_2_trigger = yes
+            }
+            # min_steps = 3
+            # max_steps = 10
+
+            min_steps = 1
+            max_steps = 6
+            setup_baol_colony_2 = yes
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:baol_colony_2 }
+            }
+            closest_system = {
+                limit = {
+                    baol_colony_2_trigger = yes
+                }
+                min_steps = 1
+                setup_baol_colony_2 = yes
+            }
+        }
+    }
+
+    option = {
+        name = "ancrel.2006.a"
+        owner = {
+            add_resource = { minor_artifacts = 50 }
+        }
+        event_target:baol_colony_2 = {
+            enable_special_project = {
+                name = "BAOL_COLONY_2"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+}
+
+# Digsite 3 Stage 4
+fleet_event = {
+    id = ancrel.2011
+    title = "ancrel.2011.name"
+    desc = "ancrel.2011.desc"
+    picture = GFX_evt_baol_datacrystals
+    show_sound = event_finding_loot
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        closest_system = {
+            limit = {
+                baol_colony_3_trigger = yes
+            }
+            # min_steps = 3
+            # max_steps = 10
+
+            min_steps = 1
+            max_steps = 7
+
+            setup_baol_colony_3 = yes
+        }
+        if = { #It is possible that that will not find a system with a valid planet. In that case, sorry player, but we'll have to spread the net a bit
+            limit = { NOT = { exists = event_target:baol_colony_3 } } ## DA HELL
+            closest_system = {
+                limit = {
+                    baol_colony_3_fallback_trigger = yes
+                }
+                setup_baol_colony_3_fallback = yes
+            }
+        }
+    }
+
+    option = {
+        name = "ancrel.2011.a"
+        owner = {
+            add_resource = { minor_artifacts = 50 }
+        }
+        event_target:baol_colony_3 = {
+            enable_special_project = {
+                name = "BAOL_COLONY_3"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+}
+
+#The Last Baol system (hidden)
+country_event = {
+    id = ancrel.2014
+    hide_window = yes
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = last_baol_system_discovered
+        set_country_flag = last_baol_system
+        if = {
+            limit = {
+                any_system_within_border = { has_star_flag = precursor_baol_1 }
+            }
+            random_system_within_border = {
+                limit = { has_star_flag = precursor_baol_1 }
+                save_event_target_as = precursor_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = precursor_spawn_system
+            }
+        }
+        event_target:precursor_spawn_system = {
+            spawn_system = {
+                # min_distance = 10
+                # max_distance = 30
+                ## this is not ok XD, precursor systems should spawn next to you
+                min_distance = 1
+                max_distance = 2
+
+                max_jumps = 0
+                initializer = "last_baol_system"
+            }
+            if = {
+                limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+        }
+        country_event = { id = ancrel.2015 days = 10 }
+    }
+}
+
+## ZRONI
+fleet_event = {
+    id = ancrel.13
+    title = "ancrel.3.name"
+    desc = ancrel.13.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_finding_loot
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = ancrel.13.a
+        medium_artifact_reward = yes
+        owner = {
+            set_global_flag = Zrocursor_system_discovered
+            set_country_flag = last_zroni_system
+            if = {
+                limit = {
+                    any_system_within_border = { has_star_flag = precursor_zroni_1 }
+                }
+                random_system_within_border = {
+                    limit = { has_star_flag = precursor_zroni_1 }
+                    save_event_target_as = precursor_spawn_system
+                }
+            }
+            else = {
+                random_system_within_border = {
+                    save_event_target_as = precursor_spawn_system
+                }
+            }
+            event_target:precursor_spawn_system = {
+                spawn_system = {
+                    # min_distance = 10
+                    # max_distance = 30
+                    # again, not ok
+
+                    min_distance = 1
+                    max_distance = 2
+                    max_jumps = 0
+                    initializer = "Zrocursor_system"
+                }
+                hidden_effect = {
+                    if = {
+                        limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                        add_hyperlane = {
+                            from = this
+                            to = last_created_system
+                        }
+                    }
+                    else = {
+                        add_extra_hyperlane_to_spawned_system_effect = yes
+                    }
+                }
+            }
+        }
+    }
+}

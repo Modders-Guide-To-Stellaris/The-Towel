@@ -7,8 +7,6 @@ planet_event = {
     hide_window = yes
 
     immediate = {
-        every_system = { if = { limit = { has_star_flag = precursor_baol_1 } set_name = "NAME_Baol" } }
-
         if = {
             limit = {
                 is_planet_class = pc_city
