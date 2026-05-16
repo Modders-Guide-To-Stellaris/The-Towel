@@ -867,7 +867,8 @@ country_event = {
 					end_game_years_passed >= 0
 					has_global_flag = hga_crisis_time_override
 				}
-				has_global_flag = extradimensionals_fight
+				has_global_flag = hga_aberrant_summoned
+				NOT = { has_global_flag = extradimensionals_fight }
 			}
 		}
 
