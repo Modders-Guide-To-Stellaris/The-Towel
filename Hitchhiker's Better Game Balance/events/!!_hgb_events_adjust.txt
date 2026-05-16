@@ -581,12 +581,11 @@ country_event = {
 		event_target:leader_2 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				70 = {
+				85 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				20 = { country_event = { id = utopia.3192 } }
-				10 = {
+				15 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -606,12 +605,11 @@ country_event = {
 		event_target:leader_2 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				50 = {
+				65 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				30 = { country_event = { id = utopia.3192 } }
-				20 = {
+				35 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -631,12 +629,11 @@ country_event = {
 		event_target:leader_2 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				30 = {
+				50 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				40 = { country_event = { id = utopia.3192 } }
-				30 = {
+				50 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -657,12 +654,11 @@ country_event = {
 		event_target:leader_3 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				70 = {
+				85 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				20 = { country_event = { id = utopia.3192 } }
-				10 = {
+				15 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -682,12 +678,11 @@ country_event = {
 		event_target:leader_3 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				50 = {
+				65 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				30 = { country_event = { id = utopia.3192 } }
-				20 = {
+				35 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -707,12 +702,11 @@ country_event = {
 		event_target:leader_3 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				30 = {
+				50 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				40 = { country_event = { id = utopia.3192 } }
-				30 = {
+				50 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -733,12 +727,11 @@ country_event = {
 		event_target:leader_4 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				70 = {
+				85 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				20 = { country_event = { id = utopia.3192 } }
-				10 = {
+				15 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -758,12 +751,11 @@ country_event = {
 		event_target:leader_4 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				50 = {
+				65 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				30 = { country_event = { id = utopia.3192 } }
-				20 = {
+				35 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
@@ -783,12 +775,11 @@ country_event = {
 		event_target:leader_4 = { save_event_target_as = chosen_leader }
 		hidden_effect = {
 			random_list = {
-				30 = {
+				50 = {
 					modifier = { add = value:delve_success_chance_from_techs }
 					country_event = { id = utopia.3191 }
 				}
-				40 = { country_event = { id = utopia.3192 } }
-				30 = {
+				50 = {
 					modifier = {
 						factor = 0
 						has_relic = r_zro_crystal
