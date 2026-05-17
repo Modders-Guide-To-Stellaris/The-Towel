@@ -335,7 +335,6 @@ the_curtain_$ETHIC$ = {
         unfulfilled_effect = -0.001
 
         potential = {
-            host_has_dlc = "Utopia"
             exists = owner
             owner = {
                 has_technology = tech_mega_engineering

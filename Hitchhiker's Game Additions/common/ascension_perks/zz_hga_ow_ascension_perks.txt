@@ -214,7 +214,6 @@ ap_hive_worlds = {
     }
 
     potential = {
-        host_has_dlc = "Utopia"
         is_hive_empire = yes
 
         NOT = {

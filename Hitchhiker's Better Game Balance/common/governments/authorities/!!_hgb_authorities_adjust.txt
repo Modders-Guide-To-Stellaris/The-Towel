@@ -309,10 +309,7 @@ auth_hive_mind = {
 	ruler_council_position = councilor_ruler_hive_mind
 
 	playable = {
-		OR = {
-			has_utopia = yes
-			has_biogenesis_dlc = yes
-		}
+        always = yes
 	}
 	possible = {
 		ethics = {
