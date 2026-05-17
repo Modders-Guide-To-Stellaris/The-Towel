@@ -21,7 +21,8 @@ action_improve_relation = {
                         current_awareness_level = full
                         observation_owner_is_actor = yes
                     }
-					is_country_type = exiled
+                    is_country_type = exiled
+                }
             }
         }
     }
