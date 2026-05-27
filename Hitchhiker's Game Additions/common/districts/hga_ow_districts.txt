@@ -247,6 +247,7 @@ district_generator = {
         district_nexus_1
         district_hive_1
         hga_district_ecology_nature_1
+        district_arcology_urban_1
     }
 
     resources = {
@@ -330,6 +331,7 @@ district_generator_uncapped = {
         district_hive_1
         district_geothermal
         hga_district_ecology_nature_1
+        district_arcology_urban_1
     }
 }
 
@@ -401,6 +403,7 @@ district_mining = {
         district_hive_2
         district_melting
         hga_district_ecology_nature_2
+        district_arcology_urban_2
     }
 
     resources = {
@@ -486,6 +489,7 @@ district_mining_uncapped = {
         district_hive_2
         district_melting
         hga_district_ecology_nature_2
+        district_arcology_urban_2
     }
 }
 
@@ -551,6 +555,7 @@ district_farming = {
         district_nexus_3
         district_hive_3
         hga_district_ecology_nature_3
+        district_arcology_urban_3
     }
 
     resources = {
@@ -680,5 +685,6 @@ district_farming_uncapped = {
         district_orchard_forests
         district_hive_3
         hga_district_ecology_nature_3
+        district_arcology_urban_3
     }
 }

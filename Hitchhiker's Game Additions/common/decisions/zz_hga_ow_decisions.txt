@@ -13,8 +13,6 @@ decision_arcology_project = {
     }
 
     potential = {
-        host_has_dlc = "Megacorp" #EULA thing
-
         NOR = {
             is_planet_class = pc_city
             is_planet_class = pc_relic
@@ -32,17 +30,33 @@ decision_arcology_project = {
 
     allow = {
         if = {
-            limit = { owner = { is_ai = no } }
-            custom_tooltip = {
-                fail_text = decision_arcology_project_requirements
-                free_district_slots < 1
-                num_districts = { type = district_farming value < 1 }
-                num_districts = { type = district_mining value < 1 }
-                num_districts = { type = district_generator value < 1 }
-                # Volcanic Worlds
-                num_districts = { type = district_geothermal value < 1 }
-                num_districts = { type = district_melting value < 1 }
-                num_districts = { type = district_polytechnic value < 1 }
+            limit = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_global_flag = hga_arcology_menials_in_play }
+                }
+                custom_tooltip = {
+                    fail_text = decision_arcology_project_requirements
+                    free_district_slots < 1
+                    num_districts = { type = district_farming value < 1 }
+                    num_districts = { type = district_mining value < 1 }
+                    num_districts = { type = district_generator value < 1 }
+                    # Volcanic Worlds
+                    num_districts = { type = district_geothermal value < 1 }
+                    num_districts = { type = district_melting value < 1 }
+                    num_districts = { type = district_polytechnic value < 1 }
+                }
+            }
+            else_if = {
+                limit = { has_global_flag = hga_arcology_menials_in_play }
+                custom_tooltip = {
+                    fail_text = decision_arcology_project_requirements_alt_menials
+                    free_district_slots < 1
+                }
             }
             custom_tooltip = {
                 fail_text = legendary_leader_decision_arcology_project

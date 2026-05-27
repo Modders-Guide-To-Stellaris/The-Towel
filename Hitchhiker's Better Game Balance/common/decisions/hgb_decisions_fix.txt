@@ -14,7 +14,6 @@ decision_arcology_project = {
     }
 
     potential = {
-
         NOR = {
             is_planet_class = pc_city
             is_planet_class = pc_relic
