@@ -1,0 +1,6 @@
+# === has_hitchhiker_better_game_balance ===
+# ORIGINAL NOT FOUND in Stellaris for entry: has_hitchhiker_better_game_balance
+
+# === has_hitchhiker_additions ===
+# ORIGINAL NOT FOUND in Stellaris for entry: has_hitchhiker_additions
+

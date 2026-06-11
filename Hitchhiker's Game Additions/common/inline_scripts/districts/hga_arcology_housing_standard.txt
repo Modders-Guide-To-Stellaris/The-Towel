@@ -1,0 +1,33 @@
+# common\inline_scripts\districts\hga_arcology_housing_standard.txt
+
+## Example
+#inline_script = {
+#	script = districts/hga_arcology_housing_standard
+#}
+
+planet_modifier = {
+    planet_housing_add = 200
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            has_valid_civic = civic_agrarian_idyll
+        }
+    }
+    modifier = {
+        planet_housing_add = 300
+    }
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_gestalt = yes }
+    }
+    modifier = {
+        planet_housing_add = 100
+    }
+}
+# /

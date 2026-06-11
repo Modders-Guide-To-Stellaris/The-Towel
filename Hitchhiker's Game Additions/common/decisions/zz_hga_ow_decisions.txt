@@ -1,0 +1,591 @@
+# >- Arcology Project -<
+decision_arcology_project = {
+    owned_planets_only = yes
+    icon = decision_arcology_project
+
+    enactment_time = 3600
+    resources = {
+        category = decisions
+        cost = {
+            influence = 200
+            alloys = 10000
+        }
+    }
+
+    potential = {
+        NOR = {
+            is_planet_class = pc_city
+            is_planet_class = pc_relic
+            is_planet_class = pc_hga_ecology
+            has_modifier = resort_colony
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+            has_modifier = pm_wenkwort_custodian
+        }
+        is_artificial = no
+        exists = owner
+        owner = { has_ascension_perk = ap_arcology_project }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = {
+        if = {
+            limit = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_global_flag = hga_arcology_menials_in_play }
+                }
+                custom_tooltip = {
+                    fail_text = decision_arcology_project_requirements
+                    free_district_slots < 1
+                    num_districts = { type = district_farming value < 1 }
+                    num_districts = { type = district_mining value < 1 }
+                    num_districts = { type = district_generator value < 1 }
+                    # Volcanic Worlds
+                    num_districts = { type = district_geothermal value < 1 }
+                    num_districts = { type = district_melting value < 1 }
+                    num_districts = { type = district_polytechnic value < 1 }
+                }
+            }
+            else_if = {
+                limit = { has_global_flag = hga_arcology_menials_in_play }
+                custom_tooltip = {
+                    fail_text = decision_arcology_project_requirements_alt_menials
+                    free_district_slots < 1
+                }
+            }
+            custom_tooltip = {
+                fail_text = legendary_leader_decision_arcology_project
+                NOT = { has_planet_flag = legendary_leader_planet }
+            }
+            custom_tooltip = {
+                fail_text = hga_cannot_construct_arcology_because_ecology
+                NOT = { has_planet_flag = ecology_project_construction }
+            }
+        }
+        num_uncleared_blockers < 1
+    }
+
+    on_queued = {
+        set_planet_flag = arcology_project_construction
+    }
+
+    on_unqueued = {
+        remove_planet_flag = arcology_project_construction
+    }
+
+    effect = {
+        remove_planet_flag = arcology_project_construction
+        # Make city-planet
+        custom_tooltip = decision_arcology_project_effects
+        hidden_effect = {
+            # save_deposits = yes
+            # clear_deposits = yes
+            # restore_saved_deposits = yes
+            change_pc = pc_city
+            relic_world_conversion_effect = {
+                DISTRICT = district_arcology_housing
+                VARIABLE = num_housing_districts
+            }
+            set_planet_entity = {
+                entity = "city_planet_entity"
+                graphical_culture = owner
+            }
+            planet_event = { id = action.68 }
+            owner = {
+                country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+            }
+            planet_event = { id = mega.200 }
+            if = {
+                limit = {
+                    OR = {
+                        is_active_resolution = "resolution_ecology_environmental_control_board"
+                        is_active_resolution = "resolution_ecology_paradise_initiative"
+                    }
+                }
+                owner = {
+                    set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 100
+            exists = owner
+            OR = {
+                pop_amount >= 7000
+                is_capital = yes
+            }
+        }
+    }
+}
+
+# >- Nu-Baol Life Seed -<
+decision_baol_life_seed = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_resort_colony
+
+    enactment_time = 720
+
+    potential = {
+        NOT = {
+            is_planet_class = pc_city
+            is_planet_class = pc_machine
+            is_planet_class = pc_relic
+            is_planet_class = pc_hive
+            is_planet_class = pc_gaia
+            is_planet_class = pc_hga_ecology
+        }
+        is_artificial = no
+        exists = owner
+        owner = { has_country_flag = relic_last_baol_activated }
+        owner = {
+            has_country_flag = not_activated_baol
+        }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = { }
+
+    effect = {
+        # Convert to Gaia world, spawn Nu-Baol pops
+        custom_tooltip = decision_baol_life_seed_effects
+        hidden_effect = {
+            change_pc = pc_gaia
+            if = {
+                limit = { NOT = { exists = event_target:nu_baol_species } }
+                if = {
+                    limit = {
+                        owner = {
+                            is_hive_empire = yes
+                        }
+                    }
+                    create_hive_nu_baol_effect = yes
+                }
+                else = {
+                    create_nu_baol_effect = yes
+                }
+            }
+            create_pop_group = {
+                size = 400
+                species = event_target:nu_baol_species
+                ethos = {
+                    ethic = "ethic_pacifist"
+                }
+            }
+            planet_event = { id = ancrel.2025 } #Notification event
+            planet_event = {
+                id = shroud.10010 		# Patron Objective Counter: po_terraform_planet
+            }
+        }
+    }
+
+    on_queued = {
+        owner = { remove_country_flag = not_activated_baol }
+    }
+
+    on_unqueued = {
+        owner = { set_country_flag = not_activated_baol }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_baol_life_seed_enhance = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_resort_colony
+
+    potential = {
+        OR = {
+            is_planet_class = pc_hga_ecology
+            is_planet_class = pc_gaia
+        }
+        exists = owner
+        owner = { has_country_flag = relic_last_baol_activated }
+    }
+
+    allow = { }
+
+    effect = {
+        # Convert to Gaia world, spawn Nu-Baol pops << Idk what paradox smoking here, but it does NOT convert to gaia XD
+        custom_tooltip = decision_baol_life_seed_enhance_effects
+        hidden_effect = {
+            owner = { remove_country_flag = relic_last_baol_activated }
+            if = {
+                limit = { NOT = { exists = event_target:nu_baol_species } }
+                if = {
+                    limit = {
+                        owner = {
+                            is_hive_empire = yes
+                        }
+                    }
+                    create_hive_nu_baol_effect = yes
+                }
+                else = {
+                    create_nu_baol_effect = yes
+                }
+            }
+            create_pop_group = {
+                size = 400
+                species = event_target:nu_baol_species
+                ethos = {
+                    ethic = "ethic_pacifist"
+                }
+            }
+            while = {
+                count = 10
+                weighted_random_owned_pop_group = {
+                    limit = {
+                        species = {
+                            NOR = {
+                                is_robotic = yes
+                                has_trait = trait_pc_gaia_preference_terraforming
+                                has_trait = trait_auto_hab_preference
+                            }
+                        }
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = pc_nuked
+                    }
+                    modify_species = {
+                        species = this
+                        remove_trait = trait_pc_nuked_preference
+                        add_trait = trait_pc_gaia_preference_terraforming
+                    }
+                }
+            }
+            planet_event = { id = ancrel.2026 } #Notification event
+        }
+    }
+
+    on_queued = {
+        owner = { remove_country_flag = not_activated_baol }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+# >- Wilderness -<
+decision_wilderness_expand = {
+    owned_planets_only = yes
+    enactment_time = 360
+
+    icon = wilderness_planet_expand
+
+    potential = {
+        exists = owner
+        owner = { is_wilderness_empire = yes }
+        OR = {
+            planet_size < @habitable_planet_max_size
+            AND = {
+                NOT = { is_planet_class = pc_hga_ecology }
+                owner = { has_tradition = tr_purity_stage_3_swap }
+                planet_size < 30
+            }
+            AND = {
+                ## Wilderness can just grow ecologies without having to have the AP.. I guess? They're just that skilled
+                NOT = { owner = { has_tradition = tr_purity_stage_3_swap } }
+                is_planet_class = pc_hga_ecology
+                planet_size < @size_max_ecology_planet_wilderness
+            }
+            AND = {
+                owner = { has_tradition = tr_purity_stage_3_swap }
+                is_planet_class = pc_hga_ecology
+                planet_size < @size_max_ecology_planet_purity_wilderness
+            }
+        }
+
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            biomass = 2
+            mult = value:wilderness_planet_size_mod
+        }
+        cost = {
+            influence = @grow_planet_decision_base_cost_infl
+        }
+    }
+
+    effect = {
+        change_planet_size = 1
+    }
+
+    on_queued = {
+        if = { # kill on the same planet
+            limit = {
+                is_variable_set = local_spent_biomass
+                any_owned_pop_group = {
+                    has_trait = trait_wilderness
+                    pop_group_size > local_spent_biomass
+                }
+            }
+            random_owned_pop_group = {
+                limit = {
+                    has_trait = trait_wilderness
+                    pop_group_size > local_spent_biomass
+                }
+                kill_pop_group = {
+                    pop_group = this
+                    amount = local_spent_biomass
+                }
+            }
+        }
+        else_if = {
+            limit = { is_variable_set = local_spent_biomass }
+            owner = {
+                global_biomass_spender = yes
+            }
+        }
+    }
+
+    on_unqueued = { #This way you can only mass produce you main species and not other ones for bodysnatcher shenanigans
+        unqueue_biomass_effect = yes
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            free_district_slots = 0
+            mult = 100
+        }
+        modifier = {
+            free_building_slots = 0
+            mult = 10
+        }
+    }
+}
+
+
+# >- Special Colony -<
+decision_penal_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_penal_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        NOT = { has_modifier = resort_colony }
+        NOT = { has_modifier = slave_colony }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { is_planet_class = pc_city }
+        NOT = { is_planet_class = pc_hga_ecology }
+        NOT = {
+            owner = {
+                any_owned_planet = { has_modifier = penal_colony }
+            }
+        }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    effect = {
+        add_modifier = {
+            modifier = penal_colony
+            days = -1
+        }
+        owner = {
+            if = {
+                limit = {
+                    is_twisted_experimenters_empire = yes
+                    NOT = { has_modifier = penal_experimental_sentencing }
+                }
+                add_modifier = {
+                    modifier = penal_experimental_sentencing
+                    days = -1
+                }
+            }
+        }
+
+        hidden_effect = { validate_planet_buildings_and_districts = yes }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_slave_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_slave_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        ## the hell is going on here lol
+        NOT = { is_planet_class = pc_city }
+        NOT = { is_planet_class = pc_hga_ecology }
+        NOT = { has_modifier = resort_colony }
+        NOT = { has_modifier = penal_colony }
+        NOT = { has_modifier = slave_colony }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = decision_slave_colony_must_have_slave
+            any_owned_pop_group = {
+                has_citizenship_type = { type = citizenship_slavery country = owner }
+            }
+        }
+        custom_tooltip = {
+            fail_text = decision_resort_colony_no_districts
+            num_districts = { type = any value < 2 }
+            num_buildings = { type = any value < 2 }
+        }
+    }
+
+    effect = {
+        custom_tooltip = decision_slave_colony_effects
+        add_modifier = {
+            modifier = slave_colony
+            days = -1
+        }
+        hidden_effect = { validate_planet_buildings_and_districts = yes }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_resort_colony = {
+    owned_planets_only = yes
+
+    enactment_time = 180
+    prerequisites = {
+        "tech_resort_colonies"
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 1000
+        }
+    }
+
+    potential = {
+        is_capital = no
+        NOR = {
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+            is_planet_class = pc_city
+            is_planet_class = pc_hga_ecology
+            AND = {
+                is_planet_class = pc_nuked
+                NOR = {
+                    owner = {
+                        OR = {
+                            is_memorialist_empire = yes
+                            has_trait = trait_survivor
+                            has_trait = trait_pc_nuked_preference
+                            has_trait = trait_plantoid_radiotrophic
+                        }
+                    }
+                }
+            }
+            AND = {
+                is_planet_class = pc_relic
+                NOT = { owner = { is_memorialist_empire = yes } }
+            }
+        }
+        owner = {
+            is_regular_empire = yes
+        }
+        is_artificial = no
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = decision_resort_colony_no_districts
+            num_districts = { type = district_farming value < 1 }
+            num_districts = { type = district_mining value < 1 }
+            num_districts = { type = district_generator value < 1 }
+            # Volcanic Worlds
+            num_districts = { type = district_geothermal value < 1 }
+            num_districts = { type = district_melting value < 1 }
+            num_districts = { type = district_polytechnic value < 1 }
+        }
+        custom_tooltip = {
+            fail_text = decision_resort_colony_only_one
+            NOT = {
+                owner = {
+                    any_owned_planet = { has_modifier = resort_colony }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = decision_cant_be_building_anything
+            has_building_construction = no
+        }
+    }
+
+    effect = {
+        add_modifier = {
+            modifier = resort_colony
+            days = -1
+        }
+        hidden_effect = {
+            remove_building = building_colony_shelter
+            remove_building = building_capital
+            remove_building = building_major_capital
+            remove_building = building_system_capital
+            add_building = building_resort_capital
+            # Summer Vacation achievement
+            if = {
+                limit = { is_planet_class = pc_volcanic }
+                owner = { set_country_flag = INF_A_volcanic_resort }
+            }
+        }
+        hidden_effect = {
+            validate_planet_buildings_and_districts = yes
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

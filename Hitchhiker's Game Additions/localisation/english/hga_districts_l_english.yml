@@ -1,0 +1,100 @@
+﻿l_english:
+ hga_district_food_arcology: "$hga_zone_food_arcology$"
+ hga_district_food_arcology_desc: "$hga_zone_food_arcology_desc$"
+ hga_district_food_arcology_plural: "$hga_zone_food_arcology_plural$"
+
+ hga_district_energy_arcology: "$hga_zone_energy_arcology$"
+ hga_district_energy_arcology_desc: "$hga_zone_energy_arcology_desc$"
+ hga_district_energy_arcology_plural: "$hga_zone_energy_arcology_plural$"
+
+ hga_district_mineral_arcology: "$hga_zone_mineral_arcology$"
+ hga_district_mineral_arcology_desc: "$hga_zone_mineral_arcology_desc$"
+ hga_district_mineral_arcology_plural: "$hga_zone_mineral_arcology_plural$"
+
+ # ==========================================
+ # ECOLOGY DISTRICTS
+ # ==========================================
+
+ # >- Primary -<
+ district_ecology_name:0 "Ecology District"
+ hga_district_ecology_housing: "Garden Estates"
+ hga_district_ecology_housing_plural: "Garden Estates"
+ hga_district_ecology_housing_desc: "Spacious, beautiful residential sectors seamlessly woven into the landscape, offering our citizens an unparalleled standard of living amidst curated nature."
+
+ # >- Secondaries (Nature Shells) -<
+ hga_district_ecology_nature_1: "Surface Parklands"
+ hga_district_ecology_nature_1_plural: "Surface Parklands"
+ hga_district_ecology_nature_1_desc: "Expansive, curated green spaces at ground level. These parks anchor the local ecosystem and provide citizens with serene recreational areas."
+
+ hga_district_ecology_nature_2: "Terrace Gardens"
+ hga_district_ecology_nature_2_plural: "Terrace Gardens"
+ hga_district_ecology_nature_2_desc: "Elevated, overlapping biomes that act as vertical parks, purifying the air while serving as scenic transit routes."
+
+ hga_district_ecology_nature_3: "Skyward Conservatories"
+ hga_district_ecology_nature_3_plural: "Skyward Conservatories"
+ hga_district_ecology_nature_3_desc: "Towering, open-air structures that catch the optimal amount of sunlight, creating a perfect high-altitude environment for exotic flora."
+
+ # >- Menials -<
+ hga_district_food_ecology: "$hga_zone_food_ecology$"
+ hga_district_food_ecology_plural: "$hga_zone_food_ecology_plural$"
+ hga_district_food_ecology_desc: "$hga_zone_food_ecology_desc$"
+
+ hga_district_energy_ecology: "$hga_zone_energy_ecology$"
+ hga_district_energy_ecology_plural: "$hga_zone_energy_ecology_plural$"
+ hga_district_energy_ecology_desc: "$hga_zone_energy_ecology_desc$"
+
+ hga_district_mineral_ecology: "$hga_zone_mineral_ecology$"
+ hga_district_mineral_ecology_plural: "$hga_zone_mineral_ecology_plural$"
+ hga_district_mineral_ecology_desc: "$hga_zone_mineral_ecology_desc$"
+
+ # >- Research -<
+ hga_district_ecology_research: "$hga_zone_research_ecology$"
+ hga_district_ecology_research_plural: "$hga_zone_research_ecology_plural$"
+ hga_district_ecology_research_desc: "$hga_zone_research_ecology_desc$"
+
+ hga_district_ecology_research_physics: "$hga_zone_research_physics_ecology$"
+ hga_district_ecology_research_physics_plural: "$hga_zone_research_physics_ecology_plural$"
+ hga_district_ecology_research_physics_desc: "$hga_zone_research_physics_ecology_desc$"
+
+ hga_district_ecology_research_society: "$hga_zone_research_society_ecology$"
+ hga_district_ecology_research_society_plural: "$hga_zone_research_society_ecology_plural$"
+ hga_district_ecology_research_society_desc: "$hga_zone_research_society_ecology_desc$"
+
+ hga_district_ecology_research_engineering: "$hga_zone_research_engineering_ecology$"
+ hga_district_ecology_research_engineering_plural: "$hga_zone_research_engineering_ecology_plural$"
+ hga_district_ecology_research_engineering_desc: "$hga_zone_research_engineering_ecology_desc$"
+
+ # >- Social & Government -<
+ hga_district_ecology_archives: "$hga_zone_archives_ecology$"
+ hga_district_ecology_archives_plural: "$hga_zone_archives_ecology_plural$"
+ hga_district_ecology_archives_desc: "$hga_zone_archives_ecology_desc$"
+
+ hga_district_ecology_unity: "$hga_zone_unity_ecology$"
+ hga_district_ecology_unity_plural: "$hga_zone_unity_ecology_plural$"
+ hga_district_ecology_unity_desc: "$hga_zone_unity_ecology_desc$"
+
+ hga_district_ecology_unity_spiritualist: "$hga_zone_unity_spiritualist_ecology$"
+ hga_district_ecology_unity_spiritualist_plural: "$hga_zone_unity_spiritualist_ecology_plural$"
+ hga_district_ecology_unity_spiritualist_desc: "$hga_zone_unity_spiritualist_ecology_desc$"
+
+ # >- Economy & Industry -<
+ hga_district_ecology_trade: "$hga_zone_trade_ecology$"
+ hga_district_ecology_trade_plural: "$hga_zone_trade_ecology_plural$"
+ hga_district_ecology_trade_desc: "$hga_zone_trade_ecology_desc$"
+
+ hga_district_ecology_industrial: "$hga_zone_industrial_ecology$"
+ hga_district_ecology_industrial_plural: "$hga_zone_industrial_ecology_plural$"
+ hga_district_ecology_industrial_desc: "$hga_zone_industrial_ecology_desc$"
+
+ hga_district_ecology_foundry: "$hga_zone_foundry_ecology$"
+ hga_district_ecology_foundry_plural: "$hga_zone_foundry_ecology_plural$"
+ hga_district_ecology_foundry_desc: "$hga_zone_foundry_ecology_desc$"
+
+ hga_district_ecology_factory: "$hga_zone_factory_ecology$"
+ hga_district_ecology_factory_plural: "$hga_zone_factory_ecology_plural$"
+ hga_district_ecology_factory_desc: "$hga_zone_factory_ecology_desc$"
+
+ # >- Military -<
+ hga_district_ecology_fortress: "$hga_zone_fortress_ecology$"
+ hga_district_ecology_fortress_plural: "$hga_zone_fortress_ecology_plural$"
+ hga_district_ecology_fortress_desc: "$hga_zone_fortress_ecology_desc$"

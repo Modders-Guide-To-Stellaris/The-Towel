@@ -5,6 +5,7 @@ has_hitchhiker_additions = {
 	always = yes
 }
 
+## probably move this to an @variable?
 has_hitchhiker_better_game_balance = {
 	has_global_flag = hgb_enabled
 }

@@ -1,0 +1,1168 @@
+# === produces ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	trade = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	unity = -0.5
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	unity = -0.5
+	engineering_research = 2.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	unity = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	alloys = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.75
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	alloys = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.25
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	alloys = @requisitorium_alloys_reduction
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	trade = 4
+	unity = -0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_designation = col_penal
+		}
+	}
+	unity = -3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_galactic_stock_exchange
+		}
+	}
+	unity = -3
+	trade = 12
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_exalted_priesthood
+		}
+	}
+	unity = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	engineering_research = 5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	unity = 1
+}
+
+# === produces ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	trade = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	unity = -0.5
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	unity = -0.5
+	engineering_research = 2.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	unity = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	alloys = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.75
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	alloys = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.25
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	alloys = @requisitorium_alloys_reduction
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	trade = 4
+	unity = -0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_designation = col_penal
+		}
+	}
+	unity = -3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_galactic_stock_exchange
+		}
+	}
+	unity = -3
+	trade = 12
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_exalted_priesthood
+		}
+	}
+	unity = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	engineering_research = 5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	unity = 1
+}
+
+# === upkeep ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	alloys = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+	}
+	minerals = 6
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	food = 9
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	energy = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+upkeep = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	consumer_goods = 1
+}
+
+# === upkeep ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	alloys = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+	}
+	minerals = 6
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	food = 9
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	energy = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+upkeep = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	consumer_goods = 1
+}
+
+# === produces ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	trade = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	unity = -0.5
+	trade = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	unity = -0.5
+	engineering_research = 2.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	unity = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	alloys = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.75
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	alloys = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	alloys = 0.25
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	alloys = @requisitorium_alloys_reduction
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	trade = 4
+	unity = -0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_designation = col_penal
+		}
+	}
+	unity = -3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_galactic_stock_exchange
+		}
+	}
+	unity = -3
+	trade = 12
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_exalted_priesthood
+		}
+	}
+	unity = 1
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+produces = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	engineering_research = 5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+produces = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	unity = 1
+}
+
+# === upkeep ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	alloys = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+	}
+	minerals = 6
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	food = 9
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	energy = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+upkeep = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	consumer_goods = 1
+}
+
+# === upkeep ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = no
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			is_megacorp = yes
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\bureaucrat_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	consumer_goods = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\entertainer_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	alloys = 0.5
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+	}
+	minerals = 6
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+	food = 9
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		exists = owner
+		owner = {
+			is_robot_empire = yes
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = no
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	minerals = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\foundry_output.txt -----
+upkeep = {
+	trigger = {
+		industrial_jobs_are_catalytic_trigger = yes
+		planet = {
+			has_planet_flag = has_material_requisitorium
+		}
+	}
+	food = 3
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\politician_output.txt -----
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+	}
+	energy = 2
+}
+
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\inline_scripts\output\trader_output.txt -----
+upkeep = {
+	trigger = {
+		planet = {
+			has_building = building_toxic_bath
+		}
+	}
+	consumer_goods = 1
+}
+

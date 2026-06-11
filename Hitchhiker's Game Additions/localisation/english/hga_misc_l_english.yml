@@ -1,0 +1,17 @@
+﻿# stuff to be sorted if demand asks
+
+l_english:
+ maintheme13: "Starsailer - HGA Maintheme"
+ hga_version: "HGA Version: §KLongclaw§! v2.1.8"
+ hgb_version_txt: "$hgb_version$"
+# Blackfyre
+# Brightroar
+# Heartsbane
+# Nightfall
+# Bolton
+# Cassel
+# Next Major Version Names
+
+ hga_planetary_features.200.name: "§HEcology§!: [Root.GetName] Perfected"
+ hga_planetary_features.200.desc: "The final sequence of the Idyllic Ecogenesis is complete, and [Root.GetName] has transitioned into a state of post-natural perfection.\n\nIt is difficult to believe this world was once merely a Gaia world, a beautiful accident of evolution. Today, it stands as a masterpiece of intent. The synthetic ley lines hum silently beneath the roots of towering, engineered groves, and the atmosphere itself has become a finely tuned instrument of our design.\n\nWe have not replaced nature with the cold indifference of steel; we have elevated it. [Root.GetName] is no longer a planet we simply inhabit; it is a world that has been taught to think, to provide, and to flourish in perfect synchronicity with our people."
+ hga_planetary_features.200.a: "A true masterpiece."

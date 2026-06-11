@@ -1,2 +1,23 @@
 namespace = hga_planetary_features
 
+## first 50 are preserved for important events
+## 50-100 are preserved for Ecology Worlds
+
+planet_event = {
+    id = hga_planetary_features.200
+    title = hga_planetary_features.200.name
+    desc = hga_planetary_features.200.desc
+    picture = GFX_evt_astral_rift_siege_on_paradise_baol
+    show_sound = event_alien_nature
+    location = root
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_planet_class = pc_hga_ecology
+    }
+
+    option = {
+        name = hga_planetary_features.200.a
+    }
+}

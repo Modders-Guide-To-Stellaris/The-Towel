@@ -1,0 +1,162 @@
+hga_grow_planet = {
+    enactment_time = @hga_grow_planet_time
+
+    potential = {
+        AND = {
+            planet = {
+                is_planet_class = pc_hga_ecology
+                planet_size < @size_max_ecology_planet
+            }
+
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_world_shaper
+                NOT = { is_wilderness_empire = yes }
+            }
+        }
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            influence = @grow_planet_decision_base_cost_infl
+        }
+
+        cost = {
+            energy = @grow_planet_decision_base_cost
+            minerals = @grow_planet_decision_base_cost
+            food = @grow_planet_decision_base_cost
+            multiplier = value:wilderness_planet_size_mod
+        }
+    }
+
+    effect = {
+        planet = {
+            change_planet_size = 1
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            free_district_slots = 0
+            mult = 100
+        }
+        modifier = {
+            free_building_slots = 0
+            mult = 10
+        }
+    }
+}
+
+hga_ecology_project = {
+    icon = decision_resort_colony
+    enactment_time = @hga_ecology_decision_time
+
+    potential = {
+        planet = {
+            AND = {
+                has_global_flag = hga_ecology_world_in_play
+                is_planet_class = pc_gaia
+                NOR = {
+                    has_modifier = resort_colony
+                    has_modifier = penal_colony
+                    has_modifier = slave_colony
+                }
+            }
+        }
+
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_world_shaper
+        }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = legendary_leader_decision_arcology_project
+            NOT = { has_planet_flag = legendary_leader_planet }
+        }
+        custom_tooltip = {
+            fail_text = hga_cannot_construct_ecology_because_arcology
+            NOT = { has_planet_flag = arcology_project_construction }
+        }
+    }
+
+    resources = {
+        category = decisions
+        cost = {
+            influence = @ecology_project_decision_base_cost_infl
+            energy = @ecology_project_decision_base_cost
+            minerals = @ecology_project_decision_base_cost
+            food = @ecology_project_decision_base_cost
+        }
+    }
+
+    on_queued = {
+        set_planet_flag = ecology_project_construction
+        ## If people somehow manage to make a city planet, then a ecology and that gives them buffs, override the decision and add this to the no block
+        ## otherwise, just a flag for other modders.
+    }
+
+    on_unqueued = {
+        remove_planet_flag = ecology_project_construction
+    }
+
+    effect = {
+        remove_planet_flag = ecology_project_construction
+
+        custom_tooltip = decision_hga_ecology_project_effects
+        hidden_effect = {
+            # save_deposits = yes
+            # clear_deposits = yes
+            # restore_saved_deposits = yes
+            change_pc = pc_hga_ecology
+
+            set_planet_entity = {
+                entity = "hga_ecology_planet"
+                graphical_culture = owner
+            }
+
+            planet_event = { id = action.68 }
+            owner = {
+                country_event = { id = distar.201 }
+            }
+
+            planet_event = { id = hga_planetary_features.200 }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 100
+            exists = owner
+            OR = {
+                pop_amount >= 7000
+                is_capital = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                OR = {
+                    has_origin = origin_life_seeded
+                    has_civic = civic_environmental_architects
+                    OR = {
+                        has_civic = civic_idyllic_bloom
+                        has_civic = civic_hive_idyllic_bloom
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            exists = owner
+            owner = {
+                is_wilderness_empire = yes
+            }
+        }
+    }
+}

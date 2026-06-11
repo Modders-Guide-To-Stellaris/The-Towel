@@ -1,287 +1,419 @@
-# events/hga_menu_events.txt
+# events\hga_menu_events.txt
 # Authors: HGA
 # >- 1-1000 (HOST MENU) -<
 #
 # Legend:
-#   hga_menu.0   - Init (hidden, fires on game start, sets defaults)
-#   hga_menu.1   - Hub / Main Menu
-# 	hga_menu.10	 - Global Settings
+#   hga_menu.0    - Init (hidden, fires on game start, sets defaults)
+#   hga_menu.1    - Hub / Main Menu
+#   hga_menu.10   - Global Settings
 #   hga_menu.100  - Relic Settings page
-#   hga_menu.110  - [RESERVED] Planetary Modifiers page (TBD)
-# 	Anything else I desire because im special xD
+#   hga_menu.110  - Planetary Modifiers page
+#   hga_menu.190  - Crisis Speeddial page
+#   hga_menu.191+ - Hidden crisis trigger events
 
 namespace = hga_menu
 
 # >- INIT -<
-	country_event = {
-		id = hga_menu.0
-		hide_window = yes
-		is_triggered_only = yes
+country_event = {
+	id = hga_menu.0
+	hide_window = yes
+	is_triggered_only = yes
 
-		trigger = {
-			is_ai = no
-			NOT = { has_global_flag = hga_menu_initialized }
-		}
-
-		immediate = {
-			set_global_flag = hga_menu_initialized
-			set_country_flag = hga_is_host
-
-			## DEFAULT SETTING SETTER
-			set_global_flag = hga_detox_tech_enabled
-			set_global_flag = hga_features_intensity_medium
-			set_global_flag = hga_features_production_medium
-
-			# Relic Wars >> default ON
-			# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
-
-			# Relic Trade >> default ON
-			# Do not set hga_no_relic_trade or hga_ai_no_relic_trade by default
-
-			# Detox AP into Tech >> default ON
-
-			country_event = { id = hga_menu.1 days = 1 }
-		}
+	trigger = {
+		is_ai = no
+		NOT = { has_global_flag = hga_menu_initialized }
 	}
+
+	immediate = {
+		set_global_flag = hga_menu_initialized
+		set_country_flag = hga_is_host
+
+		## DEFAULT SETTING SETTER
+		set_global_flag = hga_detox_tech_enabled
+		set_global_flag = hga_features_intensity_medium
+		set_global_flag = hga_features_production_medium
+
+		set_global_flag = hga_arcology_menials_in_play
+
+		# Crisis overrides >> default OFF
+		# Do not set hga_crisis_type_override or hga_crisis_time_override by default
+
+		# Relic Wars >> default ON
+		# Do not set hga_no_relic_war or hga_ai_no_relic_war by default
+
+		# Relic Trade >> default ON
+		# Do not set hga_no_relic_trade or hga_ai_no_relic_trade by default
+
+		country_event = { id = hga_menu.1 days = 1 }
+	}
+}
 
 # /
 
 
 # >- HUB / MAIN MENU -<
-	country_event = {
-		id = hga_menu.1
-		title = hga_menu.1.name
-		desc = hga_menu.1.desc
-		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+country_event = {
+	id = hga_menu.1
+	title = hga_menu.1.name
+	desc = hga_menu.1.desc
+	picture = GFX_evt_star_chart
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
-		# <<->> Global Settings <<->>
+	# <<->> Global Settings <<->>
 
-		option = {
-			name = hga_menu.1.nav_global
-			custom_tooltip = hga_menu.1.nav_globalTT
-			hidden_effect = {
-				country_event = { id = hga_menu.10 }
-			}
-		}
-
-		# <<->> Relic Settings <<->>
-
-		option = {
-			name = hga_menu.2.nav_relic
-			custom_tooltip = hga_menu.2.nav_relicTT
-			hidden_effect = {
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		# <<->> Planetary Modifiers <<->>
-
-		option = {
-			name = hga_menu.3.nav_planetfeatures
-			custom_tooltip = hga_menu.3.nav_planetfeaturesTT
-			hidden_effect = {
-				country_event = { id = hga_menu.110 }
-			}
-		}
-
-		# <<->> Start Game <<->>
-
-		option = {
-			name = hga_menu.1.start
-			custom_tooltip = hga_menu.1.startTT
-			hidden_effect = {
-				set_global_flag = hga_game_started
-			}
+	option = {
+		name = hga_menu.1.nav_global
+		custom_tooltip = hga_menu.1.nav_globalTT
+		hidden_effect = {
+			country_event = { id = hga_menu.10 }
 		}
 	}
+
+	# <<->> Relic Settings <<->>
+
+	option = {
+		name = hga_menu.2.nav_relic
+		custom_tooltip = hga_menu.2.nav_relicTT
+		hidden_effect = {
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	# <<->> Planetary Modifiers <<->>
+
+	option = {
+		name = hga_menu.3.nav_planetfeatures
+		custom_tooltip = hga_menu.3.nav_planetfeaturesTT
+		hidden_effect = {
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	# <<->> Crisis Speeddial <<->>
+
+	option = {
+		name = hga_menu.9.nav_crisis
+		custom_tooltip = hga_menu.9.nav_crisisTT
+		hidden_effect = {
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> Start Game <<->>
+
+	option = {
+		name = hga_menu.1.start
+		custom_tooltip = hga_menu.1.startTT
+		hidden_effect = {
+			set_global_flag = hga_game_started
+		}
+	}
+}
 
 # /
 
+
 # >- GLOBAL SETTINGS PAGE -<
-	country_event = {
-		id = hga_menu.10
-		title = hga_menu.10.name
-		desc = hga_menu.10.desc
-		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+# Includes: Detox tech toggle, Crisis Type Override, Crisis Time Override
+country_event = {
+	id = hga_menu.10
+	title = hga_menu.10.name
+	desc = hga_menu.10.desc
+	picture = GFX_evt_star_chart
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
-		# <<->> Detoxification Wars <<->>
+	# <<->> Detoxification Tech <<->>
 
-		option = {
-			trigger = {
+	option = {
+
+		allow = {
+			custom_tooltip = {
 				OR = {
-					NOT = { has_global_flag = hga_game_started}
+					NOT = { has_global_flag = hga_game_started }
 					has_global_flag = hga_game_started_override
-					#TODO: add flag shown above, but put a warning because certain changes after game start might break things
 				}
-
-				has_global_flag = hga_detox_tech_enabled
-			}
-			name = hga_menu.10.release_detox_tech
-			custom_tooltip = hga_menu.10.release_detox_techTT
-			hidden_effect = {
-				remove_global_flag = hga_detox_tech_enabled
-				country_event = { id = hga_menu.10 }
+				fail_text = hga_game_no_override_after_start
 			}
 		}
 
-		option = {
-			trigger = {
-				OR = {
-					NOT = { has_global_flag = hga_game_started}
-					has_global_flag = hga_game_started_override
-					fail_text = hga_game_time_override
-				}
-
-				NOT = { has_global_flag = hga_detox_tech_enabled }
-			}
-			name = hga_menu.10.force_detox_tech
-			custom_tooltip = hga_menu.100.force_detox_techTT
-			hidden_effect = {
-				set_global_flag = hga_detox_tech_enabled
-				country_event = { id = hga_menu.10 }
-			}
+		trigger = {
+			has_global_flag = hga_detox_tech_enabled
 		}
-
-		# <<->> Return Button <<->>
-
-		option = {
-			name = hga_menu.back
-			hidden_effect = {
-				country_event = { id = hga_menu.1 }
-			}
+		name = hga_menu.10.release_detox_tech
+		custom_tooltip = hga_menu.10.release_detox_techTT
+		hidden_effect = {
+			remove_global_flag = hga_detox_tech_enabled
+			country_event = { id = hga_menu.10 }
 		}
 	}
+
+	option = {
+
+		allow = {
+			custom_tooltip = {
+				OR = {
+					NOT = { has_global_flag = hga_game_started }
+					has_global_flag = hga_game_started_override
+				}
+				fail_text = hga_game_no_override_after_start
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_detox_tech_enabled }
+		}
+		name = hga_menu.10.force_detox_tech
+		custom_tooltip = hga_menu.100.force_detox_techTT
+		hidden_effect = {
+			set_global_flag = hga_detox_tech_enabled
+			country_event = { id = hga_menu.10 }
+		}
+	}
+
+	# <<->> Crisis Type Override (allow multiple endgame crises) <<->>
+
+	option = {
+		default_hide_option = yes
+
+		name = hga_menu.190.crisis_type_override_on
+		custom_tooltip = hga_menu.190.crisis_type_override_onTT
+
+		trigger = {
+			has_global_flag = hga_crisis_type_override
+		}
+
+		hidden_effect = {
+			switch = {
+				trigger = has_global_flag
+
+				hga_crisis_type_override = {
+					remove_global_flag = hga_crisis_type_override
+				}
+				default = {
+					set_global_flag = hga_crisis_type_override
+				}
+			}
+
+			country_event = { id = hga_menu.10 }
+		}
+	}
+
+	option = {
+		default_hide_option = yes
+
+		name = hga_menu.190.crisis_type_override_off
+		custom_tooltip = hga_menu.190.crisis_type_override_offTT
+
+		trigger = {
+			NOT = { has_global_flag = hga_crisis_type_override }
+		}
+
+		hidden_effect = {
+			switch = {
+				trigger = has_global_flag
+
+				hga_crisis_type_override = {
+					remove_global_flag = hga_crisis_type_override
+				}
+				default = {
+					set_global_flag = hga_crisis_type_override
+				}
+			}
+
+			country_event = { id = hga_menu.10 }
+		}
+	}
+
+	# <<->> Crisis Time Override (ignore mid/endgame year gates) <<->>
+
+	option = {
+		default_hide_option = yes
+
+		name = hga_menu.190.crisis_time_override_on
+		custom_tooltip = hga_menu.190.crisis_time_override_onTT
+
+		trigger = {
+			has_global_flag = hga_crisis_time_override
+		}
+
+		hidden_effect = {
+			switch = {
+				trigger = has_global_flag
+
+				hga_crisis_time_override = {
+					remove_global_flag = hga_crisis_time_override
+				}
+				default = {
+					set_global_flag = hga_crisis_time_override
+				}
+			}
+
+			country_event = { id = hga_menu.10 }
+		}
+	}
+
+	option = {
+		default_hide_option = yes
+
+		name = hga_menu.190.crisis_time_override_off
+		custom_tooltip = hga_menu.190.crisis_time_override_offTT
+
+		trigger = {
+			NOT = { has_global_flag = hga_crisis_time_override }
+		}
+
+		hidden_effect = {
+			switch = {
+				trigger = has_global_flag
+
+				hga_crisis_time_override = {
+					remove_global_flag = hga_crisis_time_override
+				}
+				default = {
+					set_global_flag = hga_crisis_time_override
+				}
+			}
+
+			country_event = { id = hga_menu.10 }
+		}
+	}
+
+	# <<->> Return Button <<->>
+
+	option = {
+		name = hga_menu.back
+		hidden_effect = {
+			country_event = { id = hga_menu.1 }
+		}
+	}
+}
 
 # /
 
 # >- RELIC SETTINGS PAGE -<
-	country_event = {
-		id = hga_menu.100
-		title = hga_menu.100.name
-		desc = hga_menu.100.desc
-		picture = GFX_evt_star_chart			# TODO: replace with custom GFX
+country_event = {
+	id = hga_menu.100
+	title = hga_menu.100.name
+	desc = hga_menu.100.desc
+	picture = GFX_evt_star_chart
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
-		# <<->> Relic Wars [Players] <<->>
+	# <<->> Relic Wars [Players] <<->>
 
-		option = {
-			trigger = {
-				NOT = { has_global_flag = hga_no_relic_war }
-			}
-			name = hga_menu.100.lock_relic_war
-			custom_tooltip = hga_menu.100.lock_relic_warTT
-			hidden_effect = {
-				set_global_flag = hga_no_relic_war
-				country_event = { id = hga_menu.100 }
-			}
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_no_relic_war }
 		}
-
-		option = {
-			trigger = {
-				has_global_flag = hga_no_relic_war
-			}
-			name = hga_menu.100.unlock_relic_war
-			custom_tooltip = hga_menu.100.unlock_relic_warTT
-			hidden_effect = {
-				remove_global_flag = hga_no_relic_war
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-
-		# <<->> Relic Wars [AI] <<->>
-
-		option = {
-			trigger = {
-				NOT = { has_global_flag = hga_ai_no_relic_war }
-			}
-			name = hga_menu.100.lock_ai_relic_war
-			custom_tooltip = hga_menu.100.lock_ai_relic_warTT
-			hidden_effect = {
-				set_global_flag = hga_ai_no_relic_war
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		option = {
-			trigger = {
-				has_global_flag = hga_ai_no_relic_war
-			}
-			name = hga_menu.100.unlock_ai_relic_war
-			custom_tooltip = hga_menu.100.unlock_ai_relic_warTT
-			hidden_effect = {
-				remove_global_flag = hga_ai_no_relic_war
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		# <<->> Relic Trade [Player] <<->>
-
-		option = {
-			trigger = {
-				NOT = { has_global_flag = hga_no_relic_trade }
-			}
-			name = hga_menu.100.lock_relic_trade
-			custom_tooltip = hga_menu.100.lock_relic_tradeTT
-			hidden_effect = {
-				set_global_flag = hga_no_relic_trade
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		option = {
-			trigger = {
-				has_global_flag = hga_no_relic_trade
-			}
-			name = hga_menu.100.unlock_relic_trade
-			custom_tooltip = hga_menu.100.unlock_relic_tradeTT
-			hidden_effect = {
-				remove_global_flag = hga_no_relic_trade
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		# <<->> Relic Trade [AI] <<->>
-
-		option = {
-			trigger = {
-				NOT = { has_global_flag = hga_ai_no_relic_trade }
-			}
-			name = hga_menu.100.lock_ai_relic_trade
-			custom_tooltip = hga_menu.100.lock_ai_relic_tradeTT
-			hidden_effect = {
-				set_global_flag = hga_ai_no_relic_trade
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-		option = {
-			trigger = {
-				has_global_flag = hga_ai_no_relic_trade
-			}
-			name = hga_menu.100.unlock_ai_relic_trade
-			custom_tooltip = hga_menu.100.unlock_ai_relic_tradeTT
-			hidden_effect = {
-				remove_global_flag = hga_ai_no_relic_trade
-				country_event = { id = hga_menu.100 }
-			}
-		}
-
-
-		# <<->> Return Button <<->>
-
-		option = {
-			name = hga_menu.back
-			hidden_effect = {
-				country_event = { id = hga_menu.1 }
-			}
+		name = hga_menu.100.lock_relic_war
+		custom_tooltip = hga_menu.100.lock_relic_warTT
+		hidden_effect = {
+			set_global_flag = hga_no_relic_war
+			country_event = { id = hga_menu.100 }
 		}
 	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_no_relic_war
+		}
+		name = hga_menu.100.unlock_relic_war
+		custom_tooltip = hga_menu.100.unlock_relic_warTT
+		hidden_effect = {
+			remove_global_flag = hga_no_relic_war
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	# <<->> Relic Wars [AI] <<->>
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_ai_no_relic_war }
+		}
+		name = hga_menu.100.lock_ai_relic_war
+		custom_tooltip = hga_menu.100.lock_ai_relic_warTT
+		hidden_effect = {
+			set_global_flag = hga_ai_no_relic_war
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_ai_no_relic_war
+		}
+		name = hga_menu.100.unlock_ai_relic_war
+		custom_tooltip = hga_menu.100.unlock_ai_relic_warTT
+		hidden_effect = {
+			remove_global_flag = hga_ai_no_relic_war
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	# <<->> Relic Trade [Player] <<->>
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_no_relic_trade }
+		}
+		name = hga_menu.100.lock_relic_trade
+		custom_tooltip = hga_menu.100.lock_relic_tradeTT
+		hidden_effect = {
+			set_global_flag = hga_no_relic_trade
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_no_relic_trade
+		}
+		name = hga_menu.100.unlock_relic_trade
+		custom_tooltip = hga_menu.100.unlock_relic_tradeTT
+		hidden_effect = {
+			remove_global_flag = hga_no_relic_trade
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	# <<->> Relic Trade [AI] <<->>
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_ai_no_relic_trade }
+		}
+		name = hga_menu.100.lock_ai_relic_trade
+		custom_tooltip = hga_menu.100.lock_ai_relic_tradeTT
+		hidden_effect = {
+			set_global_flag = hga_ai_no_relic_trade
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_ai_no_relic_trade
+		}
+		name = hga_menu.100.unlock_ai_relic_trade
+		custom_tooltip = hga_menu.100.unlock_ai_relic_tradeTT
+		hidden_effect = {
+			remove_global_flag = hga_ai_no_relic_trade
+			country_event = { id = hga_menu.100 }
+		}
+	}
+
+	# <<->> Return Button <<->>
+
+	option = {
+		name = hga_menu.back
+		hidden_effect = {
+			country_event = { id = hga_menu.1 }
+		}
+	}
+}
 
 # /
 
@@ -294,16 +426,20 @@ country_event = {
 	picture = GFX_evt_star_chart
 	is_triggered_only = yes
 
-	# <<->> Enable / Disable <<->>
+	# <<->> Enable / Disable Features <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			NOT = { has_global_flag = hga_planetary_features_disabled }
 		}
+
 		name = hga_menu.110.features_enabled
 		custom_tooltip = hga_menu.110.features_enabledTT
 		hidden_effect = {
@@ -313,13 +449,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_planetary_features_disabled
 		}
+
 		name = hga_menu.110.features_disabled
 		custom_tooltip = hga_menu.110.features_disabledTT
 		hidden_effect = {
@@ -331,13 +471,17 @@ country_event = {
 	# <<->> Production Tier <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_low
 		}
+
 		name = hga_menu.110.production_low
 		custom_tooltip = hga_menu.110.production_lowTT
 		hidden_effect = {
@@ -348,13 +492,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_medium
 		}
+
 		name = hga_menu.110.production_medium
 		custom_tooltip = hga_menu.110.production_mediumTT
 		hidden_effect = {
@@ -365,13 +513,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_production_high
 		}
+
 		name = hga_menu.110.production_high
 		custom_tooltip = hga_menu.110.production_highTT
 		hidden_effect = {
@@ -384,13 +536,17 @@ country_event = {
 	# <<->> Intensity (Droprate) Tier <<->>
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_low
 		}
+
 		name = hga_menu.110.intensity_low
 		custom_tooltip = hga_menu.110.intensity_lowTT
 		hidden_effect = {
@@ -401,13 +557,17 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_medium
 		}
+
 		name = hga_menu.110.intensity_medium
 		custom_tooltip = hga_menu.110.intensity_mediumTT
 		hidden_effect = {
@@ -418,13 +578,18 @@ country_event = {
 	}
 
 	option = {
-		trigger = {
+		allow = {
 			OR = {
 				NOT = { has_global_flag = hga_game_started }
 				has_global_flag = hga_game_started_override
+				has_global_flag = hga_arcology_menials_in_play
 			}
+		}
+
+		trigger = {
 			has_global_flag = hga_features_intensity_high
 		}
+
 		name = hga_menu.110.intensity_high
 		custom_tooltip = hga_menu.110.intensity_highTT
 		hidden_effect = {
@@ -434,11 +599,670 @@ country_event = {
 		}
 	}
 
+	# <<->> Menials Or Ecology Worlds <<->>
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_arcology_menials_in_play }
+		}
+
+		name = hga_menu.110.arcology_menials_off
+		custom_tooltip = hga_menu.110.arcology_menials_offTT
+		hidden_effect = {
+			set_global_flag = hga_arcology_menials_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_arcology_menials_in_play
+		}
+
+		name = hga_menu.110.arcology_menials_on
+		custom_tooltip = hga_menu.110.arcology_menials_onTT
+		hidden_effect = {
+			remove_global_flag = hga_arcology_menials_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = { has_global_flag = hga_ecology_world_in_play }
+		}
+
+		name = hga_menu.110.ecology_worlds_off
+		custom_tooltip = hga_menu.110.ecology_worlds_offTT
+		hidden_effect = {
+			set_global_flag = hga_ecology_world_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = hga_ecology_world_in_play
+		}
+
+		name = hga_menu.110.ecology_worlds_on
+		custom_tooltip = hga_menu.110.ecology_worlds_onTT
+		hidden_effect = {
+			remove_global_flag = hga_ecology_world_in_play
+			country_event = { id = hga_menu.110 }
+		}
+	}
+
 	# <<->> Return Button <<->>
 
 	option = {
 		name = hga_menu.back
 		hidden_effect = { country_event = { id = hga_menu.1 } }
+	}
+}
+
+# /
+
+
+# >- CRISIS SPEEDDIAL PAGE -<
+country_event = {
+	id = hga_menu.190
+	title = hga_menu.190.name
+	desc = hga_menu.190.desc
+	picture = GFX_evt_khan_throne_room
+
+	is_triggered_only = yes
+
+	# <<->> Back <<->>
+
+	option = {
+		name = hga_menu.back
+		hidden_effect = {
+			country_event = { id = hga_menu.1 }
+		}
+	}
+
+	# <<->> MID-GAME: Great Khan <<->>
+
+	option = {
+		name = hga_menu.190.khan
+		custom_tooltip = hga_menu.190.khan_TT
+
+		allow = {
+			AND = {
+				OR = {
+					mid_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = marauder_crisis_started }
+			any_country = {
+				is_country_type = dormant_marauders
+			}
+		}
+
+		hidden_effect = {
+			country_event = { id = hga_menu.191 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> MID-GAME: Voidspawn <<->>
+
+	option = {
+		name = hga_menu.190.voidworms
+		custom_tooltip = hga_menu.190.voidworms_TT
+
+		allow = {
+			AND = {
+				OR = {
+					mid_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = voidworms_plague_crisis_started }
+			any_country = {
+				is_country_type = voidworms
+			}
+		}
+
+		hidden_effect = {
+			country_event = { id = hga_menu.192 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: Prethoryn Scourge <<->>
+
+	option = {
+		name = hga_menu.190.scourge
+		custom_tooltip = hga_menu.190.scourge_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				OR = {
+					has_global_flag = hga_crisis_type_override
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
+				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_scourge_summoned }
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_scourge_summoned
+			country_event = { id = hga_menu.193 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: Contingency <<->>
+
+	option = {
+		name = hga_menu.190.contingency
+		custom_tooltip = hga_menu.190.contingency_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				OR = {
+					has_global_flag = hga_crisis_type_override
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
+				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_contingency_summoned }
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_contingency_summoned
+			country_event = { id = hga_menu.194 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: The Unbidden <<->>
+
+	option = {
+		name = hga_menu.190.unbidden
+		custom_tooltip = hga_menu.190.unbidden_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				OR = {
+					has_global_flag = hga_crisis_type_override
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
+				}
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_unbidden_summoned }
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_unbidden_summoned
+			country_event = { id = hga_menu.195 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: The Aberrant (requires Unbidden to exist first) <<->>
+
+	option = {
+		name = hga_menu.190.aberrant
+		custom_tooltip = hga_menu.190.aberrant_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				has_global_flag = extradimensional_invasion_happened
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_aberrant_summoned }
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_aberrant_summoned
+			country_event = { id = hga_menu.196 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: The Vehement (requires Aberrant fighting Unbidden) <<->>
+
+	option = {
+		name = hga_menu.190.vehement
+		custom_tooltip = hga_menu.190.vehement_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				has_global_flag = hga_aberrant_summoned
+				NOT = { has_global_flag = extradimensionals_fight }
+			}
+		}
+
+		trigger = {
+			NOT = { has_global_flag = hga_vehement_summoned }
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_vehement_summoned
+			country_event = { id = hga_menu.197 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+
+	# <<->> END-GAME: Cetana (requires non-gestalt Fallen Empire) <<->>
+
+	option = {
+		name = hga_menu.190.cetana
+		custom_tooltip = hga_menu.190.cetana_TT
+
+		allow = {
+			AND = {
+				OR = {
+					end_game_years_passed >= 0
+					has_global_flag = hga_crisis_time_override
+				}
+				OR = {
+					has_global_flag = hga_crisis_type_override
+					NOT = { has_global_flag = galactic_crisis_recently_fired }
+				}
+			}
+		}
+
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				is_gestalt = no
+			}
+
+			NAND = {
+				has_global_flag = hga_contingency_summoned
+				has_global_flag = war_in_heaven_ongoing
+				has_global_flag = hga_cetana_summoned
+			}
+		}
+
+		hidden_effect = {
+			set_global_flag = hga_cetana_summoned
+			country_event = { id = hga_menu.198 random = 360 }
+			country_event = { id = hga_menu.190 }
+		}
+	}
+}
+
+# /
+
+
+# >- HIDDEN CRISIS TRIGGER EVENTS -<
+
+# Great Khan
+country_event = {
+	id = hga_menu.191
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = dormant_marauders
+			}
+			set_global_flag = horde_triggered
+			country_event = { id = marauder.500 }
+		}
+	}
+}
+
+# Voidworms
+country_event = {
+	id = hga_menu.192
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = voidworms
+			}
+			country_event = { id = grand_archive.2300 }
+		}
+	}
+}
+
+# Prethoryn Scourge
+country_event = {
+	id = hga_menu.193
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = crisis.10 days = 200 random = 800 }
+		set_global_flag = galactic_crisis_happened
+		set_timed_global_flag = {
+			flag = galactic_crisis_recently_fired
+			years = 12
+		}
+	}
+}
+
+# Contingency
+country_event = {
+	id = hga_menu.194
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = crisis.2005 days = 200 random = 800 }
+		set_global_flag = galactic_crisis_happened
+		set_timed_global_flag = {
+			flag = galactic_crisis_recently_fired
+			years = 12
+		}
+	}
+}
+
+# The Unbidden
+country_event = {
+	id = hga_menu.195
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = crisis.1000 days = 200 random = 800 }
+		set_global_flag = galactic_crisis_happened
+		set_timed_global_flag = {
+			flag = galactic_crisis_recently_fired
+			years = 12
+		}
+	}
+}
+
+# The Aberrant
+country_event = {
+	id = hga_menu.196
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_crisis_sound = extradimensional_crisis_ambient_stage_3
+		set_crisis_stage_3 = yes
+		set_global_flag = extradimensional_second_portal
+		random_system_within_border = {
+			limit = {
+				NOR = {
+					is_star_class = sc_pulsar
+					is_star_class = sc_binary_1
+					has_star_flag = extradimensional_origin_system
+				}
+			}
+			set_star_flag = extradimensional_second_portal_system
+			save_event_target_as = second_portal_system
+			random_system_planet = {
+				create_species = {
+					name = "NAME_Aberrant"
+					class = EXD
+					namelist = Extradimensional
+					portrait = exd2_leader
+					traits = random
+					effect = { save_event_target_as = extradimensional_hunters_species }
+				}
+				create_country = {
+					name = "NAME_Aberrant"
+					type = "extradimensional_2"
+					species = event_target:extradimensional_hunters_species
+					name_list = "Extradimensional"
+					flag = {
+						icon= {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "triangle_split.dds"
+						}
+						colors={
+							"brown"
+							"orange"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_country_flag = aberrant
+						save_global_event_target_as = extradimensionals2
+						create_ship_design = { design = "NAME_Void_Former" }
+						add_ship_design = last_created_design
+						create_ship_design = { design = "NAME_Aberrant_Anchor" }
+						add_ship_design = last_created_design
+						create_ship_design = { design = "NAME_Unbidden_Starbase" }
+						add_ship_design = last_created_design
+						establish_communications_no_message = event_target:portal_holder_1
+						set_faction_hostility = {
+							target = event_target:portal_holder_1
+							set_hostile = no
+						}
+						save_event_target_as = extradimensional_hunters
+						set_graphical_culture = extra_dimensional_02
+					}
+				}
+				event_target:extradimensional_hunters = {
+					create_fleet = {
+						name = "NAME_Dimensional_Portal"
+						effect = {
+							set_owner = PREV
+							create_ship = {
+								name = random
+								design = "NAME_Aberrant_Portal"
+								graphical_culture = "extra_dimensional_02"
+								effect = { set_ship_flag = aberrant_portal }
+							}
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_event_target_as = second_portal
+							fleet_event = { id = crisis.1103 days = 1 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 5 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 15 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 30 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 45 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 60 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 150 } # Fleet Arrives
+							fleet_event = { id = crisis.1103 days = 350 } # Fleet Arrives
+							fleet_event = { id = crisis.1106 days = 20 } # Constructor Arrives
+							fleet_event = { id = crisis.1106 days = 25 } # Constructor Arrives
+							fleet_event = { id = crisis.1106 days = 90 } # Constructor Arrives
+							fleet_event = { id = crisis.1106 days = 210 } # Constructor Arrives
+							event_target:extradimensional_hunters = { country_event = { id = crisis.1260 days = 550 } } # Spawn Cycle starts
+						}
+					}
+					random_list = {
+						25 = {
+							create_leader = {
+								class = commander
+								species = event_target:extradimensional_hunters_species
+								name = random
+								skill = 3
+								traits = {
+									trait = leader_trait_ethereal
+								}
+							}
+						}
+						25 = {
+							create_leader = {
+								class = commander
+								species = event_target:extradimensional_hunters_species
+								name = random
+								skill = 3
+								traits = {
+									trait = leader_trait_dimensional_stutter
+								}
+							}
+						}
+						50 = {
+							create_leader = {
+								class = commander
+								species = event_target:extradimensional_hunters_species
+								name = random
+								skill = 3
+							}
+						}
+					}
+					create_fleet = {
+						effect = {
+							set_owner = PREV
+							create_ship = {
+								name = random
+								design = "NAME_Huntress"
+								graphical_culture = "extra_dimensional_02"
+							}
+							assign_leader = last_created_leader
+							while = {
+								count = 12
+								create_ship = {
+									name = random
+									design = "NAME_Huntress"
+									graphical_culture = "extra_dimensional_02"
+								}
+							}
+							while = {
+								count = 20
+								create_ship = {
+									name = random
+									design = "NAME_Assassin"
+									graphical_culture = "extra_dimensional_02"
+								}
+							}
+							while = {
+								count = 30
+								create_ship = {
+									name = random
+									design = "NAME_Predator"
+									graphical_culture = "extra_dimensional_02"
+								}
+							}
+							set_location = {
+								target = event_target:second_portal
+								distance = 5
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_aggro_range = 500
+							set_aggro_range_measure_from = self
+							set_fleet_bombardment_stance = armageddon
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			create_starbase = {
+				size = starbase_exd
+				owner = event_target:extradimensionals2
+			}
+			star = {
+				create_ambient_object = {
+					type = "extradimensional_2"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_ambient_object_flag = extradimensional_system_effect_2
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+		observer_event = { id = observer.36 }
+		# make portal invincible
+		event_target:extradimensionals2 = {
+			random_controlled_ship = { ship_event = { id = crisis.1280 } }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = { id = crisis.1110 days = 1 }
+		}
+		random_country = {
+			limit = { is_country_type = extradimensional_2 }
+			establish_communications_no_message = root
+		}
+	}
+}
+
+# The Vehement
+country_event = {
+	id = hga_menu.197
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		## Stuff didn't trigger so this is the solution
+		set_global_flag = extradimensionals_fight
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			country_event = { id = crisis.1112 }
+		}
+	}
+}
+
+# Cetana
+country_event = {
+	id = hga_menu.198
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = crisis.8005 days = 200 random = 800 }
+		set_global_flag = galactic_crisis_happened
+		set_timed_global_flag = {
+			flag = galactic_crisis_recently_fired
+			years = 12
+		}
 	}
 }
 

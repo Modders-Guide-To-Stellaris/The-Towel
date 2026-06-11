@@ -1,0 +1,57 @@
+# === machine_defense ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\armies\00_defense_armies.txt -----
+machine_defense = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.10
+	damage = 1.10
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon = GFX_army_type_machine_defensive
+	has_species = yes
+
+	potential = {
+		owner = {
+			is_machine_empire = yes
+		}
+		from = {
+			has_trait = "trait_machine_unit"
+		}
+	}
+
+	resources = {
+		category = armies
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_unyielding_resistance_is_frugal }
+			}
+			unity = 0.5
+		}
+	}
+}
+
+# === machine_occupation_army ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\armies\03_occupation_armies.txt -----
+machine_occupation_army = {
+	defensive = yes
+	occupation = yes
+	health = 1.10
+	damage = 1.10
+	has_morale = no
+	morale_damage = 1.00
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from occupation armies
+	icon = GFX_army_type_machine_defensive
+	has_species = yes
+
+	potential = {
+		owner = { is_machine_empire = yes }
+		from = {
+			has_trait = "trait_machine_unit"
+		}
+	}
+}
+

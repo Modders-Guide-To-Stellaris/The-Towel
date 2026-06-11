@@ -1,0 +1,15 @@
+﻿l_english:
+ hga_cannot_construct_arcology_because_ecology: "We cannot construct an arcology whilst we are already aiming to create an ecology."
+ hga_cannot_construct_ecology_because_arcology: "We cannot construct an ecology whilst we are already aiming to create an arcology."
+ decision_arcology_project_requirements_alt_menials:1 "£trigger_no£ §RAll district slots on the planet must be filled."
+
+ hga_grow_planet: "Planetary Accretion"
+ hga_grow_planet_desc: "By bombarding the planet with high-density mineral slurries and organic matter, held together by intense electromagnetic containment fields, we can physically add new layers to the planetary crust. The energy required to stabilize this new mass increases exponentially with the world's existing volume."
+
+ hga_ecology_project: "Synthetic Genesis"
+ hga_ecology_project_desc: "By committing 15,000 units of minerals, energy, and food, we can adapt the natural biosphere of this Gaia world with an optimized, artificial equivalent, maintaining the beauty of nature whilst elevating it to new heights."
+
+ decision_hga_ecology_project_effects: "- Turns the planet into an §Y$pc_hga_ecology$§!, providing unmatched £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§!, and §YHabitability§!.\n- Unlocks specialized £district£ §YEcology Districts§!, which seamlessly integrate industry into the global biosphere.\n- Unlike standard Arcologies, §YMenial Resource§! production is preserved and enhanced through advanced §Y$pc_hga_ecology$§! infrastructure." #\n- Construction of any £district£ §YDistricts§! while this is underway are §RDisabled§!.
+ decision_hga_ecology_project_effects_short: "Enables £district£ §YEcology Districts§!\nIncreases £housing£ §YHousing§! and §YResource Production§!\nPrevents the loss of §YBasic Resource Districts§!" #\nConstruction of any £district£ §YDistricts§! while this is underway is §RDisabled§!.
+ decision_hga_ecology_project_requirements: "£trigger_no£ §RWorld must be a§! §Y$pc_gaia$§!"
+ hga_ecology_project_construction_fail_tt: "$TRIGGER_FAIL$§RCannot construct £district£ Districts while §Y$decision_hga_ecology_project$§! is underway!§!"

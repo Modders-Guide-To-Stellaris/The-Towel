@@ -1,0 +1,39 @@
+# common\inline_scripts\zones\hga_arcology_menial_zone.txt
+
+## Example
+#inline_script = {
+#	script = zones/hga_arcology_menial_zone
+#	JOB_ZONE_SCRIPT   = "shared_food_zone"
+#	AMOUNT            = @doubled_scaling_district_1_job
+#	SWAP_DISTRICT     = hga_district_food_arcology
+#   POTENTIAL         = "has_global_flag = hga_arcology_menials_in_play"
+#}
+
+inline_script = {
+    script = zones/$JOB_ZONE_SCRIPT$
+    AMOUNT = $AMOUNT$
+}
+
+swap_type = $SWAP_DISTRICT$
+swap_type_weight = 5
+
+zone_sets = {
+    arcology
+}
+
+potential = {
+    $POTENTIAL$
+}
+
+included_building_sets = {
+    urban_automation_arcology
+}
+
+excluded_building_sets = {
+    urban_automation
+}
+
+inline_script = {
+    script = zones/shared_arcology_zone_modifiers
+}
+# /

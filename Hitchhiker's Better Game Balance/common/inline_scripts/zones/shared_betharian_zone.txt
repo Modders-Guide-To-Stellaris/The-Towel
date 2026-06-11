@@ -45,7 +45,7 @@ convert_to = {
 planet_modifier = {
     zone_building_slots_add = 3
     planet_miners_energy_produces_add = 3 ## DOWN FROM 6
-    planet_miners_minerals_produces_add = -2
+    planet_miners_minerals_produces_add = -1 ## DOWN FROM 2
 }
 
 ai_priority = 10

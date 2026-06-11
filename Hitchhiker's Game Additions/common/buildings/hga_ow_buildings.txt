@@ -1,0 +1,267 @@
+building_gaiaseeders_1 = {
+    base_buildtime = @b2_time
+    planet_limit = 1
+    can_be_disabled = no
+    upgrades = { "building_gaiaseeders_2" }
+
+    category = government
+
+    building_sets = {
+        government
+        urban
+    }
+
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = default
+            is_idyllic_bloom_empire = yes
+        }
+        NOR = {
+            is_planet_class = pc_hga_ecology
+            is_planet_class = pc_gaia
+            is_planet_class = pc_city
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_relic
+        }
+        is_artificial = no
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    destroy_trigger = {
+        OR = {
+            is_planet_class = pc_gaia	# No double bonuses if player uses other tools to turn it into a Gaia world.
+            is_planet_class = pc_city
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_relic
+            NOT = { exists = owner }
+            owner = {
+                is_idyllic_bloom_empire = no
+            }
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1500
+            multiplier = value:gaiaseeder_cost_mult
+        }
+
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            biomass = 200
+        }
+
+        upkeep = {
+            energy = 20
+            multiplier = value:gaiaseeder_upkeep
+        }
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    planet_modifier = {
+        logistic_growth_mult = 0.1
+    }
+}
+
+building_gaiaseeders_4 = {
+    base_buildtime = @b2_time
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+
+    category = government
+
+    building_sets = {
+        government
+        urban
+    }
+
+    destroy_trigger = {
+        OR = {
+            NOR = {
+                is_planet_class = pc_hga_ecology
+                is_planet_class = pc_gaia
+            }
+            NOT = { exists = owner }
+            owner = {
+                is_idyllic_bloom_empire = no
+            }
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1500
+            exotic_gases = @b4_rare_cost
+        }
+
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            biomass = 800
+        }
+
+        upkeep = {
+            energy = @b4_upkeep
+            exotic_gases = @b3_rare_upkeep
+            multiplier = value:gaiaseeder_cost_mult
+        }
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    triggered_desc = {
+        text = building_gaiaseeders_4_effect_desc
+        trigger = {
+            exists = planet
+            planet = {
+                NOR = {
+                    is_planet_class = pc_hga_ecology
+                    is_planet_class = pc_gaia
+                }
+            }
+        }
+    }
+
+    triggered_desc = {
+        text = gaia_seeder_bloomed_pops_effect
+    }
+
+    triggered_desc = {
+        text = gaia_seeder_bloom_timer_tooltip
+        trigger = {
+            has_planet_flag = gaia_seeder_bloom_timer
+        }
+    }
+}
+
+building_gaiaseeders_pc_gaia = {
+    base_buildtime = @b2_time
+    planet_limit = 1
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    icon = building_gaiaseeders_4
+
+    category = government
+
+    building_sets = {
+        government
+        urban
+    }
+
+    destroy_trigger = {
+        OR = {
+            NOR = {
+                is_planet_class = pc_hga_ecology
+                is_planet_class = pc_gaia
+            }
+            NOT = { exists = owner }
+            owner = {
+                is_idyllic_bloom_empire = no
+            }
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1500
+            exotic_gases = @b4_rare_cost
+        }
+
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            biomass = 800
+        }
+
+        upkeep = {
+            energy = @b4_upkeep
+            exotic_gases = @b3_rare_upkeep
+            multiplier = value:gaiaseeder_cost_mult
+        }
+    }
+
+    potential = {
+        hidden_trigger = {
+            exists = owner
+            owner = {
+                is_country_type = default
+                is_idyllic_bloom_empire = yes
+            }
+            OR = {
+                is_planet_class = pc_gaia
+                is_planet_class = pc_hga_ecology
+            }
+            NOR = {
+                has_building = building_gaiaseeders_4
+                has_building_construction = building_gaiaseeders_4
+                has_building = building_gaiaseeders_pc_gaia
+                has_building_construction = building_gaiaseeders_pc_gaia
+            }
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+        can_build_gaiaseeder = yes
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    triggered_desc = {
+        text = building_gaiaseeders_4_effect_desc
+        trigger = {
+            exists = planet
+            planet = {
+                NOR = {
+                    is_planet_class = pc_hga_ecology
+                    is_planet_class = pc_gaia
+                }
+            }
+        }
+    }
+
+    triggered_desc = {
+        text = gaia_seeder_bloomed_pops_effect
+    }
+
+    triggered_desc = {
+        text = gaia_seeder_bloom_timer_tooltip
+        trigger = {
+            has_planet_flag = gaia_seeder_bloom_timer
+        }
+    }
+}

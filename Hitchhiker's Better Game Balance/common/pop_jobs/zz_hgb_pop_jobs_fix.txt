@@ -1,0 +1,1050 @@
+overlord_knight = {
+    category = specialist
+    can_set_priority = no
+
+    swappable_data = {
+        default = {
+            building_icon = building_order_keep
+            icon = knight
+        }
+    }
+
+    tags = { unity research soldier }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    overlord_resources = {
+        category = planet_knights
+        produces = {
+            unity = 1
+            mult = value:knights_unity_output_modifier
+        }
+        produces = {
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+            mult = value:knights_research_output_modifier
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_country_flag = cosmogenesis_knights
+                }
+            }
+            advanced_logic = 0.5
+            mult = value:knights_research_output_modifier
+        }
+    }
+
+    resources = {
+        category = planet_knights
+        upkeep = {
+            alloys = 1
+            mult = value:knights_upkeep_modifier
+        }
+    }
+
+    planet_modifier = {
+        planet_stability_add = 3
+        planet_defense_armies_add = 1
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+        mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
+        mult = value:job_weights_research_modifier|JOB|overlord_knight|
+        modifier = {
+            factor = 0
+            is_enslaved = yes
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+overlord_knight_drone = {
+    category = complex_drone
+    can_set_priority = no
+
+    swappable_data = {
+        default = {
+            building_icon = building_order_keep
+            icon = knight
+        }
+    }
+
+    tags = { unity research soldier }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    overlord_resources = {
+        category = planet_knights
+        produces = {
+            unity = 1
+            mult = value:knights_unity_output_modifier
+        }
+        produces = {
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+            mult = value:knights_research_output_modifier
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_country_flag = cosmogenesis_knights
+                }
+            }
+            advanced_logic = 0.5
+            mult = value:knights_research_output_modifier
+        }
+    }
+
+    resources = {
+        category = planet_knights
+        upkeep = {
+            alloys = 1
+            mult = value:knights_upkeep_modifier
+        }
+    }
+
+    planet_modifier = {
+        planet_stability_add = 3
+        planet_defense_armies_add = 1
+    }
+
+    weight = {
+        weight = @overlord_job_weight
+        modifier = {
+            factor = 0
+            is_enslaved = yes
+        }
+        mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
+        mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+# Telepath jobs (Default Gestalt)
+telepath_drone = {
+    category = complex_drone
+    can_be_automated = no
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_psi_corps
+        }
+    }
+
+    tags = { crime enforcer unity telepath psionic_aura }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+        has_psionic_species_trait = yes
+    }
+
+    resources = {
+        category = planet_telepaths
+        produces = {
+            unity = 4.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { has_active_tradition = tr_domination_judgment_corps }
+            }
+            unity = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { has_country_flag = whisperers_covenant_confirmed }
+            }
+            physics_research = 1.5
+            engineering_research = 1.5
+            society_research = 1.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { has_country_flag = whisperers_covenant_rank_1 }
+            }
+            physics_research = 1.5
+            engineering_research = 1.5
+            society_research = 1.5
+        }
+        # Update @telepath_whisperers_research for covenant custom_tooltip
+        upkeep = {
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = { has_modifier = anticrime_campaign }
+            }
+            energy = 2
+        }
+    }
+
+    inline_script = "jobs/job_enforcer_additional_modifiers"
+    inline_script = "jobs/job_telepath_additional_modifiers"
+
+    ## duplicate modifiers (if any missing from the inline script, copy from here and add it
+    # planet_modifier = {
+    #     planet_crime_no_happiness_add = -10
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = planet
+    #         planet = { has_modifier = anticrime_campaign }
+    #     }
+    #     planet_crime_no_happiness_add = -10
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             exists = ruler
+    #             ruler = {
+    #                 has_trait = leader_trait_legendary_harsh_ruler
+    #             }
+    #         }
+    #     }
+    #     planet_stability_add = 0.75
+    # }
+    #
+    # triggered_country_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             is_machine_empire = yes
+    #             is_corporeal_authority = yes
+    #         }
+    #     }
+    #     psionic_aura_effectiveness_mult = @corporeal_machine_aura_effectiveness
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = instrument_covenant_confirmed }
+    #     }
+    #     planet_amenities_no_happiness_add = 700
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = instrument_covenant_rank_1 }
+    #     }
+    #     planet_amenities_no_happiness_add = 800
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = composer_covenant_confirmed }
+    #     }
+    #     modifier = {
+    #         logistic_growth_mult = 0.02
+    #     }
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = composer_covenant_rank_1 }
+    #     }
+    #     modifier = {
+    #         logistic_growth_mult = 0.03
+    #     }
+    # }
+    #
+    # triggered_country_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = eater_covenant_confirmed }
+    #     }
+    #     country_naval_cap_add = 5
+    # }
+    #
+    # triggered_country_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = eater_covenant_rank_1 }
+    #     }
+    #     country_naval_cap_add = 7
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_tradition = tr_psionics_shroud_psychometry }
+    #     }
+    #     planet_crime_no_happiness_add = @psionic_shroud_crime
+    # }
+    #
+    # # Minor Patrons accord modifiers
+    # triggered_country_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = endless_sands_accord }
+    #     }
+    #     leader_lifespan_mult = @endless_sands_leader_lifespan_mult
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = golden_dream_accord }
+    #     }
+    #     planet_stability_mult = @golden_dream_happiness_mult
+    # }
+    #
+    # triggered_country_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = bladeless_sword_accord }
+    #     }
+    #     diplo_weight_mult = @bladeless_sword_diplo_weight_mult
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = throne_shadow_accord }
+    #     }
+    #     planet_defense_armies_add = @throne_shadow_defense_armies
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = animator_of_clay_accord }
+    #     }
+    #     planet_metallurgists_produces_mult = @animator_of_clay_metallurgist_mult
+    # }
+    #
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = { has_country_flag = pale_mountain_accord }
+    #     }
+    #     planet_miners_produces_mult = @pale_mountain_miners_mult
+    # }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
+    }
+}
+
+# Hive Mineral Fix
+calculator_physicist = {
+    category = complex_drone
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_research_lab_1
+            icon = physicist
+        }
+        # Machine Astrometeorologists
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                }
+                physicist_is_astrometeorologist_trigger = yes
+            }
+            name = astrometeorologist_machine
+            desc = astrometeorologist_machine
+            icon = astrometeorologist_machine
+            building_icon = building_astrometeorology_observation_center
+            weight = 5
+        }
+        #Brain Drone Physicist - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                    is_wilderness_empire = no
+                }
+            }
+            name = brain_drone_physicist
+            desc = brain_drone_physicist
+            icon = brain_drone_physicist
+            building_icon = building_research_lab_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 50
+        }
+        # Hive Astrometeorologists
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+                physicist_is_astrometeorologist_trigger = yes
+            }
+            name = astrometeorologist_hive
+            desc = astrometeorologist_hive
+            icon = astrometeorologist_hive
+            building_icon = building_astrometeorology_observation_center
+            weight = 55
+        }
+        # Dimension Portal Researcher
+        swap_type = {
+            trigger = {
+                physicist_is_dimensional_portal_researcher_trigger = yes
+            }
+            name = dimensional_portal_researcher_gestalt
+            desc = dimensional_portal_researcher_gestalt
+            weight = 60
+        }
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            name = evosymbiont_physicist
+            desc = evosymbiont
+            icon = brain_drone_physicist
+            building_icon = brain_node_3
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 100
+        }
+        swap_type = {
+            trigger = {
+                physicist_is_extradimensional_research_unit_trigger = yes
+            }
+            name = extradimensional_research_unit
+            desc = job_extradimensional_research_unit_desc
+            icon = extradimensional_research_unit
+            building_icon = building_materiality_engine
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 100
+        }
+    }
+
+    tags = { research }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_physicists
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    physicist_is_extradimensional_research_unit_trigger = no
+                }
+            }
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    physicist_is_astrometeorologist_trigger = yes
+                    solar_system = {
+                        OR = {
+                            has_environmental_effects = yes
+                            has_star_flag = storm_system
+                        }
+                    }
+                }
+            }
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    physicist_is_extradimensional_research_unit_trigger = yes
+                }
+            }
+            alloys = 2
+            minerals = 4
+            physics_research = 3
+            multiplier = planet.value:materiality_engine_produces_mult
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+                exists = planet
+                planet = {
+                    physicist_is_extradimensional_research_unit_trigger = no
+                }
+            }
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            minerals = 2.5 ## 4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            minerals = 1.5
+        }
+        # Space-Time Researcher
+        produces = {
+            trigger = {
+                physicist_is_space_time_researcher_trigger = yes
+            }
+            physics_research = 1
+            sr_dark_matter = 0.2
+        }
+        upkeep = {
+            trigger = {
+                physicist_is_space_time_researcher_trigger = yes
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            minerals = 2.5 ## 4
+        }
+        upkeep = {
+            trigger = {
+                physicist_is_space_time_researcher_trigger = yes
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+            }
+            energy = 3
+        }
+        # Extradimensional Research Unit
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    physicist_is_extradimensional_research_unit_trigger = yes
+                }
+            }
+            sr_zro = 1
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                    physicist_is_astrometeorologist_trigger = yes
+                    solar_system = {
+                        OR = {
+                            has_environmental_effects = yes
+                            has_star_flag = storm_system
+                        }
+                    }
+                }
+            }
+            physics_research = 0.5
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|calculator_physicist|RESOURCE|physics_research|
+        mult = value:scripted_job_weight_shroud_forged_mult
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+calculator_biologist = {
+    category = complex_drone
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_research_lab_1
+            icon = biologist
+        }
+        #Brain Drone Biologist - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                    is_wilderness_empire = no
+                }
+            }
+            name = brain_drone_biologist
+            desc = brain_drone_biologist
+            icon = brain_drone_biologist
+            building_icon = building_research_lab_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 2
+        }
+        #Archeo Drone - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                has_building = building_archaeostudies_faculty
+                owner = {
+                    is_hive_empire = yes
+                    is_wilderness_empire = no
+                }
+            }
+            name = archaeo_drone
+            desc = archaeo_drone
+            icon = archaeo_drone
+            building_icon = building_archaeostudies_faculty
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 3
+        }
+        #Archeo Drone - auth_machine
+        swap_type = {
+            trigger = {
+                exists = owner
+                has_building = building_archaeostudies_faculty
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            name = archaeo_unit
+            desc = archaeo_unit
+            icon = archaeo_unit
+            building_icon = building_archaeostudies_faculty
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 3
+        }
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            name = evosymbiont_biologist
+            desc = evosymbiont
+            icon = brain_drone_biologist
+            building_icon = brain_node_3
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 10
+        }
+        swap_type = {
+            trigger = {
+                biologist_is_observator_trigger = yes
+            }
+            name = observator_drone
+            desc = job_observator_drone_desc
+            icon = observator_drone
+            building_icon = building_shroud_observatory_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 10
+        }
+    }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_biologists
+        produces = {
+            society_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    biologist_is_observator_trigger = yes
+                }
+            }
+            physics_research = 4.5
+            society_research = 1.5
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+                exists = planet
+                planet = {
+                    biologist_is_observator_trigger = no
+                }
+            }
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            minerals = 2.5 ## 4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            minerals = 1.5
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    biologist_is_observator_trigger = yes
+                }
+            }
+            sr_zro = 1
+        }
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_research
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            society_research = 0.5
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|calculator_biologist|RESOURCE|society_research|
+        mult = value:scripted_job_weight_shroud_forged_mult
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+calculator_engineer = {
+    category = complex_drone
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_research_lab_1
+            icon = engineer
+        }
+        #Brain Drone Engineer - auth_hive
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                    is_wilderness_empire = no
+                }
+            }
+            name = brain_drone_engineer
+            desc = brain_drone_engineer
+            icon = brain_drone_engineer
+            building_icon = building_research_lab_1
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 2
+        }
+        swap_type = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_wilderness_empire = yes
+                }
+            }
+            name = evosymbiont_engineer
+            desc = evosymbiont
+            icon = brain_drone_engineer
+            building_icon = brain_node_3
+            condition_string = DRONE_JOB_TRIGGER
+            weight = 10
+        }
+        # Nanotech Researcher
+        swap_type = {
+            trigger = {
+                engineer_is_nanotech_researcher_trigger = yes
+            }
+            name = nanotech_research_unit
+            desc = nanotech_research_unit
+            building_icon = building_nanolab_1
+            weight = 15
+        }
+    }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    possible = { can_think = yes }
+
+    resources = {
+        category = planet_engineers
+        produces = {
+            engineering_research = 3
+        }
+        produces = {
+            trigger = {
+                engineer_is_nanotech_researcher_trigger = yes
+            }
+            engineering_research = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+            }
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = no
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            minerals = 2.5 ## 4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_hive_empire = yes
+                }
+                planet = {
+                    has_planet_flag = has_science_ministry
+                }
+            }
+            minerals = 1.5
+        }
+        upkeep = {
+            trigger = {
+                engineer_is_nanotech_researcher_trigger = yes
+            }
+            nanites = 1
+        }
+    }
+
+    inline_script = "jobs/academia_recruiter_naval_cap_add"
+
+    inline_script = "jobs/inf_navalcap_jobs"
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_modifier|JOB|calculator_engineer|RESOURCE|engineering_research|
+        mult = value:scripted_job_weight_shroud_forged_mult
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = civic_machine_assimilator }
+            has_trait = trait_cybernetic
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = complex_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}

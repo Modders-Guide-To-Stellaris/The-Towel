@@ -190,7 +190,6 @@ triggered_planet_modifier = {
         }
     }
     planet_crime_mult = -0.10
-
     # planet_jobs_unity_produces_mult = -0.10 - DISABLED
 }
 
@@ -297,7 +296,9 @@ triggered_planet_modifier = {
         exists = owner
         owner = { has_country_flag = animator_of_clay_accord }
     }
-    foundry_jobs_bonus_workforce_mult = @animator_of_clay_metallurgist_mult
+
+    planet_metallurgists_produces_mult  = @animator_of_clay_metallurgist_mult
+    # foundry_jobs_bonus_workforce_mult = @animator_of_clay_metallurgist_mult
 }
 
 triggered_planet_modifier = {
@@ -305,5 +306,7 @@ triggered_planet_modifier = {
         exists = owner
         owner = { has_country_flag = pale_mountain_accord }
     }
-    miner_jobs_bonus_workforce_mult = @pale_mountain_miners_mult
+
+    planet_miners_produces_mult = @pale_mountain_miners_mult
+    # miner_jobs_bonus_workforce_mult = @pale_mountain_miners_mult
 }

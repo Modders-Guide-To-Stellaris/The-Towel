@@ -1,0 +1,78 @@
+# common\inline_scripts\districts\hga_ecology_district.txt
+
+## Example
+#inline_script = {
+#	script = districts/hga_ecology_district
+#	ICON              = district_farming
+#	OVERLAY_ICON      = GFX_district_food
+#	RESOURCE_CATEGORY = planet_districts
+#	JOB_SCRIPT        = "jobs/farmers_add"
+#	JOB_AMOUNT        = @b3_jobs
+#	NAME_SCRIPT       = "districts/district_triggered_name_farming"
+#	FLAVOR_SCRIPT     = "districts/district_triggered_flavor_desc_farming"
+#	PREREQUISITE      = tech_industrial_farming
+#	HOUSING_INLINE    = "districts/hga_arcology_housing_food"
+#	CONVERT_TO        = "
+#		district_farming
+#		district_rw_farming
+#	"
+#}
+
+expansion_planner = yes
+base_buildtime = 600
+icon = $ICON$
+overlay_icon = $OVERLAY_ICON$
+
+zone_slots = {
+    slot_ecology_urban_01
+    slot_ecology_urban_02
+    slot_ecology_urban_03
+}
+
+show_on_uncolonized = {
+    uses_district_set = hga_ecology_world
+}
+
+potential = {
+    always = no
+}
+
+conversion_ratio = 1
+convert_to = {
+    $CONVERT_TO$
+}
+
+resources = {
+    category = $RESOURCE_CATEGORY$
+    cost = {
+        alloys = 500
+        multiplier = $DISTRICT_COST_MULT$
+    }
+    upkeep = {
+        energy = 5
+    }
+}
+
+inline_script = {
+    script = $JOB_SCRIPT$
+    AMOUNT = $JOB_AMOUNT$
+}
+
+inline_script = {
+    script = $HOUSING_INLINE$
+}
+
+inline_script = {
+    script = $NAME_SCRIPT$
+}
+
+inline_script = {
+    script = $FLAVOR_SCRIPT$
+}
+
+prerequisites = {
+    $PREREQUISITE$
+}
+
+ai_weight_coefficient = @hga_rural_district_ai_coefficient
+# /

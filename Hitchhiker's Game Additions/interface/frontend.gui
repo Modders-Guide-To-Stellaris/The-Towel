@@ -144,7 +144,7 @@ guiTypes = {
                 name = "version"
                 font = "cg_16b"
                 text = "1337"
-                position = { x = 310 y = -60 }
+                position = { x = 310 y = -65 }
                 maxWidth = 400
                 maxHeight = 20
                 fixedSize = yes
@@ -165,9 +165,9 @@ guiTypes = {
             }
 
             instantTextBoxType = {
-                name = "hgb_version"
+                name = "hgb_version_txt"
                 font = "cg_16b"
-                text = "hgb_version"
+                text = "hgb_version_txt"
                 position = { x = 310 y = 20 }
                 maxWidth = 400
                 maxHeight = 20

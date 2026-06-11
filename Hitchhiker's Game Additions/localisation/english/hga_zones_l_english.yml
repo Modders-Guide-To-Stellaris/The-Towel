@@ -1,0 +1,79 @@
+﻿l_english:
+ hga_zone_food_arcology: "Hydroponic Bay"
+ hga_zone_food_arcology_plural: "Hydroponic Bays"
+ hga_zone_food_arcology_desc: "Massive, climate-controlled vertical biomes that utilize nutrient-rich mists to produce a constant harvest, independent of a planet's natural soil or sunlight."
+
+ hga_zone_energy_arcology: "Thermodynamic Arcology"
+ hga_zone_energy_arcology_plural: "Thermodynamic Arcologies"
+ hga_zone_energy_arcology_desc: "By designating a section of our city-planet for mass-scale water vaporization, we can channel high-pressure steam through planetary turbines to generate a tremendous amount of power."
+
+ hga_zone_mineral_arcology: "Mineral Fabricator"
+ hga_zone_mineral_arcology_plural: "Mineral Fabricators"
+ hga_zone_mineral_arcology_desc: "By pumping chemically-enriched brines into massive evaporation basins, we can precipitate and harvest solid mineral compounds, allowing for large-scale extraction even on a fully paved world."
+
+ # ==========================================
+ # ECOLOGY ZONES
+ # ==========================================
+
+ # >- Menials -<
+ hga_zone_food_ecology: "Agrarian Biosphere"
+ hga_zone_food_ecology_plural: "Agrarian Biospheres"
+ hga_zone_food_ecology_desc: "A localized sector of climate-perfected farmlands providing a reliable bounty for the population."
+
+ hga_zone_energy_ecology: "Geothermal Grid"
+ hga_zone_energy_ecology_plural: "Geothermal Grids"
+ hga_zone_energy_ecology_desc: "A localized power relay tapping safely into the planetary crust for limitless, clean thermal energy."
+
+ hga_zone_mineral_ecology: "Precipitation Quarry"
+ hga_zone_mineral_ecology_plural: "Precipitation Quarries"
+ hga_zone_mineral_ecology_desc: "A localized facility that pumps underground brines to cleanly precipitate minerals into harvestable crystals."
+
+ # >- Urban -<
+ hga_zone_research_ecology: "Ecological Campus"
+ hga_zone_research_ecology_plural: "Ecological Campuses"
+ hga_zone_research_ecology_desc: "A localized, open-air academic facility designed to inspire researchers in a tranquil setting."
+
+ hga_zone_research_physics_ecology: "Resonance Institute"
+ hga_zone_research_physics_ecology_plural: "Resonance Institutes"
+ hga_zone_research_physics_ecology_desc: "A localized laboratory equipped with energy dampeners to study the fundamental laws of physics."
+
+ hga_zone_research_society_ecology: "Societal Campus"
+ hga_zone_research_society_ecology_plural: "Societal Campuses"
+ hga_zone_research_society_ecology_desc: "A localized facility dedicated to ensuring our society remains in perfect harmony with our engineered world."
+
+ hga_zone_research_engineering_ecology: "Geo-Engineering Campus"
+ hga_zone_research_engineering_ecology_plural: "Geo-Engineering Campuses"
+ hga_zone_research_engineering_ecology_desc: "A localized testing site for material sciences and architectural design."
+
+ city_archive_1:"$hga_zone_archives_ecology$"
+ hga_zone_archives_ecology: "Archive Vault"
+ hga_zone_archives_ecology_plural: "Archive Vaults"
+ hga_zone_archives_ecology_desc: "A localized, climate-controlled library blending natural beauty with the preservation of our civilization's records."
+
+ hga_zone_unity_ecology: "Cultural Forum"
+ hga_zone_unity_ecology_plural: "Cultural Forums"
+ hga_zone_unity_ecology_desc: "A localized gathering point for citizens to celebrate our achievements and shared values."
+
+ hga_zone_unity_spiritualist_ecology: "Sanctuary Garden"
+ hga_zone_unity_spiritualist_ecology_plural: "Sanctuary Gardens"
+ hga_zone_unity_spiritualist_ecology_desc: "A localized, breathtaking sanctuary offering a serene environment for contemplation and worship."
+
+ hga_zone_trade_ecology: "Grand Boulevard"
+ hga_zone_trade_ecology_plural: "Grand Boulevards"
+ hga_zone_trade_ecology_desc: "A localized commercial hub lined with exotic flora to attract wealth and investment."
+
+ hga_zone_fortress_ecology: "Bulwark Citadel"
+ hga_zone_fortress_ecology_plural: "Bulwark Citadels"
+ hga_zone_fortress_ecology_desc: "A localized, structurally reinforced military command providing a safe haven for defensive forces."
+
+ hga_zone_industrial_ecology: "Eco-Industrial Sector"
+ hga_zone_industrial_ecology_plural: "Eco-Industrial Sectors"
+ hga_zone_industrial_ecology_desc: "A localized manufacturing area where industry is safely contained or filtered."
+
+ hga_zone_foundry_ecology: "Thermal Forge"
+ hga_zone_foundry_ecology_plural: "Thermal Forges"
+ hga_zone_foundry_ecology_desc: "A localized, clean foundry utilizing geothermal heat to smelt high-grade alloys."
+
+ hga_zone_factory_ecology: "Artisan Atelier"
+ hga_zone_factory_ecology_plural: "Artisan Ateliers"
+ hga_zone_factory_ecology_desc: "A localized, high-end workshop where citizens assemble complex goods in a stress-free environment."

@@ -1,15 +1,9 @@
 civic_corporate_ascensionists = {
     playable = {
-        OR = {
-            host_has_dlc = "Utopia"
-            has_astral_planes_dlc = yes
-        }
+        always = yes
     }
     ai_playable = {
-        OR = {
-            host_has_dlc = "Utopia"
-            has_astral_planes_dlc = yes
-        }
+        always = yes
     }
     potential = {
         OR = {

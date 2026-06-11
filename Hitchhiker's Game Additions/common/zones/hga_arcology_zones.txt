@@ -1,0 +1,31 @@
+# common\zones\hga_arcology_zones.txt
+
+hga_zone_food_arcology = {
+    inline_script = {
+        script = zones/hga_arcology_zones
+        JOB_ZONE_SCRIPT = "shared_food_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_food_arcology
+        POTENTIAL         = "has_global_flag = hga_arcology_menials_in_play"
+    }
+}
+
+hga_zone_energy_arcology = {
+    inline_script = {
+        script = zones/hga_arcology_zones
+        JOB_ZONE_SCRIPT = "shared_energy_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_energy_arcology
+        POTENTIAL         = "has_global_flag = hga_arcology_menials_in_play"
+    }
+}
+
+hga_zone_mineral_arcology = {
+    inline_script = {
+        script = zones/hga_arcology_zones
+        JOB_ZONE_SCRIPT = "shared_minerals_zone"
+        AMOUNT          = @doubled_scaling_district_1_job
+        SWAP_DISTRICT   = hga_district_mineral_arcology
+        POTENTIAL         = "has_global_flag = hga_arcology_menials_in_play"
+    }
+}
