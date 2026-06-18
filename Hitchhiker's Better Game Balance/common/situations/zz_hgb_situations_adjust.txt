@@ -6,6 +6,7 @@ behemoth_finale_situation = {
 	complete_icon = GFX_situation_outcome_challenge
 	category = positive
 	initial_progress = 0
+	situation_log_category = ambitions
 
 	on_progress_complete = {
 		custom_tooltip = behemoth_finale_situation_outcome
@@ -236,6 +237,7 @@ evolutionary_predators_situation = {
 	complete_icon = GFX_situation_outcome_eat
 	category = positive
 	initial_progress = 0
+	situation_log_category = empire_concerns
 
 	on_progress_complete = {
 		custom_tooltip = evolutionary_predators_situation_outcome

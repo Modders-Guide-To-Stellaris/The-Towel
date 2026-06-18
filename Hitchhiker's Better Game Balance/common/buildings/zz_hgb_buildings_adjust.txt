@@ -15,8 +15,12 @@ building_betharian_power_plant = {
 
     resources = {
         category = planet_buildings
-        cost = {
-            minerals = 200
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = 200
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
         }
         cost = {
             trigger = {

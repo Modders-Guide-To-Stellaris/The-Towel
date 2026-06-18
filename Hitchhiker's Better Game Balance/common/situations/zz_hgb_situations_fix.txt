@@ -6,6 +6,7 @@ situation_geomagnetic_storm = {
 	complete_icon = GFX_situation_outcome_negative
 	picture = GFX_evt_supernova
 	category = negative
+	situation_log_category = developments
 
 	on_start = {
 		set_situation_locked = yes

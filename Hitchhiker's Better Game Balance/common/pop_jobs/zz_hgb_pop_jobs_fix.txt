@@ -37,16 +37,6 @@ overlord_knight = {
             society_research = 1
             mult = value:knights_research_output_modifier
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_country_flag = cosmogenesis_knights
-                }
-            }
-            advanced_logic = 0.5
-            mult = value:knights_research_output_modifier
-        }
     }
 
     resources = {
@@ -64,8 +54,6 @@ overlord_knight = {
 
     weight = {
         weight = @overlord_job_weight
-        mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
-        mult = value:job_weights_research_modifier|JOB|overlord_knight|
         modifier = {
             factor = 0
             is_enslaved = yes
@@ -74,17 +62,10 @@ overlord_knight = {
 
     inline_script = "jobs/automodding_priority_unity"
 
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = specialist
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
 }
 
+# === overlord_knight_drone ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\pop_jobs\08_overlord_jobs.txt -----
 overlord_knight_drone = {
     category = complex_drone
     can_set_priority = no
@@ -124,16 +105,6 @@ overlord_knight_drone = {
             society_research = 1
             mult = value:knights_research_output_modifier
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_country_flag = cosmogenesis_knights
-                }
-            }
-            advanced_logic = 0.5
-            mult = value:knights_research_output_modifier
-        }
     }
 
     resources = {
@@ -155,24 +126,14 @@ overlord_knight_drone = {
             factor = 0
             is_enslaved = yes
         }
-        mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
-        mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
     }
 
     inline_script = "jobs/automodding_priority_unity"
 
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = complex_drone
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
 }
 
-# Telepath jobs (Default Gestalt)
+# === telepath_drone ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\pop_jobs\16_shroud_jobs.txt -----
 telepath_drone = {
     category = complex_drone
     can_be_automated = no
@@ -207,15 +168,13 @@ telepath_drone = {
         }
         produces = {
             trigger = {
-                exists = owner
-                owner = { has_active_tradition = tr_domination_judgment_corps }
+				owner? = { has_active_tradition = tr_domination_judgment_corps }
             }
             unity = 0.5
         }
         produces = {
             trigger = {
-                exists = owner
-                owner = { has_country_flag = whisperers_covenant_confirmed }
+				owner? = { has_country_flag = whisperers_covenant_confirmed }
             }
             physics_research = 1.5
             engineering_research = 1.5
@@ -223,8 +182,7 @@ telepath_drone = {
         }
         produces = {
             trigger = {
-                exists = owner
-                owner = { has_country_flag = whisperers_covenant_rank_1 }
+				owner? = { has_country_flag = whisperers_covenant_rank_1 }
             }
             physics_research = 1.5
             engineering_research = 1.5
@@ -394,7 +352,6 @@ telepath_drone = {
 
     weight = {
         weight = @complex_drone_job_weight
-        mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
     }
 }
 
@@ -411,10 +368,7 @@ calculator_physicist = {
         # Machine Astrometeorologists
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_machine_empire = yes
-                }
+				owner? = { is_machine_empire = yes }
                 physicist_is_astrometeorologist_trigger = yes
             }
             name = astrometeorologist_machine
@@ -426,8 +380,7 @@ calculator_physicist = {
         #Brain Drone Physicist - auth_hive
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
+				owner? = {
                     is_hive_empire = yes
                     is_wilderness_empire = no
                 }
@@ -442,10 +395,7 @@ calculator_physicist = {
         # Hive Astrometeorologists
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
-                }
+				owner? = { is_hive_empire = yes }
                 physicist_is_astrometeorologist_trigger = yes
             }
             name = astrometeorologist_hive
@@ -465,10 +415,7 @@ calculator_physicist = {
         }
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_wilderness_empire = yes
-                }
+				owner? = { is_wilderness_empire = yes }
             }
             name = evosymbiont_physicist
             desc = evosymbiont
@@ -520,7 +467,7 @@ calculator_physicist = {
                 exists = planet
                 planet = {
                     physicist_is_astrometeorologist_trigger = yes
-                    solar_system = {
+					solar_system? = {
                         OR = {
                             has_environmental_effects = yes
                             has_star_flag = storm_system
@@ -544,10 +491,7 @@ calculator_physicist = {
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
+				owner? = { is_hive_empire = no }
                 exists = planet
                 planet = {
                     physicist_is_extradimensional_research_unit_trigger = no
@@ -557,34 +501,21 @@ calculator_physicist = {
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = no }
+				has_carrier_flag = has_science_ministry
             }
             energy = 1
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
+				owner? = { is_hive_empire = yes }
                 }
-            }
-            minerals = 2.5 ## 4
+			minerals = 2.5 #down from 4
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = yes }
+				has_carrier_flag = has_science_ministry
             }
             minerals = 1.5
         }
@@ -599,20 +530,14 @@ calculator_physicist = {
         upkeep = {
             trigger = {
                 physicist_is_space_time_researcher_trigger = yes
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
+				owner? = { is_hive_empire = yes }
                 }
-            }
-            minerals = 2.5 ## 4
+			minerals = 2.5 ## down from 4
         }
         upkeep = {
             trigger = {
                 physicist_is_space_time_researcher_trigger = yes
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
+				owner? = { is_hive_empire = no }
             }
             energy = 3
         }
@@ -633,7 +558,7 @@ calculator_physicist = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+					has_carrier_flag = has_science_ministry
                 }
             }
             physics_research = 1
@@ -641,9 +566,9 @@ calculator_physicist = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+					has_carrier_flag = has_science_ministry
                     physicist_is_astrometeorologist_trigger = yes
-                    solar_system = {
+					solar_system? = {
                         OR = {
                             has_environmental_effects = yes
                             has_star_flag = storm_system
@@ -655,13 +580,24 @@ calculator_physicist = {
         }
     }
 
+	# Caregiver Paragon Effect
+	triggered_planet_modifier = {
+		potential = {
+			leader? = {
+				has_trait = leader_trait_nomadic_caregiver
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 150
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
     inline_script = "jobs/academia_recruiter_naval_cap_add"
 
     inline_script = "jobs/inf_navalcap_jobs"
 
     weight = {
         weight = @complex_drone_job_weight
-        mult = value:job_weights_modifier|JOB|calculator_physicist|RESOURCE|physics_research|
         mult = value:scripted_job_weight_shroud_forged_mult
         modifier = {
             factor = 0.9
@@ -674,15 +610,6 @@ calculator_physicist = {
 
     inline_script = "jobs/automodding_priority_research"
 
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = complex_drone
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
 }
 
 calculator_biologist = {
@@ -697,8 +624,7 @@ calculator_biologist = {
         #Brain Drone Biologist - auth_hive
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
+				owner? = {
                     is_hive_empire = yes
                     is_wilderness_empire = no
                 }
@@ -745,10 +671,7 @@ calculator_biologist = {
         }
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_wilderness_empire = yes
-                }
+				owner? = { is_wilderness_empire = yes }
             }
             name = evosymbiont_biologist
             desc = evosymbiont
@@ -799,10 +722,7 @@ calculator_biologist = {
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
+				owner? = { is_hive_empire = no }
                 exists = planet
                 planet = {
                     biologist_is_observator_trigger = no
@@ -812,34 +732,21 @@ calculator_biologist = {
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = no }
+				has_carrier_flag = has_science_ministry
             }
             energy = 1
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
+				owner? = { is_hive_empire = yes }
                 }
-            }
-            minerals = 2.5 ## 4
+			minerals = 2.5 ## down from 4
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = yes }
+				has_carrier_flag = has_science_ministry
             }
             minerals = 1.5
         }
@@ -858,12 +765,24 @@ calculator_biologist = {
         produces = {
             trigger = {
                 planet = {
-                    has_planet_flag = has_science_ministry
+					has_carrier_flag = has_science_ministry
                 }
             }
             society_research = 0.5
         }
     }
+
+	# Caregiver Paragon Effect
+	triggered_planet_modifier = {
+		potential = {
+			leader? = {
+				has_trait = leader_trait_nomadic_caregiver
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 150
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
 
     inline_script = "jobs/academia_recruiter_naval_cap_add"
 
@@ -871,7 +790,6 @@ calculator_biologist = {
 
     weight = {
         weight = @complex_drone_job_weight
-        mult = value:job_weights_modifier|JOB|calculator_biologist|RESOURCE|society_research|
         mult = value:scripted_job_weight_shroud_forged_mult
         modifier = {
             factor = 0.9
@@ -884,15 +802,6 @@ calculator_biologist = {
 
     inline_script = "jobs/automodding_priority_research"
 
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = complex_drone
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
 }
 
 calculator_engineer = {
@@ -907,8 +816,7 @@ calculator_engineer = {
         #Brain Drone Engineer - auth_hive
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
+				owner? = {
                     is_hive_empire = yes
                     is_wilderness_empire = no
                 }
@@ -922,10 +830,7 @@ calculator_engineer = {
         }
         swap_type = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_wilderness_empire = yes
-                }
+				owner? = { is_wilderness_empire = yes }
             }
             name = evosymbiont_engineer
             desc = evosymbiont
@@ -971,43 +876,27 @@ calculator_engineer = {
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
+				owner? = { is_hive_empire = no }
             }
             energy = 3
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = no
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = no }
+				has_carrier_flag = has_science_ministry
             }
             energy = 1
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
+				owner? = { is_hive_empire = yes }
                 }
-            }
-            minerals = 2.5 ## 4
+			minerals = 2.5 ## down from 4
         }
         upkeep = {
             trigger = {
-                exists = owner
-                owner = {
-                    is_hive_empire = yes
-                }
-                planet = {
-                    has_planet_flag = has_science_ministry
-                }
+				owner? = { is_hive_empire = yes }
+				has_carrier_flag = has_science_ministry
             }
             minerals = 1.5
         }
@@ -1019,13 +908,24 @@ calculator_engineer = {
         }
     }
 
+	# Caregiver Paragon Effect
+	triggered_planet_modifier = {
+		potential = {
+			leader? = {
+				has_trait = leader_trait_nomadic_caregiver
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 150
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
     inline_script = "jobs/academia_recruiter_naval_cap_add"
 
     inline_script = "jobs/inf_navalcap_jobs"
 
     weight = {
         weight = @complex_drone_job_weight
-        mult = value:job_weights_modifier|JOB|calculator_engineer|RESOURCE|engineering_research|
         mult = value:scripted_job_weight_shroud_forged_mult
         modifier = {
             factor = 0.9
@@ -1038,13 +938,5 @@ calculator_engineer = {
 
     inline_script = "jobs/automodding_priority_research"
 
-    promotion = {
-        time = @standard_promotion_time
-        effect = {
-            pop_amount_change_category = {
-                CATEGORY = complex_drone
-                AMOUNT = local_pop_amount
-            }
-        }
-    }
 }
+

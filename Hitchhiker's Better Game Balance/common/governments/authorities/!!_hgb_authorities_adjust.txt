@@ -308,9 +308,6 @@ auth_hive_mind = {
 
 	ruler_council_position = councilor_ruler_hive_mind
 
-	playable = {
-        always = yes
-	}
 	possible = {
 		ethics = {
 			value = ethic_gestalt_consciousness
@@ -446,10 +443,34 @@ auth_hive_mind = {
 			is_scope_valid = yes
 			has_country_flag = bio_mutation
 			has_origin = origin_evolutionary_predators
+			is_nomadic = no
 		}
 		modifier = {
 			custom_tooltip = auth_bio_hive_mind_evopred_tt
 			show_only_custom_tooltip = no
+			pop_cat_purge_bonus_workforce_mult = 0.5
+			empire_size_penalty_mult = -0.20
+		}
+	}
+
+	# EvoPred Mutation (Hive Mind Nomadic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_mind_evopred"
+		description = "auth_bio_hive_mind_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+			is_nomadic = yes
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_mind_evopred_nomads_tt
+			show_only_custom_tooltip = no
+			empire_size_districts_mult = -0.25
+			empire_size_colonies_mult = -0.25
 			pop_cat_purge_bonus_workforce_mult = 0.5
 			empire_size_penalty_mult = -0.20
 		}

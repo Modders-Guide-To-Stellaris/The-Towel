@@ -9,7 +9,7 @@ growth_factor = {
 	add = 1
 
 	min = 0
-	#max = 6.55
+	#max = 6.55 ## was 6.55, now removed to incentivize crisis playstyle
 }
 
 #Reduced negative empire size impact on growth Behemoth
@@ -18,7 +18,6 @@ negative_empire_size_percent = {
 	mult = trigger:empire_size
 	mult = -1
 	add = 1.1
-	#min = 0.1
+	min = 0.5 ## was 0.1, now 0.5 to reduce negative impact on growth for large empires
 	max = 1
-	min = 0.5
 }

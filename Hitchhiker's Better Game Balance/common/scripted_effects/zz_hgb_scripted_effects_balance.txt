@@ -25,9 +25,9 @@ zroni_digsite_spawn_effect = {
                 has_anomaly = no
                 NOR = {
                     exists = archaeological_site
-                    has_planet_flag = hatchling_egg
-                    has_planet_flag = suppress_archaeological_sites #for modders
-                    has_planet_flag = colony_event
+					has_carrier_flag = hatchling_egg
+					has_carrier_flag = suppress_archaeological_sites #for modders
+					has_carrier_flag = colony_event
                 }
             }
             root.owner = {
@@ -52,9 +52,9 @@ zroni_digsite_spawn_effect = {
                 }
                 NOR = {
                     exists = archaeological_site
-                    has_planet_flag = hatchling_egg
-                    has_planet_flag = suppress_archaeological_sites
-                    has_planet_flag = colony_event
+					has_carrier_flag = hatchling_egg
+					has_carrier_flag = suppress_archaeological_sites
+					has_carrier_flag = colony_event
                 }
             }
             create_archaeological_site = $DIGSITE$
@@ -92,8 +92,8 @@ zroni_digsite_spawn_effect = {
                     has_anomaly = no
                     NOR = {
                         exists = archaeological_site
-                        has_planet_flag = hatchling_egg
-                        has_planet_flag = suppress_archaeological_sites
+						has_carrier_flag = hatchling_egg
+						has_carrier_flag = suppress_archaeological_sites
                     }
                 }
             }
@@ -108,8 +108,8 @@ zroni_digsite_spawn_effect = {
                     has_anomaly = no
                     NOR = {
                         exists = archaeological_site
-                        has_planet_flag = hatchling_egg
-                        has_planet_flag = suppress_archaeological_sites
+						has_carrier_flag = hatchling_egg
+						has_carrier_flag = suppress_archaeological_sites
                     }
                 }
                 create_archaeological_site = $DIGSITE$
