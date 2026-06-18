@@ -1,0 +1,82 @@
+# === d_weapon_extraction_facility ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\deposits\11_astral_planes_deposits.txt -----
+d_weapon_extraction_facility = {
+	is_for_colonizable = yes
+	icon = d_organic_landfill
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_engineers_engineering_research_produces_add = 6
+		planet_engineers_alloys_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		planet_engineers_consumer_goods_upkeep_add = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		planet_engineers_minerals_upkeep_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		planet_engineers_energy_upkeep_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ancrel = yes
+			exists = owner
+			owner = {
+				NOT = {
+					has_ascension_perk = ap_archaeoengineers
+				}
+			}
+		}
+		planet_engineers_minor_artifacts_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ancrel = yes
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		planet_engineers_minor_artifacts_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		job_engineer_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_engineer_add = 200
+	}
+
+	potential = { always = no }
+}
+

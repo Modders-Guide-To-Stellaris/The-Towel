@@ -1,0 +1,2317 @@
+# === action_improve_relation ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_improve_relation = {
+	icon = "GFX_diplomacy_improve_relation"
+	auto_accepted = yes
+	require_envoy = yes
+	envoy_assignment = improve_relations
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	action_type = positive
+
+	potential = {
+		hidden_trigger = {
+			is_country_type = default
+			from = {
+				OR = {
+					is_country_type = default
+					AND = {
+						is_country_type = primitive
+						NOT = {
+							has_country_flag = solarpunk_country
+						}
+						current_awareness_level = full
+						observation_owner_is_actor = yes
+					}
+					is_country_type = exiled
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "DIPLOMACY_STATUS_WAR"
+			NOT = { is_at_war_with = from }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "ACTION_CANNOT_INTERFERE_POLICY"
+			OR = {
+				has_policy_flag = interference_subtle
+				has_policy_flag = interference_active
+				from = {
+					NOT = {
+						is_country_type = primitive
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fotd_seperatist"
+			from = { NOT = { has_country_flag =  fotd_seperatist_country@root } }
+		}
+	}
+
+	proposable = {
+		custom_tooltip = {
+			fail_text = "requires_envoy_not_harming_relations"
+			NOT = { is_harming_relations_with = from }
+		}
+	}
+}
+
+# === action_offer_trade_deal ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_offer_trade_deal = {
+	icon = "GFX_diplomacy_status_trade"
+	requires_recipient_independence = no
+	requires_actor_independence = no
+	action_type = neutral
+	potential = {
+		hidden_trigger = {
+			is_fallen_empire_berserk_machine = no
+			from = { is_fallen_empire_berserk_machine = no }
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "the_fe_is_busy_with_synth_queen"
+			OR = {
+				from = { is_fallen_empire = no }
+				AND = {
+					NOT = { has_global_flag = synth_queen_happened }
+					from = {
+						is_fallen_empire = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# === action_form_defensive_pact ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_form_defensive_pact = {
+	icon = "GFX_diplomacy_status_defensive_pact"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+
+	potential = {
+		hidden_trigger = {
+			NOT = { ROOT = { is_overlord_to = FROM } }
+		}
+
+		hidden_trigger = {
+			NOT = { FROM = { is_overlord_to = ROOT } }
+		}
+		hidden_trigger = {
+			is_subject = no
+		}
+
+		hidden_trigger = {
+			FROM = { is_subject = no }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Requirements:
+		# - 20 Trust OR Good Opinion
+		# - An Embassy OR the Diplomatic Networking tradition.
+		custom_tooltip = {
+			fail_text = requires_20_trust_or_good
+
+			OR = {
+				opinion_level = {
+					who = from
+					level >= good
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 20
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 10
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			fail_text = requires_embassy_or_diplomatic_networking
+			OR = {
+				has_embassy = from
+				has_active_tradition = tr_diplomacy_diplomatic_networking
+			}
+		}
+	}
+}
+
+# === action_form_non_aggression_pact ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_form_non_aggression_pact = {
+	icon = "GFX_diplomacy_status_non_aggression_pact"
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Requirements:
+		# - 10 Trust OR Neutral Opinion
+		# - An Embassy OR Improving Relations.
+		custom_tooltip = {
+			fail_text = requires_10_trust_or_neutral
+			OR = {
+				opinion_level = {
+					who = from
+					level >= neutral
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 10
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 5
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_improving_relations
+			OR = {
+				is_improving_relations_with = from
+				has_embassy = from
+			}
+		}
+	}
+}
+
+# === action_form_commercial_pact ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_form_commercial_pact = {
+	icon = "GFX_diplomacy_status_commercial_pact"
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_actor_independence = yes
+	requires_recipient_independence = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		#custom_tooltip = {
+		#	fail_text = "requires_actor_not_criminal_heritage"
+		#	is_criminal_syndicate = no
+		#}
+		#if = {
+		#	limit = { from = { is_criminal_syndicate = yes } }
+		#	if = {
+		#		limit = {
+		#			has_intel = {
+		#				who = from
+		#				intel = civics
+		#			}
+		#		}
+		#		custom_tooltip = {
+		#			fail_text = requires_recipient_not_criminal_heritage
+		#			always = no
+		#		}
+		#	}
+		#	else = {
+		#		custom_tooltip = {
+		#			fail_text = diplo_action_no_low_intel
+		#			always = no
+		#		}
+		#	}
+		#}
+		custom_tooltip = {
+			fail_text = "federation_actor_no_separate_treaties"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = treaties_separate_no }
+					NOT = { federation = { any_member = { is_same_value = root.from } } }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_recipient_no_separate_treaties"
+			from = {
+				NOT = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_law = treaties_separate_no
+						}
+						NOT = { federation = { any_member = { is_same_value = root } } }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Requirements:
+		# - 20 Trust OR Good Opinion
+		# - An Embassy OR the Diplomatic Networking tradition OR Universal Transactions
+		custom_tooltip = {
+			fail_text = requires_20_trust_or_good
+			OR = {
+				opinion_level = {
+					who = from
+					level >= good
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 20
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 10
+						}
+					}
+				}
+				# We don't take into consideration relations' status when dealing with the Mirror Empire
+				from = { is_country_type = mirrored_country }
+			}
+		}
+		if = {
+			limit = {
+				is_megacorp = no
+			}
+			custom_tooltip = {
+				fail_text = requires_embassy_or_diplomatic_networking
+				OR = {
+					has_embassy = from
+					has_active_tradition = tr_diplomacy_diplomatic_networking
+				}
+			}
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = requires_embassy_diplomatic_networking_or_universal_transactions
+				OR = {
+					has_embassy = from
+					has_active_tradition = tr_diplomacy_diplomatic_networking
+					has_ascension_perk = ap_universal_transactions
+				}
+			}
+		}
+	}
+}
+
+# === action_form_research_agreement ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_form_research_agreement = {
+	icon = "GFX_diplomacy_status_research_agreement"
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_actor_independence = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+	potential = {
+		hidden_trigger = {
+			is_country_type = default
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = exiled
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		# When actor is organic, requires target is not exterminator
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		custom_tooltip = {
+			fail_text = "federation_actor_no_separate_treaties"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = treaties_separate_no }
+					NOT = { federation = { any_member = { is_same_value = root.from } } }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_recipient_no_separate_treaties"
+			from = {
+				NOT = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_law = treaties_separate_no
+						}
+						NOT = { federation = { any_member = { is_same_value = root } } }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_automatic_research"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { any_member = { is_same_value = root.from } }
+					federation = { has_federation_perk = research_federation_passive }
+				}
+			}
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Requirements:
+		# - 20 Trust OR Good Opinion
+		# - An Embassy OR the Diplomatic Networking tradition.
+		custom_tooltip = {
+			fail_text = requires_20_trust_or_good
+			OR = {
+				opinion_level = {
+					who = from
+					level >= good
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 20
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 10
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_diplomatic_networking
+			OR = {
+				has_embassy = from
+				has_active_tradition = tr_diplomacy_diplomatic_networking
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_protectorate
+			NOT = {
+				OR = {
+					FROM = {
+						is_subject = yes
+						any_agreement = { agreement_preset = preset_protectorate }
+					}
+					AND = {
+						is_subject = yes
+						any_agreement = { agreement_preset = preset_protectorate }
+					}
+				}
+			}
+		}
+	}
+}
+
+# === action_guarantee_independence ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_guarantee_independence = {
+	icon = "GFX_diplomacy_status_guarantee"
+	auto_accepted = no
+	diplo_view_acceptance_icon = yes
+	should_show_auto_accept_message_recipient = no
+	should_notify_all_communications = yes
+	requires_recipient_independence = yes
+	#requires_actor_independence = yes
+	action_type = positive
+
+	potential = {
+		# Cannot guarantee if you are in an alliance
+		hidden_trigger = {
+			NOT = {
+				exists = alliance
+			}
+		}
+
+		# Cannot guarantee if they are in an alliance
+		hidden_trigger = {
+			exists = from
+			from = {
+				NOT = {
+					exists = alliance
+				}
+			}
+		}
+
+		# Already guaranteeing
+		hidden_trigger = {
+			exists = from
+			NOT = {
+				is_guaranteeing = from
+			}
+		}
+
+		# Defensive Pact
+		hidden_trigger = {
+			exists = from
+			NOT = {
+				has_defensive_pact = from
+			}
+		}
+
+		# Cannot guarantee if target is already a subject.
+		hidden_trigger = {
+			FROM = { is_subject = no }
+		}
+
+		hidden_trigger = {
+			is_subject = no
+		}
+
+		# Target is not overlord.
+		hidden_trigger = {
+			NOT = { has_overlord = FROM }
+		}
+
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Requirements:
+		# - 10 Trust OR Neutral Opinion
+		# - An Embassy OR Improving Relations.
+		custom_tooltip = {
+			fail_text = requires_10_trust_or_neutral
+			OR = {
+				opinion_level = {
+					who = from
+					level >= neutral
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 10
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 5
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_improving_relations
+			OR = {
+				is_improving_relations_with = from
+				has_embassy = from
+			}
+		}
+	}
+
+	on_accept = {
+		hidden_effect = {
+			country_event = { # Patron Objective Counter: po_establish_diplomatic_pact
+				id = shroud.10420
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+}
+
+# === action_support_independence ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_support_independence = {
+	icon = "GFX_diplomacy_status_support_independence"
+	auto_accepted = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+	action_type = positive
+
+	potential = {
+		hidden_trigger = {
+			exists = from
+			NOT = {
+				from = {
+					exists = overlord
+					overlord = {
+						is_same_value = root
+					}
+				}
+			}
+		}
+
+		# Actor is subject and has limited diplomacy.
+		hidden_trigger = {
+			NAND = {
+				is_subject = yes
+				any_agreement = {
+					has_term_value = {
+						term = subject_diplomacy
+						value = subject_can_not_do_diplomacy
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		# Requirements:
+		# - 10 Trust OR Neutral Opinion
+		# - An Embassy OR Improving Relations.
+		custom_tooltip = {
+			fail_text = requires_10_trust_or_neutral
+			OR = {
+				opinion_level = {
+					who = from
+					level >= neutral
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 10
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 5
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_improving_relations
+			OR = {
+				is_improving_relations_with = from
+				has_embassy = from
+			}
+		}
+	}
+
+	on_accept = {
+		hidden_effect = {
+			country_event = { # Patron Objective Counter: po_establish_diplomatic_pact
+				id = shroud.10425
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+}
+
+# === action_form_migration_pact ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_form_migration_pact = {
+	icon = "GFX_diplomacy_status_migration_pact"
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	AI_acceptance_base_value = -50
+	action_type = positive
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_gestalt_consciousness"
+			NOT = { has_ethic = ethic_gestalt_consciousness	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gestalt_consciousness"
+			from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		if = {
+			limit = {
+				from = {
+					has_valid_civic = civic_selective_kinship
+					NOT = { is_same_species_class = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_selective_kinship
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_selective_kinship"
+			NAND = {
+				has_valid_civic = civic_selective_kinship
+				NOT = { from = { is_same_species_class = root } }
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_barbaric_despoilers } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_barbaric_despoilers
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_barbaric_despoilers"
+			NOT = { has_valid_civic = civic_barbaric_despoilers }
+		}
+		custom_tooltip = {
+			fail_text = "federation_internal_migration"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { any_member = { is_same_value = root.from } }
+					federation = { has_federation_law = free_migration_yes }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_actor_no_separate_treaties"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = treaties_separate_no }
+					NOT = { federation = { any_member = { is_same_value = root.from } } }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_recipient_no_separate_treaties"
+			from = {
+				NOT = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_law = treaties_separate_no
+						}
+						NOT = { federation = { any_member = { is_same_value = root } } }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_pompous"
+			NOT = { has_valid_civic = civic_pompous_purists	}
+		}
+		# Requirements:
+		# - 20 Trust OR Good Opinion
+		# - An Embassy OR the Diplomatic Networking tradition.
+		custom_tooltip = {
+			fail_text = requires_20_trust_or_good
+			OR = {
+				opinion_level = {
+					who = from
+					level >= good
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 20
+					}
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 10
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_diplomatic_networking
+			OR = {
+				has_embassy = from
+				has_active_tradition = tr_diplomacy_diplomatic_networking
+			}
+		}
+#		custom_tooltip = {
+#			fail_text = "requires_actor_not_nomad"
+#			is_nomadic = no
+#		}
+#		custom_tooltip = {
+#			fail_text = "requires_recipient_not_nomad"
+#			FROM = { is_nomadic = no }
+#		}
+	}
+}
+
+# === action_ask_to_become_subjugated ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_ask_to_become_subjugated = {
+	icon = "GFX_diplomacy_status_has_vassal"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = no
+	should_notify_all_communications = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+
+	potential = {
+		hidden_trigger = {
+			is_subject = no
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			NOT = { has_valid_civic = civic_fanatic_purifiers	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_actor_no_separate_treaties"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = treaties_separate_no }
+					NOT = { federation = { any_member = { is_same_value = root.from } } }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_recipient_no_separate_treaties"
+			from = {
+				NOT = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_law = treaties_separate_no
+						}
+						NOT = { federation = { any_member = { is_same_value = root } } }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_in_galactic_empire"
+			OR = {
+				NAND = {
+					has_galactic_emperor = yes
+					is_galactic_community_member = no
+					from = { is_galactic_community_member = yes }
+				}
+				NAND = {
+					has_galactic_emperor = yes
+					is_galactic_community_member = yes
+					from = { is_galactic_community_member = no }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_custodian"
+			is_galactic_custodian = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gal_emperor"
+			is_galactic_emperor = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_btc"
+			has_been_declared_crisis = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_pompous"
+			NOT = { has_valid_civic = civic_pompous_purists	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_khan"
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+		}
+		# Requirements:
+		# - 50 Trust OR Excellent Opinion OR Can ignore trust values
+		# - An Embassy OR the Diplomatic Networking tradition.
+		custom_tooltip = {
+			fail_text = requires_50_trust_or_excellent
+			OR = {
+				opinion_level = {
+					who = from
+					level >= excellent
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+				from = {
+					can_ignore_trust_requirements_for_subjects = yes
+				}
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 25
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_diplomatic_networking
+			OR = {
+				has_embassy = from
+				has_active_tradition = tr_diplomacy_diplomatic_networking
+				from = { can_ignore_trust_requirements_for_subjects = yes }
+			}
+		}
+	}
+
+	should_ai_propose = {
+		modifier = { # If the Khan is bordering you, you are a lot more likely to be a subject
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+				is_neighbor_of = root
+			}
+			desc = NEIGHBORING_KHAN
+		}
+		modifier = { # If any of your neighbors are a satrapy, then that too makes you likely to be a subject
+			add = 25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			any_neighbor_country = {
+				is_subject = yes
+				any_agreement = { agreement_preset = preset_satrapy }
+			}
+			desc = NEIGHBORING_SATRAPY
+		}
+		modifier = { # AI Heirs of the Khan empires will join you
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			has_origin = origin_heirs_of_the_khan
+			desc = RIGHTFUL_KHAN
+		}
+
+		modifier = { # If you have defensive pacts then you are less likely to submit to the player Khan
+			subtract = value:num_defensive_pacts_times_25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			desc = NUMBER_OF_DEFENSIVE_PACTS
+		}
+
+		modifier = {
+			subtract = 100
+			desc = IN_GALACTIC_EMPIRE
+			has_galactic_emperor = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+		modifier = {
+			subtract = 100
+			desc = IN_GLACTIC_COMMUNITY_CUSTODIAN
+			has_galactic_custodian = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+
+		modifier = { # Nomads never want to be subjects
+			subtract = 100
+			desc = WANTS_TO_BE_FREE
+			from = { is_nomadic = yes }
+		}
+
+		modifier = { # Planetbound empires don't trust nomadic overlords
+			subtract = 100
+			desc = NOMADIC_OVERLORD
+			is_nomadic = yes
+			from = {
+				is_nomadic = no
+			}
+		}
+
+		modifier = {
+			mult = 0
+			from = {
+				trust = {
+					who = root
+					value < 50
+				}
+				NOT = { has_country_flag = heir_of_the_khan_khan }
+			}
+		}
+		modifier = {
+			mult = 0
+			relative_power = {
+				who = from
+				category = all
+				value >= equivalent
+			}
+		}
+		modifier = {
+			add = -100
+			root = {
+				is_militarist = yes
+				has_faction = imperialist
+			}
+			desc = TOO_IMPERIAL
+		}
+	}
+
+	ai_acceptance = {
+		modifier = {
+			add = -100
+			from = {
+				trust = {
+					who = root
+					value < 50
+				}
+			}
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+			desc = LACK_OF_TRUST
+		}
+	}
+}
+
+# === action_embassy ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_embassy = {
+	icon = "GFX_embassy_our"
+	auto_accepted = no
+	diplo_view_acceptance_icon = yes
+	requires_recipient_independence = no
+	requires_actor_independence = no
+	should_notify_all_communications = no
+	action_type = positive
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "DIPLOMACY_STATUS_WAR"
+			NOT = { is_at_war_with = from }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						is_machine_empire = yes
+						is_individual_machine = yes
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_scorched_earth"
+			OR = {
+				is_infernal_empire = yes
+				from = { is_genocidal_infernal = no }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "HAS_RIVALRY"
+			NOR = {
+				is_rival = from
+				from = { is_rival = prev }
+			}
+		}
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		hidden_effect = {
+			country_event = { # Patron Objective Counter: po_establish_diplomatic_pact
+				id = shroud.10395
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+
+	should_ai_propose = {
+		weight = 0
+
+		modifier = {
+			add = 1
+			has_attitude_behavior = { target = from behavior = trade }
+			opinion = { who = from value > 50 }
+		}
+
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = isolationist
+		}
+	}
+}
+
+# === action_propose_secret_fealty ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\diplomatic_actions\00_actions.txt -----
+action_propose_secret_fealty = {
+	icon = "GFX_diplomacy_status_secret_fealty"
+	auto_accepted = no
+	diplo_view_acceptance_icon = yes
+	requires_recipient_independence = no
+	requires_actor_independence = yes
+	requires_actor_federation_leader = no
+	requires_recipient_federation_leader = no
+	should_notify_all_communications = no
+	action_type = neutral
+	possible = {
+		custom_tooltip = {
+			fail_text = recent_failed_betrayal_overlord
+			NOT = {
+				FROM = {
+					OR = {
+						has_modifier = failed_betrayal
+						has_modifier = failed_betrayal_status_quo
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+
+		if = {
+			limit = { from = { has_valid_civic = civic_fanatic_purifiers } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_fanatic_purifiers
+					OR = {
+						is_same_species = from
+						from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+					}
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					OR = {
+						is_same_species = from
+						NOT = { has_valid_civic = civic_fanatic_purifiers }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { from = { has_valid_civic = civic_hive_devouring_swarm } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_devouring_swarm
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+
+		if = {
+			limit = { from = { has_valid_civic = civic_machine_terminator } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_machine_terminator
+					AND = {
+						from = { has_civic = civic_machine_terminator }
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					AND = {
+						from = { has_civic = civic_machine_terminator }
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { from = { is_genocidal_infernal = yes } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = "requires_recipient_not_scorched_earth"
+					OR = {
+						is_infernal_empire = yes
+						from = { is_genocidal_infernal = no }
+					}
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					OR = {
+						is_genocidal_infernal = no
+						from = { is_infernal_empire = yes }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+		}
+
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							is_machine_empire = yes
+							is_individual_machine = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_scorched_earth"
+			OR = {
+				is_genocidal_infernal = no
+				from = { is_infernal_empire = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_khan"
+			from = { NOT = { has_country_flag = heir_of_the_khan_khan } }
+		}
+		# Requirements:
+		# - 50 Trust OR Excellent Opinion OR Can ignore trust values
+		# - An Embassy OR the Diplomatic Networking tradition.
+		custom_tooltip = {
+			fail_text = requires_50_trust_or_excellent
+			OR = {
+				opinion_level = {
+					who = from
+					level >= excellent
+				}
+				from = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+				can_ignore_trust_requirements_for_subjects = yes
+				AND = {
+					has_valid_civic = civic_hive_familiar_face
+					from = {
+						trust = {
+							who = root
+							value >= 25
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = requires_embassy_or_diplomatic_networking
+			OR = {
+				has_embassy = from
+				has_active_tradition = tr_diplomacy_diplomatic_networking
+				can_ignore_trust_requirements_for_subjects = yes
+			}
+		}
+	}
+}
+

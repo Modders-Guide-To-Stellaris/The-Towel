@@ -1,0 +1,6 @@
+# === hgb_is_level_3_player_crisis ===
+# ORIGINAL NOT FOUND in Stellaris for entry: hgb_is_level_3_player_crisis
+
+# === hgb_is_definitive_crisis ===
+# ORIGINAL NOT FOUND in Stellaris for entry: hgb_is_definitive_crisis
+

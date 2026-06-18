@@ -1,0 +1,24 @@
+# === growth_factor ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\script_values\06_script_values_biogenesis.txt -----
+growth_factor = {
+	base = 0
+	add = owner.growth_factor_variable
+	mult = 0.005
+	add = owner.value:transferred_pops_district_scale_half_percent
+	add = 1
+
+	min = 0
+	max = 6.55
+}
+
+# === negative_empire_size_percent ===
+# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\script_values\00_script_values.txt -----
+negative_empire_size_percent = {
+	base = 0.001
+	mult = trigger:empire_size
+	mult = -1
+	add = 1.1
+	min = 0.1
+	max = 1
+}
+
