@@ -118,12 +118,12 @@ hga_ecology_project = {
                 graphical_culture = owner
             }
 
-            planet_event = { id = action.68 }
+            carrier_event = { id = action.68 }
             owner = {
                 country_event = { id = distar.201 }
             }
 
-            planet_event = { id = hga_planetary_features.200 }
+            carrier_event = { id = hga_planetary_features.200 }
         }
     }
 

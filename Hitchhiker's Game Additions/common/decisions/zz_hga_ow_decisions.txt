@@ -95,11 +95,11 @@ decision_arcology_project = {
                 entity = "city_planet_entity"
                 graphical_culture = owner
             }
-            planet_event = { id = action.68 }
+            carrier_event = { id = action.68 }
             owner = {
                 country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
             }
-            planet_event = { id = mega.200 }
+            carrier_event = { id = mega.200 }
             if = {
                 limit = {
                     OR = {
@@ -181,8 +181,8 @@ decision_baol_life_seed = {
                     ethic = "ethic_pacifist"
                 }
             }
-            planet_event = { id = ancrel.2025 } #Notification event
-            planet_event = {
+            carrier_event = { id = ancrel.2025 } #Notification event
+            carrier_event = {
                 id = shroud.10010 		# Patron Objective Counter: po_terraform_planet
             }
         }
@@ -266,7 +266,7 @@ decision_baol_life_seed_enhance = {
                     }
                 }
             }
-            planet_event = { id = ancrel.2026 } #Notification event
+            carrier_event = { id = ancrel.2026 } #Notification event
         }
     }
 

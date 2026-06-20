@@ -1,7 +1,8 @@
 namespace = plant
 
 # Gaia Seed building chain completed.
-planet_event = {
+
+carrier_event = {
     id = plant.100
     is_triggered_only = yes
     title = "plant.100.name"
@@ -20,7 +21,7 @@ planet_event = {
         # Turn planet into Gaia world.
         change_pc = pc_gaia
         set_planet_flag = gaia_seeder_bloom
-        planet_event = {
+        carrier_event = {
             id = shroud.10010 		# Patron Objective Counter: po_terraform_planet
         }
     }
@@ -50,7 +51,7 @@ planet_event = {
             change_pc = pc_gaia
         }
         hidden_effect = {
-            planet_event = {
+            carrier_event = {
                 id = plant.115
                 days = 180
             }
@@ -63,7 +64,7 @@ planet_event = {
     }
 }
 
-planet_event = {
+carrier_event = {
     id = plant.101
     hide_window = yes
     is_triggered_only = yes
@@ -78,7 +79,7 @@ planet_event = {
 
     immediate = {
         set_planet_flag = gaia_seeder_bloom
-        planet_event = {
+        carrier_event = {
             id = plant.115
             days = 180
         }
