@@ -70,12 +70,8 @@ building_hive_major_capital = {
 
 	resources = {
 		category = planet_buildings
-		inline_script = {
-			script = buildings/nomadic_cost_switcher
-			REGULAR_RESOURCE = minerals
-			NOMADIC_RESOURCE = alloys
-			COST = @b2_minerals
-			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		cost = {
+			minerals = @b2_minerals
 		}
 		upkeep = {
 			energy = @b2_upkeep

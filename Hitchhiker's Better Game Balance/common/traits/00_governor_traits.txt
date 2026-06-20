@@ -13,19 +13,9 @@ trait_ruler_frontier_spirit = {
 		COUNCIL = yes
 		TIER = none
 	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = no
-		}
+	councilor_modifier = {
 		ship_colonizer_cost_mult = -0.25
 		planet_colony_development_speed_mult = 0.15
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = yes
-		}
-		megastructures_waystations_cost_mult = -0.25
-		megastructure_waystation_megastructure_build_speed_mult = 0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = no
@@ -110,7 +100,7 @@ leader_trait_army_veteran = {
 	councilor_modifier = {
 		planet_army_build_speed_mult = 0.25
 		armies_cost_mult = -0.10
-		army_damage_mult = 0.10
+		army_defense_damage_mult = 0.25
 	}
 	leader_potential_add = {
 		is_pool_leader = yes # Starting trait only.
@@ -398,7 +388,6 @@ leader_trait_environmental_engineer = {
 	}
 	leader_potential_add = {
 		trait_is_crisis_faction_check = no
-		trait_is_nomad_check = no
 		exists = owner
 		owner = {
 			has_blocker_removal_tech = yes
@@ -623,21 +612,10 @@ leader_trait_frontier_spirit = {
 		COUNCIL = yes
 		TIER = 1
 	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = no
-		}
+	councilor_modifier = {
 		ship_colonizer_cost_mult = -0.10
 		planet_colony_development_speed_mult = 0.33
 		planet_resettlement_unemployed_mult = 0.25
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = yes
-		}
-		megastructures_waystations_cost_mult = -0.10
-		megastructure_waystation_megastructure_build_speed_mult = 0.15
-		ship_speed_mult = 0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -662,21 +640,10 @@ leader_trait_frontier_spirit_2 = {
 		COUNCIL = yes
 		TIER = 2
 	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = no
-		}
+	councilor_modifier = {
 		ship_colonizer_cost_mult = -0.10
 		planet_colony_development_speed_mult = 0.50
 		planet_resettlement_unemployed_mult = 0.50
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			trait_is_nomad_check = yes
-		}
-		megastructures_waystations_cost_mult = -0.10
-		megastructure_waystation_megastructure_build_speed_mult = 0.25
-		ship_speed_mult = 0.25
 	}
 	leader_class = { official }
 }
@@ -1119,17 +1086,11 @@ leader_trait_mining_focus = {
 		COUNCIL = no
 		TIER = 1
 	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = no }
+	planet_modifier = {
 		planet_jobs_minerals_produces_mult = 0.15
 	}
-	triggered_sector_modifier = {
-		potential = { trait_is_nomad_check = no }
+	sector_modifier = {
 		planet_jobs_minerals_produces_mult = 0.075
-	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		arkship_harvest_resources_produces_mult = 0.075
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -1162,17 +1123,11 @@ leader_trait_mining_focus_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = no }
+	planet_modifier = {
 		planet_jobs_minerals_produces_mult = 0.25
 	}
-	triggered_sector_modifier = {
-		potential = { trait_is_nomad_check = no }
+	sector_modifier = {
 		planet_jobs_minerals_produces_mult = 0.125
-	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		arkship_harvest_resources_produces_mult = 0.125
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -1189,17 +1144,11 @@ leader_trait_mining_focus_3 = {
 		COUNCIL = no
 		TIER = 3
 	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = no }
+	planet_modifier = {
 		planet_jobs_minerals_produces_mult = 0.45
 	}
-	triggered_sector_modifier = {
-		potential = { trait_is_nomad_check = no }
+	sector_modifier = {
 		planet_jobs_minerals_produces_mult = 0.225
-	}
-	triggered_planet_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		arkship_harvest_resources_produces_mult = 0.225
 	}
 	leader_trait_type = veteran
 	leader_class = { commander }
@@ -1458,15 +1407,9 @@ leader_trait_cartographer = {
 			has_trait = subclass_scientist_councilor
 		}
 	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = no }
+	councilor_modifier = {
 		terraform_speed_mult = 0.25
 		planet_clear_blocker_speed_mult = 0.10
-	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		science_ship_survey_speed = 0.10
-		ship_anomaly_generation_chance_mult = 0.05
 	}
 	leader_trait_type = veteran
 	leader_class = { official scientist }
@@ -1486,15 +1429,9 @@ leader_trait_cartographer_2 = {
 		COUNCIL = yes
 		TIER = 2
 	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = no }
+	councilor_modifier = {
 		terraform_speed_mult = 0.33
 		planet_clear_blocker_speed_mult = 0.25
-	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		science_ship_survey_speed = 0.15
-		ship_anomaly_generation_chance_mult = 0.10
 	}
 	leader_trait_type = veteran
 	leader_class = { official scientist }
@@ -1510,15 +1447,9 @@ leader_trait_cartographer_3 = {
 		COUNCIL = yes
 		TIER = 3
 	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = no }
+	councilor_modifier = {
 		terraform_speed_mult = 0.5
 		planet_clear_blocker_speed_mult = 0.33
-	}
-	triggered_councilor_modifier = {
-		potential = { trait_is_nomad_check = yes }
-		science_ship_survey_speed = 0.25
-		ship_anomaly_generation_chance_mult = 0.15
 	}
 	leader_trait_type = veteran
 	leader_class = { official scientist }
@@ -1863,7 +1794,7 @@ leader_trait_urbanist = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2237,7 +2168,7 @@ leader_trait_efficient = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2286,7 +2217,7 @@ leader_trait_arbiter = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2353,7 +2284,7 @@ leader_trait_utopian_idealist = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2410,7 +2341,7 @@ leader_trait_mediator = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2467,7 +2398,7 @@ leader_trait_shroud_preacher = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2534,7 +2465,7 @@ leader_trait_master_diplomat = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2542,12 +2473,6 @@ leader_trait_master_diplomat = {
 		diplo_weight_mult = 0.2
 		country_trust_cap_add = 50
 		envoys_add = 2
-	}
-	triggered_councilor_modifier = {
-		potential = {
-			owner = { is_nomadic = yes }
-		}
-		nomadic_contract_value_mult = 0.1
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -2580,7 +2505,7 @@ leader_trait_supreme_organizer = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}
@@ -2613,7 +2538,7 @@ leader_trait_galvanizer = {
 		TIER = none
 	}
 	on_gained_effect = {
-		owner? = {
+		owner = {
 			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
 		}
 	}

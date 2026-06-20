@@ -1,7 +1,7 @@
-the_masquerade_$ETHIC$ = {
-    name = "pft_the_masquerade"
-    desc = "pft_the_masquerade_desc"
-    icon = "GFX_faction_icon_the_masquerade"
+the_grand_dance_$ETHIC$ = {
+    name = "pft_the_grand_dance"
+    desc = "pft_the_grand_dance_desc"
+    icon = "GFX_faction_icon_the_grand_dance"
     election_header = "GFX_faction_header_yellow"
     guiding_ethic = ethic_$ETHIC$
     visual_ethic = $VISUAL_ETHIC$
@@ -10,23 +10,23 @@ the_masquerade_$ETHIC$ = {
     use_guiding_ethic_as_pop_filter = no
     can_rename = no
     unique = yes
-    support_weight_exponent = 0.7
+    support_weight_exponent = 0.75
 
     country_modifier = {
-        diplo_weight_mult = 0.02
+        country_trust_growth = 0.02
     }
 
     extortion_resource = {
         category = pop_factions
         produces = {
-            energy = @faction_base_output
-            mult = @faction_extortion_energy_ratio
+            minerals = @faction_base_output
+            mult = @faction_extortion_minerals_ratio
         }
     }
 
     is_potential = {
         is_secret_societies_empire = yes
-        has_country_flag = the_masquerade_$ETHIC$_selected
+        has_country_flag = the_grand_dance_$ETHIC$_selected
     }
 
     parameters = {
@@ -78,105 +78,74 @@ the_masquerade_$ETHIC$ = {
     }
 
     demand = {
-        title = "THE_MASQUERADE_SPECIAL_POWERS1"
-        unfulfilled_title = "THE_MASQUERADE_SPECIAL_POWERS1"
-        desc = "THE_MASQUERADE_SPECIAL_POWERS_DESC1"
-
-        fulfilled_effect = 5
-        unfulfilled_effect = -0.001
-
-        potential = {
-            is_galactic_council_established = yes
-            exists = owner
-            owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
-            }
-        }
-
-        trigger = {
-            owner = {
-                is_part_of_galactic_council = yes
-            }
-        }
-    }
-
-    demand = {
-        title = "THE_MASQUERADE_SPECIAL_POWERS2"
-        unfulfilled_title = "THE_MASQUERADE_SPECIAL_POWERS2"
-        desc = "THE_MASQUERADE_SPECIAL_POWERS_DESC2"
-
-        fulfilled_effect = 10
-        unfulfilled_effect = -0.001
-
-        potential = {
-            is_galactic_council_established = yes
-            exists = owner
-            owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
-                is_part_of_galactic_council = yes
-            }
-        }
-
-        trigger = {
-            owner = {
-                OR = {
-                    is_galactic_custodian = yes
-                    is_galactic_emperor = yes
-                }
-            }
-        }
-    }
-
-    demand = {
-        title = "THE_MASQUERADE_SPECIAL_POWERS3"
-        unfulfilled_title = "THE_MASQUERADE_SPECIAL_POWERS3"
-        desc = "THE_MASQUERADE_SPECIAL_POWERS_DESC3"
-
-        fulfilled_effect = 20
-        unfulfilled_effect = -0.001
-
-        potential = {
-            is_galactic_council_established = yes
-            exists = owner
-            owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
-                is_part_of_galactic_council = yes
-                OR = {
-                    is_galactic_custodian = yes
-                    is_galactic_emperor = yes
-                }
-            }
-        }
-
-        trigger = {
-            owner = {
-                is_galactic_emperor = yes
-            }
-        }
-    }
-
-    demand = {
-        title = "THE_MASQUERADE_THANKFUL_FRIENDS"
-        unfulfilled_title = "THE_MASQUERADE_THANKFUL_FRIENDS"
-        desc = "THE_MASQUERADE_THANKFUL_FRIENDS_DESC"
+        title = "THE_GRAND_DANCE_PROMENADE"
+        unfulfilled_title = "THE_GRAND_DANCE_PROMENADE"
+        desc = "THE_GRAND_DANCE_PROMENADE_DESC"
 
         fulfilled_effect = 5
         unfulfilled_effect = -5
 
         potential = {
-            is_galactic_community_formed = yes
             exists = owner
             owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
+                num_communications >= 1
+            }
+            count_playable_country = {
+                count < 2
+                limit = {
+                    has_communications = root.owner
+                    opinion_level = {
+                        who = root.owner
+                        level >= good
+                    }
+                }
             }
         }
 
         trigger = {
-            any_country = {
-                root.owner = {
-                    num_favors = {
-                        target = prev
-                        value >= @the_masquerade_thankful_friends_favors
+            any_playable_country = {
+                has_communications = root.owner
+                opinion_level = {
+                    who = root.owner
+                    level >= good
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "THE_GRAND_DANCE_PROMENADE2"
+        unfulfilled_title = "THE_GRAND_DANCE_PROMENADE2"
+        desc = "THE_GRAND_DANCE_PROMENADE2_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications >= 2
+            }
+            count_playable_country = {
+                count = 2
+                limit = {
+                    has_communications = root.owner
+                    opinion_level = {
+                        who = root.owner
+                        level >= good
+                    }
+                }
+            }
+        }
+
+        trigger = {
+            count_playable_country = {
+                count = 2
+                limit = {
+                    has_communications = root.owner
+                    opinion_level = {
+                        who = root.owner
+                        level >= good
                     }
                 }
             }
@@ -184,118 +153,184 @@ the_masquerade_$ETHIC$ = {
     }
 
     demand = {
-        title = "THE_MASQUERADE_CONTROL_OF_THE_LAW"
-        unfulfilled_title = "THE_MASQUERADE_CONTROL_OF_THE_LAW"
-        desc = "THE_MASQUERADE_CONTROL_OF_THE_LAW_DESC"
+        title = "THE_GRAND_DANCE_PROMENADE3"
+        unfulfilled_title = "THE_GRAND_DANCE_PROMENADE3"
+        desc = "THE_GRAND_DANCE_PROMENADE3_DESC"
 
-        fulfilled_effect = 10
+        fulfilled_effect = 15
         unfulfilled_effect = -0.001
 
         potential = {
-            is_galactic_community_formed = yes
             exists = owner
             owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
+                num_communications >= 3
+            }
+            count_playable_country = {
+                count > 2
+                limit = {
+                    has_communications = root.owner
+                    opinion_level = {
+                        who = root.owner
+                        level >= good
+                    }
+                }
             }
         }
 
         trigger = {
-            owner = {
-                has_passed_resolution = { years = @the_masquerade_control_of_the_law_years }
+            count_playable_country = {
+                count > 2
+                limit = {
+                    has_communications = root.owner
+                    opinion_level = {
+                        who = root.owner
+                        level >= good
+                    }
+                }
             }
         }
     }
 
     demand = {
-        title = "THE_MASQUERADE_POLITICAL_ACTOR"
-        unfulfilled_title = "THE_MASQUERADE_POLITICAL_ACTOR"
-        desc = "THE_MASQUERADE_POLITICAL_ACTOR_DESC"
+        title = "THE_GRAND_DANCE_PLAYING_BOTH_SIDES"
+        unfulfilled_title = "THE_GRAND_DANCE_PLAYING_BOTH_SIDES"
+        desc = "THE_GRAND_DANCE_PLAYING_BOTH_SIDES_DESC"
+
+        fulfilled_effect = 10
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications >= 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = playing_both_sides_demand
+            }
+        }
+    }
+
+    demand = {
+        title = "THE_GRAND_DANCE_ACTIVE_SENSOR"
+        unfulfilled_title = "THE_GRAND_DANCE_ACTIVE_SENSOR"
+        desc = "THE_GRAND_DANCE_ACTIVE_SENSOR_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications >= 1
+            }
+        }
+
+        trigger = {
+            any_country = {
+                OR = {
+                    has_sensor_link_from = root.owner
+                    root.owner = { has_sensor_link_from = prev }
+                }
+            }
+        }
+    }
+
+    demand = {
+        title = "THE_GRAND_DANCE_INNOCENT_PRANK"
+        unfulfilled_title = "THE_GRAND_DANCE_INNOCENT_PRANK"
+        desc = "THE_GRAND_DANCE_INNOCENT_PRANK_DESC"
+
+        fulfilled_effect = 5
+        unfulfilled_effect = -0.001
+
+        potential = {
+            exists = owner
+            owner = {
+                num_communications >= 2
+            }
+        }
+
+        trigger = {
+            owner = {
+                has_country_flag = innocent_prank_demand
+            }
+        }
+    }
+
+    demand = {
+        title = "THE_GRAND_DANCE_DARK_WHISPERS"
+        unfulfilled_title = "THE_GRAND_DANCE_DARK_WHISPERS"
+        desc = "THE_GRAND_DANCE_DARK_WHISPERS_DESC"
 
         fulfilled_effect = 5
         unfulfilled_effect = -5
 
         potential = {
-            is_galactic_community_formed = yes
             exists = owner
             owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
+                num_communications >= 2
             }
         }
 
         trigger = {
             owner = {
-                has_galactic_community_emissary = yes
+                count_envoy = {
+                    limit = {
+                        OR = {
+                            has_envoy_task = { task = improve_relations }
+                            has_envoy_task = { task = harm_relations }
+                        }
+                    }
+                    count >= 2
+                }
             }
         }
     }
 
     demand = {
-        title = "THE_MASQUERADE_NARRATIVE_CONTROL"
-        unfulfilled_title = "THE_MASQUERADE_NARRATIVE_CONTROL"
-        desc = "THE_MASQUERADE_NARRATIVE_CONTROL_DESC"
-
-        fulfilled_effect = 5
-        unfulfilled_effect = -0.001
-
-        potential = {
-            exists = owner
-            owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
-                is_galactic_community_formed = yes
-            }
-        }
-
-        trigger = {
-            owner = {
-                has_country_flag = narrative_control
-            }
-        }
-    }
-
-    demand = {
-        title = "THE_MASQUERADE_PRICE_SETTER"
-        unfulfilled_title = "THE_MASQUERADE_PRICE_SETTER"
-        desc = "THE_MASQUERADE_PRICE_SETTER_DESC"
+        title = "THE_GRAND_DANCE_SHADOW_PUPPET"
+        unfulfilled_title = "THE_GRAND_DANCE_SHADOW_PUPPET"
+        desc = "THE_GRAND_DANCE_SHADOW_PUPPET_DESC"
 
         fulfilled_effect = 10
         unfulfilled_effect = -0.001
 
         potential = {
-            has_federations_dlc = yes
-            has_megacorp = yes
-            is_galactic_community_formed = yes
             exists = owner
             owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
+                num_communications >= 2
+                has_active_tradition = tr_diplomacy_diplomatic_networking
             }
         }
 
         trigger = {
-            owner = {
-                is_market_leader = yes
+            any_country = {
+                has_secret_fealty_with = root.owner
             }
         }
     }
 
     demand = {
-        title = "THE_MASQUERADE_UNITED_PURPOSE"
-        unfulfilled_title = "THE_MASQUERADE_UNITED_PURPOSE"
-        desc = "THE_MASQUERADE_UNITED_PURPOSE_DESC"
+        title = "THE_GRAND_DANCE_RIGHT_CHOICE"
+        unfulfilled_title = "THE_GRAND_DANCE_RIGHT_CHOICE"
+        desc = "THE_GRAND_DANCE_RIGHT_CHOICE_DESC"
 
         fulfilled_effect = 5
-        unfulfilled_effect = -0.001
+        unfulfilled_effect = -5
 
         potential = {
-            is_galactic_community_formed = yes
             exists = owner
             owner = {
-                num_communications >= value:get_num_empires_percent|PERC|0.5|
+                NOT = { has_election_type = none }
             }
         }
 
         trigger = {
             owner = {
-                has_country_flag = united_in_purpose
+                has_country_flag = right_choice_demand
             }
         }
     }
@@ -309,8 +344,8 @@ the_masquerade_$ETHIC$ = {
     }
 
     on_destroy = {
-        remove_country_flag = the_masquerade_$ETHIC$_selected
-        roll_masquerade_secret_faction = yes
+        remove_country_flag = the_grand_dance_$ETHIC$_selected
+        roll_grand_dance_secret_faction = yes
         if = {
             limit = {
                 has_modifier = promoted_$ETHIC$

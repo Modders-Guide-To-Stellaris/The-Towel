@@ -92,7 +92,7 @@ trait_egg_laying = {
 	}
 
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 }
 
@@ -144,7 +144,7 @@ trait_seasonal_dormancy = {
 	}
 
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 
 	assembly_score = {
@@ -165,7 +165,7 @@ trait_hollow_bones = {
 			can_add_or_remove_phenotype_traits = yes
 		}
 	}
-	opposites = { "trait_strong" "trait_very_strong" "trait_weak" "trait_tankbound" "trait_photoadaptive" }
+	opposites = { "trait_strong" "trait_very_strong" "trait_weak" "trait_tankbound" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	species_class = { TOX AVI }
 	localized_tags = {
@@ -189,7 +189,7 @@ trait_hollow_bones = {
 	}
 
 	slave_cost = {
-		trade = -400
+		energy = -400
 	}
 
 	assembly_score = {
@@ -229,7 +229,7 @@ trait_rooted = {
 	}
 
 	slave_cost = {
-		trade = -400
+		energy = -400
 	}
 	assembly_score = {
 		modifier = {
@@ -277,7 +277,7 @@ trait_acidic_vascularity = {
 		pop_cat_purge_bonus_workforce_mult = -0.75
 	}
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 }
 
@@ -325,7 +325,7 @@ trait_shelled = {
 		}
 	}
 	slave_cost = {
-		trade = 1500
+		energy = 1500
 	}
 }
 
@@ -379,7 +379,7 @@ trait_camouflage = {
 	}
 
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 }
 
@@ -439,7 +439,7 @@ trait_chromalogs = {
 	}
 
 	slave_cost = {
-		trade = 1500
+		energy = 1500
 	}
 }
 
@@ -469,7 +469,7 @@ trait_brittle = {
 		pop_amenities_usage_add = 0.5
 	}
 	slave_cost = {
-		trade = -1000
+		energy = -1000
 	}
 	assembly_score = {
 		modifier = {
@@ -519,7 +519,7 @@ trait_familial = {
 		mult = planet.value:counter_familial
 	}
 	slave_cost = {
-		trade = 1000
+		energy = 1000
 	}
 
 	assembly_score = {
@@ -599,7 +599,7 @@ trait_permeable_skin = {
 		pop_environment_tolerance = -0.2
 	}
 	slave_cost = {
-		trade = -1000
+		energy = -1000
 	}
 }
 
@@ -622,7 +622,7 @@ trait_genetic_memory = {
 		always = yes
 	}
 	portrait_override = { fun16 fun4 lith_human lith_human_inf pla17 aqu5 }
-	opposites = { "trait_nonadaptive" "trait_pc_ark_preference" }
+	opposites = { "trait_nonadaptive" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	species_class = { HUM MAM NECROID }
 	localized_tags = {
@@ -648,7 +648,7 @@ trait_genetic_memory = {
 		mult = value:genetic_memory_mult
 	}
 	slave_cost = {
-		trade = 1000
+		energy = 1000
 	}
 }
 
@@ -656,11 +656,9 @@ trait_nascent_stage = {
 	host_has_dlc = "BioGenesis"
 	cost = -2
 	species_potential_add = {
-		OR = {
-			can_add_negative_organic_traits = yes
-			can_add_or_remove_phenotype_traits = yes
-		}
+		always = no
 	}
+
 	portrait_override = { fun16 fun4 lith_human lith_human_inf pla17 aqu5 mindwarden_01 }
 	opposites = { "trait_slow_breeders" "trait_humanoid_psychological_infertility" "trait_unplugged_cybernetic_positives_3" "trait_unplugged_cybernetic_positives_2" "trait_unplugged_cybernetic_positives_1" "trait_pathogenic_genes" "trait_wilderness" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -679,8 +677,10 @@ trait_nascent_stage = {
 	tags = { organic negative pop_growth humanoid mammalian reptilian arthropoid species }
 	custom_tooltip = trait_nascent_stage_effect
 	slave_cost = {
-		trade = -1000
+		energy = -1000
 	}
+
+	initial = no
 }
 
 trait_flight = {
@@ -720,7 +720,7 @@ trait_flight = {
 		army_damage_taken_mult = -0.30
 	}
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 }
 
@@ -762,7 +762,7 @@ trait_spatial_mastery = {
 		pop_housing_usage_mult = -0.10
 	}
 	slave_cost = {
-		trade = 1000
+		energy = 1000
 	}
 }
 
@@ -820,7 +820,7 @@ trait_spare_organs = {
 	}
 
 	slave_cost = {
-		trade = 1000
+		energy = 1000
 	}
 }
 
@@ -1055,7 +1055,7 @@ trait_malleable_genes = {
 
 	custom_tooltip = trait_malleable_genes_cant_modify
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 }
 
@@ -1398,7 +1398,7 @@ trait_adaptive_mutations = {
 	tags = { organic positive automod special }
 
 	slave_cost = {
-		trade = 500
+		energy = 500
 	}
 	custom_tooltip_with_modifiers = automodding_trait_adaptive_mutations_tt
 }

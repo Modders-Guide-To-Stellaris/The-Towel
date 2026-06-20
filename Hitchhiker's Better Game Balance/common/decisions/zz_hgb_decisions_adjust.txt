@@ -1,7 +1,6 @@
 
 #RNG lose a planet WHY... (gone)
 decision_open_shroud_rift = {
-	important = yes
 	owned_planets_only = yes
 	icon = decision_surreal_visions
 
@@ -52,7 +51,7 @@ decision_open_shroud_rift = {
 		}
 		custom_tooltip = {
 			fail_text = decision_open_shroud_rift_legacy_fail
-			NOT = { has_carrier_flag = zroni_legacy_flag }
+			NOT = { has_planet_flag = zroni_legacy_flag }
 		}
 	}
 
@@ -70,7 +69,7 @@ decision_open_shroud_rift = {
 						change_pc = pc_shrouded
 					}
 					hidden_effect = {
-						carrier_event = {
+						planet_event = {
 							id = shroud_forged.160
 							scopes = {
 								from = owner
@@ -92,20 +91,7 @@ decision_open_shroud_rift = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				is_artificial = no
-				NOT = { is_planet_class = pc_machine }
-				NOT = { is_planet_class = pc_hive }
-				any_deposit = {
-					is_blocker = no
-					NOR = {
-						has_deposit_category = deposit_cat_rare
-						has_deposit_category = deposit_cat_rare_resource
-						has_deposit_category = deposit_cat_rare_blocker
-					}
-				}
-			}
+		else = {
 			decision_shroud_region_effect = yes
 		}
 	}
