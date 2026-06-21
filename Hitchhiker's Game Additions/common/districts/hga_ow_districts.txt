@@ -87,6 +87,7 @@ district_city = {
         district_crashed_slaver_ship
         district_resort
         district_slave
+        district_ark_city
     }
 
     resources = {
@@ -248,6 +249,7 @@ district_generator = {
         district_hive_1
         hga_district_ecology_nature_1
         district_arcology_urban_1
+        district_ark_generator
     }
 
     resources = {
@@ -332,6 +334,7 @@ district_generator_uncapped = {
         district_geothermal
         hga_district_ecology_nature_1
         district_arcology_urban_1
+        district_ark_generator
     }
 }
 
@@ -556,6 +559,7 @@ district_farming = {
         district_hive_3
         hga_district_ecology_nature_3
         district_arcology_urban_3
+        district_ark_basic
     }
 
     resources = {
@@ -686,5 +690,6 @@ district_farming_uncapped = {
         district_hive_3
         hga_district_ecology_nature_3
         district_arcology_urban_3
+        district_ark_basic
     }
 }

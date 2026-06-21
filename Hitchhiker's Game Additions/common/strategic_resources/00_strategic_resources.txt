@@ -7,7 +7,10 @@
 # fixed_max_amount = yes/no		# default no, if yes maximum storage capacity of the resource is fixed to the amount specified in max = INT
 # special_max_amount = yes/no	# default no, if yes maximum storage capacity of the resource is fixed to the amount specified in max = INT + country_resource_max_RESOURCE_NAME_add modifiers + dynamic_capacity
 #								This explicitly ignores MOD_COUNTRY_RESOURCE_MAX_ADD modifiers.
-# tradable_in_market = {}		# default yes, trigger for blocking a resource from the market but still leaving it open for trade agreements
+# tradable_in_market = {}		# default yes, evaluated first as a hard gate: if it fails the resource is invisible to the market for that country (buy and sell both blocked),
+#								  but trade agreements are unaffected. The override_trade_restriction resource-converter flag cannot bypass this gate.
+#								# To let a country trade a resource regardless of income or galactic market access, set override_trade_restriction = yes
+#								  on that resource in the country's resource converter (common/resource_converters/).
 
 
 ### Basic Resources
@@ -143,7 +146,7 @@ unity = {
     category = other
     deficit_modifier = unity_deficit #found in static modifiers
 
-    culling_conversion_value = 1
+    culling_conversion_value = 3
 
     ai_weight = {
         weight = 1
@@ -247,7 +250,12 @@ volatile_motes = {
     market_price = 100
     max = 15000
 
-    prerequisites = { "tech_mine_volatile_motes" }
+    prerequisites = {
+        OR = {
+            tech_mine_volatile_motes
+            tech_nomads_mechanized_mining
+        }
+    }
 
     deficit_situation = situation_volatile_motes_deficit
     deficit_trade_conversion_mult = -1.25
@@ -270,7 +278,12 @@ exotic_gases = {
     market_price = 100
     max = 15000
 
-    prerequisites = { "tech_mine_exotic_gases" }
+    prerequisites = {
+        OR = {
+            tech_mine_exotic_gases
+            tech_nomads_mechanized_mining
+        }
+    }
 
     deficit_situation = situation_exotic_gases_deficit
     deficit_trade_conversion_mult = -1.25
@@ -293,7 +306,12 @@ rare_crystals = {
     market_price = 100
     max = 15000
 
-    prerequisites = { "tech_mine_rare_crystals" }
+    prerequisites = {
+        OR = {
+            tech_mine_rare_crystals
+            tech_nomads_mechanized_mining
+        }
+    }
 
     deficit_situation = situation_rare_crystals_deficit
     deficit_trade_conversion_mult = -1.25
@@ -478,6 +496,15 @@ biomass = {
 ################
 
 menace = {
+    tradable = no
+    category = other
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
+integrity = {
     tradable = no
     category = other
 

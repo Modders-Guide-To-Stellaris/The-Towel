@@ -18,6 +18,8 @@ ap_detox = {
         }
         #
         # has_global_flag = hga_detox_tech_disabled
+
+        is_nomadic = no
     }
 
     on_enabled = {
@@ -111,6 +113,8 @@ ap_world_shaper = {
             has_valid_civic = civic_machine_servitor
             has_valid_civic = civic_machine_assimilator
         }
+
+        is_nomadic = no
     }
 
     ai_weight = {
@@ -157,6 +161,7 @@ ap_arcology_project = {
         NOT = {
             has_ascension_perk = ap_arcology_project
         }
+        is_nomadic = no
     }
 
     possible = {
@@ -222,6 +227,8 @@ ap_hive_worlds = {
 
         is_lithoid_devouring_swarm = no # Lithoid devouring swarms consume worlds and cannot improve them (since they never get terraforming tech)
         is_wilderness_empire = no # the wilderness integrates with natural worlds
+
+        is_nomadic = no
     }
 
     possible = {
