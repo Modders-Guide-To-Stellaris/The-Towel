@@ -1,0 +1,64 @@
+
+@base_tradition_agenda_cost = 7000
+@short_agenda_cost = 3500
+## fixed psionic individualistic machines not being able to take the psionic supremacy agenda
+agenda_psionic_supremacy = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_psionics_adopt
+	}
+	potential = {
+		has_shroud_dlc = no
+		is_gestalt = no
+		NOR = {
+			has_cybernetic_ascension = yes
+			has_genetic_ascension = yes
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			#is_individual_machine = yes
+			has_purity_ascension = yes
+			has_cloning_ascension = yes
+			has_mutation_ascension = yes
+		}
+		NOR = {
+			has_country_flag = composer_covenant_confirmed
+			has_country_flag = instrument_covenant_confirmed
+			has_country_flag = eater_covenant_confirmed
+			has_country_flag = whisperers_covenant_confirmed
+		}
+	}
+	modifier = {
+		category_psionics_research_speed_mult = 0.1
+		psionic_pop_bonus_workforce_mult = 0.05
+	}
+	finish_modifier = agenda_psionic_supremacy_finish_no_covenant
+	ai_weight = {
+		base = @ascension_agenda_weight
+	}
+}
+
+agenda_psionic_supremacy_shroud = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_psionics_shroud_adopt
+	}
+	potential = {
+		has_shroud_dlc = yes
+		NOR = {
+			has_cybernetic_ascension = yes
+			has_genetic_ascension = yes
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			#is_individual_machine = yes
+		}
+	}
+	modifier = {
+		category_psionics_research_speed_mult = 0.1
+		psionic_pop_bonus_workforce_mult = 0.05
+		attunement_mult = 0.1
+	}
+	finish_modifier = agenda_psionic_supremacy_shroud_finish
+	ai_weight = {
+		base = @ascension_agenda_weight
+	}
+}

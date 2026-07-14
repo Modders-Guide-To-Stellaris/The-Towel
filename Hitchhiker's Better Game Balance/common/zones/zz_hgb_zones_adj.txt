@@ -1,0 +1,63 @@
+zone_ark_harvest = {
+	inline_script = {
+		script = zones/shared_ark_harvest_zone
+		AMOUNT = 400 #up from 200 to match the new job counts of the other zones
+	}
+
+	show_in_tech = tech_nomads_mechanized_mining
+	show_tech_unlock_if = { is_nomadic = yes }
+
+	zone_sets = {
+		ark_basic
+	}
+}
+
+zone_ark_waystation_trade = {
+	icon = GFX_district_specialization_trade
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		owner? = {
+			is_nomadic = yes
+			has_technology = tech_waystation_2
+		}
+	}
+
+	show_in_tech = tech_waystation_2
+	show_tech_unlock_if = { is_nomadic = yes }
+
+	resources = {
+		category = planet_zones
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = @zone_cost
+			NOMADIC_COST_MULT = 0.5
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_ark_waystation_trader_add
+		AMOUNT = 400 #up from 200 to match the new job counts of the other zones
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_weight_coefficient = 0.8
+	ai_priority = 10
+
+	zone_sets = {
+		ark_basic
+	}
+
+	included_building_sets = {
+		trade
+		urban
+		urban_automation
+	}
+
+	swap_type = district_ark_waystation_trade
+	swap_type_weight = 5
+}
