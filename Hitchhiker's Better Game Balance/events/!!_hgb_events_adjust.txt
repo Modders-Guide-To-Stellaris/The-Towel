@@ -796,3 +796,126 @@ country_event = {
 		default_hide_option = yes
 	}
 }
+
+namespace = nomads
+
+#Sero the Younger, the Naturalist
+country_event = {
+	id = nomads.1520
+	title = "nomads.1520.name"
+	desc = "nomads.1520.desc"
+	show_sound = nom_paragon_4_sero_the_younger_the_naturalist
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+	auto_opens = no
+	event_window_type = leader_recruit
+	notification_event_icon = "GFX_message_leader_recruitment_naturalist"
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine
+			LEADER_PORTRAIT = par_renown_18
+			CLASS = scientist
+			TIER = leader_tier_renowned
+			NAME = NAME_nomadic_naturalist
+			LEVEL = 4
+			GENDER = male
+			IMMORTAL = no
+			ETHIC = materialist
+			DESC = DESC_nomadic_naturalist
+			CATCH_PHRASE = catch_phrase_nomadic_naturalist
+		}
+		last_created_leader = {
+			add_trait = {
+				trait = subclass_scientist_explorer
+				consume_selection = yes
+			}
+			add_trait = {
+				trait = leader_trait_roamer
+				consume_selection = yes
+			}
+			add_trait = {
+				trait = leader_trait_meticulous
+				consume_selection = yes
+			}
+			add_trait = {
+				trait = leader_trait_prospector
+				consume_selection = yes
+			}
+			add_trait = {
+				trait = leader_trait_lawless
+				consume_selection = yes
+			}
+			add_trait = {
+				trait = leader_trait_nomadic_naturalist
+				consume_selection = yes
+			}
+			set_age = 50
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			remove_global_flag = nomadic_naturalist # Put this leader back into the pool, so player can still get them
+			ethic_leader_kill_effect = yes
+			set_country_flag = dismissed_nomadic_naturalist
+		}
+	}
+	option = {
+		name = nomads.1520.a
+		response_text = nomads.1520.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = nomads.1520.b
+		response_text = nomads.1520.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = nomads.1520.c
+		response_text = nomads.1520.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = nomads.1520.d
+		response_text = nomads.1520.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			is_species_class = ART
+		}
+		name = nomads.1520.e
+		response_text = nomads.1520.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = nomads.1520.hire_custom_tooltip
+		add_tech_option_or_research_effect = {
+			TECH = tech_alien_life_studies
+			PROGRESS = 0.25
+			CATEGORY = society_research
+		}
+		hidden_effect = {
+			ethic_leader_hire_effect = {
+				GLOBAL_EVENT_TARGET = nomadic_naturalist
+			}
+			set_country_flag = hired_nomadic_naturalist
+			country_event = {
+				id = nomads.1522
+				days = 1
+			}
+			set_global_flag = hired_nomadic_paragon_3
+		}
+	}
+}
