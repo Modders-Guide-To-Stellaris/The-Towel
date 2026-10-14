@@ -13,8 +13,8 @@ hgb_is_level_3_player_crisis = {
 hgb_is_definitive_crisis = {
     OR = {
         OR = {
-            hgb_is_level_3_player_crisis = yes
-            is_level_4_player_crisis = yes
+            #hgb_is_level_3_player_crisis = yes
+            #is_level_4_player_crisis = yes
             is_level_5_player_crisis = yes
         }
         has_country_flag = unlock_accord_distortion
