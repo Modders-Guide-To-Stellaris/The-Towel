@@ -1,0 +1,93 @@
+## PDX forgot to multiply these value too times 5 during the 4.3 update naval capacity changes, so this is a fix to make them scale properly with the new naval capacity values. 
+confuser_chance_size_factor = {
+	base = 10
+	# Corvettes (and equivalent) do not have their chance reduced due to ship size
+	modifier = {
+		mult = 1
+		ship_size_multiplier >= 10 # was 2
+		ship_size_multiplier < 20 # was 4
+	}
+	modifier = {
+		mult = 2
+		ship_size_multiplier >= 20 # was 4
+		ship_size_multiplier < 40 # was 8
+	}
+	modifier = {
+		mult = 3
+		ship_size_multiplier >= 40 # was 8
+		ship_size_multiplier < 80 # was 16
+	}
+	modifier = {
+		mult = 4
+		ship_size_multiplier >= 80 # was 16
+		ship_size_multiplier < 160 # was 32
+	}
+	modifier = {
+		mult = 5
+		ship_size_multiplier >= 160 # was 32
+		ship_size_multiplier < 320 # was 64
+	}
+	modifier = {
+		mult = 6
+		ship_size_multiplier >= 320 # was 64
+		ship_size_multiplier < 640 # was 128
+	}
+	modifier = {
+		mult = 7
+		ship_size_multiplier >= 640 # was 128
+		ship_size_multiplier < 1280 # was 256
+	}
+	modifier = {
+		mult = 8
+		ship_size_multiplier > 1280 # was 256
+	}
+}
+
+ship_terrify_chance = {
+	base = 0
+	modifier = {
+		add = 25
+		ship_size_multiplier < 10 # was 2
+	}
+	modifier = {
+		add = 20
+		ship_size_multiplier >= 10 # was 2
+		ship_size_multiplier < 20 # was 4
+	}
+	modifier = {
+		add = 10
+		ship_size_multiplier >= 20 # was 4
+		ship_size_multiplier < 40 # was 8
+	}
+	modifier = {
+		add = 3
+		ship_size_multiplier >= 40 # was 8
+		ship_size_multiplier < 80 # was 16
+	}
+	modifier = {
+		add = 1
+		ship_size_multiplier >= 80 # was 16
+	}
+}
+
+ship_terrify_duration = {
+	base = 0
+	modifier = {
+		add = 10
+		ship_size_multiplier < 10 # was 2
+	}
+	modifier = {
+		add = 8
+		ship_size_multiplier >= 10 # was 2
+		ship_size_multiplier < 20 # was 4
+	}
+	modifier = {
+		add = 6
+		ship_size_multiplier >= 20 # was 4
+		ship_size_multiplier < 40 # was 8
+	}
+	modifier = {
+		add = 5
+		ship_size_multiplier >= 40 # was 8
+	}
+}
