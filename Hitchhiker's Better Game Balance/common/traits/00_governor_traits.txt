@@ -2506,7 +2506,11 @@ leader_trait_shroud_preacher = {
 					has_genetic_ascension = yes
 					has_synthetic_ascension = yes
 					is_natural_design_empire = yes
-					is_individual_machine = yes
+					AND ={
+						is_individual_machine = yes
+						has_psionic_ascension = no  #Give Psio Robots too
+					}
+					
 				}
 			}
 			factor = 0
