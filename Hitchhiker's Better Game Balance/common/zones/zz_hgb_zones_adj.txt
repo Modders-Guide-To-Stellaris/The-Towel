@@ -61,3 +61,62 @@ zone_ark_waystation_trade = {
 	swap_type = district_ark_waystation_trade
 	swap_type_weight = 5
 }
+
+zone_ark_farm_society = {
+	inline_script = {
+		script = zones/shared_research_society_zone
+		AMOUNT = 100
+	}
+
+	potential = { # planet scope
+		hidden_trigger = {
+			owner? = {
+				has_technology = tech_society_1
+			}
+		}
+	}
+
+	show_in_tech = tech_society_1
+	show_tech_unlock_if = { is_nomadic = yes }
+
+	zone_sets = {
+		ark_basic
+	}
+
+	included_building_sets = {
+		society
+		zoo
+		medical
+		farming
+		fallen_empire_farming
+		farming_automation
+	}
+
+	swap_type = district_ark_basic_society
+	swap_type_weight = 5
+
+	ai_priority = 15
+
+	ai_weight_coefficient = 1.1
+}
+
+zone_ark_military_eco = {
+	inline_script = {
+		script = zones/shared_ark_foundry_zone
+		AMOUNT = 100
+		LARGE_AMOUNT = 100
+	}
+
+	show_in_tech = tech_basic_industry
+	show_tech_unlock_if = {
+		is_nomadic = yes
+		NOT = { has_origin = origin_forever_cruise }
+	}
+
+	swap_type = district_ark_military_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		ark_military
+	}
+}
