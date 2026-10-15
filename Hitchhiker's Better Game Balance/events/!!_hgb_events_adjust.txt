@@ -12,7 +12,7 @@ country_event = {
 	desc = shroud.3200.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3200_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -61,7 +61,7 @@ country_event = {
 	}
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3210_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -96,7 +96,7 @@ country_event = {
 	desc = shroud.3220.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3220_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -131,7 +131,7 @@ country_event = {
 	desc = shroud.3230.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3230_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -166,7 +166,7 @@ country_event = {
 	desc = shroud.3240.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3240_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -201,7 +201,7 @@ country_event = {
 	desc = shroud.3250.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3250_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -247,7 +247,7 @@ country_event = {
 	desc = shroud.3260.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3260_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -282,7 +282,7 @@ country_event = {
 	desc = shroud.3270.desc
 
 	trigger = {
-		NOR = {
+		NOT = {
 			has_country_flag = shroud_3270_happened
 			#has_country_flag = forging_our_own_path
 		}
@@ -307,28 +307,28 @@ country_event = {
 	}
 }
 
-ship_event = {
-	id = shroud.10495
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		exists = controller
-		controller = {
-			can_access_shroud = yes
-			has_patron_counter = po_build_ship_size_mult
-		}
-	}
-
-	immediate = {
-		controller = {
-			add_patron_objective_counter = {
-				counter = po_build_ship_size_mult
-				amount = prev.trigger:ship_size_multiplier
-			}
-		}
-	}
-}
+# ship_event = {
+# 	id = shroud.10495
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		exists = controller
+# 		controller = {
+# 			can_access_shroud = yes
+# 			has_patron_counter = po_build_ship_size_mult
+# 		}
+# 	}
+#
+# 	immediate = {
+# 		controller = {
+# 			add_patron_objective_counter = {
+# 				counter = po_build_ship_size_mult
+# 				amount = prev.trigger:ship_size_multiplier
+# 			}
+# 		}
+# 	}
+# }
 
 namespace = utopia
 

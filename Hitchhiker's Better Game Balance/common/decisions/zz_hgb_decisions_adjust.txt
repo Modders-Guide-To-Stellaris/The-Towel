@@ -23,11 +23,12 @@ decision_open_shroud_rift = {
 	}
 
 	potential = {
-		exists = owner
 		is_artificial = no
-		owner = {
+		owner? = {
 			has_origin = origin_shroud_forged
-			NOT = { has_country_flag = finish_shroud_forged_control_flag }
+			NOT = {
+				has_country_flag = finish_shroud_forged_control_flag
+			}
 		}
 	}
 
@@ -52,60 +53,21 @@ decision_open_shroud_rift = {
 		}
 		custom_tooltip = {
 			fail_text = decision_open_shroud_rift_legacy_fail
-			NOT = { has_carrier_flag = zroni_legacy_flag }
+			NOT = {
+				has_carrier_flag = zroni_legacy_flag
+			}
 		}
 	}
 
 	effect = {
 		if = {
 			limit = {
-				has_deposit = d_shroud_rift_deposit
-			}
-			random_list = {
-				0 = {
-					#modifier = {
-					#	add = value:get_shroud_rift_decision_uses
-					#}
-					tooltip = {
-						change_pc = pc_shrouded
-					}
-					hidden_effect = {
-						carrier_event = {
-							id = shroud_forged.160
-							scopes = {
-								from = owner
-							}
-						}
-						add_deposit = d_shroud_rift_deposit
-						kill_all_pop = yes
-						remove_all_buildings = yes
-						destroy_colony = yes
-						close_shroud_rift_effect = yes
-						change_pc = pc_shrouded
-					}
-				}
-				10 = {
-					modifier = {
-						subtract = value:get_shroud_rift_decision_uses
-					}
-					decision_shroud_region_effect = yes
+				OR = {
+					has_deposit = d_shroud_rift_deposit
+					NOR = { is_planet_class = pc_machine is_planet_class = pc_hive }
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				is_artificial = no
-				NOT = { is_planet_class = pc_machine }
-				NOT = { is_planet_class = pc_hive }
-				any_deposit = {
-					is_blocker = no
-					NOR = {
-						has_deposit_category = deposit_cat_rare
-						has_deposit_category = deposit_cat_rare_resource
-						has_deposit_category = deposit_cat_rare_blocker
-					}
-				}
-			}
+
 			decision_shroud_region_effect = yes
 		}
 	}

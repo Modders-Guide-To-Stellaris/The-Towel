@@ -258,6 +258,7 @@ auth_imperial = {
             envoy_harm_relations_mult = 0.50
             envoy_attunement_mult = 0.50
             planet_crime_add = 20
+			show_only_custom_tooltip = no
         }
     }
 
@@ -282,6 +283,7 @@ auth_imperial = {
             leader_lifespan_add = 10
             logistic_growth_mult = -0.05
             planet_pop_assembly_mult = -0.05
+			show_only_custom_tooltip = no
         }
     }
 
@@ -528,6 +530,7 @@ auth_hive_mind = {
 			planet_jobs_complex_drone_produces_mult = 0.1
 			empire_size_mult = -0.1
 			pop_environment_tolerance = -0.1
+			show_only_custom_tooltip = no
 		}
 	}
 
@@ -554,6 +557,7 @@ auth_hive_mind = {
 			planet_stability_mult = 0.10
 			council_agenda_progress_speed = 0.3
 			council_agenda_finishing_effect_duration_mult = 0.3
+			show_only_custom_tooltip = no
 		}
 	}
 }   

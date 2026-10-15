@@ -2,6 +2,7 @@
 ## buffed attunement gain to 10 (was 1)
 ## nerfed job bonuses (halved)
 psionic_choir = {
+	category = society
 	potential = {
 		has_shroud_dlc = yes
 		is_corporeal_authority = yes
@@ -90,7 +91,7 @@ psionic_choir = {
 		}
 	}
 	option = {
-		name = song_of_luxury
+		name = song_of_luxury_gestalt
 
 		potential = {
 			has_patron_relation = { patron = the_instrument_of_desire contact = any }

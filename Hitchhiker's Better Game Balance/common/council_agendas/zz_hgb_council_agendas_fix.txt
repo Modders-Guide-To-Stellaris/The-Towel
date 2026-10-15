@@ -1,4 +1,4 @@
-
+@ascension_agenda_weight = 100
 @base_tradition_agenda_cost = 7000
 @short_agenda_cost = 3500
 ## fixed psionic individualistic machines not being able to take the psionic supremacy agenda

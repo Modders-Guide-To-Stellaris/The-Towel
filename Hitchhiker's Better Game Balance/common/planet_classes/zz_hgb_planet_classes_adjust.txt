@@ -41,6 +41,7 @@ pc_gaia = {
     starting_planet = no
     uses_alternative_skies_for_moons = yes
     uses_alternative_skies_if_has_orbital_ring = yes
+	can_have_no_pop_colony = yes
 
     carry_cap_per_free_district = @carry_cap_high
 }

@@ -1,7 +1,3 @@
-
-
-
-
 #Checks whether any leaders (scientists etc) can be formed from this pop group
 #Root = country
 #This = pop_group

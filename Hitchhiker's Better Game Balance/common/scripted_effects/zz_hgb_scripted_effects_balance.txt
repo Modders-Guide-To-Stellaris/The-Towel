@@ -8,7 +8,6 @@ zroni_digsite_spawn_effect = {
             NOR = {
                 is_same_value = root.solar_system
                 has_star_flag = first_zroni_site@root.owner
-                is_same_value = root.owner.capital_scope.solar_system
                 has_star_flag = hostile_system
             }
             is_fe_cluster = no
@@ -25,8 +24,8 @@ zroni_digsite_spawn_effect = {
                 has_anomaly = no
                 NOR = {
                     exists = archaeological_site
-					has_carrier_flag = hatchling_egg
-					has_carrier_flag = suppress_archaeological_sites #for modders
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites #for modders
 					has_carrier_flag = colony_event
                 }
             }
@@ -52,8 +51,8 @@ zroni_digsite_spawn_effect = {
                 }
                 NOR = {
                     exists = archaeological_site
-					has_carrier_flag = hatchling_egg
-					has_carrier_flag = suppress_archaeological_sites
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
 					has_carrier_flag = colony_event
                 }
             }
@@ -76,7 +75,6 @@ zroni_digsite_spawn_effect = {
                 NOR = {
                     is_same_value = root.solar_system
                     has_star_flag = first_zroni_site@root.owner
-                    is_same_value = root.owner.capital_scope.solar_system
                     has_star_flag = hostile_system
                 }
                 is_fe_cluster = no
@@ -92,8 +90,8 @@ zroni_digsite_spawn_effect = {
                     has_anomaly = no
                     NOR = {
                         exists = archaeological_site
-						has_carrier_flag = hatchling_egg
-						has_carrier_flag = suppress_archaeological_sites
+						has_planet_flag = hatchling_egg
+						has_planet_flag = suppress_archaeological_sites
                     }
                 }
             }
@@ -108,8 +106,8 @@ zroni_digsite_spawn_effect = {
                     has_anomaly = no
                     NOR = {
                         exists = archaeological_site
-						has_carrier_flag = hatchling_egg
-						has_carrier_flag = suppress_archaeological_sites
+						has_planet_flag = hatchling_egg
+						has_planet_flag = suppress_archaeological_sites
                     }
                 }
                 create_archaeological_site = $DIGSITE$

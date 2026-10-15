@@ -1,4 +1,4 @@
-## OVERWRITE - BALANCE ADJUST (Removed Unity Produces mult negative because WHY JUST WHY)
+# Crime suppression and garrison, reduced when the telepath doubles as an educator
 triggered_planet_modifier = {
     potential = {
         enforcer_is_educator_trigger = no
@@ -8,16 +8,18 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
     potential = {
         enforcer_is_educator_trigger = no
-        exists = owner
-        owner = { is_gestalt = yes }
+        owner? = {
+            is_gestalt = yes
+        }
     }
     planet_crime_no_happiness_add = -10
 }
 triggered_planet_modifier = {
     potential = {
         enforcer_is_educator_trigger = no
-        exists = owner
-        owner = { is_gestalt = no }
+        owner? = {
+            is_gestalt = no
+        }
     }
     planet_crime_add = -10
 }
@@ -25,64 +27,76 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
     potential = {
         enforcer_is_educator_trigger = yes
-        exists = owner
-        owner = { is_gestalt = yes }
+        owner? = {
+            is_gestalt = yes
+        }
     }
     planet_crime_no_happiness_add = -5
 }
 triggered_planet_modifier = {
     potential = {
         enforcer_is_educator_trigger = yes
-        exists = owner
-        owner = { is_gestalt = no }
+        owner? = {
+            is_gestalt = no
+        }
     }
     planet_crime_add = -5
     pop_government_ethic_attraction = 0.1
 }
 
+# Thought Enforcement edict
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_edict = thought_enforcement }
+        owner? = {
+            has_edict = thought_enforcement
+        }
     }
-    modifier = {
-        planet_crime_add = -30
-    }
+    planet_crime_add = -30
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_edict = thought_enforcement_gestalt }
+        owner? = {
+            has_edict = thought_enforcement_gestalt
+        }
     }
-    modifier = {
-        planet_crime_no_happiness_add = -30
-    }
+    planet_crime_no_happiness_add = -30
 }
 
+# Covenant with the Instrument of Desire
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        has_shroud_dlc = no
+        owner? = {
             has_country_flag = instrument_covenant_confirmed
             is_gestalt = no
         }
     }
-    planet_amenities_add = 700
+    planet_amenities_add = @telepath_instrument_amenities_confirmed
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        has_shroud_dlc = no
+        owner? = {
             has_country_flag = instrument_covenant_rank_1
             is_gestalt = no
         }
     }
-    planet_amenities_add = 800
+    planet_amenities_add = @telepath_instrument_amenities_rank_1
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        has_shroud_dlc = yes
+        owner? = {
+            has_covenant_with_the_instrument_of_desire = yes
+            is_gestalt = no
+        }
+    }
+    planet_amenities_add = @telepath_instrument_amenities
+}
+triggered_planet_modifier = {
+    potential = {
+        has_shroud_dlc = yes
+        owner? = {
             has_covenant_with_the_instrument_of_desire = yes
             is_gestalt = yes
         }
@@ -90,59 +104,83 @@ triggered_planet_modifier = {
     planet_amenities_no_happiness_add = @telepath_instrument_amenities # Gestalt are Psionic only with Shroud DLC
 }
 
+# Covenant with the Composer of Strands
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = composer_covenant_confirmed }
+        has_shroud_dlc = no
+        owner? = {
+            has_country_flag = composer_covenant_confirmed
+            is_robot_empire = no
+        }
     }
-    modifier = {
-        logistic_growth_mult = 0.02
-    }
+    logistic_growth_mult = @telepath_composer_growth_confirmed
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = composer_covenant_rank_1 }
+        has_shroud_dlc = no
+        owner? = {
+            has_country_flag = composer_covenant_rank_1
+            is_robot_empire = no
+        }
     }
-    modifier = {
-        logistic_growth_mult = 0.03
-    }
+    logistic_growth_mult = @telepath_composer_growth_rank_1
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        has_shroud_dlc = yes
+        owner? = {
+            has_covenant_with_the_composer_of_strands = yes
+            is_robot_empire = no
+        }
+    }
+    logistic_growth_mult = @telepath_composer_growth
+}
+triggered_planet_modifier = {
+    potential = {
+        has_shroud_dlc = yes
+        owner? = {
             has_covenant_with_the_composer_of_strands = yes
             is_robot_empire = yes
         }
     }
-    modifier = {
-        planet_pop_assembly_mult = @telepath_composer_growth # Robots are Psionic only with Shroud DLC
-    }
+    planet_pop_assembly_mult = @telepath_composer_growth # Robots are Psionic only with Shroud DLC
 }
 
+# Covenant with the Eater of Worlds
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = eater_covenant_confirmed }
+        has_shroud_dlc = no
+        owner? = {
+            has_country_flag = eater_covenant_confirmed
+        }
     }
-    country_naval_cap_add = 1
+    country_naval_cap_add = @telepath_eater_naval_cap_confirmed
 }
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = eater_covenant_rank_1 }
+        has_shroud_dlc = no
+        owner? = {
+            has_country_flag = eater_covenant_rank_1
+        }
     }
-    country_naval_cap_add = 1.5
+    country_naval_cap_add = @telepath_eater_naval_cap_rank_1
 }
-# Update @telepath_eater_naval_cap for covenant custom_tooltip
+triggered_country_modifier = {
+    potential = {
+        has_shroud_dlc = yes
+        owner? = {
+            has_covenant_with_the_eater_of_worlds = yes
+        }
+    }
+    country_naval_cap_add = @telepath_eater_naval_cap
+}
 
 ### Shroud DLC modifiers
 
+# Covenant with the Cradle of Souls
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_covenant_with_the_cradle_of_souls = yes
             is_gestalt = no
         }
@@ -151,19 +189,18 @@ triggered_country_modifier = {
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_covenant_with_the_cradle_of_souls = yes
             is_gestalt = yes
         }
     }
-    planet_telepaths_unity_produces_mult = @telepath_cradle_unity #also sketchy.. but fine
+    planet_pops_psionic_unity_produces_add = @telepath_cradle_unity
 }
 
+# Psychometry tradition
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_tradition = tr_psionics_shroud_psychometry
             is_gestalt = yes
         }
@@ -172,8 +209,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_tradition = tr_psionics_shroud_psychometry
             is_gestalt = no
         }
@@ -181,10 +217,10 @@ triggered_planet_modifier = {
     planet_crime_add = @psionic_shroud_crime
 }
 
+# Authority and government type combinations
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             is_imperial_authority = yes
             is_corporeal_authority = yes
         }
@@ -195,8 +231,7 @@ triggered_planet_modifier = {
 
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             is_dictatorial_authority = yes
             OR = {
                 is_transcendent_authority = yes
@@ -209,8 +244,7 @@ triggered_country_modifier = {
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             is_megacorp = yes
             OR = {
                 is_transcendent_authority = yes
@@ -218,13 +252,12 @@ triggered_planet_modifier = {
             }
         }
     }
-    planet_jobs_trade_produces_mult = @corporate_government_telepaths_trade_value_mult #Sketchy but fine?
+    planet_jobs_trade_produces_mult = @corporate_government_telepaths_trade_value_mult
 }
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             is_machine_empire = yes
             is_transcendent_authority = yes
         }
@@ -234,10 +267,10 @@ triggered_planet_modifier = {
     planet_engineers_upkeep_mult = @transcendent_machine_calculator_upkeep
 }
 
+# Psionic aura effectiveness
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             is_imperial_authority = yes
             is_corporeal_authority = yes
         }
@@ -245,19 +278,29 @@ triggered_country_modifier = {
     psionic_aura_effectiveness_mult = @corporeal_imperial_telepath_effectiveness
 }
 
+triggered_country_modifier = {
+    potential = {
+        owner? = {
+            is_machine_empire = yes
+            is_corporeal_authority = yes
+        }
+    }
+    psionic_aura_effectiveness_mult = @corporeal_machine_aura_effectiveness
+}
+
 # Minor Patrons accord modifiers
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = endless_sands_accord }
+        owner? = {
+            has_country_flag = endless_sands_accord
+        }
     }
     leader_lifespan_mult = @endless_sands_leader_lifespan_mult
 }
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_country_flag = golden_dream_accord
             is_gestalt = yes
         }
@@ -266,8 +309,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = {
+        owner? = {
             has_country_flag = golden_dream_accord
             is_gestalt = no
         }
@@ -277,36 +319,36 @@ triggered_planet_modifier = {
 
 triggered_country_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = bladeless_sword_accord }
+        owner? = {
+            has_country_flag = bladeless_sword_accord
+        }
     }
     diplo_weight_mult = @bladeless_sword_diplo_weight_mult
 }
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = throne_shadow_accord }
+        owner? = {
+            has_country_flag = throne_shadow_accord
+        }
     }
     planet_defense_armies_add = @throne_shadow_defense_armies
 }
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = animator_of_clay_accord }
+        owner? = {
+            has_country_flag = animator_of_clay_accord
+        }
     }
-
-    planet_metallurgists_produces_mult  = @animator_of_clay_metallurgist_mult
-    # foundry_jobs_bonus_workforce_mult = @animator_of_clay_metallurgist_mult
+    foundry_jobs_bonus_workforce_mult = @animator_of_clay_metallurgist_mult
 }
 
 triggered_planet_modifier = {
     potential = {
-        exists = owner
-        owner = { has_country_flag = pale_mountain_accord }
+        owner? = {
+            has_country_flag = pale_mountain_accord
+        }
     }
-
-    planet_miners_produces_mult = @pale_mountain_miners_mult
-    # miner_jobs_bonus_workforce_mult = @pale_mountain_miners_mult
+    miner_jobs_bonus_workforce_mult = @pale_mountain_miners_mult
 }

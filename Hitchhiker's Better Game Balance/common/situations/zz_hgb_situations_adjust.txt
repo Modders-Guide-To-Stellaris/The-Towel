@@ -293,13 +293,13 @@ evolutionary_predators_situation = {
 		}
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
-			custom_tooltip = evolutionary_predators_consume_tooltip
 			owner = {
 				remove_country_flag = evolutionary_predators_incorporate
 				remove_country_flag = evolutionary_predators_synthesize
 				set_country_flag = evolutionary_predators_consume
 			}
 		}
+		custom_tooltip_with_modifiers = evolutionary_predators_consume_tooltip
 	}
 
 	approach = {
@@ -307,13 +307,13 @@ evolutionary_predators_situation = {
 		icon = GFX_situation_approach_incorporate
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
-			custom_tooltip = evolutionary_predators_incorporate_tooltip
 			owner = {
 				remove_country_flag = evolutionary_predators_consume
 				remove_country_flag = evolutionary_predators_synthesize
 				set_country_flag = evolutionary_predators_incorporate
 			}
 		}
+		custom_tooltip_with_modifiers = evolutionary_predators_incorporate_tooltip
 		default = yes
 	}
 
@@ -322,13 +322,13 @@ evolutionary_predators_situation = {
 		icon = GFX_situation_approach_synthesize
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
-			custom_tooltip = evolutionary_predators_synthesize_tooltip
 			owner = {
 				remove_country_flag = evolutionary_predators_consume
 				remove_country_flag = evolutionary_predators_incorporate
 				set_country_flag = evolutionary_predators_synthesize
 			}
 		}
+		custom_tooltip_with_modifiers = evolutionary_predators_synthesize_tooltip
 	}
 
 	monthly_progress = {

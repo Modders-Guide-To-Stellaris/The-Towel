@@ -5,7 +5,7 @@ damn_the_consequences = {
     edict_lock_in_months = 60
 
     resources = {
-        category = edicts
+		category = edicts_unscaled
         cost = {
             unity = 30
             multiplier = value:edict_size_effect
