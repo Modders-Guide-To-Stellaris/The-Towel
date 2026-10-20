@@ -1,0 +1,27 @@
+
+## IF multiple changes:
+# [FILENAME]
+# [LAST EDITED]
+##############################################################################
+#    List of Changes / Additions / Fixes
+#
+#    [CHANGE 1]
+#       [SHORT DESCRIPTION OF CHANGES]
+##############################################################################
+
+## IF only 1 change:
+# [FILENAME]
+# [LAST EDITED]
+#
+# [CHANGE DESCRIPTION]
+
+
+
+# Example:
+
+    # zz_hgb_hive_jobs_adjust.txt
+    # 2026-10-19
+    #
+    # Reduced mineral upkeep for researcher drones from 6 to 3
+
+# Descriptor should also be apart of your commit message for traceability.

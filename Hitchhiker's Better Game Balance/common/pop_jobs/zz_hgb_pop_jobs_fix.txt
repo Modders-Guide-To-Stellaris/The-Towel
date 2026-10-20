@@ -132,47 +132,6 @@ overlord_knight_drone = {
 
 }
 
-# === telepath_drone ===
-# ----- SOURCE: C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\pop_jobs\16_shroud_jobs.txt -----
-telepath_drone = {
-    category = complex_drone
-    can_be_automated = no
-
-    swappable_data = {
-        default = {
-            condition_string = DRONE_JOB_TRIGGER
-            building_icon = building_psi_corps
-        }
-    }
-
-    tags = { crime enforcer unity telepath psionic_aura }
-
-    possible_pre_triggers = {
-        has_owner = yes
-        is_enslaved = no
-        is_being_purged = no
-        is_being_assimilated = no
-        is_sapient = yes
-    }
-
-    possible_precalc = can_fill_drone_job
-    possible = {
-        can_think = yes
-        has_psionic_species_trait = yes
-    }
-
-	inline_script = "jobs/job_telepath_resources"
-
-    inline_script = "jobs/job_enforcer_additional_modifiers"
-    inline_script = "jobs/job_telepath_additional_modifiers"
-
-	inline_script = "jobs/automodding_priority_unity"
-
-    weight = {
-        weight = @complex_drone_job_weight
-    }
-}
-
 # Hive Mineral Fix
 calculator_physicist = {
     category = complex_drone
